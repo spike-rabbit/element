@@ -21,12 +21,8 @@
     "paths": {
       "@siemens/element-ng": ["projects/element-ng/public-api.ts"],
       "@siemens/element-ng/*": ["projects/element-ng/*"],
-      "@siemens/element-translate-ng": [
-        "dist/@siemens/element-translate-ng/public-api.ts"
-      ],
-      "@siemens/element-translate-ng/*": [
-        "dist/@siemens/element-translate-ng/*"
-      ],
+      "@siemens/element-translate-ng": ["dist/@siemens/element-translate-ng/public-api.ts"],
+      "@siemens/element-translate-ng/*": ["dist/@siemens/element-translate-ng/*"],
       "@siemens/live-preview": ["projects/live-preview/public-api.ts"],
       "@siemens/live-preview/*": ["projects/live-preview/*"]
     }

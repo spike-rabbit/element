@@ -9,28 +9,33 @@ $icon-font-path: '@simpl/element-icons/dist/fonts' !default;
 @use '@siemens/element-theme/src/styles/variables/semantic-tokens';
 @use '@siemens/live-preview/styles/live-preview';
 
-@use '@simpl/element-icons/dist/style/simpl-element-icons' with (
-  $font-path: $icon-font-path
-);
+// TODO: find a way to include internal icons and fonts into the build
+//@use '@simpl/element-icons/dist/style/simpl-element-icons' with (
+//  $font-path: $icon-font-path
+//);
+//
+//@use '@simpl/brand/src/themes/element-theme-siemens-brand' with (
+//  $siemens-font-path: $siemens-font-path
+//);
 
-@use '@simpl/brand/src/themes/element-theme-siemens-brand' with (
-  $siemens-font-path: $siemens-font-path
-);
+//@use '@siemens/element-theme/src/theme' with (
+//  $element-theme-default: 'siemens-brand',
+//  $element-themes: (
+//    'siemens-brand',
+//    'element'
+//  )
+//);
 
-@use '@siemens/element-theme/src/theme' with (
-  $element-theme-default: 'siemens-brand',
-  $element-themes: (
-    'siemens-brand',
-    'element'
-  )
-);
-@use '@siemens/element-theme/src/styles/themes';
-@include themes.make-theme(element-theme-siemens-brand.$theme-siemens-brand-light, 'siemens-brand');
-@include themes.make-theme(
-  element-theme-siemens-brand.$theme-siemens-brand-dark,
-  'siemens-brand',
-  true
-);
+//@use '@siemens/element-theme/src/styles/themes';
+//@include themes.make-theme(element-theme-siemens-brand.$theme-siemens-brand-light, 'siemens-brand');
+//@include themes.make-theme(
+//  element-theme-siemens-brand.$theme-siemens-brand-dark,
+//  'siemens-brand',
+//  true
+//);
+
+// TODO remove this when building with siemens brand resources
+@use '@siemens/element-theme/src/theme';
 
 app-sample {
   block-size: 100%;
