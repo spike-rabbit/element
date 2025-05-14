@@ -1,0 +1,41 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "module": "es2022",
+    "moduleResolution": "Bundler",
+    "importHelpers": true,
+    "noUnusedLocals": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "target": "es2022",
+    "strict": true,
+    "allowUmdGlobalAccess": true,
+    "lib": ["es2022", "dom"],
+    "isolatedModules": true,
+    "paths": {
+      "@siemens/element-ng": ["projects/element-ng/public-api.ts"],
+      "@siemens/element-ng/*": ["projects/element-ng/*"],
+      "@siemens/element-translate-ng": [
+        "dist/@siemens/element-translate-ng/public-api.ts"
+      ],
+      "@siemens/element-translate-ng/*": [
+        "dist/@siemens/element-translate-ng/*"
+      ],
+      "@siemens/live-preview": ["projects/live-preview/public-api.ts"],
+      "@siemens/live-preview/*": ["projects/live-preview/*"]
+    }
+  },
+  "exclude": ["dist/**", "testing/**/*.ts"],
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictTemplates": true,
+    "strictNullChecks": true
+  }
+}

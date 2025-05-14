@@ -1,0 +1,68 @@
+<div
+  class="app-switcher pt-8 g-5 g-sm-9 container-fluid"
+  cdkTrapFocus
+  cdkTrapFocusAutoCapture
+  (keydown.escape)="escape()"
+>
+  @if (titleText()) {
+    <p class="mb-4 si-title-1 lh-1">{{ titleText() | translate }}</p>
+  }
+  @if (subtitleText()) {
+    <p class="si-body-2 text-secondary mb-4">{{ subtitleText() | translate }}</p>
+  }
+  <div class="apps-scroll pb-8 ms-n2 ps-2">
+    @for (category of categories(); track category; let first = $first) {
+      @if (!enableFavorites() || !hasFavorites() || first || showAllApps) {
+        <div class="mt-4">
+          @if (category.name) {
+            <span class="si-title-1">
+              {{ category.name | translate }}
+            </span>
+          }
+          <div class="mt-4 d-flex flex-wrap gap-4">
+            @for (app of category.apps; track app) {
+              <!-- eslint-disable @angular-eslint/template/no-any -->
+              <!-- temporary until old primary-navbar is removed -->
+              <a
+                si-launchpad-app
+                [enableFavoriteToggle]="enableFavorites() && !$any(app)._noFavorite"
+                [favorite]="!!app.favorite"
+                [href]="app.href"
+                [target]="app.target ?? ''"
+                [active]="app.active"
+                [external]="app.external"
+                [iconUrl]="app.iconUrl"
+                [iconClass]="app.iconClass"
+                (favoriteChange)="toggleFavorite(app, $event)"
+              >
+                <span app-name>{{ app.name | translate }}</span>
+                <span app-systemName>{{ app.systemName | translate }}</span>
+              </a>
+              <!-- eslint-enable @angular-eslint/template/no-any -->
+            }
+          </div>
+        </div>
+      }
+
+      @if (enableFavorites() && first && hasFavorites()) {
+        <button
+          type="button"
+          class="btn btn-link dropdown-toggle text-decoration-none my-4 si-title-2"
+          [class.show]="showAllApps"
+          (click)="showAllApps = !showAllApps"
+        >
+          <b>{{ (showAllApps ? showLessAppsText() : showMoreAppsText()) | translate }}</b>
+          <si-icon-next class="dropdown-caret icon" [icon]="icons.elementDown2" />
+        </button>
+      }
+    }
+  </div>
+  <button
+    type="button"
+    class="btn btn-circle btn-sm btn-ghost position-absolute top-0 end-0 mt-6 me-4"
+    [attr.aria-label]="closeText() | translate"
+    (click)="closeLaunchpad()"
+  >
+    <si-icon-next [icon]="icons.elementCancel" />
+  </button>
+</div>

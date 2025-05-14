@@ -1,0 +1,39 @@
+@use '../../variables/spacers';
+@use '../variables';
+
+@use 'sass:map';
+
+.form-label,
+.col-form-label {
+  font-size: variables.$form-label-font-size;
+  font-style: variables.$form-label-font-style;
+  font-weight: variables.$form-label-font-weight;
+  color: variables.$form-label-color;
+}
+
+.form-label {
+  display: inline-block;
+  line-height: 0.875rem;
+  padding-block: map.get(spacers.$spacers, 3) map.get(spacers.$spacers, 2);
+
+  .text-end & {
+    padding-inline-end: variables.$input-padding-x;
+  }
+}
+
+.col-form-label {
+  padding-block: map.get(spacers.$spacers, 4) - 1px 0;
+}
+
+.required:is(.form-label, .col-form-label, .form-check-label)::after {
+  content: '*';
+}
+
+.form-text {
+  display: block;
+  margin-block-start: variables.$form-text-margin-top;
+  font-size: variables.$form-text-font-size;
+  font-style: variables.$form-text-font-style;
+  font-weight: variables.$form-text-font-weight;
+  color: variables.$form-text-color;
+}

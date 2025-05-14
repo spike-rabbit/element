@@ -1,0 +1,49 @@
+$element-theme-default: null !default;
+$element-themes: null !default;
+
+$_theme-default: 'element';
+$_themes: () !default;
+
+// Load Bootstrap
+@use 'styles/bootstrap';
+
+// Component extensions
+@use 'styles/components/application-header';
+@use 'styles/components/container-grid';
+@use 'styles/components/datatable';
+@use 'styles/components/electron-titlebar';
+@use 'styles/components/elevation';
+@use 'styles/components/focus';
+@use 'styles/components/icons';
+@use 'styles/components/layout';
+@use 'styles/components/links';
+@use 'styles/components/pills';
+@use 'styles/components/scrollbar';
+@use 'styles/components/skeleton';
+@use 'styles/components/switch';
+@use 'styles/components/system-banner';
+@use 'styles/components/widgets';
+@use 'styles/components/drag_drop';
+
+// accessibility extensions
+@use 'styles/accessibility';
+
+// theming
+@use 'styles/themes';
+@use 'theme/theme-element';
+
+@include themes.configure($element-theme-default, $element-themes);
+@include themes.make-theme(theme-element.$theme-element-light, 'element');
+@include themes.make-theme(theme-element.$theme-element-dark, 'element', true);
+
+html,
+body {
+  block-size: 100%;
+}
+
+// Define what 1rem actually means. Everything here assumes 16px.
+// When the whole thing is properly done, carefully mixing (r)em and px values,
+// this can be removed to allow the user's setting.
+html {
+  font-size: 16px;
+}

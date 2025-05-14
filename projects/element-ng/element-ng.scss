@@ -1,0 +1,14 @@
+@use '@angular/cdk/overlay' with (
+  // these muse be higher than the Bootstrap $zindex-modal, otherwise popover/tooltips won't work inside modals
+  $overlay-container-z-index: 1070,
+  $overlay-z-index: 1070,
+  $overlay-backdrop-z-index: 1070
+);
+@use '@angular/cdk/a11y';
+
+@include overlay.overlay();
+@include a11y.a11y-visually-hidden();
+
+.cdk-drag-preview {
+  z-index: overlay.$overlay-z-index !important; // stylelint-disable-line declaration-no-important
+}

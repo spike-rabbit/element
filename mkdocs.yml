@@ -1,0 +1,106 @@
+site_name: Siemens Element Documentation
+
+site_author: 'Siemens'
+site_url: 'https://element.siemens.io/'
+site_dir: 'dist/design'
+
+repo_name: 'siemens/element'
+repo_url: 'https://github.com/siemens/element'
+edit_uri: 'blob/main/docs/'
+
+copyright: '&copy; Siemens 2016-2025'
+
+nav:
+  - Home:                                 'index.md'
+  - Fundamentals:
+    - Typography:                         'fundamentals/typography.md'
+    - Colors:
+      - Color palette:                    'fundamentals/colors/color-palette.md'
+      - UI colors:                        'fundamentals/colors/ui-colors.md'
+      - Data visualization colors:        'fundamentals/colors/data-visualization-colors.md'
+    - Shapes:                             'fundamentals/shapes.md'
+    - Illustrations:                      'fundamentals/illustrations.md'
+    - Layouts:
+      - Overview:                         'fundamentals/layouts/overview.md'
+      - Anatomy:                          'fundamentals/layouts/anatomy.md'
+      - Header:                           'fundamentals/layouts/header.md'
+      - Content:                          'fundamentals/layouts/content.md'
+      - Grid:                             'fundamentals/layouts/grid.md'
+      - Spacing:                          'fundamentals/layouts/spacing.md'
+    - Elevation:                          'fundamentals/elevation.md'
+    - Localization:                       'fundamentals/localization.md'
+  - Components:
+    - Overview:                           'components/index.md'
+    - Buttons & menus:
+      - Buttons:                          'components/buttons-menus/buttons.md'
+      - Dropdowns:                        'components/buttons-menus/dropdowns.md'
+      - Links:                            'components/buttons-menus/links.md'
+      - Menu:                             'components/buttons-menus/menu.md'
+    - Layout & navigation:
+      - Application header:               'components/layout-navigation/application-header.md'
+      - Launchpad:                        'components/layout-navigation/launchpad.md'
+    - Status & notifications:
+      - Avatar:                           'components/status-notifications/avatar.md'
+  - Architecture:
+    - CSS framework:                      'architecture/css-framework.md'
+    - Theming:                            'architecture/theming.md'
+    - Motion and animation:               'architecture/motion-animation.md'
+  - Contributing:                         'contributing.md'
+  - Changelog:                            'CHANGELOG.md'
+
+theme:
+  name: code-siemens-code-docs-theme
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: dark
+      toggle:
+        icon: siemens/element/element-economy
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: light
+      toggle:
+        icon: siemens/element/element-sun
+        name: Switch to system theme
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: siemens/element/element-theme-auto
+        name: Switch to dark mode
+  favicon: '_src/favicon.png'
+  features:
+    - navigation.tabs
+    - page.toc
+    - content.action.edit
+
+extra:
+  links:
+    - name: 'GitHub'
+      value: 'https://github.com/siemens/element'
+    - name: 'Siemens Xcelerator Developer Portal'
+      value: 'https://developer.siemens.com/'
+  page_license_text: Except where otherwise noted, content on this site is licensed under <a href="https://github.com/siemens/element/blob/main/LICENSE.md">MIT License</a>.
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.highlight:
+      linenums: true
+      linenums_style: pymdownx-inline
+      guess_lang: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:mkdocs_siemens.icons.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.details
+  - pymdownx.tasklist
+  - pymdownx.tilde
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - md_in_html
+  - element-docs:
+      examples_base: !ENV [ EXAMPLES_BASE, 'http://localhost:4200' ]
+  - toc:
+      permalink: true
+
+plugins:
+  - material/search
+  - minify_html
+  - element-docs-builder

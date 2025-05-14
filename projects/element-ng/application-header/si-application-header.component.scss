@@ -1,0 +1,5 @@
+@use '@siemens/element-theme/src/styles/variables';
+
+.modal-backdrop {
+  z-index: variables.$zindex-application-header-backdrop;
+}

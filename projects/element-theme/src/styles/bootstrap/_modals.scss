@@ -1,0 +1,234 @@
+@use '../variables/spacers';
+@use '../variables/typography';
+@use '../variables/zindex';
+@use './functions';
+@use './mixins/backdrop';
+@use './mixins/breakpoints';
+@use './variables';
+
+@use 'sass:map';
+
+.modal {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  block-size: 100%;
+  inline-size: 100%;
+  z-index: zindex.$zindex-modal;
+  display: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  // Prevent Chrome on Windows from adding a focus outline. For details, see
+  // https://github.com/twbs/bootstrap/pull/10951.
+  outline: 0;
+  // We deliberately don't use `-webkit-overflow-scrolling: touch;` due to a
+  // gnarly iOS Safari bug: https://bugs.webkit.org/show_bug.cgi?id=158342
+  // See also https://github.com/twbs/bootstrap/issues/17695
+}
+
+.modal-dialog {
+  position: relative;
+  inline-size: auto;
+  margin: variables.$modal-dialog-margin;
+  // allow clicks to pass through for custom click handling to close modal
+  pointer-events: none;
+  // because of :focus-visible that shouldn't be visible
+  box-shadow: none !important; // stylelint-disable-line declaration-no-important
+
+  .modal.fade & {
+    transition: variables.$modal-transition;
+    transform: variables.$modal-fade-transform;
+  }
+
+  .modal.show & {
+    transform: variables.$modal-show-transform;
+  }
+
+  // When trying to close, animate focus to scale
+  .modal.modal-static & {
+    transform: variables.$modal-scale-transform;
+  }
+}
+
+.modal-dialog-scrollable {
+  block-size: functions.subtract(100%, variables.$modal-dialog-margin * 2);
+
+  .modal-content {
+    max-block-size: 100%;
+    overflow: hidden;
+  }
+
+  .modal-body {
+    overflow-y: auto;
+  }
+}
+
+.modal-dialog-centered {
+  display: flex;
+  align-items: center;
+  min-block-size: functions.subtract(100%, variables.$modal-dialog-margin * 2);
+}
+
+.modal-header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
+  padding-block: variables.$modal-header-padding-y;
+  padding-inline: variables.$modal-header-padding-x;
+  border-start-start-radius: variables.$modal-content-inner-border-radius;
+  border-start-end-radius: variables.$modal-content-inner-border-radius;
+
+  .btn-close {
+    padding-block: variables.$modal-header-padding-y * 0.5;
+    padding-inline: variables.$modal-header-padding-x * 0.5;
+    margin: 0;
+  }
+
+  .icon {
+    font-size: 2rem;
+    margin-inline-end: map.get(spacers.$spacers, 4);
+  }
+
+  .modal-title {
+    flex: 1;
+  }
+}
+
+.modal-title {
+  font-size: typography.$si-font-size-title-1;
+  font-weight: typography.$si-font-weight-title-1;
+  line-height: variables.$modal-title-line-height;
+  margin-block-end: 0;
+}
+
+.modal-backdrop {
+  @include backdrop.overlay-backdrop(
+    zindex.$zindex-modal-backdrop,
+    variables.$modal-backdrop-bg,
+    variables.$modal-backdrop-opacity
+  );
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  inline-size: 100%; // Ensure `.modal-content` extends the full width of the parent `.modal-dialog`
+  // counteract the pointer-events: none; in the .modal-dialog
+  color: variables.$modal-content-color;
+  pointer-events: auto;
+  background-color: variables.$modal-content-bg;
+  background-clip: padding-box;
+  border-radius: variables.$modal-content-border-radius;
+  box-shadow: variables.$modal-content-box-shadow-xs;
+  // Remove focus outline from opened modal
+  outline: 0;
+}
+
+.modal-body {
+  position: relative;
+  // Enable `flex-grow: 1` so that the body take up as much space as possible
+  // when there should be a fixed height on `.modal-dialog`.
+  flex: 1 1 auto;
+  padding-block: map.get(spacers.$spacers, 5) variables.$modal-inner-padding;
+  // use margin instead of padding so that the scrollbar isn't on the edge of the dialog
+  margin-inline: variables.$modal-inner-padding;
+  padding-inline: 0;
+
+  .modal-dialog-scrollable & {
+    padding-block: 0;
+  }
+}
+
+.modal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  align-items: center; // vertically center
+  justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
+  padding: (variables.$modal-inner-padding - variables.$modal-footer-margin-between * 0.5);
+  border-end-start-radius: variables.$modal-content-inner-border-radius;
+  border-end-end-radius: variables.$modal-content-inner-border-radius;
+
+  // Place margin between footer elements
+  // This solution is far from ideal because of the universal selector usage,
+  // but is needed to fix https://github.com/twbs/bootstrap/issues/24800
+  > * {
+    margin: (variables.$modal-footer-margin-between * 0.5);
+  }
+}
+
+@media (max-width: 400px) {
+  .modal-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+// Scale up the modal
+@include breakpoints.media-breakpoint-up(sm) {
+  // Automatically set modal's width for larger viewports
+  .modal-dialog {
+    max-inline-size: variables.$modal-md;
+    margin-block: variables.$modal-dialog-margin-y-sm-up;
+    margin-inline: auto;
+  }
+
+  .modal-dialog-scrollable {
+    block-size: functions.subtract(100%, variables.$modal-dialog-margin-y-sm-up * 2);
+  }
+
+  .modal-dialog-centered {
+    min-block-size: functions.subtract(100%, variables.$modal-dialog-margin-y-sm-up * 2);
+  }
+
+  .modal-content {
+    box-shadow: variables.$modal-content-box-shadow-sm-up;
+  }
+
+  .modal-sm {
+    max-inline-size: variables.$modal-sm;
+  }
+}
+
+@include breakpoints.media-breakpoint-up(lg) {
+  .modal-lg,
+  .modal-xl {
+    max-inline-size: variables.$modal-lg;
+  }
+}
+
+@include breakpoints.media-breakpoint-up(xl) {
+  .modal-xl {
+    max-inline-size: variables.$modal-xl;
+  }
+}
+
+// scss-docs-start modal-fullscreen-loop
+@each $breakpoint in map.keys(variables.$grid-breakpoints) {
+  $infix: breakpoints.breakpoint-infix($breakpoint, variables.$grid-breakpoints);
+  $postfix: if($infix != '', $infix + '-down', '');
+
+  @include breakpoints.media-breakpoint-down($breakpoint) {
+    .modal-fullscreen#{$postfix} {
+      inline-size: 100vw;
+      max-inline-size: none;
+      block-size: 100%;
+      margin: 0;
+
+      .modal-content {
+        block-size: 100%;
+        border: 0;
+      }
+
+      :is(.modal-header, .modal-content, .modal-footer) {
+        border-radius: 0;
+      }
+
+      .modal-body {
+        overflow-y: auto;
+      }
+    }
+  }
+}

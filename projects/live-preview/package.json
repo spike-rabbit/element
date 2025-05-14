@@ -1,0 +1,62 @@
+{
+  "name": "@siemens/live-preview",
+  "description": "Element live preview for web",
+  "version": "47.11.0",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:siemens/element.git"
+  },
+  "author": {
+    "name": "Siemens AG",
+    "email": "info@siemens.com"
+  },
+  "homepage": "https://github.com/siemens/element",
+  "bugs": "https://github.com/siemens/element/issues/new",
+  "dependencies": {
+    "codeflask": "^1.4.1",
+    "qrcode-generator": "^1.4.4",
+    "glob": "11.0.2"
+  },
+  "devDependencies": {
+    "@types/babel__standalone": "^7.1.7",
+    "@types/codeflask": "~1.4.6",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0"
+  },
+  "peerDependencies": {
+    "@angular/common": "19",
+    "@angular/core": "19",
+    "react": "18 || 19",
+    "react-dom": "18 || 19",
+    "vue": "3",
+    "vue3-sfc-loader": "0.9.5",
+    "@babel/standalone": "7.27.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    },
+    "vue3-sfc-loader": {
+      "optional": true
+    },
+    "@babel/standalone": {
+      "optional": true
+    }
+  },
+  "exports": {
+    "./component-loader": {
+      "default": "./component-loader.cjs"
+    },
+    "./esbuild-component-loader": {
+      "default": "./esbuild-component-loader.mjs"
+    }
+  }
+}

@@ -1,0 +1,413 @@
+<div class="example" [class.fullscreen]="exampleFullscreen" [class.is-mobile]="isMobile">
+  <div class="preview-iframe" [class.is-mobile]="isMobile">
+    <si-live-preview-iframe
+      [template]="template"
+      [baseUrl]="baseUrl"
+      [exampleUrl]="example ?? ''"
+      [ticketLinkBug]="ticketLinkBug"
+      [ticketLinkFeature]="ticketLinkFeature"
+      [isFullscreen]="isFullscreen"
+      [theme]="theme"
+      [locale]="locale"
+      [isRTL]="isRTL"
+      [loadReact]="loadReact"
+      [loadVue]="loadVue"
+      [loadJs]="loadJs"
+      [reactVueTemplate]="
+        activeTab === 'react' ? templateReact : activeTab === 'vue' ? templateVue : templateJs
+      "
+      (templateFromComponent)="templateFromComponent($event)"
+      (logClear)="logClear(true)"
+      (logMessage)="logEvent($event)"
+      (logRenderingError)="renderingError = $event"
+      (inProgress)="handleInProgressEvent($event)"
+      (themeChange)="themeChange($event)"
+      (localeChange)="changeLocale($event)"
+    />
+    @if (inProgress) {
+      <div class="progress-container">
+        <div class="progress-inner">
+          <div class="progress-dots"></div>
+        </div>
+      </div>
+    }
+    @if (isFullscreen) {
+      <div class="buttons">
+        <button
+          type="button"
+          class="btn-command fullscreen"
+          title="Close fullscreen"
+          aria-label="Close fullscreen"
+          (click)="toggleFullscreen(true)"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              d="M273,256l87.52-87.51a12,12,0,0,0-17-17L256,239l-87.51-87.52a12,12,0,0,0-17,17L239,256l-87.52,87.51a12,12,0,0,0,17,17L256,273l87.51,87.52a12,12,0,0,0,17-17Z"
+            />
+          </svg>
+        </button>
+      </div>
+    }
+  </div>
+</div>
+
+<div class="code" [class.is-mobile]="isMobile" [class.is-collapsed]="editorCollapsed">
+  <div class="collapse-wrapper">
+    <div role="tablist" class="nav lp-tabs">
+      @if (showEditor && (activeTab === 'template' || activeTab === 'typescript')) {
+        <button
+          type="button"
+          role="tab"
+          class="tab-item tab-link focus-inside"
+          id="templateEditorTab"
+          [class.tab-active]="activeTab === 'template'"
+          (click)="activateTab('template')"
+        >
+          Template
+        </button>
+        <button
+          type="button"
+          role="tab"
+          class="tab-item tab-link focus-inside"
+          id="typescriptEditorTab"
+          [class.tab-active]="activeTab === 'typescript'"
+          (click)="activateTab('typescript')"
+        >
+          Typescript
+        </button>
+      }
+    </div>
+    @if (!isMobile) {
+      <div class="collapse-button" [class.is-collapsed]="editorCollapsed">
+        <button
+          type="button"
+          [attr.title]="editorCollapsed ? 'Show editor' : 'Hide editor'"
+          [attr.aria-label]="editorCollapsed ? 'Show editor' : 'Hide editor'"
+          (click)="toggleCollapse()"
+        >
+          <svg class="collapse-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              class="cls-1"
+              d="M248.93,277.23l-1.72-1.44-110-110a12.43,12.43,0,0,1,15.86-19l1.72,1.44L256,249.41l101.21-101.2a12.45,12.45,0,0,1,15.86-1.44l1.72,1.44a12.45,12.45,0,0,1,1.44,15.86l-1.44,1.72-110,110A12.45,12.45,0,0,1,248.93,277.23Z"
+            />
+            <path
+              class="cls-1"
+              d="M248.93,365.23l-1.72-1.44-88-88a12.43,12.43,0,0,1,15.86-19l1.72,1.44L256,337.41l79.21-79.2a12.45,12.45,0,0,1,15.86-1.44l1.72,1.44a12.45,12.45,0,0,1,1.44,15.86l-1.44,1.72-88,88A12.45,12.45,0,0,1,248.93,365.23Z"
+            />
+          </svg>
+        </button>
+      </div>
+    }
+  </div>
+
+  @if (allowFullscreen && !isFullscreen) {
+    <div class="buttons">
+      @if (webcomponents && showEditor && frameworks.size > 1) {
+        <select
+          aria-label="select framework"
+          class="btn-command locale-selection"
+          [(ngModel)]="selectedFramework"
+          (ngModelChange)="changeFramework($event)"
+        >
+          @for (aFramework of frameworks | keyvalue; track $index) {
+            <option [value]="aFramework.value" [selected]="selectedFramework === aFramework.value">
+              {{ aFramework.key }}
+            </option>
+          }
+        </select>
+      }
+      @if (!!localeApi && showEditor) {
+        <select
+          aria-label="select locale"
+          class="btn-command locale-selection"
+          (change)="localeSelectionChanged($event.target)"
+        >
+          @for (aLocale of availableLocales; track $index) {
+            <option [value]="aLocale" [selected]="locale === aLocale">
+              {{ aLocale }}
+            </option>
+          }
+        </select>
+      }
+      @if (rtlSwitcher) {
+        <button
+          type="button"
+          class="btn-command rtl-selection"
+          [title]="isRTL ? 'Right-to-left layout' : 'Left-to-right layout'"
+          [attr.aria-label]="isRTL ? 'Right-to-left layout' : 'Left-to-right layout'"
+          (click)="toggleRTL()"
+        >
+          {{ isRTL ? 'RTL' : 'LTR' }}
+        </button>
+      }
+      @if (!isMobile && !showEditor && (renderingError || (logMessages.length && newMsgs))) {
+        <button
+          type="button"
+          class="btn-command"
+          title="Show console"
+          aria-label="Show console"
+          [class.alert]="renderingError"
+          [class.info]="logMessages.length"
+          (click)="toggleCollapse()"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              d="M255.84,296a12,12,0,0,1-12-12V124a12,12,0,1,1,24,0V284A12,12,0,0,1,255.84,296Z"
+            />
+            <path d="M256.12,387.81h-.24a16,16,0,0,1,0-32h.24a16,16,0,0,1,0,32Z" />
+          </svg>
+        </button>
+      }
+      @if (switcherEnabled && !isMobile) {
+        <button
+          type="button"
+          class="btn-command"
+          title="Toggle theme"
+          aria-label="Toggle theme"
+          (click)="toggleTheme()"
+        >
+          @if (theme === 'light') {
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path
+                d="M360.07,147.88a12,12,0,0,0,5.89-21.1,168.05,168.05,0,0,0-214.71,0C80,186,70.19,292.1,129.38,363.35a166.9,166.9,0,0,0,113.77,59.93q7.9.74,15.75.73A166.74,166.74,0,0,0,366,385.22a12,12,0,0,0-5.89-21.1,109.33,109.33,0,0,1,0-216.24ZM244.43,275.77A133.48,133.48,0,0,0,330,381.08,144.11,144.11,0,0,1,147.84,348C97.1,287,105.51,196,166.58,145.24A144.08,144.08,0,0,1,330,130.94C272,152.38,234.91,212.29,244.43,275.77Z"
+              />
+            </svg>
+          }
+          @if (theme === 'dark') {
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path
+                d="M256,349.82A93.82,93.82,0,1,0,162.18,256,93.93,93.93,0,0,0,256,349.82Zm0-163.64A69.82,69.82,0,1,1,186.18,256,69.9,69.9,0,0,1,256,186.18Z"
+              />
+              <path
+                d="M256,120.73a12,12,0,0,0,12-12V76a12,12,0,0,0-24,0v32.73A12,12,0,0,0,256,120.73Z"
+              />
+              <path d="M268,436V403.27a12,12,0,0,0-24,0V436a12,12,0,0,0,24,0Z" />
+              <path d="M143.44,160.41a12,12,0,1,0,17-17l-23.23-23.23a12,12,0,1,0-17,17Z" />
+              <path
+                d="M351.59,351.59a12,12,0,0,0,0,17l23.23,23.23a12,12,0,0,0,17-17l-23.23-23.23A12,12,0,0,0,351.59,351.59Z"
+              />
+              <path
+                d="M120.73,256a12,12,0,0,0-12-12H76a12,12,0,0,0,0,24h32.73A12,12,0,0,0,120.73,256Z"
+              />
+              <path d="M436,244H403.27a12,12,0,0,0,0,24H436a12,12,0,0,0,0-24Z" />
+              <path
+                d="M137.18,391.79l23.23-23.23a12,12,0,1,0-17-17l-23.23,23.23a12,12,0,1,0,17,17Z"
+              />
+              <path
+                d="M360.07,163.93a12,12,0,0,0,8.49-3.52l23.23-23.23a12,12,0,1,0-17-17l-23.23,23.23a12,12,0,0,0,8.48,20.49Z"
+              />
+            </svg>
+          }
+        </button>
+      }
+      @if (!isMobile && showEditor) {
+        <button
+          type="button"
+          class="btn-command"
+          title="Example fullscreen"
+          aria-label="Example fullscreen"
+          (click)="toggleFullscreen(true)"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              d="M406,112H106a42,42,0,0,0-42,42V358a42,42,0,0,0,42,42H406a42,42,0,0,0,42-42V154A42,42,0,0,0,406,112Zm18,246a18,18,0,0,1-18,18H106a18,18,0,0,1-18-18V154a18,18,0,0,1,18-18H406a18,18,0,0,1,18,18Z"
+            />
+          </svg>
+        </button>
+      }
+      @if (showEditor) {
+        <button
+          type="button"
+          class="btn-command"
+          title="Editor + Example fullscreen"
+          aria-label="Editor + Example fullscreen"
+          (click)="toggleFullscreen()"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              d="M406,112H106a42,42,0,0,0-42,42V358a42,42,0,0,0,42,42H406a42,42,0,0,0,42-42V154A42,42,0,0,0,406,112Zm18,42V313.44H199.35V136H406A18,18,0,0,1,424,154ZM88,358V154a18,18,0,0,1,18-18h69.35V376H106A18,18,0,0,1,88,358Zm318,18H199.35V337.44H424V358A18,18,0,0,1,406,376Z"
+            />
+          </svg>
+        </button>
+      }
+    </div>
+  }
+  <div class="tab-content" [class.is-mobile]="isMobile">
+    <fieldset
+      class="tab-pane"
+      [class.tab-active]="activeTab === 'template'"
+      [class.is-mobile]="isMobile"
+      [disabled]="editorCollapsed"
+    >
+      <div class="buttons" [class.show-copied]="showCopied">
+        @if (!isMobile) {
+          <button
+            type="button"
+            class="btn-command"
+            title="Open in new tab"
+            aria-label="Open in new tab"
+            (click)="openTab()"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path
+                d="M344.94 150.78l46.12 38L345 226.94v-25.38l-24.19.19c-19.93.16-43.45 1.35-66.84 9a132.91 132.91 0 00-20.6 8.6c1.13-1.56 2.32-3.11 3.57-4.63 13.37-16.27 39-36.14 85.18-38.4l22.83-1.11v-24.43M329.09 109a8.33 8.33 0 00-3.48.77 8.14 8.14 0 00-4.67 7.38v35.15c-54.9 2.69-86 27-102.55 47.14-21.1 25.69-28.56 55.84-28.51 75.48a8.1 8.1 0 006 7.83 7.68 7.68 0 002.1.28 8.13 8.13 0 007.1-4.13c12.67-22.33 31.08-37.18 56.29-45.38 19.82-6.45 40.3-7.62 59.61-7.78v34.91a8 8 0 004.66 7.37 7.84 7.84 0 003.46.79 8.26 8.26 0 005.16-1.85l86.92-72a8.06 8.06 0 002.93-6.26 8.17 8.17 0 00-3-6.25l-86.9-71.66a8.11 8.11 0 00-5.15-1.84z"
+              />
+              <path
+                d="M397.23 399.39H114.94a26.89 26.89 0 01-26.86-26.86V204.26a26.89 26.89 0 0126.86-26.86h70.49a12 12 0 010 24h-70.49a2.9 2.9 0 00-2.86 2.86v168.27a2.9 2.9 0 002.86 2.86h282.29a2.9 2.9 0 002.85-2.86V253.67a12 12 0 0124 0v118.86a26.88 26.88 0 01-26.85 26.86z"
+              />
+            </svg>
+          </button>
+        }
+        @if (allowCopy) {
+          <button
+            type="button"
+            class="btn-command"
+            title="Copy template as URL"
+            aria-label="Copy template as URL"
+            (click)="createLink()"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path
+                d="M333.56,88.16a90,90,0,0,0-62.83,25.39l-.13.12-27,26.82a12,12,0,0,0,16.92,17l26.92-26.76a66.44,66.44,0,0,1,94,93.94l-47,47a67.6,67.6,0,0,1-7.19,6.23,66.44,66.44,0,0,1-93-13.41A12,12,0,0,0,215,278.88a89.88,89.88,0,0,0,59.52,35.34,91.93,91.93,0,0,0,13.1.94,89.77,89.77,0,0,0,54-18,90.87,90.87,0,0,0,9.79-8.48l47.07-47.07.14-.15A90.44,90.44,0,0,0,333.56,88.16Z"
+              />
+              <path
+                d="M251.28,354.51l-26.75,26.75a66.44,66.44,0,0,1-93.95-93.95l47-47a68.76,68.76,0,0,1,7.19-6.23,66.53,66.53,0,0,1,93,13.41A12,12,0,0,0,297,233.12a90.5,90.5,0,0,0-136.39-9.77l-47.06,47.07-.15.15A90.44,90.44,0,0,0,241.28,398.45a.93.93,0,0,0,.14-.14l26.83-26.83a12,12,0,0,0-17-17Z"
+              />
+            </svg>
+          </button>
+        }
+        @if (allowCopy) {
+          <button
+            type="button"
+            class="btn-command"
+            title="Copy template"
+            aria-label="Copy template"
+            (click)="copyTemplate()"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path
+                d="M380.8,197.2H240.4a43.25,43.25,0,0,0-43.2,43.2V380.8A43.25,43.25,0,0,0,240.4,424H380.8A43.25,43.25,0,0,0,424,380.8V240.4A43.25,43.25,0,0,0,380.8,197.2ZM400,380.8A19.22,19.22,0,0,1,380.8,400H240.4a19.22,19.22,0,0,1-19.2-19.2V240.4a19.22,19.22,0,0,1,19.2-19.2H380.8A19.22,19.22,0,0,1,400,240.4Z"
+              />
+              <path
+                d="M146.8,290.8H131.2A19.22,19.22,0,0,1,112,271.6V131.2A19.22,19.22,0,0,1,131.2,112H271.6a19.22,19.22,0,0,1,19.2,19.2v15.6a12,12,0,0,0,24,0V131.2A43.25,43.25,0,0,0,271.6,88H131.2A43.25,43.25,0,0,0,88,131.2V271.6a43.25,43.25,0,0,0,43.2,43.2h15.6a12,12,0,0,0,0-24Z"
+              />
+            </svg>
+          </button>
+        }
+        <div class="copied" role="tooltip">copied</div>
+      </div>
+      <div #codeTemplate class="codeflask-editor"></div>
+    </fieldset>
+    <fieldset
+      class="tab-pane"
+      [class.tab-active]="activeTab === 'typescript'"
+      [class.is-mobile]="isMobile"
+      [disabled]="editorCollapsed"
+    >
+      <div class="buttons" [class.show-copied]="showCopied">
+        <span class="readonly-label">read-only</span>
+        @if (allowCopy) {
+          <button
+            type="button"
+            class="btn-command"
+            title="Copy code"
+            aria-label="Copy code"
+            (click)="copyCode()"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path
+                d="M380.8,197.2H240.4a43.25,43.25,0,0,0-43.2,43.2V380.8A43.25,43.25,0,0,0,240.4,424H380.8A43.25,43.25,0,0,0,424,380.8V240.4A43.25,43.25,0,0,0,380.8,197.2ZM400,380.8A19.22,19.22,0,0,1,380.8,400H240.4a19.22,19.22,0,0,1-19.2-19.2V240.4a19.22,19.22,0,0,1,19.2-19.2H380.8A19.22,19.22,0,0,1,400,240.4Z"
+              />
+              <path
+                d="M146.8,290.8H131.2A19.22,19.22,0,0,1,112,271.6V131.2A19.22,19.22,0,0,1,131.2,112H271.6a19.22,19.22,0,0,1,19.2,19.2v15.6a12,12,0,0,0,24,0V131.2A43.25,43.25,0,0,0,271.6,88H131.2A43.25,43.25,0,0,0,88,131.2V271.6a43.25,43.25,0,0,0,43.2,43.2h15.6a12,12,0,0,0,0-24Z"
+              />
+            </svg>
+          </button>
+        }
+        <div class="copied" role="tooltip">copied</div>
+      </div>
+      <fieldset #codeTypescript class="codeflask-editor readonly"></fieldset>
+    </fieldset>
+    <fieldset
+      class="tab-pane"
+      [class.tab-active]="activeTab === 'react' || activeTab === 'vue' || activeTab === 'js'"
+      [class.is-mobile]="isMobile"
+      [disabled]="editorCollapsed"
+    >
+      <div class="buttons" [class.show-copied]="showCopied">
+        @if (allowCopy) {
+          <button
+            type="button"
+            class="btn-command"
+            title="Copy template as URL"
+            aria-label="Copy template as URL"
+            (click)="createLink()"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path
+                d="M333.56,88.16a90,90,0,0,0-62.83,25.39l-.13.12-27,26.82a12,12,0,0,0,16.92,17l26.92-26.76a66.44,66.44,0,0,1,94,93.94l-47,47a67.6,67.6,0,0,1-7.19,6.23,66.44,66.44,0,0,1-93-13.41A12,12,0,0,0,215,278.88a89.88,89.88,0,0,0,59.52,35.34,91.93,91.93,0,0,0,13.1.94,89.77,89.77,0,0,0,54-18,90.87,90.87,0,0,0,9.79-8.48l47.07-47.07.14-.15A90.44,90.44,0,0,0,333.56,88.16Z"
+              />
+              <path
+                d="M251.28,354.51l-26.75,26.75a66.44,66.44,0,0,1-93.95-93.95l47-47a68.76,68.76,0,0,1,7.19-6.23,66.53,66.53,0,0,1,93,13.41A12,12,0,0,0,297,233.12a90.5,90.5,0,0,0-136.39-9.77l-47.06,47.07-.15.15A90.44,90.44,0,0,0,241.28,398.45a.93.93,0,0,0,.14-.14l26.83-26.83a12,12,0,0,0-17-17Z"
+              />
+            </svg>
+          </button>
+        }
+        @if (allowCopy) {
+          <button
+            type="button"
+            class="btn-command"
+            title="Copy code"
+            aria-label="Copy code"
+            (click)="copyCode()"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path
+                d="M380.8,197.2H240.4a43.25,43.25,0,0,0-43.2,43.2V380.8A43.25,43.25,0,0,0,240.4,424H380.8A43.25,43.25,0,0,0,424,380.8V240.4A43.25,43.25,0,0,0,380.8,197.2ZM400,380.8A19.22,19.22,0,0,1,380.8,400H240.4a19.22,19.22,0,0,1-19.2-19.2V240.4a19.22,19.22,0,0,1,19.2-19.2H380.8A19.22,19.22,0,0,1,400,240.4Z"
+              />
+              <path
+                d="M146.8,290.8H131.2A19.22,19.22,0,0,1,112,271.6V131.2A19.22,19.22,0,0,1,131.2,112H271.6a19.22,19.22,0,0,1,19.2,19.2v15.6a12,12,0,0,0,24,0V131.2A43.25,43.25,0,0,0,271.6,88H131.2A43.25,43.25,0,0,0,88,131.2V271.6a43.25,43.25,0,0,0,43.2,43.2h15.6a12,12,0,0,0,0-24Z"
+              />
+            </svg>
+          </button>
+        }
+        <div class="copied" role="tooltip">copied</div>
+      </div>
+      <label for="reactVueEditor">React and Vue code editor</label>
+      <fieldset #codeReactVue class="codeflask-editor"></fieldset>
+    </fieldset>
+    <div class="console" [hidden]="!renderingError && !logMessages.length">
+      <div class="buttons">
+        @if (logMessages.length) {
+          <button
+            type="button"
+            class="btn-command btn-clear"
+            title="Clear log"
+            aria-label="Clear log"
+            (click)="logClear()"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path
+                d="M400,144H328V132a44.05,44.05,0,0,0-44-44H228a44.05,44.05,0,0,0-44,44v12H112a12,12,0,0,0,0,24h20V380a44.05,44.05,0,0,0,44,44H336a44.05,44.05,0,0,0,44-44V168h20a12,12,0,0,0,0-24ZM208,132a20,20,0,0,1,20-20h56a20,20,0,0,1,20,20v12H208ZM356,380a20,20,0,0,1-20,20H176a20,20,0,0,1-20-20V168H356Z"
+              />
+              <path d="M224,344a12,12,0,0,0,12-12V236a12,12,0,0,0-24,0v96A12,12,0,0,0,224,344Z" />
+              <path d="M288,344a12,12,0,0,0,12-12V236a12,12,0,0,0-24,0v96A12,12,0,0,0,288,344Z" />
+            </svg>
+          </button>
+        }
+      </div>
+      <div #consoleContainer class="scroller">
+        @if (renderingError) {
+          <pre class="alert-danger"><code>{{ renderingError.toString() }}</code></pre>
+        }
+        @if (!renderingError && logMessages.length) {
+          <ul>
+            @for (msg of logMessages; track $index) {
+              <li>{{ msg }}</li>
+            }
+          </ul>
+        }
+      </div>
+    </div>
+  </div>
+</div>

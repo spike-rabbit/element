@@ -1,0 +1,46 @@
+@use '../variables';
+
+.lp-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  padding-inline-start: 0;
+  margin: 0;
+  list-style: none;
+  background: none;
+  inline-size: inherit;
+  font-weight: 700;
+
+  .tab-item {
+    &.tab-active {
+      &.tab-link {
+        color: variables.$live-preview-link-color;
+        border-block-end-color: variables.$live-preview-link-color !important; // stylelint-disable-line declaration-no-important
+
+        &:hover {
+          color: variables.$live-preview-link-hover-color;
+        }
+      }
+    }
+
+    &.tab-link {
+      font: inherit;
+      background: none;
+      min-inline-size: 150px;
+      display: block;
+      padding-block: 8px;
+      padding-inline: 15px;
+      cursor: pointer;
+      text-align: start;
+      line-height: 20px;
+      color: variables.$live-preview-link-inactive-color;
+      border: 0;
+      border-block-end: 4px solid transparent;
+
+      &:hover {
+        text-decoration: none;
+        color: variables.$live-preview-link-hover-color;
+        border-block-end-color: variables.$live-preview-border-color;
+      }
+    }
+  }
+}

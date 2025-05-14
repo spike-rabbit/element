@@ -1,0 +1,105 @@
+@use 'sass:map';
+@use '../variables';
+@use '../bootstrap/mixins/breakpoints';
+
+.si-layout-fixed-height {
+  &,
+  .si-layout-inner {
+    @include variables.si-layout-fixed-height;
+  }
+}
+
+.si-layout-main-padding {
+  padding-block: map.get(variables.$spacers, 6) 0;
+  padding-inline: map.get(variables.$spacers, 6);
+
+  @include breakpoints.media-breakpoint-up(md) {
+    padding-inline: map.get(variables.$spacers, 9);
+  }
+}
+
+.si-layout-top-element {
+  transition: margin-inline variables.$element-default-transition-duration;
+  margin-inline: var(--si-layout-header-first-element-offset, 0)
+    var(--si-layout-header-first-element-offset-end, 0);
+}
+
+.si-layout-status {
+  margin-block-end: map.get(variables.$spacers, 4);
+  margin-block-start: -#{map.get(variables.$spacers, 4)};
+}
+
+.si-layout-breadcrumb {
+  display: block;
+  margin-block-end: map.get(variables.$spacers, 4);
+
+  &.si-layout-top-element {
+    margin-block-end: map.get(variables.$spacers, 6);
+  }
+}
+
+.si-layout-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    'title title'
+    'subtitle subtitle'
+    'actions actions';
+  margin-block-end: map.get(variables.$spacers, 8);
+}
+
+.si-layout-title {
+  grid-area: title;
+  margin-block-end: 0;
+
+  &.si-layout-top-element + .si-layout-subtitle {
+    margin-inline: var(--si-layout-header-first-element-offset, 0)
+      var(--si-layout-header-first-element-offset-end, 0);
+  }
+}
+
+.si-layout-subtitle {
+  grid-area: subtitle;
+  margin-block-start: map.get(variables.$spacers, 4);
+  margin-block-end: 0;
+  color: variables.$element-text-secondary;
+  @include variables.si-font(
+    variables.$si-font-size-body-2,
+    variables.$si-line-height-body-2,
+    variables.$si-font-weight-body-2
+  );
+}
+
+.si-layout-actions {
+  grid-area: actions;
+  margin-block-start: map.get(variables.$spacers, 6);
+}
+
+@include breakpoints.media-breakpoint-up(sm) {
+  .si-layout-breadcrumb {
+    margin-block-end: map.get(
+      variables.$spacers,
+      4
+    ) !important; // stylelint-disable-line declaration-no-important
+  }
+}
+
+@include breakpoints.media-breakpoint-up(md) {
+  .si-layout-header {
+    grid-template-areas:
+      'title actions'
+      'subtitle actions';
+  }
+
+  .si-layout-actions {
+    margin-block-start: 0;
+  }
+
+  .si-layout-status {
+    margin-block-start: 0;
+    margin-block-end: map.get(
+      variables.$spacers,
+      6
+    ) !important; // stylelint-disable-line declaration-no-important
+  }
+}

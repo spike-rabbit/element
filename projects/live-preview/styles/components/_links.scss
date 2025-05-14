@@ -1,0 +1,14 @@
+@use '../variables';
+
+a {
+  color: variables.$live-preview-link-color;
+
+  &::after {
+    // for MAT
+    display: none;
+  }
+
+  &:hover {
+    color: variables.$live-preview-link-hover-color;
+  }
+}

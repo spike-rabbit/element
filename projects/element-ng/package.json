@@ -1,0 +1,32 @@
+{
+  "name": "@siemens/element-ng",
+  "description": "Element Angular component library, implementing the Siemens Design Language",
+  "version": "47.11.0",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:siemens/element.git"
+  },
+  "author": {
+    "name": "Siemens AG",
+    "email": "info@siemens.com"
+  },
+  "homepage": "https://github.com/siemens/element",
+  "bugs": "https://github.com/siemens/element/issues/new",
+  "type": "module",
+  "peerDependencies": {
+    "@angular/animations": "19",
+    "@angular/cdk": "19",
+    "@angular/common": "19",
+    "@angular/core": "19",
+    "@angular/forms": "19",
+    "@angular/router": "19",
+    "@siemens/element-translate-ng": "47.11.0",
+    "@siemens/element-theme": "47.11.0"
+  },
+  "peerDependenciesMeta": {
+    "@angular/animations": {
+      "optional": true
+    }
+  }
+}

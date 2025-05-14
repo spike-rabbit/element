@@ -1,0 +1,186 @@
+@use '../variables/spacers';
+@use '../variables/typography';
+@use 'mixins/breakpoints';
+@use 'mixins/table-row';
+@use 'variables';
+
+@use 'sass:map';
+
+.table {
+  // FIXME: drop these
+  --#{variables.$variable-prefix}table-bg: #{variables.$table-bg};
+  --#{variables.$variable-prefix}table-accent-bg: #{variables.$table-accent-bg};
+  --#{variables.$variable-prefix}table-striped-color: #{variables.$table-striped-color};
+  --#{variables.$variable-prefix}table-striped-bg: #{variables.$table-striped-bg};
+  --#{variables.$variable-prefix}table-active-color: #{variables.$table-active-color};
+  --#{variables.$variable-prefix}table-active-bg: #{variables.$table-active-bg};
+  --#{variables.$variable-prefix}table-hover-color: #{variables.$table-hover-color};
+  --#{variables.$variable-prefix}table-hover-bg: #{variables.$table-hover-bg};
+
+  inline-size: 100%;
+  margin-block-end: spacers.$spacer;
+  color: variables.$table-color;
+  vertical-align: variables.$table-cell-vertical-align;
+  border-color: variables.$table-border-color;
+  border-radius: variables.$border-radius;
+  background-color: var(--bs-table-bg);
+
+  // Target th & td
+  // We need the child combinator to prevent styles leaking to nested tables which doesn't have a `.table` class.
+  // We use the universal selectors here to simplify the selector (else we would need 6 different selectors).
+  // Another advantage is that this generates less code and makes the selector less specific making it easier to override.
+  // stylelint-disable-next-line selector-max-universal
+  > :not(caption) > * > * {
+    padding-block: variables.$table-cell-padding-y;
+    padding-inline: variables.$table-cell-padding-x;
+    background-color: var(--bs-table-accent-bg);
+    border-block-end-width: variables.$table-border-width;
+  }
+
+  > tbody {
+    vertical-align: inherit;
+  }
+
+  > thead {
+    vertical-align: bottom;
+  }
+
+  // Highlight border color between thead, tbody and tfoot.
+  > :not(:first-child) {
+    border-block-start: (2 * variables.$table-border-width) solid
+      variables.$table-group-separator-color;
+  }
+
+  :is(th, td) {
+    vertical-align: middle;
+
+    &:first-child {
+      padding-inline-start: map.get(spacers.$spacers, 6);
+    }
+
+    &:last-child {
+      padding-inline-end: map.get(spacers.$spacers, 6);
+    }
+  }
+
+  thead {
+    border-width: 0;
+    border-block-end: map.get(spacers.$spacers, 2) solid variables.$table-border-color;
+
+    th {
+      vertical-align: baseline;
+      font-size: typography.$si-font-size-title-2;
+      font-weight: typography.$si-font-weight-title-2;
+      line-height: typography.$si-line-height-title-2;
+    }
+  }
+
+  tbody {
+    tr {
+      &:last-child {
+        border-end-start-radius: variables.$border-radius;
+        border-end-end-radius: variables.$border-radius;
+
+        > * {
+          border-block-end: 0;
+        }
+
+        > :first-child {
+          border-end-start-radius: inherit;
+        }
+
+        > :last-child {
+          border-end-end-radius: inherit;
+        }
+      }
+    }
+
+    :is(th, td) {
+      block-size: 64px;
+    }
+  }
+}
+
+//
+// Change placement of captions with a class
+//
+
+.caption-top {
+  caption-side: top;
+}
+
+.table-sm {
+  // stylelint-disable-next-line selector-max-universal
+  > :not(caption) > * > * {
+    padding-block: variables.$table-cell-padding-y-sm;
+    padding-inline: variables.$table-cell-padding-x-sm;
+  }
+
+  tbody {
+    :is(th, td) {
+      block-size: 48px;
+    }
+  }
+}
+
+// Zebra-striping
+//
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+
+.table-striped {
+  > tbody > tr:nth-of-type(#{variables.$table-striped-order}) > * {
+    --#{variables.$variable-prefix}table-accent-bg: var(
+      --#{variables.$variable-prefix}table-striped-bg
+    );
+    color: var(--#{variables.$variable-prefix}table-striped-color);
+  }
+}
+
+// Active table
+//
+// The `.table-active` class can be added to highlight rows or cells
+
+.table-active {
+  --#{variables.$variable-prefix}table-accent-bg: var(
+    --#{variables.$variable-prefix}table-active-bg
+  );
+  color: var(--#{variables.$variable-prefix}table-active-color);
+}
+
+// Hover effect
+//
+// Placed here since it has to come after the potential zebra striping
+
+.table-hover {
+  > tbody > tr:hover > * {
+    --#{variables.$variable-prefix}table-accent-bg: var(
+      --#{variables.$variable-prefix}table-hover-bg
+    );
+    color: var(--#{variables.$variable-prefix}table-hover-color);
+  }
+}
+
+// Table variants
+//
+// Table variants set the table cell backgrounds, border colors
+// and the colors of the striped, hovered & active tables
+
+@each $color, $value in variables.$table-variants {
+  @include table-row.table-variant($color, $value);
+}
+
+// Responsive tables
+//
+// Generate series of `.table-responsive-*` classes for configuring the screen
+// size of where your table will overflow.
+
+@each $breakpoint in map.keys(variables.$grid-breakpoints) {
+  $infix: breakpoints.breakpoint-infix($breakpoint, variables.$grid-breakpoints);
+
+  @include breakpoints.media-breakpoint-down($breakpoint) {
+    .table-responsive#{$infix} {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+# Ignore artifacts:
+.venv
+build
+coverage
+dist
+tmp
+playwright/snapshots
+CHANGELOG.md
+
+# Formatting is broken
+docs
+mkdocs.yml

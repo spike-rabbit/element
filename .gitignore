@@ -1,0 +1,68 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/projects/*/dist
+/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
+# generated typedoc documentation
+/src/assets/typedoc
+# generated docs-composer documentation
+/docs-out
+# icon preview documentation
+docs/_src/fonts
+docs/_src/style
+
+# dependencies
+/node_modules
+/projects/*/node_modules
+
+# profiling files
+chrome-profiler-events*.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+/.angular/cache
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+messages.json
+__pycache__
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Playwright
+/playwright/results/
+/playwright/.cache/
+
+# these are from LFS and are re-added automatically.
+# In this .gitignore because husky recreates its own .gitignore after `yarn install`
+/.husky/post-checkout
+/.husky/post-commit
+/.husky/post-merge
+/.husky/pre-push

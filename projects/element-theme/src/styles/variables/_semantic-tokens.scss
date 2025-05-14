@@ -1,0 +1,178 @@
+// Semantic tokens defined by the theme
+
+$element-ui-0: var(--element-ui-0);
+$element-ui-0-hover: var(--element-ui-0-hover);
+$element-ui-1: var(--element-ui-1);
+$element-ui-2: var(--element-ui-2);
+$element-ui-3: var(--element-ui-3);
+$element-ui-4: var(--element-ui-4);
+$element-ui-5: var(--element-ui-5);
+$element-ui-6: var(--element-ui-6);
+
+$element-base-0: var(--element-base-0);
+$element-base-1: var(--element-base-1);
+$element-base-1-hover: var(--element-base-1-hover);
+$element-base-1-selected: var(--element-base-1-selected);
+$element-base-2: var(--element-base-2);
+$element-base-3: var(--element-base-3);
+$element-base-information: var(--element-base-information);
+$element-base-success: var(--element-base-success);
+$element-base-caution: var(--element-base-caution);
+$element-base-warning: var(--element-base-warning);
+$element-base-danger: var(--element-base-danger);
+$element-base-translucent-1: var(--element-base-translucent-1);
+$element-base-translucent-2: var(--element-base-translucent-2);
+
+$element-radius-0: var(--element-radius-0);
+$element-radius-1: var(--element-radius-1);
+$element-radius-2: var(--element-radius-2);
+$element-radius-3: var(--element-radius-3);
+
+$element-action-primary: var(--element-action-primary);
+$element-action-primary-hover: var(--element-action-primary-hover);
+$element-action-primary-text: var(--element-action-primary-text);
+$element-action-secondary: var(--element-action-secondary);
+$element-action-secondary-hover: var(--element-action-secondary-hover);
+$element-action-secondary-text: var(--element-action-secondary-text);
+$element-action-secondary-text-hover: var(--element-action-secondary-text-hover);
+$element-action-secondary-border: var(--element-action-secondary-border);
+$element-action-secondary-border-hover: var(--element-action-secondary-border-hover);
+$element-action-secondary-warning: var(--element-action-secondary-warning);
+$element-action-secondary-danger: var(--element-action-secondary-danger);
+$element-action-warning: var(--element-action-warning);
+$element-action-warning-hover: var(--element-action-warning-hover);
+$element-action-warning-text: var(--element-action-warning-text);
+$element-action-danger: var(--element-action-danger);
+$element-action-danger-hover: var(--element-action-danger-hover);
+$element-action-danger-text: var(--element-action-danger-text);
+$element-action-disabled-opacity: var(--element-action-disabled-opacity);
+
+$element-text-primary: var(--element-text-primary);
+$element-text-secondary: var(--element-text-secondary);
+$element-text-disabled: var(--element-text-disabled);
+$element-text-inverse: var(--element-text-inverse);
+$element-text-active: var(--element-text-active);
+$element-text-information: var(--element-text-information);
+$element-text-success: var(--element-text-success);
+$element-text-caution: var(--element-text-caution);
+$element-text-warning: var(--element-text-warning);
+$element-text-danger: var(--element-text-danger);
+
+$element-status-information: var(--element-status-information);
+$element-status-information-contrast: var(--element-status-information-contrast);
+$element-status-success: var(--element-status-success);
+$element-status-success-contrast: var(--element-status-success-contrast);
+$element-status-caution: var(--element-status-caution);
+$element-status-caution-contrast: var(--element-status-caution-contrast);
+$element-status-warning: var(--element-status-warning);
+$element-status-warning-contrast: var(--element-status-warning-contrast);
+$element-status-danger: var(--element-status-danger);
+$element-status-danger-contrast: var(--element-status-danger-contrast);
+$element-status-critical: var(--element-status-critical);
+$element-status-critical-contrast: var(--element-status-critical-contrast);
+
+$element-focus-default: var(--element-focus-default);
+
+$element-button-radius: var(--element-button-radius);
+$element-button-focus-width: var(--element-button-focus-width);
+$element-button-focus-overlay-width: var(--element-button-focus-overlay-width);
+$element-button-focus-overlay-color: var(--element-button-focus-overlay-color);
+$element-input-radius: var(--element-input-radius);
+
+$element-brand-logo: var(--element-brand-logo);
+$element-brand-logo-width: var(--element-brand-logo-width);
+$element-brand-logo-height: var(--element-brand-logo-height);
+$element-brand-logo-text: var(--element-brand-logo-text);
+
+// Additional semantic colors defined by the theme for domain specific use cases
+
+$element-color-cooling: var(--element-color-cooling);
+$element-color-heating: var(--element-color-heating);
+$element-color-comfort: var(--element-color-comfort);
+$element-color-economy: var(--element-color-economy);
+$element-color-off: var(--element-color-off);
+$element-color-on: var(--element-color-on);
+$element-color-default: var(--element-color-default);
+
+$element-color-passed: var(--element-color-passed);
+$element-color-failed: var(--element-color-failed);
+
+$element-color-bad: var(--element-color-bad);
+$element-color-poor: var(--element-color-poor);
+$element-color-average: var(--element-color-average);
+$element-color-good: var(--element-color-good);
+$element-color-excellent: var(--element-color-excellent);
+
+$element-range-danger: var(--element-gradient-danger);
+$element-range-warning: var(--element-gradient-warning);
+$element-range-caution: var(--element-gradient-caution);
+$element-range-information: var(--element-gradient-information);
+$element-range-success: var(--element-gradient-success);
+$element-range-temp-heating: var(--element-gradient-temp-heating);
+$element-range-temp-cooling: var(--element-gradient-temp-cooling);
+$element-range-comfort: var(--element-gradient-comfort);
+
+$element-range-temperature: var(--element-gradient-temperature);
+$element-range-humidity: var(--element-gradient-humidity);
+
+$element-data-1: var(--element-data-1);
+$element-data-2: var(--element-data-2);
+$element-data-3: var(--element-data-3);
+$element-data-4: var(--element-data-4);
+$element-data-5: var(--element-data-5);
+$element-data-6: var(--element-data-6);
+$element-data-7: var(--element-data-7);
+$element-data-8: var(--element-data-8);
+$element-data-9: var(--element-data-9);
+$element-data-10: var(--element-data-10);
+$element-data-11: var(--element-data-11);
+$element-data-12: var(--element-data-12);
+$element-data-13: var(--element-data-13);
+$element-data-14: var(--element-data-14);
+$element-data-15: var(--element-data-15);
+$element-data-16: var(--element-data-16);
+$element-data-17: var(--element-data-17);
+
+$element-data-green-1: var(--element-data-green-1);
+$element-data-green-2: var(--element-data-green-2);
+$element-data-green-3: var(--element-data-green-3);
+$element-data-green-4: var(--element-data-green-4);
+
+$element-data-turquoise-1: var(--element-data-turquoise-1);
+$element-data-turquoise-2: var(--element-data-turquoise-2);
+$element-data-turquoise-3: var(--element-data-turquoise-3);
+$element-data-turquoise-4: var(--element-data-turquoise-4);
+
+$element-data-interactive-coral-1: var(--element-data-interactive-coral-1);
+$element-data-interactive-coral-2: var(--element-data-interactive-coral-2);
+$element-data-interactive-coral-3: var(--element-data-interactive-coral-3);
+$element-data-interactive-coral-4: var(--element-data-interactive-coral-4);
+
+$element-data-purple-1: var(--element-data-purple-1);
+$element-data-purple-2: var(--element-data-purple-2);
+$element-data-purple-3: var(--element-data-purple-3);
+$element-data-purple-4: var(--element-data-purple-4);
+
+$element-data-plum-1: var(--element-data-plum-1);
+$element-data-plum-2: var(--element-data-plum-2);
+$element-data-plum-3: var(--element-data-plum-3);
+$element-data-plum-4: var(--element-data-plum-4);
+
+$element-data-red-1: var(--element-data-red-1);
+$element-data-red-2: var(--element-data-red-2);
+$element-data-red-3: var(--element-data-red-3);
+$element-data-red-4: var(--element-data-red-4);
+
+$element-data-orange-1: var(--element-data-orange-1);
+$element-data-orange-2: var(--element-data-orange-2);
+$element-data-orange-3: var(--element-data-orange-3);
+$element-data-orange-4: var(--element-data-orange-4);
+
+$element-data-sand-1: var(--element-data-sand-1);
+$element-data-sand-2: var(--element-data-sand-2);
+$element-data-sand-3: var(--element-data-sand-3);
+$element-data-sand-4: var(--element-data-sand-4);
+
+$element-feedback-icon-invalid: var(--element-feedback-icon-invalid);
+$element-feedback-icon-warning: var(--element-feedback-icon-warning);
+$element-feedback-icon-valid: var(--element-feedback-icon-valid);

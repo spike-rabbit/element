@@ -1,0 +1,34 @@
+@use 'sass:map';
+
+@use '../../variables/zindex';
+@use '../mixins/breakpoints';
+@use '../variables';
+
+// Shorthand
+
+.fixed-top {
+  position: fixed;
+  inset-inline: 0;
+  inset-block-start: 0;
+  z-index: zindex.$zindex-fixed;
+}
+
+.fixed-bottom {
+  position: fixed;
+  inset-inline: 0;
+  inset-block-end: 0;
+  z-index: zindex.$zindex-fixed;
+}
+
+// Responsive sticky top
+@each $breakpoint in map.keys(variables.$grid-breakpoints) {
+  @include breakpoints.media-breakpoint-up($breakpoint) {
+    $infix: breakpoints.breakpoint-infix($breakpoint, variables.$grid-breakpoints);
+
+    .sticky#{$infix}-top {
+      position: sticky;
+      inset-block-start: 0;
+      z-index: zindex.$zindex-sticky;
+    }
+  }
+}

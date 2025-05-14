@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../out-tsc/spec",
+    "types": ["jasmine", "zone.js"],
+    "paths": {
+      "@siemens/element-translate-ng/*": ["projects/element-translate-ng/*"]
+    }
+  },
+  "include": ["**/*.spec.ts", "**/*.d.ts"]
+}

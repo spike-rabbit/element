@@ -1,0 +1,235 @@
+@use '../variables/typography';
+@use './mixins/lists';
+@use './variables';
+
+// used for @extend to work
+@use './reboot';
+
+//
+// Headings
+//
+.h1 {
+  @extend h1;
+}
+
+.h2 {
+  @extend h2;
+}
+
+.h3 {
+  @extend h3;
+}
+
+.h4 {
+  @extend h4;
+}
+
+.h5 {
+  @extend h5;
+}
+
+.h6 {
+  @extend h6;
+}
+
+.lead {
+  font-size: variables.$lead-font-size;
+  font-weight: variables.$lead-font-weight;
+}
+
+//
+// Emphasis
+//
+.small {
+  @extend small;
+}
+
+.mark {
+  @extend mark;
+}
+
+//
+// Lists
+//
+
+.list-unstyled {
+  @include lists.list-unstyled();
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+  @include lists.list-unstyled();
+}
+
+.list-inline-item {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-inline-end: variables.$list-inline-padding;
+  }
+}
+
+//
+// Misc
+//
+
+// Builds on `abbr`
+.initialism {
+  font-size: variables.$initialism-font-size;
+  text-transform: uppercase;
+}
+
+// Blockquotes
+.blockquote {
+  margin-block-end: variables.$blockquote-margin-y;
+  font-size: variables.$blockquote-font-size;
+
+  > :last-child {
+    margin-block-end: 0;
+  }
+}
+
+.blockquote-footer {
+  margin-block: -(variables.$blockquote-margin-y) variables.$blockquote-margin-y;
+  font-size: variables.$blockquote-footer-font-size;
+  color: variables.$blockquote-footer-color;
+
+  &::before {
+    content: '\2014\00A0'; // em dash, nbsp
+  }
+}
+
+h1,
+.h1,
+.si-h1 {
+  @include typography.si-font(
+    typography.$si-font-size-h1,
+    typography.$si-line-height-h1,
+    typography.$si-font-weight-h1
+  );
+}
+
+.si-h1-black {
+  @include typography.si-font(
+    typography.$si-font-size-h1-black,
+    typography.$si-line-height-h1-black,
+    typography.$si-font-weight-h1-black
+  );
+}
+
+h2,
+.h2,
+.si-h2 {
+  @include typography.si-font(
+    typography.$si-font-size-h2,
+    typography.$si-line-height-h2,
+    typography.$si-font-weight-h2
+  );
+}
+
+h3,
+.h3,
+.si-h3 {
+  @include typography.si-font(
+    typography.$si-font-size-h3,
+    typography.$si-line-height-h3,
+    typography.$si-font-weight-h3
+  );
+}
+
+h4,
+h5,
+h6,
+.h4,
+.h5,
+.h6 {
+  @include typography.si-font(
+    typography.$si-font-size-body-1,
+    typography.$si-line-height-body-1,
+    typography.$si-font-weight-body-1
+  );
+}
+
+.si-title-1 {
+  @include typography.si-font(
+    typography.$si-font-size-title-1,
+    typography.$si-line-height-title-1,
+    typography.$si-font-weight-title-1
+  );
+}
+
+.si-body-1 {
+  @include typography.si-font(
+    typography.$si-font-size-body-1,
+    typography.$si-line-height-body-1,
+    typography.$si-font-weight-body-1
+  );
+}
+
+.si-title-2 {
+  @include typography.si-font(
+    typography.$si-font-size-title-2,
+    typography.$si-line-height-title-2,
+    typography.$si-font-weight-title-2
+  );
+}
+
+.si-body-2 {
+  @include typography.si-font(
+    typography.$si-font-size-body-2,
+    typography.$si-line-height-body-2,
+    typography.$si-font-weight-body-2
+  );
+}
+
+.si-caption {
+  @include typography.si-font(
+    typography.$si-font-size-caption-1,
+    typography.$si-line-height-caption-1,
+    typography.$si-font-weight-caption-1
+  );
+}
+
+.display-1,
+.si-display-1 {
+  @include typography.si-font(
+    typography.$si-font-size-display-1,
+    typography.$si-line-height-display-1,
+    typography.$si-font-weight-display-1
+  );
+}
+
+.display-2,
+.si-display-2 {
+  @include typography.si-font(
+    typography.$si-font-size-display-2,
+    typography.$si-line-height-display-2,
+    typography.$si-font-weight-display-2
+  );
+}
+
+.display-3,
+.si-display-3 {
+  @include typography.si-font(
+    typography.$si-font-size-display-3,
+    typography.$si-line-height-display-3,
+    typography.$si-font-weight-display-3
+  );
+}
+
+.display-4,
+.si-display-4 {
+  @include typography.si-font(
+    typography.$si-font-size-display-4,
+    typography.$si-line-height-display-4,
+    typography.$si-font-weight-display-4
+  );
+}
+
+.text-pre {
+  white-space: pre;
+}
+
+.text-pre-wrap {
+  white-space: pre-wrap;
+}

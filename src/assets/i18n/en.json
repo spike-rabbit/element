@@ -1,0 +1,97 @@
+{
+  "APP": {
+    "CLAIM": "Dive in into the wonderful world of Element",
+    "NAV": {
+      "LANGUAGE": "Language",
+      "THEME": "Theme",
+      "PROFILE": "Profile"
+    }
+  },
+  "FORM": {
+    "ENGINEER": "Engineer",
+    "INSTALLER": "Installer",
+    "NAME": "Name",
+    "DESCRIPTION": "Description",
+    "PHONE_NUMBER": "Phone number",
+    "BIRTHDAY": "Day of birth",
+    "ACCEPT_TERMS": "Accept terms",
+    "ACCEPT_TERMS_DESCRIPTION": "I confirm that I accept all and everything.",
+    "ADD_ENTITY_TEXT": "Add a new entity with the button below.",
+    "ROLE": "Role",
+    "REQUIRED": "A value is required.",
+    "NAME_REQUIRED": "Every good form needs a name!",
+    "ACCEPT_TERMS_REQUIRED": "You need to accept all terms before joining.",
+    "ACCEPT_NO_PRIVACY": "I confirm that I do not care about my privacy.",
+    "MINLENGTH": "A minimum length of {{requiredLength}} characters is required.",
+    "NOT_EIGHTEEN": "You need to be at least 18 years old.",
+    "CLASS": "Class of service",
+    "FELLOW_PASSENGERS": "Fellow passengers",
+    "ARRIVAL": "Arrival",
+    "DEPARTURE": "Departure",
+    "DEPARTURE_AFTER_ARRIVAL": "The departure time must be after arrival.",
+    "INVALID_DATE": "Invalid Date.",
+    "TRAVEL_DATE": "Travel Date",
+    "TRAVEL_DATE_REQUIRED": "Travel date is required.",
+    "END_BEFORE_START": "End date cannot be before start date.",
+    "SEARCH": "Search",
+    "INVALID_PHONE": "Invalid phone number",
+    "INVALID_PHONE_COUNTRY": "Invalid country/region",
+    "SELECT_COUNTRY": "Select Country",
+    "NAME_UPPERCASE": "A name must start with an uppercase letter."
+  },
+  "LANGUAGE": {
+    "EN": "English",
+    "EL": "Greek",
+    "DE": "Deutsch",
+    "FR": "Français"
+  },
+  "SI_FILTERED_SEARCH": {
+    "COUNTRY": "Country",
+    "SWITZERLAND": "Switzerland",
+    "GERMANY": "Germany",
+    "COMPANY": "Company",
+    "LOCATION": "Location",
+    "ALARM": "Alarm",
+    "BIRTHDAY": "Birthday",
+    "HIGHLIMIT": "High Limit [°C]"
+  },
+  "THEME_EDITOR": {
+    "AVAILABLE_THEMES": "Available themes",
+    "NEW_THEME": "New theme",
+    "SELECTED_THEME": "Selected theme",
+    "LIGHT_THEME": "Light theme",
+    "DARK_THEME": "Dark theme",
+    "APPLY": "Set active",
+    "CANCEL": "Cancel",
+    "DOWNLOAD": "Download",
+    "UPLOAD_OPEN": "Upload",
+    "UPLOAD_CLOSE": "Close",
+    "UPLOAD_WARNING_TITLE": "Warning",
+    "UPLOAD_WARNING_TEXT": "By uploading a theme you will lose your current unsaved changes and override any themes with the same name.",
+    "UPLOAD_DROP": "Drop files here or",
+    "UPLOAD_SELECT": "click to upload",
+    "UPLOAD_UPLOAD": "Upload",
+    "UPLOAD_REMOVE": "Remove",
+    "UPLOAD_UPLOADING": "Uploading",
+    "UPLOAD_MAX_FILE_SIZE": "Maximum file size",
+    "UPLOAD_MAX_FILES_REACHED": "Only one theme can be uploaded at a time",
+    "UPLOAD_ACCEPTED_FILES": "Accepted file types",
+    "UPLOAD_CLEAR": "Clear",
+    "UPLOAD_CANCEL": "Cancel",
+    "UPLOAD_ERROR_MAX_FILE_SIZE": "File exceeds allowed maximum size",
+    "UPLOAD_ERROR_FILE_TYPE": "Please select a JSON file",
+    "UPLOAD_ERROR_FAILED": "Could not upload theme",
+    "UPLOAD_SUCCESS_TITLE": "Upload completed",
+    "DELETE": "Delete",
+    "SAVE": "Save",
+    "COLOR_SCHEMES": {
+      "LIGHT": "Light",
+      "DARK": "Dark",
+      "AUTO": "Auto"
+    }
+  },
+  "MODAL_DIALOGS": {
+    "COLUMN_SELECTION_ITEM_MOVED_SUCCESS": "Item is now at position {{targetPosition}}"
+  },
+  "SI-TOAST.CLOSE": "Close"
+}

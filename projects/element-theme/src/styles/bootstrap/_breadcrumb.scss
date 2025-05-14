@@ -1,0 +1,32 @@
+@use './functions';
+@use './variables';
+
+// FIXME: drop this completely as Element styling has a different separator
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding-block: variables.$breadcrumb-padding-y;
+  padding-inline: variables.$breadcrumb-padding-x;
+  margin-block-end: variables.$breadcrumb-margin-bottom;
+  font-size: variables.$breadcrumb-font-size;
+  list-style: none;
+  background-color: variables.$breadcrumb-bg;
+}
+
+.breadcrumb-item {
+  // The separator between breadcrumbs (by default, a forward-slash: "/")
+  + .breadcrumb-item {
+    &::before {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      inline-size: 24px;
+      color: variables.$breadcrumb-divider-color;
+      content: functions.escape-svg(variables.$breadcrumb-divider);
+    }
+  }
+
+  &.active {
+    color: variables.$breadcrumb-active-color;
+  }
+}

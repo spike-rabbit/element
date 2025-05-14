@@ -1,0 +1,60 @@
+@use '../variables/semantic-tokens';
+@use '../variables/typography';
+@use 'variables';
+
+.alert {
+  position: relative;
+  overflow: hidden;
+  padding-block: variables.$alert-padding-y;
+  padding-inline: variables.$alert-padding-x;
+  margin-block-end: variables.$alert-margin-bottom;
+
+  &::before {
+    content: '';
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    position: absolute;
+    inline-size: 4px;
+    block-size: 100%;
+    background: var(--color-bar);
+  }
+}
+
+.alert,
+.alert-link {
+  font-size: typography.$si-font-size-title-1;
+  line-height: typography.$si-line-height-title-1;
+}
+
+.alert-link {
+  font-weight: typography.$si-font-weight-title-1;
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.alert-success {
+  --color-bar: #{semantic-tokens.$element-status-success};
+  color: semantic-tokens.$element-text-success;
+  background: semantic-tokens.$element-base-success;
+}
+
+.alert-warning {
+  --color-bar: #{semantic-tokens.$element-status-warning};
+  color: semantic-tokens.$element-text-warning;
+  background: semantic-tokens.$element-base-warning;
+}
+
+.alert-danger {
+  --color-bar: #{semantic-tokens.$element-status-danger};
+  color: semantic-tokens.$element-text-danger;
+  background: semantic-tokens.$element-base-danger;
+}
+
+.alert-info {
+  --color-bar: #{semantic-tokens.$element-status-information};
+  color: semantic-tokens.$element-text-information;
+  background: semantic-tokens.$element-base-information;
+}

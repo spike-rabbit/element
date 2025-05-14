@@ -1,0 +1,599 @@
+@use 'sass:map';
+
+@use '../bootstrap/variables';
+@use 'spacers';
+
+$negative-spacers: (
+  // -2px
+  n1: spacers.$spacer * -0.125,
+  // -4px
+  n2: spacers.$spacer * -0.25,
+  // -6px
+  n3: spacers.$spacer * -0.375,
+  // -8px
+  n4: spacers.$spacer * -0.5,
+  // -12px
+  n5: spacers.$spacer * -0.75,
+  // -16px
+  n6: spacers.$spacer * -1,
+  // -20px
+  n7: spacers.$spacer * -1.25,
+  // -24px
+  n8: spacers.$spacer * -1.5,
+  // -32px
+  n9: spacers.$spacer * -2,
+  // -64px
+  n10: spacers.$spacer * -4,
+  // -96px
+  n11: spacers.$spacer * -6
+);
+
+$_margins: map.merge(
+  spacers.$spacers,
+  (
+    auto: auto
+  )
+);
+
+$utilities: (
+  'align': (
+    property: vertical-align,
+    class: align,
+    values: baseline top middle bottom text-bottom text-top
+  ),
+  'float': (
+    responsive: true,
+    property: float,
+    values: (
+      start: inline-start,
+      end: inline-end,
+      none: none
+    )
+  ),
+  'opacity': (
+    property: opacity,
+    values: (
+      0: 0,
+      25: 0.25,
+      50: 0.5,
+      75: 0.75,
+      100: 1
+    )
+  ),
+  'overflow': (
+    property: overflow,
+    values: auto hidden visible scroll
+  ),
+  'display': (
+    responsive: true,
+    print: true,
+    property: display,
+    class: d,
+    values: inline inline-block block grid table table-row table-cell flex inline-flex contents none
+  ),
+  'shadow': (
+    property: box-shadow,
+    class: shadow,
+    values: (
+      null: variables.$box-shadow,
+      sm: variables.$box-shadow-sm,
+      lg: variables.$box-shadow-lg,
+      none: none
+    )
+  ),
+  'position': (
+    property: position,
+    values: static relative absolute fixed sticky
+  ),
+  'top': (
+    property: inset-block-start,
+    class: top,
+    values: variables.$position-values
+  ),
+  'bottom': (
+    property: inset-block-end,
+    class: bottom,
+    values: variables.$position-values
+  ),
+  'start': (
+    property: inset-inline-start,
+    class: start,
+    values: variables.$position-values
+  ),
+  'end': (
+    property: inset-inline-end,
+    class: end,
+    values: variables.$position-values
+  ),
+  'translate-middle': (
+    property: transform,
+    class: translate-middle,
+    values: (
+      null: translate(-50%, -50%),
+      x: translateX(-50%),
+      y: translateY(-50%)
+    )
+  ),
+  'border': (
+    property: border,
+    values: (
+      null: variables.$border-width solid variables.$border-color,
+      0: 0
+    )
+  ),
+  'border-top': (
+    property: border-block-start,
+    class: border-top,
+    values: (
+      null: variables.$border-width solid variables.$border-color,
+      0: 0
+    )
+  ),
+  'border-bottom': (
+    property: border-block-end,
+    class: border-bottom,
+    values: (
+      null: variables.$border-width solid variables.$border-color,
+      0: 0
+    )
+  ),
+  'border-end': (
+    property: border-inline-end,
+    class: border-end,
+    values: (
+      null: variables.$border-width solid variables.$border-color,
+      0: 0
+    )
+  ),
+  'border-start': (
+    property: border-inline-start,
+    class: border-start,
+    values: (
+      null: variables.$border-width solid variables.$border-color,
+      0: 0
+    )
+  ),
+  // Sizing utilities
+  'width': (
+      property: inline-size,
+      class: w,
+      values: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto
+      )
+    ),
+  'max-width': (
+    property: max-inline-size,
+    class: mw,
+    values: (
+      100: 100%
+    )
+  ),
+  'viewport-width': (
+    property: inline-size,
+    class: vw,
+    values: (
+      100: 100vw
+    )
+  ),
+  'min-viewport-width': (
+    property: min-inline-size,
+    class: min-vw,
+    values: (
+      100: 100vw
+    )
+  ),
+  'height': (
+    property: block-size,
+    class: h,
+    values: (
+      25: 25%,
+      50: 50%,
+      75: 75%,
+      100: 100%,
+      auto: auto
+    )
+  ),
+  'max-height': (
+    property: max-block-size,
+    class: mh,
+    values: (
+      100: 100%
+    )
+  ),
+  'viewport-height': (
+    property: block-size,
+    class: vh,
+    values: (
+      100: 100vh
+    )
+  ),
+  'min-viewport-height': (
+    property: min-block-size,
+    class: min-vh,
+    values: (
+      100: 100vh
+    )
+  ),
+  // Flex utilities
+  'flex': (
+      responsive: true,
+      property: flex,
+      values: (
+        fill: 1 1 auto
+      )
+    ),
+  'flex-direction': (
+    responsive: true,
+    property: flex-direction,
+    class: flex,
+    values: row column row-reverse column-reverse
+  ),
+  'flex-grow': (
+    responsive: true,
+    property: flex-grow,
+    class: flex,
+    values: (
+      grow-0: 0,
+      grow-1: 1
+    )
+  ),
+  'flex-shrink': (
+    responsive: true,
+    property: flex-shrink,
+    class: flex,
+    values: (
+      shrink-0: 0,
+      shrink-1: 1
+    )
+  ),
+  'flex-wrap': (
+    responsive: true,
+    property: flex-wrap,
+    class: flex,
+    values: wrap nowrap wrap-reverse
+  ),
+  'gap': (
+    responsive: true,
+    property: gap,
+    class: gap,
+    values: spacers.$spacers
+  ),
+  'justify-content': (
+    responsive: true,
+    property: justify-content,
+    values: (
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      between: space-between,
+      around: space-around,
+      evenly: space-evenly
+    )
+  ),
+  'align-items': (
+    responsive: true,
+    property: align-items,
+    values: (
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      baseline: baseline,
+      stretch: stretch
+    )
+  ),
+  'align-content': (
+    responsive: true,
+    property: align-content,
+    values: (
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      between: space-between,
+      around: space-around,
+      stretch: stretch
+    )
+  ),
+  'align-self': (
+    responsive: true,
+    property: align-self,
+    values: (
+      auto: auto,
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      baseline: baseline,
+      stretch: stretch
+    )
+  ),
+  'order': (
+    responsive: true,
+    property: order,
+    values: (
+      first: -1,
+      0: 0,
+      1: 1,
+      2: 2,
+      3: 3,
+      4: 4,
+      5: 5,
+      last: 6
+    )
+  ),
+  // Margin utilities
+  'margin': (
+      responsive: true,
+      property: margin,
+      class: m,
+      values: $_margins
+    ),
+  'margin-x': (
+    responsive: true,
+    property: margin-inline,
+    class: mx,
+    values: $_margins
+  ),
+  'margin-y': (
+    responsive: true,
+    property: margin-block,
+    class: my,
+    values: $_margins
+  ),
+  'margin-top': (
+    responsive: true,
+    property: margin-block-start,
+    class: mt,
+    values: $_margins
+  ),
+  'margin-end': (
+    responsive: true,
+    property: margin-inline-end,
+    class: me,
+    values: $_margins
+  ),
+  'margin-bottom': (
+    responsive: true,
+    property: margin-block-end,
+    class: mb,
+    values: $_margins
+  ),
+  'margin-start': (
+    responsive: true,
+    property: margin-inline-start,
+    class: ms,
+    values: $_margins
+  ),
+  // Negative margin utilities
+  'negative-margin': (
+      responsive: true,
+      property: margin,
+      class: m,
+      values: $negative-spacers
+    ),
+  'negative-margin-x': (
+    responsive: true,
+    property: margin-inline,
+    class: mx,
+    values: $negative-spacers
+  ),
+  'negative-margin-y': (
+    responsive: true,
+    property: margin-block,
+    class: my,
+    values: $negative-spacers
+  ),
+  'negative-margin-top': (
+    responsive: true,
+    property: margin-block-start,
+    class: mt,
+    values: $negative-spacers
+  ),
+  'negative-margin-end': (
+    responsive: true,
+    property: margin-inline-end,
+    class: me,
+    values: $negative-spacers
+  ),
+  'negative-margin-start': (
+    responsive: true,
+    property: margin-inline-start,
+    class: ms,
+    values: $negative-spacers
+  ),
+  'negative-margin-bottom': (
+    responsive: true,
+    property: margin-block-end,
+    class: mb,
+    values: $negative-spacers
+  ),
+  // Padding utilities
+  'padding': (
+      responsive: true,
+      property: padding,
+      class: p,
+      values: spacers.$spacers
+    ),
+  'padding-x': (
+    responsive: true,
+    property: padding-inline,
+    class: px,
+    values: spacers.$spacers
+  ),
+  'padding-y': (
+    responsive: true,
+    property: padding-block,
+    class: py,
+    values: spacers.$spacers
+  ),
+  'padding-top': (
+    responsive: true,
+    property: padding-block-start,
+    class: pt,
+    values: spacers.$spacers
+  ),
+  'padding-end': (
+    responsive: true,
+    property: padding-inline-end,
+    class: pe,
+    values: spacers.$spacers
+  ),
+  'padding-bottom': (
+    responsive: true,
+    property: padding-block-end,
+    class: pb,
+    values: spacers.$spacers
+  ),
+  'padding-start': (
+    responsive: true,
+    property: padding-inline-start,
+    class: ps,
+    values: spacers.$spacers
+  ),
+  // Text
+  'font-family': (
+      property: font-family,
+      class: font,
+      values: (
+        monospace: var(--#{variables.$variable-prefix}font-monospace)
+      )
+    ),
+  'font-size': (
+    rfs: true,
+    property: font-size,
+    class: fs,
+    values: variables.$font-sizes
+  ),
+  'font-style': (
+    property: font-style,
+    class: fst,
+    values: italic normal
+  ),
+  'font-weight': (
+    property: font-weight,
+    class: fw,
+    values: (
+      light: variables.$font-weight-light,
+      lighter: variables.$font-weight-lighter,
+      normal: variables.$font-weight-normal,
+      bold: variables.$font-weight-bold,
+      bolder: variables.$font-weight-bolder
+    )
+  ),
+  'line-height': (
+    property: line-height,
+    class: lh,
+    values: (
+      1: 1,
+      sm: variables.$line-height-sm,
+      base: variables.$line-height-base,
+      lg: variables.$line-height-lg
+    )
+  ),
+  'text-align': (
+    responsive: true,
+    property: text-align,
+    class: text,
+    values: (
+      start: start,
+      end: end,
+      center: center
+    )
+  ),
+  'text-decoration': (
+    property: text-decoration,
+    values: none underline line-through
+  ),
+  'text-transform': (
+    property: text-transform,
+    class: text,
+    values: lowercase uppercase capitalize
+  ),
+  'white-space': (
+    property: white-space,
+    class: text,
+    values: (
+      wrap: normal,
+      nowrap: nowrap
+    )
+  ),
+  'word-wrap': (
+    property: word-wrap word-break,
+    class: text,
+    values: (
+      break: break-word
+    )
+  ),
+  'user-select': (
+    property: user-select,
+    values: all auto none
+  ),
+  'pointer-events': (
+    property: pointer-events,
+    class: pe,
+    values: none auto
+  ),
+  'rounded': (
+    property: border-radius,
+    class: rounded,
+    values: (
+      null: variables.$border-radius,
+      0: 0,
+      1: variables.$border-radius-sm,
+      2: variables.$border-radius,
+      3: variables.$border-radius-lg,
+      circle: 50%,
+      pill: variables.$border-radius-pill
+    )
+  ),
+  'rounded-top': (
+    property: border-start-start-radius border-start-end-radius,
+    class: rounded-top,
+    values: (
+      null: variables.$border-radius
+    )
+  ),
+  'rounded-end': (
+    property: border-end-start-radius border-end-end-radius,
+    class: rounded-end,
+    values: (
+      null: variables.$border-radius
+    )
+  ),
+  'rounded-bottom': (
+    property: border-end-start-radius border-end-end-radius,
+    class: rounded-bottom,
+    values: (
+      null: variables.$border-radius
+    )
+  ),
+  'rounded-start': (
+    property: border-start-start-radius border-end-start-radius,
+    class: rounded-start,
+    values: (
+      null: variables.$border-radius
+    )
+  ),
+  'visibility': (
+    property: visibility,
+    class: null,
+    values: (
+      visible: visible,
+      invisible: hidden
+    )
+  )
+);
+
+@mixin rtl {
+  // for WebKit/Blink based browsers, not (yet) supporting :dir
+  [dir='rtl'] #{if(&, "&","")} {
+    @content;
+  }
+
+  // Spec and Firefox
+  :dir(rtl) #{if(&, "&","")} {
+    @content;
+  }
+}

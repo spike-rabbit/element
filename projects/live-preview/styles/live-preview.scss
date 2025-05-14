@@ -1,0 +1,16 @@
+body {
+  font-size: 14px;
+}
+
+body,
+app-root,
+app-root > * {
+  display: flex !important; // stylelint-disable-line declaration-no-important
+
+  flex: auto;
+  flex-direction: column;
+}
+
+router-outlet {
+  display: none !important; // stylelint-disable-line declaration-no-important
+}

@@ -1,0 +1,188 @@
+@use '../variables/semantic-tokens';
+@use '../variables/spacers';
+@use '../variables/zindex';
+@use './mixins/reset-text';
+@use './variables';
+
+@use 'sass:map';
+
+$si-popover-arrow-width: var(--popover-arrow-width, variables.$popover-arrow-width);
+$si-popover-arrow-height: var(--popover-arrow-height, variables.$popover-arrow-height);
+$si-popover-bg: var(--popover-bg-color, variables.$popover-bg);
+
+.popover {
+  position: absolute;
+  top: 0; // stylelint-disable-line liberty/use-logical-spec
+  left: 0; // stylelint-disable-line liberty/use-logical-spec
+  z-index: zindex.$zindex-popover;
+  display: block;
+  min-block-size: 50px;
+  min-inline-size: 176px;
+  max-inline-size: variables.$popover-max-width;
+  // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
+  // So reset our font and text properties to avoid inheriting weird values.
+  @include reset-text.reset-text();
+  font-size: variables.$popover-font-size;
+  // Allow breaking very long words so they don't overflow the popover's bounds
+  word-wrap: break-word;
+  background-color: $si-popover-bg;
+  background-clip: padding-box;
+  box-shadow: variables.$popover-box-shadow;
+  border-radius: semantic-tokens.$element-radius-2;
+
+  &.auto-width {
+    max-inline-size: unset;
+  }
+
+  &.no-content-padding {
+    .popover-body {
+      padding: 0;
+      overflow: hidden;
+      border-radius: semantic-tokens.$element-radius-2;
+    }
+  }
+
+  .popover-arrow {
+    position: absolute;
+    display: block;
+    inline-size: $si-popover-arrow-width;
+    block-size: $si-popover-arrow-height;
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: '';
+      border-color: transparent;
+      border-style: solid;
+    }
+  }
+}
+
+.popover-header {
+  display: flex;
+  align-items: center;
+  padding-block: variables.$popover-header-padding-y 0;
+  padding-inline: variables.$popover-header-padding-x;
+  margin-block-end: 0; // Reset the default from Reboot
+  font-size: variables.$font-size-base;
+  background-color: variables.$popover-header-bg;
+  border-start-start-radius: variables.$popover-inner-border-radius;
+  border-start-end-radius: variables.$popover-inner-border-radius;
+
+  &:empty {
+    display: none;
+  }
+
+  + .popover-body {
+    padding-block-start: map.get(spacers.$spacers, 4);
+  }
+
+  &:has(> .icon) {
+    padding-inline-start: calc(variables.$popover-header-padding-y - 4px);
+  }
+}
+
+.popover-body {
+  padding-block: variables.$popover-body-padding-y;
+  padding-inline: variables.$popover-body-padding-x;
+  color: variables.$popover-body-color;
+}
+
+// .bs-popover-*: standard BS
+// .popover-*-*: si-popover with CDK overlay
+// .bs-popover-auto*: popper.js
+// FIXME: remove popper.js selectors in next breaking release
+
+:is(
+  .bs-popover-top,
+  .popover-start-bottom,
+  .popover-end-bottom,
+  .popover-center-bottom,
+  .bs-popover-auto[data-popper-placement^='top']
+) {
+  margin-block-end: $si-popover-arrow-height;
+
+  > .popover-arrow {
+    inset-block-end: calc(-1 * $si-popover-arrow-height);
+    margin-inline-start: calc(-0.5 * $si-popover-arrow-width);
+
+    &::before {
+      inset-block-end: 0;
+      border-block-width: $si-popover-arrow-height 0;
+      border-inline-width: calc($si-popover-arrow-width * 0.5);
+      border-block-start-color: $si-popover-bg;
+    }
+  }
+}
+
+:is(.bs-popover-end, .popover-start-center, .bs-popover-auto[data-popper-placement^='right']) {
+  margin-inline-start: $si-popover-arrow-height;
+
+  > .popover-arrow {
+    inset-inline-start: calc(-1 * $si-popover-arrow-height);
+    inline-size: $si-popover-arrow-height;
+    block-size: $si-popover-arrow-width;
+    margin-block-start: calc(-0.5 * $si-popover-arrow-width);
+
+    &::before {
+      inset-inline-start: 0;
+      border-block-width: calc($si-popover-arrow-width * 0.5);
+      border-inline-width: 0 $si-popover-arrow-height;
+      border-inline-end-color: $si-popover-bg;
+    }
+  }
+}
+
+:is(
+  .bs-popover-bottom,
+  .popover-start-top,
+  .popover-end-top,
+  .popover-center-top,
+  .bs-popover-auto[data-popper-placement^='bottom']
+) {
+  margin-block-start: $si-popover-arrow-height;
+
+  > .popover-arrow {
+    inset-block-start: calc(-1 * $si-popover-arrow-height);
+    margin-inline-start: calc(-0.5 * $si-popover-arrow-width);
+
+    &::before {
+      inset-block-start: 0;
+      border-block-width: 0 $si-popover-arrow-height;
+      border-inline-width: calc($si-popover-arrow-width * 0.5);
+      border-block-end-color: $si-popover-bg;
+    }
+  }
+}
+
+:is(.bs-popover-start, .popover-end-center, .bs-popover-auto[data-popper-placement^='left']) {
+  margin-inline-end: $si-popover-arrow-height;
+
+  > .popover-arrow {
+    inset-inline-end: calc(-1 * $si-popover-arrow-height);
+    inline-size: $si-popover-arrow-height;
+    block-size: $si-popover-arrow-width;
+    margin-block-start: calc(-0.5 * $si-popover-arrow-width);
+
+    &::before {
+      inset-inline-end: 0;
+      border-block-width: calc($si-popover-arrow-width * 0.5);
+      border-inline-width: $si-popover-arrow-height 0;
+      border-inline-start-color: $si-popover-bg;
+    }
+  }
+}
+
+// center arrow in block direction
+:is(.popover-start-center, .popover-end-center) {
+  .popover-arrow {
+    inset-block-start: 50%;
+  }
+}
+
+// center arrow in inline direction
+:is(.popover-center-top, .popover-center-bottom) {
+  .popover-arrow {
+    inset-inline-start: 50%;
+  }
+}

@@ -1,0 +1,115 @@
+@use '../variables/semantic-tokens';
+@use '../variables/spacers';
+@use '../variables/typography';
+@use './variables';
+
+@use 'sass:map';
+
+// stylelint-disable declaration-no-important
+
+.badge {
+  display: inline-block;
+  color: semantic-tokens.$element-text-primary;
+  padding-block: variables.$badge-padding-y;
+  padding-inline: variables.$badge-padding-x;
+  margin-block: 0;
+  margin-inline: map.get(spacers.$spacers, 4);
+  block-size: map.get(spacers.$spacers, 8);
+  line-height: map.get(spacers.$spacers, 8);
+  flex-shrink: 0;
+  font-size: typography.$si-font-size-title-2;
+  font-weight: typography.$si-font-weight-title-2;
+  max-inline-size: 196px;
+  min-inline-size: map.get(spacers.$spacers, 8);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: variables.$badge-border-radius;
+
+  &:empty {
+    display: none;
+  }
+
+  &.bg-default {
+    background-color: semantic-tokens.$element-base-0 !important;
+    color: semantic-tokens.$element-text-primary;
+  }
+
+  &.bg-primary {
+    background-color: semantic-tokens.$element-ui-0 !important;
+    color: semantic-tokens.$element-text-inverse;
+  }
+
+  &.bg-secondary {
+    background-color: semantic-tokens.$element-ui-4 !important;
+    color: semantic-tokens.$element-text-primary;
+  }
+
+  &.bg-info {
+    background-color: semantic-tokens.$element-base-information !important;
+    color: semantic-tokens.$element-text-information;
+  }
+
+  &.bg-success {
+    background-color: semantic-tokens.$element-base-success !important;
+    color: semantic-tokens.$element-text-success;
+  }
+
+  &.bg-caution {
+    background-color: semantic-tokens.$element-base-caution !important;
+    color: semantic-tokens.$element-text-caution;
+  }
+
+  &.bg-warning {
+    background-color: semantic-tokens.$element-base-warning !important;
+    color: semantic-tokens.$element-text-warning;
+  }
+
+  &.bg-danger {
+    background-color: semantic-tokens.$element-base-danger !important;
+    color: semantic-tokens.$element-text-danger;
+  }
+
+  &.bg-inverse {
+    background-color: semantic-tokens.$element-ui-1 !important;
+    color: semantic-tokens.$element-text-inverse;
+  }
+}
+
+.badge-dot {
+  position: relative;
+
+  &::after {
+    content: '';
+    inline-size: 10px;
+    block-size: 10px;
+    border-radius: 5px;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    background-color: semantic-tokens.$element-status-danger;
+  }
+}
+
+.badge-text {
+  block-size: 14px;
+  min-inline-size: 14px;
+  border-radius: 7px;
+  position: relative;
+  background-color: semantic-tokens.$element-action-danger;
+  color: semantic-tokens.$element-action-danger-text;
+  font-size: typography.$si-font-size-caption-1;
+  line-height: 13px;
+  padding-block: 0;
+  padding-inline: map.get(spacers.$spacers, 2);
+  font-family: variables.$font-family-sans-serif;
+  font-weight: typography.$si-font-weight-bold;
+}
+
+.icon + .badge-text {
+  inset-block-start: -5px;
+  inset-inline-start: -12px;
+  margin-inline-end: -12px;
+}

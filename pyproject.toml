@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "element"
+version = "0.0.0"
+description = "Siemens Element design system documentation."
+authors = ["Siemens <opensource@siemens.com>"]
+license = "SEE LICENSE IN LICENSE.md"
+readme = "README.md"
+homepage = "https://element.siemens.io"
+repository = "https://github.com/siemens/element.git"
+documentation = "https://element.siemens.io"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+mkdocs-code-siemens-code-docs-theme = {version = "^7.6.0", source = "code-docs-theme"}
+mkdocs-minify-html-plugin = "0.3.1"
+mkdocs-element-docs-builder = {path = "projects/docs-builder", develop = true}
+
+[[tool.poetry.source]]
+name = "code-docs-theme"
+url = "https://code.siemens.com/api/v4/groups/3259/-/packages/pypi/simple"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

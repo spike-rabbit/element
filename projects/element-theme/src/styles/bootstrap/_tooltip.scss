@@ -1,0 +1,145 @@
+@use '../variables/zindex';
+@use './mixins/reset-text';
+@use './variables';
+
+.tooltip {
+  position: absolute;
+  z-index: zindex.$zindex-tooltip;
+  display: block;
+  margin: variables.$tooltip-margin;
+  // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
+  // So reset our font and text properties to avoid inheriting weird values.
+  @include reset-text.reset-text();
+  font-size: variables.$tooltip-font-size;
+  // Allow breaking very long words so they don't overflow the tooltip's bounds
+  word-wrap: break-word;
+  opacity: 0;
+
+  &.show {
+    opacity: variables.$tooltip-opacity;
+  }
+
+  .tooltip-arrow {
+    position: absolute;
+    display: block;
+    inline-size: variables.$tooltip-arrow-width;
+    block-size: variables.$tooltip-arrow-height;
+
+    &::before {
+      position: absolute;
+      content: '';
+      border-color: transparent;
+      border-style: solid;
+    }
+  }
+}
+
+.tooltip-inner {
+  min-inline-size: 100px;
+  max-inline-size: variables.$tooltip-max-width;
+  padding-block: variables.$tooltip-padding-y;
+  padding-inline: variables.$tooltip-padding-x;
+  color: variables.$tooltip-color;
+  text-align: center;
+  background-color: variables.$tooltip-bg;
+  border-radius: variables.$tooltip-border-radius;
+}
+
+// .bs-tooltip-*: standard BS
+// .tooltip-*-*: si-tooltip with CDK overlay
+// .bs-tooltip-auto*: popper.js
+// FIXME: remove popper.js selectors in next breaking release
+
+:is(
+  .bs-tooltip-top,
+  .tooltip-start-bottom,
+  .tooltip-end-bottom,
+  .tooltip-center-bottom,
+  .bs-tooltip-auto[data-popper-placement^='top']
+) {
+  padding-block: variables.$tooltip-arrow-height;
+
+  .tooltip-arrow {
+    inset-block-end: 0;
+    margin-inline-start: (variables.$tooltip-arrow-width * -0.5);
+
+    &::before {
+      inset-block-start: -1px;
+      border-block-width: variables.$tooltip-arrow-height 0;
+      border-inline-width: (variables.$tooltip-arrow-width * 0.5);
+      border-block-start-color: variables.$tooltip-arrow-color;
+    }
+  }
+}
+
+:is(.bs-tooltip-end, .tooltip-start-center, .bs-tooltip-auto[data-popper-placement^='right']) {
+  padding-inline: variables.$tooltip-arrow-height;
+
+  .tooltip-arrow {
+    inset-inline-start: 0;
+    inline-size: variables.$tooltip-arrow-height;
+    block-size: variables.$tooltip-arrow-width;
+    margin-block-start: -0.5 * variables.$tooltip-arrow-width;
+
+    &::before {
+      inset-inline-end: -1px;
+      border-block-width: (variables.$tooltip-arrow-width * 0.5);
+      border-inline-width: 0 variables.$tooltip-arrow-height;
+      border-inline-end-color: variables.$tooltip-arrow-color;
+    }
+  }
+}
+
+:is(
+  .bs-tooltip-bottom,
+  .tooltip-start-top,
+  .tooltip-end-top,
+  .tooltip-center-top,
+  .bs-tooltip-auto[data-popper-placement^='bottom']
+) {
+  padding-block: variables.$tooltip-arrow-height;
+
+  .tooltip-arrow {
+    inset-block-start: 0;
+    margin-inline-start: (variables.$tooltip-arrow-width * -0.5);
+
+    &::before {
+      inset-block-end: -1px;
+      border-block-width: 0 variables.$tooltip-arrow-height;
+      border-inline-width: (variables.$tooltip-arrow-width * 0.5);
+      border-block-end-color: variables.$tooltip-arrow-color;
+    }
+  }
+}
+
+:is(.bs-tooltip-start, .tooltip-end-center, .bs-tooltip-auto[data-popper-placement^='left']) {
+  padding-inline: variables.$tooltip-arrow-height;
+
+  .tooltip-arrow {
+    inset-inline-end: 0;
+    inline-size: variables.$tooltip-arrow-height;
+    block-size: variables.$tooltip-arrow-width;
+    margin-block-start: -0.5 * variables.$tooltip-arrow-width;
+
+    &::before {
+      inset-inline-start: -1px;
+      border-block-width: (variables.$tooltip-arrow-width * 0.5);
+      border-inline-width: variables.$tooltip-arrow-height 0;
+      border-inline-start-color: variables.$tooltip-arrow-color;
+    }
+  }
+}
+
+// center arrow in block direction
+:is(.tooltip-start-center, .tooltip-end-center) {
+  .tooltip-arrow {
+    inset-block-start: 50%;
+  }
+}
+
+// center arrow in inline direction
+:is(.tooltip-center-top, .tooltip-center-bottom) {
+  .tooltip-arrow {
+    inset-inline-start: 50%;
+  }
+}

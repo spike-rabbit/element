@@ -1,0 +1,25 @@
+@use '../variables';
+@use '../variables/utilities';
+
+.icon {
+  font-size: variables.$si-icon-font-size;
+}
+
+.icon-small {
+  font-size: variables.$si-icon-font-size-small;
+}
+
+.spinning {
+  animation: 1.5s linear infinite spinner-border;
+}
+
+.smooth-auto {
+  -webkit-font-smoothing: auto !important; // stylelint-disable-line declaration-no-important
+  -moz-osx-font-smoothing: auto !important; // stylelint-disable-line declaration-no-important
+}
+
+@include utilities.rtl {
+  .flip-rtl {
+    transform: scaleX(-1);
+  }
+}

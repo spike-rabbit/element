@@ -1,0 +1,244 @@
+@use '../bootstrap/mixins/breakpoints';
+@use '../bootstrap/variables' as bootstrap-variables;
+@use '../variables';
+@use '../variables/elevation';
+@use '../variables/semantic-tokens';
+@use '../variables/spacers';
+@use '../variables/typography';
+@use '../variables/zindex';
+
+@use 'sass:map';
+
+.has-application-header,
+.has-navbar-fixed-top {
+  padding-block-start: calc(
+    variables.$si-application-header-height + variables.$si-titlebar-spacing +
+      variables.$si-system-banner-spacing
+  );
+}
+
+.application-header {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  inset-inline: 0;
+  inset-block-start: calc(
+    var(--element-titlebar-spacing, 0px) + var(--element-system-banner-spacing, 0px)
+  );
+  z-index: zindex.$zindex-application-header;
+  background: semantic-tokens.$element-base-1;
+  min-block-size: variables.$si-application-header-height;
+  align-items: stretch;
+  border-block-end: 1px solid semantic-tokens.$element-ui-4;
+
+  // hide border when mobile styles are applied and either the dropdown-menu or header-toggle is shown
+  &:has(.dropdown-menu.show, .header-toggle.show) {
+    border-block-end: none;
+  }
+
+  // does not affect desktop styles, as in the desktop mode the dropdown-menu is rendered within the CDK overlay
+  .dropdown-menu {
+    order: 2;
+    flex-basis: 100%;
+    box-shadow: none;
+    border-block-start: 1px solid semantic-tokens.$element-ui-4;
+    margin-block: 0;
+    border-radius: 0;
+  }
+
+  // does not affect desktop styles, as in the desktop mode each dropdown-menu is rendered in a separate CDK overlay
+  :is(.header-navigation, .header-collapsible-actions, .dropdown-menu) .dropdown-menu {
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+    order: initial;
+
+    .dropdown-header {
+      padding-inline-start: 28px;
+    }
+  }
+}
+
+.header-brand {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+}
+
+.header-logo {
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  box-sizing: content-box;
+  inline-size: semantic-tokens.$element-brand-logo-width;
+  min-block-size: semantic-tokens.$element-brand-logo-height;
+  content: #{semantic-tokens.$element-brand-logo} / semantic-tokens.$element-brand-logo-text;
+}
+
+.application-name {
+  font-size: typography.$si-font-size-body-1;
+  font-weight: typography.$si-font-weight-body-1;
+  padding: map.get(spacers.$spacers, 5);
+  white-space: nowrap;
+}
+
+%collapsible-expanded {
+  order: 2;
+  flex-basis: 100%;
+  display: flex;
+  flex-flow: column;
+  padding-block: map.get(spacers.$spacers, 4);
+  border-block-start: 1px solid semantic-tokens.$element-ui-4;
+}
+
+.header-navigation {
+  display: none;
+
+  .application-header.show-navigation & {
+    @extend %collapsible-expanded;
+  }
+}
+
+.header-collapsible-actions {
+  display: none;
+
+  &.show {
+    @extend %collapsible-expanded;
+  }
+}
+
+.header-actions {
+  display: contents;
+}
+
+.header-toggle {
+  color: semantic-tokens.$element-text-primary;
+  border: 0;
+  line-height: 0;
+  padding: map.get(spacers.$spacers, 4);
+  font-size: 32px;
+  background-color: transparent; // remove default button style
+
+  &:is(:hover, .show, :active) {
+    background: semantic-tokens.$element-base-1-hover;
+    text-decoration: none;
+  }
+}
+
+.header-item {
+  --si-header-item-border: transparent;
+  display: flex;
+  flex-basis: 0;
+  align-items: center;
+  position: relative;
+  color: semantic-tokens.$element-text-primary;
+  inline-size: 100%;
+  font-size: typography.$si-font-size-title-1;
+  line-height: typography.$si-line-height-title-1;
+  font-weight: typography.$si-font-weight-title-1;
+  padding-block: 15px;
+  padding-inline: map.get(spacers.$spacers, 5);
+  background: none;
+  box-shadow: none;
+  border: 0;
+  white-space: nowrap;
+
+  .icon {
+    margin-block: -3px;
+
+    ~ .item-title {
+      padding-inline-start: map.get(spacers.$spacers, 5);
+    }
+  }
+
+  .dropdown-caret {
+    display: none;
+  }
+
+  :is(.header-navigation, .header-collapsible-actions) & .dropdown-caret {
+    display: block;
+  }
+
+  &:hover {
+    color: semantic-tokens.$element-text-primary;
+    background-color: semantic-tokens.$element-base-1-hover;
+    text-decoration: none;
+  }
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline: 0;
+    block-size: map.get(spacers.$spacers, 2);
+    background: var(--si-header-item-border);
+  }
+
+  &.header-selection-item {
+    color: semantic-tokens.$element-action-secondary-text;
+    font-size: typography.$si-font-size-title-2;
+    font-weight: typography.$si-font-weight-title-2;
+    line-height: typography.$si-line-height-title-2;
+
+    &:hover {
+      color: semantic-tokens.$element-action-secondary-text-hover;
+    }
+  }
+}
+
+@each $breakpoint in map.keys(bootstrap-variables.$grid-breakpoints) {
+  @include breakpoints.media-breakpoint-up($breakpoint) {
+    .expand-#{$breakpoint} {
+      &.application-header {
+        flex-wrap: nowrap;
+      }
+
+      .header-brand {
+        display: flex;
+        flex: 1 1 33.333%;
+        justify-content: flex-start;
+      }
+
+      .header-navigation {
+        display: flex;
+        flex: 1 1 33.333%;
+        justify-content: center;
+
+        .header-item {
+          &.active {
+            color: semantic-tokens.$element-action-primary;
+            --si-header-item-border: #{semantic-tokens.$element-action-primary};
+          }
+
+          &:hover {
+            color: semantic-tokens.$element-action-primary-hover;
+            --si-header-item-border: #{semantic-tokens.$element-action-primary-hover};
+          }
+        }
+      }
+
+      .header-actions {
+        display: flex;
+        flex: 1 1 33.333%;
+        justify-content: flex-end;
+      }
+
+      .header-collapsible-actions {
+        display: contents;
+
+        .header-item .dropdown-caret {
+          display: none;
+        }
+      }
+
+      .header-toggle {
+        display: none;
+      }
+
+      .header-item {
+        inline-size: auto;
+        flex-basis: auto;
+      }
+    }
+  }
+}

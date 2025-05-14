@@ -1,0 +1,58 @@
+@use 'sass:map';
+
+@use '../variables';
+
+// used for @extend to work
+@use '../bootstrap/type';
+@use './skeleton';
+
+.si-value-widget-value {
+  @extend .si-display-3;
+  display: inline-block;
+  min-block-size: variables.$si-font-size-display-3 * variables.$si-line-height-display-3;
+}
+
+/**
+* Defines a skeleton that has the height of the font-size and does not include
+* the line height.
+*/
+.si-value-widget-value-skeleton {
+  @extend .si-display-3;
+  @extend .si-skeleton;
+  display: inline-block;
+  block-size: variables.$si-font-size-display-3;
+  vertical-align: middle;
+  inline-size: 100%;
+}
+
+.si-value-widget-unit {
+  @extend .si-body-1;
+  display: inline-block;
+  margin-inline-start: map.get(variables.$spacers, 2);
+}
+
+.si-value-widget-description {
+  display: flex;
+  align-items: center;
+  gap: map.get(variables.$spacers, 2);
+  margin-block-start: map.get(variables.$spacers, 2);
+  min-block-size: variables.$si-icon-font-size;
+}
+
+.si-link-widget {
+  display: flex;
+  flex-direction: column;
+  gap: map.get(variables.$spacers, 4);
+}
+
+.si-link-widget-skeleton {
+  @extend .si-skeleton;
+  block-size: calc(variables.$si-font-size-body-2 * variables.$si-line-height-body-2);
+  inline-size: 100%;
+}
+
+.si-timeline-widget-item-lower-line {
+  inline-size: 1px;
+  block-size: 100%;
+  background-color: variables.$element-ui-4;
+}

@@ -1,0 +1,10 @@
+@use './forms/form-check';
+@use './forms/form-control';
+@use './forms/form-file';
+@use './forms/form-label';
+@use './forms/form-range';
+// not part of the design system
+// @import 'bootstrap/scss/forms/floating-labels';
+// FIXME: check if needed
+@use './forms/input-group';
+@use './forms/validation';

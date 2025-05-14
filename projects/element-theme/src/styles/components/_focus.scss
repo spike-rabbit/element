@@ -1,0 +1,21 @@
+@use '../variables/focus';
+
+// Unified focus styling
+
+*:focus-visible,
+*.focus-default:focus-visible,
+*:focus-visible .focus-sub,
+*:focus-visible > .focus-direct-sub,
+*:focus-visible > .focus-direct-sub-inside {
+  @include focus.make-outline-focus();
+}
+
+*.focus-inside:focus-visible,
+*:focus-visible .focus-sub-inside,
+*:focus-visible > .focus-direct-sub-inside {
+  outline-offset: focus.$focus-style-outline-inside-offset;
+}
+
+.focus-none {
+  outline: none !important; // stylelint-disable-line declaration-no-important
+}

@@ -1,0 +1,155 @@
+@use '../variables/semantic-tokens';
+@use '../variables/spacers';
+@use './variables';
+
+@use 'sass:map';
+
+$nav-tabs-height: 40px;
+$nav-tabs-min-width: 100px;
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-inline-start: 0;
+  margin-block-end: 0;
+  list-style: none;
+
+  .nav-link {
+    &:hover {
+      color: semantic-tokens.$element-action-secondary-text-hover;
+      background: semantic-tokens.$element-action-secondary-hover;
+      border-color: semantic-tokens.$element-action-secondary-border-hover;
+    }
+  }
+}
+
+.nav-link {
+  display: block;
+  padding-block: variables.$nav-link-padding-y;
+  padding-inline: variables.$nav-link-padding-x;
+  font-size: variables.$nav-link-font-size;
+  font-weight: variables.$nav-link-font-weight;
+  color: variables.$nav-link-color;
+
+  &:is(:hover, :focus) {
+    color: variables.$nav-link-hover-color;
+    text-decoration: none;
+  }
+
+  // Disabled state lightens text
+  &.disabled {
+    color: variables.$nav-link-disabled-color;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+.nav-tabs {
+  position: relative;
+  block-size: $nav-tabs-height;
+  line-height: 1.125rem;
+  border: 0;
+  flex-wrap: nowrap;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    inset-block-end: 0;
+    block-size: variables.$nav-tabs-border-width;
+    background: semantic-tokens.$element-ui-4;
+  }
+
+  &:focus-visible::before {
+    // because otherwise the focus is cut off
+    background: semantic-tokens.$element-focus-default;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    block-size: $nav-tabs-height;
+    min-inline-size: $nav-tabs-min-width;
+    margin-block-end: -(variables.$nav-tabs-border-width);
+    background: none;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0 0 variables.$nav-tabs-border-width;
+    border-start-start-radius: variables.$btn-border-radius;
+    border-start-end-radius: variables.$btn-border-radius;
+    cursor: pointer;
+
+    .badge {
+      margin-inline-start: map.get(spacers.$spacers, 1);
+      margin-block-start: -7px;
+      flex-shrink: 0;
+    }
+
+    &.active {
+      border-color: semantic-tokens.$element-action-secondary-border-hover;
+    }
+
+    &:hover {
+      isolation: isolate;
+    }
+
+    &.disabled {
+      color: variables.$nav-link-disabled-color;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  :is(.nav-link.active, .nav-item.show .nav-link) {
+    color: variables.$nav-tabs-link-active-color;
+  }
+
+  .dropdown-menu {
+    // Make dropdown border overlap tab border
+    margin-block-start: -(variables.$nav-tabs-border-width);
+    border-start-start-radius: 0;
+    border-start-end-radius: 0;
+  }
+}
+
+//
+// Justified variants
+//
+
+.nav-fill {
+  > .nav-link,
+  .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+.nav-justified {
+  > .nav-link,
+  .nav-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+:is(.nav-fill, .nav-justified) {
+  .nav-item .nav-link {
+    inline-size: 100%; // Make sure button will grow
+  }
+}
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}

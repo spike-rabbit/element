@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../../out-tsc/lib",
+    "types": ["jasmine", "node", "zone.js"],
+    "paths": {
+      "@siemens/element-translate-ng/*": ["projects/element-translate-ng/*"]
+    }
+  }
+}

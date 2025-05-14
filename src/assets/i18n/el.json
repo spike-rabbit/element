@@ -1,0 +1,29 @@
+{
+  "APP": {
+    "CLAIM": "Dive in into the wonderful world of Element"
+  },
+  "FORM": {
+    "ENGINEER": "Engineer",
+    "INSTALLER": "Installer",
+    "NAME": "Name",
+    "DESCRIPTION": "Description",
+    "BIRTHDAY": "Day of birth",
+    "ACCEPT_TERMS": "Accept terms",
+    "ACCEPT_TERMS_DESCRIPTION": "I confirm that I accept all and everything.",
+    "ADD_ENTITY_TEXT": "Add a new entity with the button below.",
+    "ROLE": "Role",
+    "REQUIRED": "A value is required.",
+    "NAME_REQUIRED": "Every good form needs a name!",
+    "ACCEPT_TERMS_REQUIRED": "You need to accept all terms before joining.",
+    "MINLENGTH": "A minimum length of {{requiredLength}} characters is required.",
+    "INVALID_PHONE": "Invalid phone number",
+    "SEARCH": "Search",
+    "SELECT_COUNTRY": "Select Country"
+  },
+  "LANGUAGE": {
+    "EN": "English",
+    "EL": "Greek",
+    "DE": "Deutsch",
+    "FR": "Français"
+  }
+}

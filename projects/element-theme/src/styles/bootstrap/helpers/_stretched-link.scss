@@ -1,0 +1,14 @@
+@use '../variables';
+
+//
+// Stretched link
+//
+
+.stretched-link {
+  &::#{variables.$stretched-link-pseudo-element} {
+    position: absolute;
+    inset: 0;
+    z-index: variables.$stretched-link-z-index;
+    content: '';
+  }
+}

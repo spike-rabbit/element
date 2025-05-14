@@ -1,0 +1,99 @@
+@use '../bootstrap/mixins/breakpoints';
+@use '../bootstrap/mixins/grid';
+@use '../bootstrap/variables';
+
+// Extends the Bootstrap grid system with additional container classes which are
+// not based on media queries for their responsiveness. Instead, the size
+// classes are manually applied (or via JavaScript). Available classes:
+// si-container-xs, si-container-sm, si-container-md, si-container-lg
+//
+// This is implemented by resetting (actually setting to "defaults") the bootstrap
+// grid framework classes if we're in the context of a `container-*` class.
+
+%reset-col {
+  flex: unset;
+  inline-size: 100%;
+}
+
+@mixin reset-grid($breakpoint) {
+  $infix: breakpoints.breakpoint-infix($breakpoint, variables.$grid-breakpoints);
+
+  @for $i from 1 through variables.$grid-columns {
+    .col#{$infix}-#{$i} {
+      @extend %reset-col;
+    }
+  }
+}
+
+@mixin make-grid($breakpoint) {
+  $infix: breakpoints.breakpoint-infix($breakpoint, variables.$grid-breakpoints);
+
+  @for $i from 1 through variables.$grid-columns {
+    .col#{$infix}-#{$i} {
+      @include grid.make-col($i, variables.$grid-columns);
+    }
+  }
+
+  // `$columns - 1` because offsetting by the width of an entire row isn't possible
+  @for $i from 0 through (variables.$grid-columns - 1) {
+    // Avoid emitting useless .offset-0
+    @if $infix != '' and $i > 0 {
+      .offset#{$infix}-#{$i} {
+        @include grid.make-col-offset($i, variables.$grid-columns);
+      }
+    }
+  }
+}
+
+// reset grid
+.si-container-xs {
+  @include reset-grid(sm);
+}
+
+:is(.si-container-xs, .si-container-sm) {
+  @include reset-grid(md);
+}
+
+:is(.si-container-xs, .si-container-sm, .si-container-md) {
+  @include reset-grid(lg);
+}
+
+:is(.si-container-xs, .si-container-sm, .si-container-md, .si-container-lg) {
+  @include reset-grid(xl);
+}
+
+:is(.si-container-xs, .si-container-sm, .si-container-md, .si-container-lg, .si-container-xl) {
+  @include reset-grid(xxl);
+}
+
+// make grid
+:is(
+  .si-container-xs,
+  .si-container-sm,
+  .si-container-md,
+  .si-container-lg,
+  .si-container-xl,
+  .si-container-xxl
+) {
+  @include make-grid(xs);
+}
+
+:is(.si-container-sm, .si-container-md, .si-container-lg, .si-container-xl, .si-container-xxl) {
+  @include make-grid(sm);
+}
+
+:is(.si-container-md, .si-container-lg, .si-container-xl, .si-container-xxl) {
+  @include make-grid(md);
+}
+
+:is(.si-container-lg, .si-container-xl, .si-container-xxl) {
+  @include make-grid(lg);
+}
+
+:is(.si-container-xl, .si-container-xxl) {
+  @include make-grid(xl);
+}
+
+.si-container-xxl {
+  @include make-grid(xxl);
+}

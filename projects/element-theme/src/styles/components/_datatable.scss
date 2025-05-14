@@ -1,0 +1,328 @@
+@use '../bootstrap/mixins/text-truncate';
+@use '../bootstrap/variables';
+@use '../variables/animations';
+@use '../variables/focus';
+@use '../variables/semantic-tokens';
+@use '../variables/spacers';
+@use '../variables/typography';
+@use '../variables/utilities';
+
+@use 'sass:map';
+
+$datatable-header-border-color: variables.$table-border-color !default;
+$datatable-header-background-color: transparent !default;
+$datatable-header-color: semantic-tokens.$element-text-primary !default;
+$datatable-footer-background-color: transparent !default;
+
+$datatable-header-height: 40px !default;
+$datatable-cell-min-width: 40px !default;
+$datatable-body-row-min-height: 48px !default;
+
+$datatable-ghost-cell-container-background: variables.$table-bg !default;
+
+$datatable-ghost-cell-strip-background: semantic-tokens.$element-base-1-hover !default;
+$datatable-ghost-cell-strip-background-image: linear-gradient(
+  90deg,
+  semantic-tokens.$element-base-1-hover 0%,
+  semantic-tokens.$element-base-1-selected 25%,
+  semantic-tokens.$element-base-1-hover 50%
+) !default;
+$datatable-ghost-cell-strip-radius: 0 !default;
+
+.ngx-datatable {
+  .ghost-cell-container {
+    background: $datatable-ghost-cell-container-background;
+  }
+
+  .ghost-cell-strip {
+    background: $datatable-ghost-cell-strip-background;
+    background-image: $datatable-ghost-cell-strip-background-image;
+  }
+}
+
+.ngx-datatable.table-element {
+  background-color: variables.$table-bg;
+  border-radius: semantic-tokens.$element-radius-2;
+
+  &.table-custom {
+    --si-datatable-row-min-height: 24px;
+  }
+
+  // any kind of selection: apply a row hover state
+  &:is(
+      .single-selection,
+      .multi-selection,
+      .multi-click-selection,
+      .cell-selection,
+      .checkbox-selection
+    ) {
+    .datatable-row-wrapper {
+      &:hover {
+        background-color: variables.$table-hover-bg;
+      }
+    }
+  }
+
+  // any selection type but 'cell'
+  &:is(.single-selection, .multi-selection, .multi-click-selection, .checkbox-selection) {
+    .datatable-body-row {
+      &.active {
+        &,
+        .datatable-row-group {
+          background-color: variables.$table-active-bg;
+        }
+      }
+    }
+  }
+
+  // solely 'cell' selection type
+  &.cell-selection {
+    .datatable-body-cell {
+      &.active,
+      &.active .datatable-row-group,
+      &:focus,
+      &:focus .datatable-row-group {
+        background-color: variables.$table-active-bg;
+      }
+    }
+  }
+
+  // not 'cell' selection type
+  &:not(.cell-selection) {
+    .datatable-body-row {
+      &:focus,
+      &:focus .datatable-row-group {
+        background-color: variables.$table-active-bg;
+      }
+    }
+  }
+
+  // 'checkbox' selection
+  :is(.datatable-header-cell, .datatable-body-cell) {
+    label.datatable-checkbox {
+      display: inline-flex;
+      inline-size: 13px;
+      block-size: 13px;
+      margin-block: 0;
+      margin-inline: 0 map.get(spacers.$spacers, 6);
+      position: relative;
+
+      > input {
+        inline-size: 100%;
+        block-size: 100%;
+      }
+    }
+  }
+
+  .datatable-header-cell {
+    label.datatable-checkbox {
+      > input {
+        inset-block: 0;
+      }
+    }
+  }
+
+  // Global Row Styles
+  :is(.datatable-header, .datatable-body) {
+    ghost-loader:not(.ghost-overlay) {
+      display: flex;
+      flex: 1 1 0;
+
+      :is(.ghost-cell-strip, .ghost-element, .ghost-loader) {
+        display: flex;
+        flex: 1 1 0;
+        inline-size: unset !important; // stylelint-disable-line declaration-no-important
+      }
+    }
+
+    .ghost-cell-strip {
+      animation-name: shimmer !important; // stylelint-disable-line declaration-no-important
+      animation-duration: animations.element-transition-duration(
+        1.6s
+      ) !important; // stylelint-disable-line declaration-no-important
+      animation-timing-function: ease-in-out !important; // stylelint-disable-line declaration-no-important
+      background-size: 200% 100%;
+      background-position-x: 100%;
+    }
+
+    :is(.datatable-header-cell, .datatable-body-cell) {
+      display: flex;
+      align-items: center;
+      padding-block: 0;
+      padding-inline: 4px;
+      min-inline-size: $datatable-cell-min-width;
+      line-height: typography.$si-line-height-body-2;
+
+      > div {
+        padding: 4px;
+      }
+
+      &:first-child {
+        padding-inline-start: map.get(spacers.$spacers, 5);
+      }
+
+      &:last-child {
+        padding-inline-end: map.get(spacers.$spacers, 5);
+      }
+    }
+
+    .datatable-header-cell {
+      .datatable-header-cell-template-wrap {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+
+        .datatable-header-cell-wrapper {
+          @include text-truncate.text-truncate;
+        }
+      }
+    }
+  }
+
+  // Header Styles
+  .datatable-header {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    border-block-end: 4px solid $datatable-header-border-color;
+    background-color: $datatable-header-background-color;
+    color: $datatable-header-color;
+    block-size: $datatable-header-height;
+    vertical-align: baseline;
+    font-size: typography.$si-font-size-title-2;
+    font-weight: typography.$si-font-weight-title-2;
+    line-height: typography.$si-line-height-title-2;
+    user-select: none;
+
+    .sort-btn {
+      color: $datatable-header-color !important; // stylelint-disable-line declaration-no-important
+    }
+
+    // Resizable handle
+    .resizeable:hover {
+      .resize-handle {
+        background-color: semantic-tokens.$element-base-0;
+        inline-size: 2px;
+        border-radius: 2px;
+        padding-block: 0;
+        padding-inline: 2px;
+      }
+    }
+
+    :is(.datatable-row-left, .datatable-row-right) {
+      background-color: variables.$table-bg;
+      display: flex;
+
+      .datatable-header-cell {
+        flex-shrink: 0;
+      }
+    }
+
+    .datatable-header-cell:focus-visible {
+      @include focus.make-outline-focus();
+    }
+  }
+
+  // Body Styles
+  .datatable-body {
+    .datatable-row-wrapper {
+      min-block-size: var(--si-datatable-row-min-height, #{$datatable-body-row-min-height});
+      justify-content: center;
+      padding: 0;
+      inline-size: 100%;
+    }
+
+    .datatable-body-row {
+      border-block-end: 1px solid $datatable-header-border-color;
+      inline-size: 100% !important; // stylelint-disable-line declaration-no-important
+      min-inline-size: fit-content;
+
+      .datatable-body-cell-label {
+        overflow: inherit;
+        text-overflow: ellipsis;
+      }
+
+      &:hover:not(.active) {
+        background-color: variables.$table-hover-bg;
+
+        :is(.datatable-row-left, .datatable-row-right) {
+          background-color: variables.$table-hover-bg;
+        }
+      }
+
+      :is(.datatable-row-left, .datatable-row-right) {
+        background-color: variables.$table-bg;
+      }
+    }
+
+    .datatable-body-cell,
+    .datatable-body-row {
+      &:focus-visible {
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: '';
+          inset: 0;
+          z-index: 9;
+          pointer-events: none; // Otherwise this can block mouse events if the focus is on a row/cell.
+          @include focus.make-outline-focus-inside();
+        }
+      }
+    }
+  }
+
+  // Footer Styles
+  .datatable-footer {
+    display: flex;
+    align-items: flex-end;
+    flex: 1;
+    align-content: flex-end;
+    background-color: $datatable-footer-background-color;
+    color: semantic-tokens.$element-text-secondary;
+    font-size: typography.$si-font-size-caption-1;
+    margin-block-start: -4px;
+    position: relative;
+    z-index: 11;
+
+    .datatable-footer-inner {
+      background-color: variables.$table-bg;
+      padding-inline-start: map.get(spacers.$spacers, 6);
+      padding-inline-end: map.get(spacers.$spacers, 4);
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: '';
+        inset-block-start: 0;
+        inset-inline-start: 0;
+        inline-size: 100%;
+        block-size: 1px;
+        background-color: var(--element-base-0);
+      }
+    }
+  }
+
+  > div {
+    block-size: unset !important; // stylelint-disable-line declaration-no-important
+    min-block-size: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Tree view icon styles
+  .datatable-tree-button {
+    border: 0;
+    background: none;
+    margin-inline: map.get(spacers.$spacers, 2);
+    padding: 0;
+
+    &[disabled] {
+      display: none;
+    }
+
+    &:focus-visible {
+      @include focus.make-outline-focus-inside();
+    }
+  }
+}

@@ -1,0 +1,197 @@
+@use 'sass:map';
+
+@use '../variables/focus';
+@use '../variables/semantic-tokens';
+@use '../variables/typography';
+@use 'mixins/breakpoints';
+@use 'variables';
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 0;
+  border-radius: variables.$list-group-border-radius;
+}
+
+.list-group-numbered {
+  list-style-type: none;
+  counter-reset: section;
+
+  > li::before {
+    // Increments only this instance of the section counter
+    content: counters(section, '.') '. ';
+    counter-increment: section;
+  }
+}
+
+.list-group-item-action {
+  inline-size: 100%; // For `<button>`s (anchors become 100% by default though)
+  color: variables.$list-group-action-color;
+  text-align: inherit; // For `<button>`s (anchors inherit)
+
+  // Hover state
+  &:is(:hover, :focus) {
+    z-index: 1; // Place hover/focus items above their siblings for proper border styling
+    color: variables.$list-group-action-hover-color;
+    text-decoration: none;
+    background-color: variables.$list-group-hover-bg;
+  }
+
+  &:focus-visible {
+    outline-offset: focus.$focus-style-outline-inside-offset;
+  }
+
+  &:active {
+    color: variables.$list-group-action-active-color;
+    background-color: variables.$list-group-action-active-bg;
+  }
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding-block: variables.$list-group-item-padding-y;
+  padding-inline: variables.$list-group-item-padding-x;
+  color: variables.$list-group-color;
+  text-decoration: none;
+  background-color: variables.$list-group-bg;
+  border: variables.$list-group-border-width solid variables.$list-group-border-color;
+  border-inline-width: 0;
+  margin: 0;
+
+  .list-group-item-heading {
+    color: variables.$headings-color;
+  }
+
+  &:first-child {
+    border-block-start: none;
+    border-start-start-radius: inherit;
+    border-start-end-radius: inherit;
+  }
+
+  &:last-child {
+    border-block-end-color: transparent;
+    border-end-start-radius: inherit;
+    border-end-end-radius: inherit;
+  }
+
+  &:is(.disabled, :disabled) {
+    color: variables.$list-group-disabled-color;
+    pointer-events: none;
+    background-color: variables.$list-group-disabled-bg;
+  }
+
+  // Include both here for `<a>`s and `<button>`s
+  &.active {
+    z-index: 2; // Place active items above their siblings for proper border styling
+    color: variables.$list-group-active-color;
+    background-color: variables.$list-group-active-bg;
+    border-color: variables.$list-group-active-border-color;
+  }
+
+  & + & {
+    border-block-start-width: 0;
+
+    &.active {
+      margin-block-start: -(variables.$list-group-border-width);
+      border-block-start-width: variables.$list-group-border-width;
+    }
+  }
+}
+
+.list-group-lg .list-group-item {
+  min-block-size: 64px;
+}
+
+.list-group-md .list-group-item {
+  min-block-size: 48px;
+}
+
+.list-header {
+  font-size: typography.$si-font-size-caption-1;
+  padding-block: variables.$list-group-item-padding-y;
+  padding-inline: variables.$list-group-item-padding-x;
+  color: variables.$headings-color;
+  margin-block-end: -1px;
+  border: 1px solid variables.$list-group-border-color;
+}
+
+@each $breakpoint in map.keys(variables.$grid-breakpoints) {
+  @include breakpoints.media-breakpoint-up($breakpoint) {
+    $infix: breakpoints.breakpoint-infix($breakpoint, variables.$grid-breakpoints);
+
+    .list-group-horizontal#{$infix} {
+      flex-direction: row;
+
+      > .list-group-item {
+        border-block-width: 0;
+
+        &:first-child {
+          border-end-start-radius: variables.$list-group-border-radius;
+          border-start-end-radius: 0;
+        }
+
+        &:last-child {
+          border-start-end-radius: variables.$list-group-border-radius;
+          border-end-start-radius: 0;
+        }
+
+        &.active {
+          margin-block-start: 0;
+        }
+
+        + .list-group-item {
+          border-inline-start-width: variables.$list-group-border-width;
+
+          &.active {
+            margin-inline-start: -(variables.$list-group-border-width);
+            border-inline-start-width: variables.$list-group-border-width;
+          }
+        }
+      }
+    }
+  }
+}
+
+.list-group-flush {
+  border-radius: 0;
+
+  > .list-group-item {
+    border-inline-width: 0;
+    border-block-width: 0 variables.$list-group-border-width;
+
+    &:last-child {
+      border-block-end-width: 0;
+    }
+  }
+}
+
+.list-group-item-secondary {
+  background-color: semantic-tokens.$element-ui-4;
+  color: semantic-tokens.$element-text-primary;
+}
+
+.list-group-item-success {
+  color: semantic-tokens.$element-text-success;
+  background: semantic-tokens.$element-base-success;
+}
+
+.list-group-item-warning {
+  color: semantic-tokens.$element-text-warning;
+  background: semantic-tokens.$element-base-warning;
+}
+
+.list-group-item-caution {
+  background-color: semantic-tokens.$element-base-caution;
+  color: semantic-tokens.$element-text-caution;
+}
+
+.list-group-item-danger {
+  color: semantic-tokens.$element-text-danger;
+  background: semantic-tokens.$element-base-danger;
+}
+
+.list-group-item-info {
+  color: semantic-tokens.$element-text-information;
+  background: semantic-tokens.$element-base-information;
+}

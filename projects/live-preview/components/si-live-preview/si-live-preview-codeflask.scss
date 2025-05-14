@@ -1,0 +1,265 @@
+/* stylelint-disable color-no-hex */
+
+@use '../../styles/variables';
+
+// Codeflask/prism theme with Atom One Light colors
+
+// stylelint-disable selector-class-pattern
+
+$default: #000;
+$background: #fff;
+$background-readonly: #f9f9f9;
+$purple: #a626a4;
+$yellow: #986801;
+$yellow2: #c18401;
+$red: #e45649;
+$blue: #4078f2;
+$blue2: #0184bc;
+$green: #50a14f;
+$gray: #a0a1a7;
+$lines-color: #999;
+$lines-background: #eee;
+
+// join the dark side, we have cookies!
+$default-dark: #bcbcbc;
+$background-dark: #222;
+$background-readonly-dark: #333;
+$lines-color-dark: #eee;
+$lines-background-dark: #666;
+
+:host ::ng-deep {
+  .readonly .codeflask {
+    background-color: $background-readonly;
+  }
+
+  .codeflask {
+    background-color: $background;
+
+    pre,
+    code {
+      color: $default;
+      background: none;
+      border: 0;
+      border-radius: 0;
+      text-align: start;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      word-wrap: normal;
+      tab-size: 2;
+      hyphens: none;
+    }
+
+    .codeflask__flatten,
+    .codeflask__code {
+      font-family: variables.$font-family-monospace;
+    }
+
+    // this fixes rendering problem during scrolling
+    .codeflask__flatten {
+      min-inline-size: calc(100% - 40px);
+      inline-size: auto;
+    }
+
+    .codeflask__pre {
+      z-index: 0;
+    }
+
+    .codeflask__textarea {
+      z-index: 1;
+      color: transparent;
+      caret-color: #000;
+    }
+
+    &.codeflask--has-line-numbers::before {
+      background: $lines-background;
+    }
+  }
+
+  .codeflask__lines {
+    color: $lines-color;
+  }
+
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token {
+    &.comment,
+    &.prolog,
+    &.doctype,
+    &.cdata {
+      color: $gray;
+      font-style: italic;
+    }
+
+    &.punctuation {
+      color: $default;
+    }
+
+    &.constant,
+    &.symbol,
+    &.keyword {
+      color: $purple;
+    }
+
+    &.builtin {
+      color: $blue2;
+    }
+
+    &.property {
+      color: $yellow;
+    }
+
+    &.tag {
+      color: $red;
+    }
+
+    &.boolean {
+      color: $yellow;
+    }
+
+    &.number {
+      color: $yellow;
+    }
+
+    &.attr-name {
+      color: $yellow;
+    }
+
+    &.attr-value {
+      color: $green;
+    }
+
+    &.string,
+    &.char {
+      color: $green;
+    }
+
+    &.function {
+      color: $blue;
+    }
+
+    &.class-name {
+      color: $yellow2;
+    }
+
+    &.regex,
+    &.important,
+    &.variable {
+      color: #e90;
+    }
+
+    &.important,
+    &.bold {
+      font-weight: bold;
+    }
+
+    &.italic {
+      font-style: italic;
+    }
+
+    &.entity {
+      cursor: help;
+    }
+
+    &.inserted {
+      color: #690;
+    }
+
+    &.deleted {
+      color: #905;
+    }
+  }
+}
+
+@mixin code-dark {
+  code[class*='language-'],
+  pre[class*='language-'] {
+    color: $default-dark;
+  }
+
+  .token.punctuation {
+    color: $default-dark;
+  }
+
+  .codeflask {
+    background-color: $background-dark;
+
+    &.codeflask--has-line-numbers::before {
+      background: $lines-background-dark;
+    }
+
+    pre,
+    code {
+      color: $default-dark;
+    }
+
+    .codeflask__textarea {
+      caret-color: #fff;
+    }
+  }
+
+  .readonly .codeflask {
+    background-color: $background-readonly-dark;
+  }
+
+  .codeflask__lines {
+    color: $lines-color-dark;
+  }
+}
+
+@mixin code-light {
+  code[class*='language-'],
+  pre[class*='language-'] {
+    color: $default;
+  }
+
+  .token.punctuation {
+    color: $default;
+  }
+
+  .codeflask {
+    background-color: $background;
+
+    &.codeflask--has-line-numbers::before {
+      background: $lines-background;
+    }
+
+    pre,
+    code {
+      color: $default;
+    }
+
+    .codeflask__textarea {
+      caret-color: #000;
+    }
+  }
+
+  .readonly .codeflask {
+    background-color: $background-readonly;
+  }
+
+  .codeflask__lines {
+    color: $lines-color;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :host ::ng-deep {
+    @include code-dark;
+  }
+}
+
+:host-context(.app--dark) :host ::ng-deep {
+  @include code-dark;
+}
+
+:host-context(.app--light) {
+  // For higher specificity
+  @media (min-width: 0) {
+    :host ::ng-deep {
+      @include code-light;
+    }
+  }
+}

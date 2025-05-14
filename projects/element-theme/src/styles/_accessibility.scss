@@ -1,0 +1,9 @@
+:root {
+  --element-animations-enabled: 1;
+}
+
+@media (prefers-reduced-motion) {
+  :root {
+    --element-animations-enabled: 0;
+  }
+}

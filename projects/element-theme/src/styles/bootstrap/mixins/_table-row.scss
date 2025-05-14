@@ -1,0 +1,31 @@
+@use '../variables';
+
+@mixin table-variant($state, $background) {
+  // Exact selectors below required to override `.table-striped` and prevent
+  // inheritance to nested tables.
+  .table-#{$state} {
+    &:last-child {
+      border-end-start-radius: variables.$border-radius;
+      border-end-end-radius: variables.$border-radius;
+
+      > *:first-child {
+        border-end-start-radius: inherit;
+      }
+
+      > *:last-child {
+        border-end-end-radius: inherit;
+      }
+    }
+
+    &,
+    > :is(th, td) {
+      background-color: $background;
+    }
+  }
+
+  // Hover states for `.table-hover`
+  // Note: this is not available for cells or rows within `thead` or `tfoot`.
+  .table-hover {
+    $hover-background: $background; // FIXME
+  }
+}

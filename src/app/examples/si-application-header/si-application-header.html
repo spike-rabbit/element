@@ -1,0 +1,133 @@
+<si-application-header>
+  <si-header-brand>
+    <a siHeaderLogo routerLink="/" class="d-none d-md-flex"></a>
+    <span class="application-name">My application</span>
+  </si-header-brand>
+
+  <si-header-navigation aria-label="Main navigation">
+    <a si-header-navigation-item routerLink="m1" routerLinkActive="active">Module 1</a>
+    <button
+      type="button"
+      si-header-navigation-item
+      routerLinkActive="active"
+      [siHeaderDropdownTriggerFor]="module2"
+    >
+      Module 2
+      <!-- template must be here to have routerLinkActive working -->
+      <ng-template #module2>
+        <si-header-dropdown>
+          <a si-header-dropdown-item routerLink="m2/1">M2.1</a>
+          <a si-header-dropdown-item routerLink="m2/2">M2.2</a>
+        </si-header-dropdown>
+      </ng-template>
+    </button>
+  </si-header-navigation>
+
+  <si-header-actions>
+    <button
+      class="d-none d-sm-flex"
+      type="button"
+      si-header-selection-item
+      [siHeaderDropdownTriggerFor]="tenants"
+      >{{ activeTenant }}</button
+    >
+    <button
+      type="button"
+      icon="element-language"
+      si-header-action-item
+      [siHeaderDropdownTriggerFor]="notifications"
+    >
+      Notifications
+    </button>
+
+    <si-header-collapsible-actions>
+      <button
+        class="d-sm-none"
+        type="button"
+        si-header-selection-item
+        [siHeaderDropdownTriggerFor]="tenants"
+        >{{ activeTenant }}</button
+      >
+      <button
+        si-header-action-item
+        type="button"
+        icon="element-help"
+        [badge]="400"
+        [siHeaderDropdownTriggerFor]="support"
+        >Support</button
+      >
+      <button si-header-action-item type="button" icon="element-settings" [badge]="true"
+        >Settings</button
+      >
+    </si-header-collapsible-actions>
+
+    <button
+      si-header-account-item
+      type="button"
+      name="Lars Vegas"
+      [siHeaderDropdownTriggerFor]="account"
+    >
+    </button>
+  </si-header-actions>
+</si-application-header>
+
+<ng-template #tenants>
+  <si-header-dropdown>
+    @for (tenant of allTenants; track tenant) {
+      <button
+        si-header-dropdown-item
+        type="button"
+        [checked]="tenant === activeTenant ? 'check' : undefined"
+        (click)="activeTenant = tenant"
+      >
+        {{ tenant }}
+      </button>
+    }
+  </si-header-dropdown>
+</ng-template>
+
+<ng-template #notifications>
+  <si-header-dropdown>
+    <button si-header-dropdown-item type="button">Message 1</button>
+    <button si-header-dropdown-item type="button">Message 2</button>
+  </si-header-dropdown>
+</ng-template>
+
+<ng-template #account>
+  <si-header-dropdown>
+    <div class="mx-5">
+      <div class="si-title-2">Lars Vegas</div>
+      <div>lars.vegas&#64;siemens.com</div>
+      <div class="d-flex align-items-center text-secondary mt-2">
+        Siemens AG
+        <span class="badge bg-default">Admin</span>
+      </div>
+    </div>
+    <div class="dropdown-divider"></div>
+    <button
+      si-header-dropdown-item
+      icon="element-language"
+      type="button"
+      [siHeaderDropdownTriggerFor]="language"
+    >
+      Language
+    </button>
+    <button si-header-dropdown-item icon="element-palette" type="button">Design</button>
+    <button si-header-dropdown-item icon="element-user" type="button">Profile</button>
+  </si-header-dropdown>
+</ng-template>
+
+<ng-template #language>
+  <si-header-dropdown>
+    <div class="dropdown-header">Selection has no effect!</div>
+    <button si-header-dropdown-item type="button">German</button>
+    <button si-header-dropdown-item type="button">English</button>
+  </si-header-dropdown>
+</ng-template>
+
+<ng-template #support>
+  <si-header-dropdown>
+    <button si-header-dropdown-item type="button">Help</button>
+    <button si-header-dropdown-item type="button">Contact</button>
+  </si-header-dropdown>
+</ng-template>

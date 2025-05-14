@@ -1,0 +1,15 @@
+@use 'sass:map';
+@use '@siemens/element-theme/src/styles/variables';
+
+.item-end:empty {
+  display: none !important; //stylelint-disable-line declaration-no-important
+}
+
+// this only works in mobile, so this is exactly what we need
+:host-context(.dropdown-menu .dropdown-menu) {
+  padding-inline-start: 28px;
+}
+
+.dropdown-caret {
+  transform-origin: initial;
+}

@@ -1,0 +1,86 @@
+<nav class="component-list" aria-label="Live preview" [class.is-collapsed]="isCollapsed">
+  <div class="component-list-header">
+    @if (showContent) {
+      <span>Examples</span>
+    }
+    <button
+      type="button"
+      class="collapse-button"
+      [attr.title]="isCollapsed ? 'Expand' : 'Collapse'"
+      [attr.aria-label]="isCollapsed ? 'Expand' : 'Collapse'"
+      (click)="toggleCollapse()"
+    >
+      <svg class="collapse-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path
+          d="M234.77,248.93l1.44-1.72,110-110a12.43,12.43,0,0,1,19,15.86l-1.44,1.72L262.59,256l101.2,101.21a12.45,12.45,0,0,1,1.44,15.86l-1.44,1.72a12.45,12.45,0,0,1-15.86,1.44l-1.72-1.44-110-110A12.45,12.45,0,0,1,234.77,248.93Z"
+        />
+        <path
+          d="M146.77,248.93l1.44-1.72,88-88a12.43,12.43,0,0,1,19,15.86l-1.44,1.72L174.59,256l79.2,79.21a12.45,12.45,0,0,1,1.44,15.86l-1.44,1.72a12.45,12.45,0,0,1-15.86,1.44l-1.72-1.44-88-88A12.45,12.45,0,0,1,146.77,248.93Z"
+        />
+      </svg>
+    </button>
+  </div>
+  @if (showContent) {
+    <div class="search-bar" role="search" aria-label="Live preview">
+      <svg class="search-bar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path
+          d="M420.49,403.51l-76.88-76.87A139.39,139.39,0,0,0,377,236c0-77.2-62.8-140-140-140S97,158.8,97,236s62.8,140,140,140a139.33,139.33,0,0,0,89.55-32.48l77,77a12,12,0,0,0,17-17ZM121,236A116,116,0,1,1,237,352,116.13,116.13,0,0,1,121,236Z"
+        />
+      </svg>
+      <input
+        type="text"
+        placeholder="Filter examples"
+        autocorrect="off"
+        autocapitalize="none"
+        [formControl]="searchControl"
+      />
+      @if (searchControl.value) {
+        <button
+          type="button"
+          class="cancel-button"
+          aria-label="clear search"
+          (click)="resetSearchBar()"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              d="M273,256l87.52-87.51a12,12,0,0,0-17-17L256,239l-87.51-87.52a12,12,0,0,0-17,17L239,256l-87.52,87.51a12,12,0,0,0,17,17L256,273l87.51,87.52a12,12,0,0,0,17-17Z"
+            />
+          </svg>
+        </button>
+      }
+    </div>
+  }
+  @if (showContent) {
+    <div class="available-examples">
+      <ul>
+        @for (item of tree; track $index) {
+          <li [style.--level]="item.level">
+            @if (item.link) {
+              <a
+                routerLinkActive="example-active"
+                queryParamsHandling="merge"
+                [routerLink]="'/overview/' + item.link"
+              >
+                {{ item.label }}
+              </a>
+            } @else {
+              {{ item.label }}
+            }
+          </li>
+        }
+      </ul>
+    </div>
+  }
+  @if (!showContent && isCollapsed) {
+    <div class="component-list-text">
+      <span>Examples</span>
+    </div>
+  }
+</nav>
+<main aria-label="Live preview">
+  <si-live-preview
+    [ticketBaseUrl]="ticketBaseUrl"
+    [baseUrl]="baseUrl"
+    [example]="activeExampleRoute | async"
+  />
+</main>

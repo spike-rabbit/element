@@ -1,0 +1,55 @@
+@use 'sass:map';
+@use '@siemens/element-theme/src/theme/base-colors' as base;
+@use '@siemens/element-theme/src/theme/data-colors' as data;
+@use '@siemens/element-theme/src/styles/variables';
+
+:host {
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  position: relative;
+  padding-block: map.get(variables.$spacers, 7);
+  inline-size: 152px;
+  max-inline-size: 152px;
+  padding-inline: map.get(variables.$spacers, 2);
+  color: variables.$element-text-primary;
+  border-radius: variables.$element-radius-2;
+
+  &.active {
+    border: 1px solid variables.$element-ui-0;
+    background-color: variables.$element-base-1-hover;
+  }
+
+  &.action {
+    color: variables.$element-action-primary;
+  }
+
+  &:hover {
+    color: variables.$element-text-primary;
+    text-decoration: none;
+    background-color: variables.$element-base-1-hover;
+  }
+}
+
+.app-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 48px;
+  block-size: 48px;
+  margin-block-end: map.get(variables.$spacers, 4);
+  border-radius: variables.$element-radius-2;
+}
+
+.favorite-icon {
+  font-size: 20px;
+  position: absolute;
+  inset-inline-end: 22px;
+  inset-block-start: 10px;
+  padding: map.get(variables.$spacers, 1);
+  color: variables.$element-text-primary;
+}
+
+.is-favorite {
+  color: variables.$element-status-caution;
+}

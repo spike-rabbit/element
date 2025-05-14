@@ -1,0 +1,21 @@
+<button
+  #toggle
+  type="button"
+  class="header-toggle focus-inside"
+  [class.show]="mobileExpanded()"
+  [attr.aria-expanded]="mobileExpanded()"
+  [attr.aria-label]="mobileToggleLabel() | translate"
+  [attr.aria-controls]="id + '-content'"
+  (click)="toggleMobileExpanded()"
+>
+  <si-icon-next [icon]="icons.elementOptionsVertical" [class.badge-dot]="badgeCount()" />
+</button>
+<div
+  class="header-collapsible-actions"
+  [id]="id + '-content'"
+  [class.show]="mobileExpanded()"
+  [cdkTrapFocus]="mobileExpanded()"
+  (keydown.escape)="escapePressed()"
+>
+  <ng-content />
+</div>

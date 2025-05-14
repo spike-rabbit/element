@@ -1,0 +1,44 @@
+@for (item of items(); track item) {
+  @if (item.isHeading) {
+    <div class="dropdown-item dropdown-header dropdown-item-static">
+      {{ item.title | translate }}
+    </div>
+  } @else {
+    @if (item.title !== '-') {
+      @if (item.items) {
+        <button
+          type="button"
+          si-header-dropdown-item
+          [icon]="item.icon"
+          [badge]="item.badgeStyle !== 'dot' ? item.badge : undefined"
+          [badgeColor]="item.badgeColor"
+          [iconBadge]="item.badgeStyle === 'dot' ? item.badge : undefined"
+          [siHeaderDropdownTriggerFor]="dropdown"
+        >
+          {{ item.title | translate }}
+        </button>
+        <ng-template #dropdown>
+          <si-header-dropdown>
+            <si-header-dropdown-items-factory [items]="item.items" />
+          </si-header-dropdown>
+        </ng-template>
+      } @else {
+        <a
+          si-header-dropdown-item
+          activeClass="active"
+          [siLink]="item"
+          [icon]="item.icon"
+          [badge]="item.badgeStyle !== 'dot' ? item.badge : undefined"
+          [badgeColor]="item.badgeColor"
+          [iconBadge]="item.badgeStyle === 'dot' ? item.badge : undefined"
+          [checked]="item.selectionState"
+          (activeChange)="activeChange.emit($event)"
+        >
+          {{ item.title | translate }}
+        </a>
+      }
+    } @else {
+      <div class="dropdown-divider"></div>
+    }
+  }
+}

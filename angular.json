@@ -1,0 +1,316 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "projects": {
+    "element-examples": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-esbuild:application",
+          "options": {
+            "plugins": ["projects/live-preview/esbuild-component-loader.mjs"],
+            "outputPath": {
+              "base": "dist/element-examples",
+              "browser": ""
+            },
+            "index": "src/index.html",
+            "browser": "src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "src/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "src/favicon.png",
+              "src/app/examples",
+              {
+                "glob": "**/*",
+                "input": "src/assets/",
+                "ignore": ["**/i18n/*.json", "**/i18n/"],
+                "output": "/assets/"
+              },
+              {
+                "glob": "**/*",
+                "input": "./projects/maps-ng/assets",
+                "output": "/assets/"
+              }
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["node_modules/"]
+            },
+            "styles": ["src/styles.scss"],
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "@babel/standalone",
+              "pbf",
+              "rbush",
+              "react-dom/client",
+              "vue3-sfc-loader"
+            ],
+            "extractLicenses": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "src/tsconfig.app.prod.json",
+              "crossOrigin": "use-credentials",
+              "optimization": true,
+              "outputHashing": "all",
+              "namedChunks": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "4mb",
+                  "maximumError": "6mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            },
+            "aot": {
+              "aot": true,
+              "sourceMap": false,
+              "tsConfig": "src/tsconfig.app.prod.json",
+              "outputPath": "dist/element-examples-aot"
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-builders/custom-esbuild:dev-server",
+          "options": {
+            "buildTarget": "element-examples:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "element-examples:build:production"
+            }
+          }
+        },
+        "build-webpack": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/element-examples",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "src/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "src/favicon.png",
+              "src/app/examples",
+              {
+                "glob": "*",
+                "input": "projects/element-ng/assets/images",
+                "output": "assets/images"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/",
+                "ignore": ["**/i18n/*.json", "**/i18n/"],
+                "output": "/assets/"
+              },
+              {
+                "glob": "**/*",
+                "input": "./projects/maps-ng/assets",
+                "output": "/assets/"
+              }
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["node_modules/"]
+            },
+            "styles": ["src/styles-webpack.scss"],
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "zrender",
+              "echarts",
+              "google-libphonenumber",
+              "@babel/standalone",
+              "pbf",
+              "rbush",
+              "react-dom/client",
+              "vue3-sfc-loader"
+            ],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "tsConfig": "src/tsconfig.app.prod.json",
+              "crossOrigin": "use-credentials",
+              "optimization": true,
+              "outputHashing": "all",
+              "namedChunks": false,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "4mb",
+                  "maximumError": "6mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            },
+            "aot": {
+              "aot": true,
+              "sourceMap": false,
+              "tsConfig": "src/tsconfig.app.prod.json",
+              "outputPath": "dist/element-examples-aot"
+            }
+          }
+        },
+        "serve-webpack": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "buildTarget": "element-examples:build-webpack"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "element-examples:build-webpack:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"],
+            "eslintConfig": "eslint.config.js"
+          }
+        }
+      }
+    },
+    "element-ng": {
+      "projectType": "library",
+      "root": "projects/element-ng",
+      "sourceRoot": "projects/element-ng",
+      "prefix": "si",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/element-ng/tsconfig.lib.json",
+            "project": "projects/element-ng/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "builderMode": "application",
+            "polyfills": ["zone.js", "zone.js/testing"],
+            "tsConfig": "projects/element-ng/tsconfig.spec.json",
+            "karmaConfig": "projects/element-ng/karma.conf.cjs",
+            "stylePreprocessorOptions": {
+              "includePaths": ["node_modules/"]
+            },
+            "styles": ["projects/element-theme/src/theme.scss"],
+            "codeCoverageExclude": [
+              "projects/element-ng/**/*.module.ts",
+              "projects/element-ng/**/testing/**/*.ts"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": ["projects/element-ng/**/*.ts", "projects/element-ng/**/*.html"],
+            "eslintConfig": "projects/element-ng/eslint.config.js"
+          }
+        }
+      }
+    },
+    "element-translate-ng": {
+      "projectType": "library",
+      "root": "projects/element-translate-ng",
+      "sourceRoot": "projects/element-translate-ng",
+      "prefix": "si",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/element-translate-ng/tsconfig.lib.json",
+            "project": "projects/element-translate-ng/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": ["zone.js", "zone.js/testing"],
+            "tsConfig": "projects/element-translate-ng/tsconfig.spec.json",
+            "karmaConfig": "projects/element-translate-ng/karma.conf.cjs",
+            "stylePreprocessorOptions": {
+              "includePaths": ["node_modules/"]
+            },
+            "codeCoverageExclude": [
+              "projects/element-translate-ng/**/*.module.ts",
+              "projects/element-translate-ng/**/testing/**/*.ts"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/element-translate-ng/**/*.ts",
+              "projects/element-translate-ng/**/*.html"
+            ],
+            "eslintConfig": "projects/element-translate-ng/eslint.config.js"
+          }
+        }
+      }
+    },
+    "live-preview": {
+      "projectType": "library",
+      "root": "projects/live-preview",
+      "sourceRoot": "projects/live-preview/src",
+      "prefix": "si",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/live-preview/tsconfig.lib.json",
+            "project": "projects/live-preview/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/live-preview/**/*.ts",
+              "projects/live-preview/**/*.html"
+            ],
+            "eslintConfig": "projects/live-preview/eslint.config.js"
+          }
+        }
+      }
+    }
+  },
+  "version": 1,
+  "newProjectRoot": "projects",
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "scss"
+    }
+  },
+  "cli": {
+    "packageManager": "yarn",
+    "analytics": false
+  }
+}

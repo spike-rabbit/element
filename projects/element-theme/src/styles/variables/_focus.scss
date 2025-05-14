@@ -1,0 +1,55 @@
+@use 'semantic-tokens';
+
+// Building focus< with outline
+$focus-style-outline: semantic-tokens.$element-button-focus-width solid
+  semantic-tokens.$element-focus-default;
+$focus-style-outline-offset: semantic-tokens.$element-button-focus-overlay-width;
+$focus-style-outline-inside-offset: calc(-1 * #{semantic-tokens.$element-button-focus-width});
+
+@mixin make-outline-focus() {
+  outline: $focus-style-outline;
+  outline-offset: $focus-style-outline-offset;
+}
+
+@mixin make-outline-focus-inside {
+  outline: $focus-style-outline;
+  outline-offset: $focus-style-outline-inside-offset;
+}
+
+// legacy box-shadow focus
+
+@function make-focus($focus-color) {
+  $focus-width: calc(
+    semantic-tokens.$element-button-focus-width +
+      semantic-tokens.$element-button-focus-overlay-width
+  );
+  $focus-overlay: 0 0 0 semantic-tokens.$element-button-focus-overlay-width
+    semantic-tokens.$element-button-focus-overlay-color;
+
+  @return $focus-overlay, 0 0 0 $focus-width $focus-color;
+}
+
+// same as make-focus, but with an additional offset for things that use box-shadow as border
+// e.g. the textarea
+@function make-focus-with-offset($focus-color, $offset) {
+  $focus-width: calc(
+    semantic-tokens.$element-button-focus-width +
+      semantic-tokens.$element-button-focus-overlay-width + $offset
+  );
+  $focus-overlay: 0 0 0 calc(semantic-tokens.$element-button-focus-overlay-width + $offset)
+    semantic-tokens.$element-button-focus-overlay-color;
+
+  @return $focus-overlay, 0 0 0 $focus-width $focus-color;
+}
+
+@function make-focus-inside($focus-color) {
+  $focus-width: calc(
+    semantic-tokens.$element-button-focus-width +
+      semantic-tokens.$element-button-focus-overlay-width
+  );
+
+  @return inset 0 0 0 semantic-tokens.$element-button-focus-width $focus-color;
+}
+
+$si-focus-styling-box-shadow: make-focus(semantic-tokens.$element-focus-default);
+$si-focus-styling-inside-box-shadow: make-focus-inside(semantic-tokens.$element-focus-default);

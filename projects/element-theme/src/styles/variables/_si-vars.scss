@@ -1,0 +1,19 @@
+@use './animations';
+
+// Custom variables
+$si-caret-transition-duration: animations.element-transition-duration(0.4s);
+$si-icon-font-size: 1.5rem;
+$si-icon-font-size-small: 1rem;
+
+$btn-width-normal: 100px;
+
+// Component styling
+$si-application-header-height: 48px;
+
+$si-titlebar-height: 36px;
+$si-system-banner-height: 20px;
+
+// allows adding a custom titlebar on top
+// stylelint-disable-next-line length-zero-no-unit
+$si-titlebar-spacing: var(--element-titlebar-spacing, 0px);
+$si-system-banner-spacing: var(--element-system-banner-spacing, 0px);

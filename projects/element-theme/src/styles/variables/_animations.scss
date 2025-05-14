@@ -1,0 +1,7 @@
+// transition-duration that can be disabled by settings
+// :root { --element-animations-enabled: 0; }
+@function element-transition-duration($duration) {
+  @return calc($duration * var(--element-animations-enabled, 1));
+}
+
+$element-default-transition-duration: element-transition-duration(0.5s);

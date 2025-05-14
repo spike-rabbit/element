@@ -1,0 +1,35 @@
+@use 'sass:list';
+
+$_theme-default: 'element';
+$_themes: () !default;
+
+@mixin configure($defaultTheme: null, $themes: ()) {
+  @if $defaultTheme {
+    $_theme-default: $defaultTheme !global;
+  }
+
+  @if $themes {
+    $_themes: $themes !global;
+  }
+}
+
+@mixin make-theme($vars, $name, $dark: false, $force-generate: false) {
+  $theme-name: '';
+  $mode: '';
+
+  @if list.index($_themes, $name) or $name == $_theme-default or $force-generate {
+    @if $name != $_theme-default {
+      $theme-name: '.theme-#{$name}';
+    }
+
+    @if $dark {
+      $mode: '.app--dark';
+    }
+
+    :root#{$theme-name}#{$mode} {
+      @each $token, $val in $vars {
+        --element-#{$token}: #{$val};
+      }
+    }
+  }
+}

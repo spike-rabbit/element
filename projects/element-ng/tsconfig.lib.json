@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../out-tsc/lib",
+    "declaration": true,
+    "inlineSources": true,
+    "types": ["../element-translate-ng/localize-types/index.ts", "zone.js"],
+    "lib": ["dom", "es2022"]
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "skipTemplateCodegen": true,
+    "strictMetadataEmit": true,
+    "enableResourceInlining": true,
+    "compilationMode": "partial"
+  },
+  "exclude": ["**/*.spec.ts", "**/test-helpers/"]
+}

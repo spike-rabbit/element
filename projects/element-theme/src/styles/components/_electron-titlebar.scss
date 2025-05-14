@@ -1,0 +1,5 @@
+@use '../variables';
+
+.in-electron {
+  --element-titlebar-spacing: #{variables.$si-titlebar-height};
+}

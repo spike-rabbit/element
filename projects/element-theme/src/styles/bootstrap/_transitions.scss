@@ -1,0 +1,28 @@
+@use './mixins/transition';
+@use './variables';
+
+.fade {
+  @include transition.transition(variables.$transition-fade);
+
+  &:not(.show) {
+    opacity: 0;
+  }
+}
+
+.collapse {
+  &:not(.show) {
+    display: none;
+  }
+}
+
+.collapsing {
+  block-size: 0;
+  overflow: hidden;
+  @include transition.transition(variables.$transition-collapse);
+
+  &.collapse-horizontal {
+    inline-size: 0;
+    block-size: auto;
+    @include transition.transition(variables.$transition-collapse-width);
+  }
+}

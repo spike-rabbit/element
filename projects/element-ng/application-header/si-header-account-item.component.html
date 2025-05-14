@@ -1,0 +1,16 @@
+<si-avatar
+  size="small"
+  color="0"
+  [altText]="name()"
+  [initials]="initials()"
+  [imageUrl]="imageUrl()"
+/>
+<div class="item-title" aria-hidden="true" [class.d-none]="visuallyHideTitle">
+  {{ name() }}
+</div>
+@if (badgeValue()) {
+  <div class="badge-text">{{ badgeValue() }}</div>
+}
+@if (dropdownTrigger) {
+  <si-icon-next class="dropdown-caret" [icon]="icons.elementDown2" />
+}

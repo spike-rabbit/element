@@ -1,0 +1,208 @@
+@use '../variables/semantic-tokens';
+@use '../variables/spacers';
+@use '../variables/typography';
+@use 'mixins/breakpoints';
+@use 'variables';
+
+@use 'sass:map';
+
+%card-inner-radius-top {
+  border-start-start-radius: variables.$card-inner-border-radius;
+  border-start-end-radius: variables.$card-inner-border-radius;
+}
+
+%card-inner-radius-start {
+  border-start-start-radius: variables.$card-inner-border-radius;
+  border-end-start-radius: variables.$card-inner-border-radius;
+}
+
+%card-inner-radius-bottom {
+  border-end-start-radius: variables.$card-inner-border-radius;
+  border-end-end-radius: variables.$card-inner-border-radius;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-inline-size: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+  block-size: variables.$card-height;
+  word-wrap: break-word;
+  background-color: variables.$card-bg;
+  border-radius: variables.$card-border-radius;
+
+  > .list-group {
+    &:first-child {
+      @extend %card-inner-radius-top;
+    }
+
+    &:last-child {
+      @extend %card-inner-radius-bottom;
+    }
+  }
+
+  &.accent-primary {
+    border-inline-start: map.get(spacers.$spacers, 4) solid semantic-tokens.$element-ui-0;
+  }
+
+  &.accent-inactive {
+    border-inline-start: map.get(spacers.$spacers, 4) solid semantic-tokens.$element-ui-4;
+  }
+
+  &.accent-info {
+    border-inline-start: map.get(spacers.$spacers, 4) solid
+      semantic-tokens.$element-status-information;
+  }
+
+  &.accent-success {
+    border-inline-start: map.get(spacers.$spacers, 4) solid semantic-tokens.$element-status-success;
+  }
+
+  &.accent-warning {
+    border-inline-start: map.get(spacers.$spacers, 4) solid semantic-tokens.$element-status-warning;
+  }
+
+  &.accent-caution {
+    border-inline-start: map.get(spacers.$spacers, 4) solid semantic-tokens.$element-status-caution;
+  }
+
+  &.accent-danger {
+    border-inline-start: map.get(spacers.$spacers, 4) solid semantic-tokens.$element-status-danger;
+  }
+}
+
+.card-header {
+  font-size: typography.$si-font-size-title-2;
+  font-weight: typography.$si-font-weight-title-2;
+  min-block-size: map.get(spacers.$spacers, 9) + map.get(spacers.$spacers, 4);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-block: variables.$card-cap-padding-y;
+  padding-inline: variables.$card-cap-padding-x;
+  margin-block-end: 0; // Removes the default margin-bottom of <hN>
+  color: variables.$card-cap-color;
+  background-color: variables.$card-cap-bg;
+
+  &,
+  .icon {
+    line-height: typography.$si-font-size-title-2;
+  }
+
+  &:first-child {
+    @extend %card-inner-radius-top;
+  }
+}
+
+.card-body {
+  overflow: hidden;
+  // Enable `flex-grow: 1` for decks and groups so that card blocks take up
+  // as much space as possible, ensuring footers are aligned to the bottom.
+  flex: 1 1 auto;
+  padding-block: variables.$card-spacer-y;
+  padding-inline: variables.$card-spacer-x;
+  color: variables.$card-color;
+}
+
+.card-title {
+  margin-block-end: variables.$card-title-spacer-y;
+}
+
+.card-subtitle {
+  margin-block: (-(variables.$card-title-spacer-y) * 0.5) 0;
+}
+
+.card-text:last-child {
+  margin-block-end: 0;
+}
+
+// If the card has a header, remove the top padding for the body.
+// Since we removed the separator line from the header, too much
+// padding looks weird.
+.card-header + .card-body {
+  padding-block-start: 0;
+}
+
+.card-footer {
+  @extend %card-inner-radius-bottom;
+  padding-inline: variables.$card-cap-padding-x;
+  padding-block-start: variables.$card-cap-padding-y;
+  padding-block-end: variables.$card-cap-padding-x;
+  background-color: variables.$card-cap-bg;
+}
+
+.card-img-overlay {
+  position: absolute;
+  inset: 0;
+  padding: variables.$card-img-overlay-padding;
+  border-radius: variables.$card-inner-border-radius;
+}
+
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  inline-size: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
+}
+
+.card-img,
+.card-img-top {
+  @extend %card-inner-radius-top;
+}
+
+.card-img,
+.card-img-start {
+  @extend %card-inner-radius-start;
+}
+
+.card-img,
+.card-img-bottom {
+  @extend %card-inner-radius-bottom;
+}
+
+.card-group {
+  // The child selector allows nested `.card` within `.card-group` to display properly.
+  > .card {
+    margin-block-end: variables.$card-group-margin;
+  }
+
+  @include breakpoints.media-breakpoint-up(sm) {
+    display: flex;
+    flex-flow: row wrap;
+    // The child selector allows nested `.card` within `.card-group` to display properly.
+    > .card {
+      flex: 1 0 0%;
+      margin-block-end: 0;
+
+      + .card {
+        margin-inline-start: 0;
+      }
+
+      // Handle rounded corners
+      &:not(:last-child) {
+        border-start-end-radius: 0;
+        border-end-end-radius: 0;
+
+        :is(.card-img-top, .card-header) {
+          border-start-end-radius: 0;
+        }
+
+        :is(.card-img-bottom, .card-footer) {
+          border-end-end-radius: 0;
+        }
+      }
+
+      &:not(:first-child) {
+        border-start-start-radius: 0;
+        border-end-start-radius: 0;
+
+        :is(.card-img-top, .card-header) {
+          border-start-start-radius: 0;
+        }
+
+        :is(.card-img-bottom, .card-footer) {
+          border-end-start-radius: 0;
+        }
+      }
+    }
+  }
+}

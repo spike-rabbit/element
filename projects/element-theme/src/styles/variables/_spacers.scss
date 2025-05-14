@@ -1,0 +1,28 @@
+$spacer: 16px;
+
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: (
+  0: 0,
+  // 2px
+  1: $spacer * 0.125,
+  // 4px
+  2: $spacer * 0.25,
+  // 6px
+  3: $spacer * 0.375,
+  // 8px
+  4: $spacer * 0.5,
+  // 12px
+  5: $spacer * 0.75,
+  // 16px
+  6: $spacer,
+  // 20px
+  7: $spacer * 1.25,
+  // 24px
+  8: $spacer * 1.5,
+  // 32px
+  9: $spacer * 2,
+  // 64px
+  10: $spacer * 4,
+  // 96px
+  11: $spacer * 6
+);

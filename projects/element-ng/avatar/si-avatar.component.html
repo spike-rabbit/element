@@ -1,0 +1,24 @@
+@if (imageUrl()) {
+  <img [src]="imageUrl()" [alt]="altText()" />
+} @else if (icon()) {
+  <i class="icon" [title]="altText()" [ngClass]="icon()"></i>
+} @else {
+  <div
+    class="initials"
+    [class.text-body]="color() === 0"
+    [title]="altText()"
+    [attr.aria-label]="altText()"
+    >{{ displayInitials }}</div
+  >
+}
+@if (statusIcon) {
+  <si-icon
+    size="indicator-size"
+    class="indicator"
+    [alt]="statusAriaLabel() ?? ''"
+    [icon]="statusIcon.icon"
+    [color]="statusIcon.color"
+    [stackedIcon]="statusIcon.stacked"
+    [stackedColor]="statusIcon.stackedColor"
+  />
+}

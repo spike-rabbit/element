@@ -1,0 +1,57 @@
+@charset "UTF-8";
+@use 'sass:map';
+
+$siemens-font-path: '@simpl/brand/src/fonts' !default;
+$icon-font-path: '@simpl/element-icons/dist/fonts' !default;
+
+@use '@siemens/element-ng/element-ng';
+@use '@siemens/element-theme/src/styles/variables/spacers';
+@use '@siemens/element-theme/src/styles/variables/semantic-tokens';
+@use '@siemens/live-preview/styles/live-preview';
+
+@use '@simpl/element-icons/dist/style/simpl-element-icons' with (
+  $font-path: $icon-font-path
+);
+
+@use '@simpl/brand/src/themes/element-theme-siemens-brand' with (
+  $siemens-font-path: $siemens-font-path
+);
+
+@use '@siemens/element-theme/src/theme' with (
+  $element-theme-default: 'siemens-brand',
+  $element-themes: (
+    'siemens-brand',
+    'element'
+  )
+);
+@use '@siemens/element-theme/src/styles/themes';
+@include themes.make-theme(element-theme-siemens-brand.$theme-siemens-brand-light, 'siemens-brand');
+@include themes.make-theme(
+  element-theme-siemens-brand.$theme-siemens-brand-dark,
+  'siemens-brand',
+  true
+);
+
+app-sample {
+  block-size: 100%;
+  display: block;
+}
+
+body {
+  overscroll-behavior: none;
+}
+
+.code-preview {
+  border: 1px solid semantic-tokens.$element-ui-4;
+  border-radius: semantic-tokens.$element-radius-2;
+  padding: map.get(spacers.$spacers, 4);
+}
+
+.sortable-item {
+  margin-block-end: map.get(spacers.$spacers, 2);
+}
+
+// Padding around "app-sample", move into examples
+si-live-preview-webcomponent > div {
+  padding: 12px;
+}

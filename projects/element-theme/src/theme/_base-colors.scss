@@ -1,0 +1,79 @@
+// stylelint-disable color-no-hex, color-hex-length
+
+$color-interactive-blue-100: #ece9ff;
+$color-interactive-blue-300: #b5b3f4;
+$color-interactive-blue-500: #7353e5;
+$color-interactive-blue-700: #4c3fbf;
+$color-interactive-blue-900: #553ba3;
+
+$color-deep-blue-50: #eeeeee;
+$color-deep-blue-100: #e9e9e9;
+$color-deep-blue-200: #d4d4d4;
+$color-deep-blue-300: #c4c4c4;
+$color-deep-blue-400: #a9a9a9;
+$color-deep-blue-500: #999999;
+$color-deep-blue-600: #4e4e4e;
+$color-deep-blue-700: #383838;
+$color-deep-blue-800: #1a1a1a;
+$color-deep-blue-900: #000000;
+
+$color-white: #ffffff;
+$color-black: #000000;
+$color-light-sand: #f3f3f3;
+$color-sand: #e8e8e8;
+$color-dark-grayish-navy: #343434;
+$color-grayish-navy: #2f2f2f;
+
+$color-bold-green: #7c8cff;
+$color-light-bold-green: #d6d5ff;
+$color-dark-bold-green: #1c144f;
+$color-interactive-coral: #6477ff;
+$color-interactive-coral-db55: #404b8c;
+$color-teal: #2e3a70;
+$color-petrol: #5a5daa;
+$color-focus: #9fabff;
+$color-diesel: #6c7be3;
+
+$color-blue-100: #d6e7ff;
+$color-blue-300: #84b9ff;
+$color-blue-500: #297dff;
+$color-blue-700: #1a4fb5;
+$color-blue-900: #153366;
+
+$color-green-100: #d6f5e7;
+$color-green-300: #72e6a3;
+$color-green-500: #6ed9a2;
+$color-green-700: #2cbd72;
+$color-green-900: #0e3b28;
+
+$color-orange-100: #ffe7d1;
+$color-orange-300: #ffb168;
+$color-orange-500: #f78b1f;
+$color-orange-700: #d1731b;
+$color-orange-900: #734213;
+
+$color-red-100: #ffe0e5;
+$color-red-300: #ff9999;
+$color-red-500: #e53935;
+$color-red-700: #b71c1c;
+$color-red-900: #7f0a0a;
+
+$color-yellow-100: #fff7d6;
+$color-yellow-300: #ffe066;
+$color-yellow-500: #ffcc00;
+$color-yellow-700: #b88a00;
+$color-yellow-900: #7a5a00;
+
+$color-gradient-bold-dynamic: linear-gradient(
+  114.59deg,
+  $color-bold-green 15.81%,
+  $color-interactive-coral 84.42%
+);
+$color-gradient-bold-dynamic-90: linear-gradient(
+  180deg,
+  $color-bold-green 15.81%,
+  $color-interactive-coral 84.42%
+);
+$color-gradient-deep-blue-petrol: linear-gradient(180deg, $color-deep-blue-900, $color-petrol);
+$color-gradient-deep-blue-green: linear-gradient(180deg, $color-deep-blue-900, $color-green-700);
+$color-gradient-deep-blue-blue: linear-gradient(180deg, $color-deep-blue-900, $color-blue-500);

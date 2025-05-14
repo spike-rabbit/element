@@ -1,0 +1,67 @@
+<header
+  class="application-header"
+  [ngClass]="'expand-' + expandBreakpoint()"
+  [class.show-navigation]="mobileNavigationExpanded()"
+>
+  @if (launchpad()) {
+    <button
+      type="button"
+      class="header-toggle focus-inside"
+      [class.show]="launchpadOpen()"
+      [class.d-none]="hasNavigation()"
+      [ngClass]="'d-' + expandBreakpoint() + '-block'"
+      [attr.aria-expanded]="launchpadOpen()"
+      [attr.aria-label]="launchpadLabel() | translate"
+      [attr.aria-controls]="id + '-launchpad'"
+      (click)="toggleLaunchpad()"
+    >
+      <si-icon-next [icon]="icons.elementThumbnails" />
+    </button>
+  }
+  @if (hasNavigation()) {
+    <button
+      #navigationToggle
+      type="button"
+      class="header-toggle focus-inside"
+      [class.show]="mobileNavigationExpanded()"
+      [attr.aria-expanded]="mobileNavigationExpanded()"
+      [attr.aria-label]="toggleNavigation | translate"
+      [attr.aria-controls]="id + '-navigation-wrapper'"
+      (click)="toggleMobileNavigationExpanded()"
+    >
+      <si-icon-next [icon]="icons.elementMenu" />
+    </button>
+  }
+  <ng-content select="si-header-brand, element-header-brand">
+    <div class="header-brand"></div>
+  </ng-content>
+
+  <div
+    class="d-contents"
+    [id]="id + '-navigation-wrapper'"
+    [cdkTrapFocus]="mobileNavigationExpanded()"
+    (keydown.escape)="navigationEscapePressed()"
+  >
+    <ng-content select="si-header-navigation, element-header-navigation">
+      <div class="header-navigation"></div>
+    </ng-content>
+  </div>
+
+  <ng-content select="si-header-actions, element-header-actions">
+    <div class="header-actions"></div>
+  </ng-content>
+</header>
+
+@if (launchpadOpen() && launchpad()) {
+  <div [id]="id + '-launchpad'">
+    <ng-template [ngTemplateOutlet]="launchpad()!" [ngTemplateOutletInjector]="injector" />
+  </div>
+}
+
+@if (openDropdownCount() || launchpadOpen()) {
+  <div
+    class="modal-backdrop"
+    [ngClass]="launchpadOpen() ? 'd-block' : 'd-' + expandBreakpoint() + '-none'"
+    (click)="backdropClicked()"
+  ></div>
+}

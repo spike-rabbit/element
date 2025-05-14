@@ -1,0 +1,6 @@
+@mixin si-layout-fixed-height() {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  min-block-size: 0;
+}

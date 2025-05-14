@@ -1,0 +1,58 @@
+@use '../variables/semantic-tokens';
+@use '../variables/spacers';
+@use '../variables/typography';
+@use 'mixins/lists';
+
+@use 'sass:map';
+
+$page-button-size: 24px;
+
+.pagination {
+  display: flex;
+  margin: 0;
+  padding-block: map.get(spacers.$spacers, 4);
+  @include lists.list-unstyled();
+}
+
+.page-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: ($page-button-size * 0.5);
+  min-inline-size: $page-button-size;
+  block-size: $page-button-size;
+  padding-block: 0;
+  padding-inline: map.get(spacers.$spacers, 2);
+  margin-inline: map.get(spacers.$spacers, 1);
+  background: transparent;
+  font-size: typography.$si-font-size-title-2;
+  font-weight: typography.$si-font-weight-title-2;
+  color: semantic-tokens.$element-text-primary;
+  border: 0;
+
+  &:is(.active, :hover:not(:disabled)):not(.separator) {
+    background: semantic-tokens.$element-base-1-selected;
+  }
+
+  &:has(.icon) {
+    padding-inline: 0;
+  }
+
+  &.disabled {
+    opacity: semantic-tokens.$element-action-disabled-opacity;
+  }
+
+  &.separator {
+    font-weight: normal;
+  }
+}
+
+.page-link {
+  cursor: pointer;
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}

@@ -1,0 +1,4 @@
+@use './styles' with (
+  $siemens-font-path: '~@simpl/fonts/dist/fonts',
+  $icon-font-path: '@simpl/element-icons/dist/fonts'
+);

@@ -1,0 +1,10 @@
+// the minimal set of variables w/o all the heavy bootstrap stuff
+@forward './variables/animations';
+@forward './variables/semantic-tokens';
+@forward './variables/typography';
+@forward './variables/elevation';
+@forward './variables/focus';
+@forward './variables/spacers';
+@forward './variables/zindex';
+@forward './variables/layout';
+@forward './variables/si-vars';

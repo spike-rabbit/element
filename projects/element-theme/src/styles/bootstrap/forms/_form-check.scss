@@ -1,0 +1,249 @@
+@use '../../variables/semantic-tokens';
+@use '../../variables/spacers';
+@use '../functions';
+@use '../variables';
+
+// ----------------------------------------------------------------------------
+// this is a drop-in replacement to bootstrap's _form-check.scss
+// there's too many differences between what BS5 does and what the design system expects
+@use 'sass:map';
+
+$form-check-size: map.get(spacers.$spacers, 6);
+$form-radio-size: map.get(spacers.$spacers, 6);
+$form-radio-inner-size: map.get(spacers.$spacers, 3);
+$form-radio-offset: ($form-radio-size - $form-radio-inner-size) * 0.5 - 1px;
+$form-check-padding-x: map.get(spacers.$spacers, 2);
+
+$form-check-label-start: $form-check-size + map.get(spacers.$spacers, 4);
+
+.form-check {
+  padding-block: map.get(spacers.$spacers, 1);
+
+  :is(.valid-feedback, .invalid-feedback) {
+    margin-inline-start: $form-check-label-start;
+  }
+}
+
+.form-check-inline {
+  display: inline-block;
+  margin-inline-end: variables.$form-check-inline-margin-end;
+}
+
+%form-check-base {
+  position: relative;
+  appearance: none;
+  background-color: semantic-tokens.$element-ui-5;
+  border: 1px solid semantic-tokens.$element-ui-1;
+  flex-shrink: 0;
+  float: inline-start;
+
+  &:is(:hover, .hover) {
+    border-color: semantic-tokens.$element-action-secondary-border-hover;
+    background: semantic-tokens.$element-action-secondary-hover;
+  }
+
+  &:is([disabled], .disabled) {
+    border-color: semantic-tokens.$element-ui-3;
+    background-color: semantic-tokens.$element-ui-5;
+  }
+}
+
+%form-check-checkbox {
+  inline-size: $form-check-size !important; // stylelint-disable-line declaration-no-important
+  block-size: $form-check-size !important; // stylelint-disable-line declaration-no-important
+  border-radius: semantic-tokens.$element-button-radius;
+  inset-inline-start: map.get(spacers.$spacers, 1);
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    inset-inline-start: -1px;
+    inset-block-start: -1px;
+    inline-size: $form-check-size;
+    block-size: $form-check-size;
+    mask-image: functions.escape-svg(variables.$form-check-input-checked-bg-image);
+    opacity: 0;
+  }
+
+  &:is(:checked, .checked) {
+    background-color: semantic-tokens.$element-ui-0;
+    border-color: semantic-tokens.$element-ui-0;
+
+    &:hover {
+      background-color: semantic-tokens.$element-ui-0-hover;
+      border-color: semantic-tokens.$element-ui-0-hover;
+    }
+
+    &::after {
+      background-color: semantic-tokens.$element-text-inverse;
+      opacity: 1;
+    }
+
+    &[disabled] {
+      background-color: semantic-tokens.$element-ui-3;
+      border-color: semantic-tokens.$element-ui-3;
+    }
+  }
+
+  &:indeterminate {
+    border-color: semantic-tokens.$element-ui-0;
+
+    &::after {
+      mask-image: none;
+      background-color: semantic-tokens.$element-ui-0;
+      inline-size: 10px;
+      block-size: 2px;
+      opacity: 1;
+      inset-inline-start: 2px;
+      inset-block-start: 6px;
+    }
+
+    &:hover {
+      border-color: semantic-tokens.$element-ui-0-hover;
+
+      &::after {
+        background-color: semantic-tokens.$element-ui-0-hover;
+      }
+    }
+
+    &:disabled {
+      border-color: semantic-tokens.$element-ui-3;
+
+      &::after {
+        background-color: semantic-tokens.$element-ui-3;
+      }
+    }
+  }
+}
+
+%form-check-radio {
+  inline-size: $form-radio-size;
+  block-size: $form-radio-size;
+  border-radius: 50%;
+  inset-inline-start: 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    inset-block-start: $form-radio-offset;
+    inset-inline-start: $form-radio-offset;
+    inline-size: $form-radio-inner-size;
+    block-size: $form-radio-inner-size;
+    border-radius: 50%;
+  }
+
+  &:checked {
+    border-color: semantic-tokens.$element-ui-0;
+
+    &::after {
+      background-color: semantic-tokens.$element-ui-0;
+    }
+
+    &:hover {
+      border-color: semantic-tokens.$element-ui-0-hover;
+
+      &::after {
+        background-color: semantic-tokens.$element-ui-0-hover;
+      }
+    }
+
+    &[disabled] {
+      border-color: semantic-tokens.$element-ui-3;
+
+      &::after {
+        background-color: semantic-tokens.$element-ui-3;
+      }
+    }
+  }
+}
+
+%form-check-label {
+  display: inline-block;
+  position: relative;
+  padding-inline: map.get(spacers.$spacers, 4) $form-check-padding-x;
+  color: semantic-tokens.$element-text-primary;
+}
+
+.form-check-input {
+  @extend %form-check-base;
+
+  ~ .form-check-label {
+    @extend %form-check-label;
+  }
+
+  &[disabled] ~ .form-check-label {
+    color: semantic-tokens.$element-text-disabled;
+  }
+
+  &:is([type='checkbox'], .si-form-checkbox) {
+    @extend %form-check-checkbox;
+  }
+
+  &[type='radio'] {
+    @extend %form-check-radio;
+  }
+}
+
+// button group
+.btn-check {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+
+  &:is([disabled], :disabled) {
+    + .btn {
+      pointer-events: none;
+      filter: none;
+      color: semantic-tokens.$element-text-disabled;
+    }
+  }
+}
+
+.ngx-datatable {
+  .datatable-checkbox {
+    inline-size: $form-check-size !important; // stylelint-disable-line declaration-no-important
+    block-size: $form-check-size !important; // stylelint-disable-line declaration-no-important
+    inset-block-start: 1px !important; // stylelint-disable-line declaration-no-important
+
+    input[type='checkbox'] {
+      @extend %form-check-base;
+      @extend %form-check-checkbox;
+    }
+  }
+
+  .datatable-body .datatable-checkbox {
+    inset-block-start: 3px !important; // stylelint-disable-line declaration-no-important
+  }
+}
+
+formly-field-multicheckbox {
+  input[type='checkbox'] {
+    @extend %form-check-base;
+    @extend %form-check-checkbox;
+
+    ~ label {
+      @extend %form-check-label;
+    }
+
+    &[disabled] ~ label {
+      color: semantic-tokens.$element-text-disabled;
+    }
+  }
+}
+
+formly-field-radio {
+  input[type='radio'] {
+    @extend %form-check-base;
+    @extend %form-check-radio;
+
+    ~ label {
+      @extend %form-check-label;
+    }
+
+    &[disabled] ~ label {
+      color: semantic-tokens.$element-text-disabled;
+    }
+  }
+}

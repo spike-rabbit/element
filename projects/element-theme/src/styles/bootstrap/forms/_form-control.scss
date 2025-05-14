@@ -1,0 +1,151 @@
+@use '../../variables/focus';
+@use '../../variables/semantic-tokens';
+@use '../../variables/spacers';
+@use '../../variables/typography';
+@use '../../variables/utilities';
+@use '../variables';
+
+@use 'sass:map';
+
+:is(.form-control, .form-select) {
+  --border-color: #{semantic-tokens.$element-ui-2};
+  display: block;
+  inline-size: 100%;
+  padding-block: variables.$input-padding-y;
+  padding-inline-start: variables.$input-padding-x;
+  padding-inline-end: calc(
+    var(--si-feedback-icon-offset, 0px) + var(--si-action-icon-offset, 0px) +
+      #{variables.$input-padding-x}
+  );
+  font-family: variables.$input-font-family;
+  font-size: variables.$input-font-size;
+  font-weight: variables.$input-font-weight;
+  line-height: variables.$input-line-height;
+  color: variables.$input-color;
+  background-color: variables.$input-bg;
+  background-clip: padding-box;
+  border: variables.$input-border-width solid var(--border-color);
+  border-radius: variables.$input-border-radius;
+  appearance: none; // Fix appearance for date inputs in Safari
+  background-image: var(--si-feedback-icon, none);
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  background-position: top 5px right calc(6px + var(--si-action-icon-offset, 0px));
+
+  @include utilities.rtl {
+    background-position: top 5px left 6px;
+  }
+
+  &.hide-feedback-icon {
+    background-image: none;
+    padding-inline-end: variables.$input-padding-x;
+  }
+
+  &:autofill {
+    background: semantic-tokens.$element-base-information;
+  }
+
+  &:is(:focus, :hover) {
+    --border-color: #{semantic-tokens.$element-ui-1};
+  }
+
+  &:is(.readonly, [readonly]) {
+    &,
+    :is(:hover, :focus) {
+      --border-color: #{semantic-tokens.$element-ui-4};
+      background-color: variables.$input-bg;
+    }
+  }
+
+  &:is(.disabled, :disabled) {
+    &,
+    &:is(:hover, :focus) {
+      --border-color: #{semantic-tokens.$element-ui-3};
+      color: semantic-tokens.$element-text-disabled;
+    }
+
+    &::placeholder {
+      color: variables.$input-placeholder-disabled-color;
+    }
+  }
+
+  &:is(:disabled, [readonly]) {
+    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+    opacity: 1;
+  }
+
+  &:focus {
+    @include focus.make-outline-focus();
+  }
+
+  &::placeholder {
+    color: variables.$input-placeholder-color;
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
+  }
+}
+
+.form-control:not(textarea):not(select[multiple]) {
+  // force height to fix line-height issue in firefox
+  block-size: calc(#{typography.$si-line-height-body-2}em + #{2 * map.get(spacers.$spacers, 4)});
+}
+
+.addon-second-icon {
+  --input-addon-inset-end: #{map.get(spacers.$spacers, 9)};
+}
+
+textarea.form-control {
+  min-block-size: variables.$input-height;
+  padding-block: variables.$input-padding-y;
+  line-height: 1.5;
+  // prevent scrollbar overlapping rounded borders
+  box-shadow: 0 0 0 1px var(--border-color);
+  border: 3px solid variables.$input-bg !important; // stylelint-disable-line declaration-no-important
+  outline-offset: 2px !important; // stylelint-disable-line declaration-no-important
+}
+
+select.form-control {
+  &.readonly {
+    pointer-events: none;
+  }
+}
+
+select:is(.form-control, .form-select):not([multiple]) {
+  padding-block: variables.$input-padding-y;
+  padding-inline: map.get(spacers.$spacers, 4) map.get(spacers.$spacers, 8);
+  appearance: none;
+  background-image:
+    var(--si-feedback-icon, none),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M352.79 203.21a12.45 12.45 0 011.44 15.86l-1.44 1.72-88 88a12.45 12.45 0 01-15.86 1.44l-1.72-1.44-88-88a12.43 12.43 0 0115.86-19l1.72 1.44L256 282.42l79.21-79.21a12.45 12.45 0 0115.86-1.44z'/></svg>");
+  background-repeat: no-repeat;
+  background-position:
+    right 20px center,
+    right 2px top 50%;
+  background-size: 1.25rem, 1.5rem;
+
+  @include utilities.rtl {
+    background-position: left map.get(spacers.$spacers, 2) top 50%;
+  }
+
+  .app--dark & {
+    background-image:
+      var(--si-feedback-icon, none),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='white' d='M352.79 203.21a12.45 12.45 0 011.44 15.86l-1.44 1.72-88 88a12.45 12.45 0 01-15.86 1.44l-1.72-1.44-88-88a12.43 12.43 0 0115.86-19l1.72 1.44L256 282.42l79.21-79.21a12.45 12.45 0 0115.86-1.44z'/></svg>");
+  }
+}
+
+select:is(.form-control, .form-select)[multiple] {
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
+  padding: 0;
+
+  option {
+    padding: map.get(spacers.$spacers, 4);
+  }
+
+  option:checked,
+  &:not(:disabled) option:not(:disabled):hover {
+    background: semantic-tokens.$element-base-0;
+    color: semantic-tokens.$element-text-active;
+  }
+}

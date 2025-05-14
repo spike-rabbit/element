@@ -1,0 +1,11 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "noUnusedLocals": false,
+    "useDefineForClassFields": true,
+    "types": ["../projects/element-translate-ng/localize-types/index.d.ts", "zone.js"]
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["**/*.spec.ts"]
+}

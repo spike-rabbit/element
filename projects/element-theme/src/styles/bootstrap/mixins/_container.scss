@@ -1,0 +1,7 @@
+@use '../variables';
+
+@mixin make-container($gutter: variables.$container-padding-x) {
+  inline-size: 100%;
+  padding-inline: var(--#{variables.$variable-prefix}gutter-x, #{$gutter});
+  margin-inline: auto;
+}

@@ -1,0 +1,97 @@
+{
+  "APP": {
+    "CLAIM": "Tauch ein in die wundervolle Welt von Element",
+    "NAV": {
+      "LANGUAGE": "Sprache",
+      "THEME": "Design",
+      "PROFILE": "Profil"
+    }
+  },
+  "SI_FILTERED_SEARCH": {
+    "COUNTRY": "Land",
+    "SWITZERLAND": "Schweiz",
+    "GERMANY": "Deutschland",
+    "COMPANY": "Unternehmen",
+    "LOCATION": "Standort",
+    "ALARM": "Alarm",
+    "BIRTHDAY": "Geburtstag",
+    "HIGHLIMIT": "Obergrenze [°C]"
+  },
+  "FORM": {
+    "MR": "Herr",
+    "ENGINEER": "Ingenieur",
+    "INSTALLER": "Installateur",
+    "NAME": "Name",
+    "DESCRIPTION": "Beschreibung",
+    "PHONE_NUMBER": "Telefonnummer",
+    "BIRTHDAY": "Geburtstag",
+    "ACCEPT_TERMS": "Bedingungen",
+    "ACCEPT_TERMS_DESCRIPTION": "Ich akzeptiere alle Bedingungen",
+    "ADD_ENTITY_TEXT": "Fügen Sie eine neue Entität hinzu.",
+    "ROLE": "Rolle",
+    "REQUIRED": "Ein Wert ist erforderlich.",
+    "NAME_REQUIRED": "Jedes gute Formular braucht einen Namen!",
+    "ACCEPT_TERMS_REQUIRED": "Sie müssen wirklich alles hinnehmen und akzeptieren, bevor sie hier mitmachen können.",
+    "ACCEPT_NO_PRIVACY": "I bestätige, dass mir meine Privatsphäre egal ist.",
+    "MINLENGTH": "Der Wert muss aus {{requiredLength}} Buchstaben bestehen.",
+    "NOT_EIGHTEEN": "Sie müssen mindestens 18 Jahre alt sein.",
+    "ARRIVAL": "Ankunft",
+    "DEPARTURE": "Abfahrt",
+    "CLASS": "Reiseklasse",
+    "FELLOW_PASSENGERS": "Mitreisende",
+    "DEPARTURE_AFTER_ARRIVAL": "Die Abfahrtszeit muss nach der Ankunft sein.",
+    "INVALID_DATE": "Ungültiges Datum.",
+    "TRAVEL_DATE": "Reise datum",
+    "TRAVEL_DATE_REQUIRED": "Reisedatum ist erforderlich.",
+    "END_BEFORE_START": "Das Enddatum darf nicht vor dem Startdatum liegen.",
+    "INVALID_PHONE": "Ungültige Telefonnummer",
+    "SEARCH": "Suche",
+    "SELECT_COUNTRY": "Land auswählen",
+    "NAME_UPPERCASE": "Name muss mit einem Grossbuchstaben beginnen."
+  },
+  "LANGUAGE": {
+    "EN": "English",
+    "EL": "Greek",
+    "DE": "Deutsch",
+    "FR": "Français"
+  },
+  "THEME_EDITOR": {
+    "AVAILABLE_THEMES": "Verfügbare Designs",
+    "NEW_THEME": "Neues Design",
+    "SELECTED_THEME": "Ausgewähltes Design",
+    "LIGHT_THEME": "Helles Design",
+    "DARK_THEME": "Dunkles Design",
+    "APPLY": "Übernehmen",
+    "CANCEL": "Abbrechen",
+    "DOWNLOAD": "Herunterladen",
+    "UPLOAD_OPEN": "Hochladen",
+    "UPLOAD_CLOSE": "Schliessen",
+    "UPLOAD_WARNING_TITLE": "Warnung",
+    "UPLOAD_WARNING_TEXT": "Durch das Hochladen eines Designs verlieren Sie alle ungespeicherten Änderungen und Designs mit dem selben Namen werden überschrieben.",
+    "UPLOAD_DROP": "Ziehe Dateien hier hin oder",
+    "UPLOAD_SELECT": "klicke zum Hochladen",
+    "UPLOAD_UPLOAD": "Hochladen",
+    "UPLOAD_REMOVE": "Entfernen",
+    "UPLOAD_UPLOADING": "Hochladen",
+    "UPLOAD_MAX_FILE_SIZE": "Maximale Dateigrösse",
+    "UPLOAD_MAX_FILES_REACHED": "Nur ein Design kann auf einmal hochgeladen werden",
+    "UPLOAD_ACCEPTED_FILES": "Akzeptierte Dateitypen",
+    "UPLOAD_CLEAR": "Löschen",
+    "UPLOAD_CANCEL": "Abbrechen",
+    "UPLOAD_ERROR_MAX_FILE_SIZE": "Datei ist grösser als die erlaubte Grösse",
+    "UPLOAD_ERROR_FILE_TYPE": "Bitte wähle eine JSON Datei aus",
+    "UPLOAD_ERROR_FAILED": "Konnte Datei nicht hochladen",
+    "UPLOAD_SUCCESS_TITLE": "Hochladen abgeschlossen",
+    "DELETE": "Löschen",
+    "SAVE": "Speichern",
+    "COLOR_SCHEMES": {
+      "LIGHT": "Hell",
+      "DARK": "Dunkel",
+      "AUTO": "Auto"
+    }
+  },
+  "MODAL_DIALOGS": {
+    "COLUMN_SELECTION_ITEM_MOVED_SUCCESS": "Das Element befindet sich an Stelle {{targetPosition}}"
+  },
+  "SI-TOAST.CLOSE": "Schliessen"
+}

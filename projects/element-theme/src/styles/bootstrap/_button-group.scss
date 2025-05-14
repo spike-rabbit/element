@@ -1,0 +1,101 @@
+@use '../variables/focus';
+@use '../variables/semantic-tokens';
+@use '../variables/spacers';
+@use '../variables/typography';
+@use './variables';
+
+@use 'sass:map';
+
+.btn-group {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+
+  .btn {
+    border-radius: 0;
+  }
+
+  > .btn:first-of-type,
+  > label:first-of-type .btn {
+    border-start-start-radius: semantic-tokens.$element-button-radius;
+    border-end-start-radius: semantic-tokens.$element-button-radius;
+  }
+
+  > .btn:last-of-type,
+  > label:last-of-type .btn {
+    border-start-end-radius: semantic-tokens.$element-button-radius;
+    border-end-end-radius: semantic-tokens.$element-button-radius;
+  }
+
+  > .btn,
+  label > .btn {
+    position: relative;
+    flex: 1 1 auto;
+  }
+
+  > .btn-check:focus + .btn,
+  > .btn:is(:hover, :active, .active) {
+    z-index: 1;
+  }
+
+  > .btn:not(:first-of-type),
+  label + label {
+    margin-inline-start: -1px;
+  }
+}
+
+.btn-group .btn-check {
+  + .btn {
+    background: transparent;
+    color: semantic-tokens.$element-text-primary;
+    padding-block: map.get(spacers.$spacers, 5) - 1px;
+    border: 1px solid semantic-tokens.$element-ui-4;
+    transition: none;
+
+    &.icon-only {
+      min-inline-size: unset;
+      padding-inline: map.get(spacers.$spacers, 5) - 1px;
+
+      .icon {
+        margin-inline: 0;
+      }
+    }
+
+    &.btn-sm {
+      padding-block: map.get(spacers.$spacers, 4) - 1px;
+      font-size: typography.$si-font-size-body-2;
+      line-height: typography.$si-line-height-body-2;
+    }
+  }
+
+  &:checked + .btn,
+  + .btn:hover {
+    color: semantic-tokens.$element-action-secondary-text-hover;
+  }
+
+  &:checked + .btn {
+    background: semantic-tokens.$element-action-secondary-hover;
+    border-color: semantic-tokens.$element-action-secondary-border-hover;
+    z-index: 2;
+
+    &:hover {
+      color: semantic-tokens.$element-text-primary;
+    }
+  }
+
+  &:focus-visible + .btn {
+    @include focus.make-outline-focus();
+    z-index: 3;
+  }
+}
+
+// Optional: Group multiple button groups together for a toolbar
+.btn-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  .input-group {
+    inline-size: auto;
+  }
+}

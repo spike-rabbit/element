@@ -1,0 +1,68 @@
+@use '../../variables/elevation';
+@use '../../variables/focus';
+@use '../../variables/semantic-tokens';
+
+$track-color: semantic-tokens.$element-ui-4 !default;
+$track-height: 4px !default;
+$thumb-size: 24px !default;
+
+@mixin range-track {
+  block-size: $track-height;
+  cursor: pointer;
+  animation-duration: 0.2s;
+  background: $track-color;
+}
+
+@mixin range-thumb {
+  box-shadow: var(--thumb-shadow);
+  border: 1px solid semantic-tokens.$element-action-secondary-border;
+  block-size: $thumb-size;
+  inline-size: $thumb-size;
+  border-radius: 50%;
+  background: semantic-tokens.$element-base-1;
+  cursor: pointer;
+
+  &:hover {
+    border-color: semantic-tokens.$element-action-secondary-border-hover;
+    background: radial-gradient(
+      circle,
+      semantic-tokens.$element-action-secondary-text-hover 0%,
+      semantic-tokens.$element-action-secondary-text-hover 35%,
+      semantic-tokens.$element-action-secondary-hover 36%
+    );
+  }
+}
+
+.form-range {
+  --thumb-shadow: #{elevation.$element-elevation-1};
+  -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
+  background: transparent;
+  inline-size: 100%;
+
+  &:focus-visible {
+    --thumb-shadow: #{focus.$si-focus-styling-box-shadow};
+    outline: none;
+  }
+
+  &::-webkit-slider-runnable-track {
+    @include range-track;
+  }
+
+  &::-webkit-slider-thumb {
+    @include range-thumb;
+    -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
+    margin-block-start: -0.5 * $thumb-size;
+  }
+
+  &::-moz-range-track {
+    @include range-track;
+  }
+
+  &::-moz-range-thumb {
+    @include range-thumb;
+  }
+
+  &::-moz-focus-outer {
+    border: 0;
+  }
+}

@@ -1,0 +1,10 @@
+@use '../variables/semantic-tokens';
+
+html {
+  scrollbar-color: color-mix(
+      in srgb,
+      semantic-tokens.$element-ui-2 60%,
+      semantic-tokens.$element-base-1
+    )
+    semantic-tokens.$element-base-1;
+}

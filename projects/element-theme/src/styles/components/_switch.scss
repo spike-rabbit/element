@@ -1,0 +1,77 @@
+@use '../variables';
+
+@use 'sass:map';
+
+$si-switch-size: 20px !default;
+$si-switch-background-off-color: variables.$element-ui-4 !default;
+$si-switch-background-on-color: variables.$element-ui-0 !default;
+$si-switch-background-disabled-color: variables.$element-ui-3 !default;
+$si-switch-slider-margin: 4px !default;
+$si-switch-slider-off-color: variables.$element-ui-2 !default;
+$si-switch-slider-on-color: variables.$element-ui-5 !default;
+$si-switch-transition-length: variables.element-transition-duration(0.4s) !default;
+
+$si-switch-knob-size: calc(#{$si-switch-size} - 2 * #{$si-switch-slider-margin});
+
+.form-switch {
+  padding-block: map.get(variables.$spacers, 1);
+
+  .form-check-input {
+    cursor: pointer;
+    position: relative;
+    inset: 0;
+    margin-inline: 0 map.get(variables.$spacers, 3);
+    margin-block: - map.get(variables.$spacers, 1);
+    inline-size: calc(
+      2 * #{$si-switch-size}
+    ) !important; // stylelint-disable-line declaration-no-important
+    block-size: #{$si-switch-size} !important; // stylelint-disable-line declaration-no-important
+    background-color: $si-switch-background-off-color;
+    transition: $si-switch-transition-length;
+    border: 0;
+    border-radius: #{$si-switch-size};
+    appearance: none;
+
+    &::before {
+      position: absolute;
+      content: '';
+      block-size: $si-switch-knob-size !important; // stylelint-disable-line declaration-no-important
+      inline-size: $si-switch-knob-size !important; // stylelint-disable-line declaration-no-important
+      inset-inline-start: $si-switch-slider-margin;
+      inset-block-end: $si-switch-slider-margin;
+      background-color: $si-switch-slider-off-color;
+      transition: $si-switch-transition-length;
+      border-radius: 50%;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      background-color: variables.$element-ui-4;
+    }
+
+    &:is(:checked, .checked) {
+      background-color: $si-switch-background-on-color;
+
+      &:hover {
+        background-color: variables.$element-ui-0-hover;
+      }
+
+      &:is(:disabled, .disabled) {
+        background-color: $si-switch-background-on-color;
+      }
+    }
+
+    &:is(:disabled, .disabled) {
+      cursor: default;
+      opacity: 0.5;
+    }
+
+    &:is(:checked, .checked)::before {
+      inset-inline-start: calc(#{$si-switch-slider-margin} + #{$si-switch-size});
+      background-color: $si-switch-slider-on-color;
+    }
+  }
+}

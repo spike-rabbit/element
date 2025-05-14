@@ -1,0 +1,11 @@
+<si-icon-next class="icon" [class.badge-dot]="badgeDot()" [icon]="icon()" />
+@if (badgeValue()) {
+  <span class="badge-text">{{ badgeValue() }}</span>
+}
+<ng-content select="si-avatar" />
+<div class="item-title" [class.visually-hidden]="visuallyHideTitle">
+  <ng-content />
+</div>
+@if (dropdownTrigger) {
+  <si-icon-next class="dropdown-caret" [icon]="icons.elementDown2" />
+}

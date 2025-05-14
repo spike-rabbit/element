@@ -1,0 +1,23 @@
+@use '@siemens/element-theme/src/styles/variables';
+
+$font-family-monospace: Menlo, 'Ubuntu Mono', 'Liberation Mono', Consolas, Courier, monospace;
+
+$live-preview-alert-color: variables.$element-action-danger-text;
+$live-preview-alert-background-color: variables.$element-action-danger;
+
+$live-preview-info-color: variables.$element-action-secondary-text;
+$live-preview-info-background-color: variables.$element-action-secondary;
+
+$live-preview-background-color: variables.$element-base-0;
+$live-preview-bar-background-color: variables.$element-base-0;
+$live-preview-border-color: variables.$element-ui-4;
+$live-preview-button-background-color: variables.$element-action-secondary;
+
+$live-preview-control-fill-color: variables.$element-text-primary;
+
+$live-preview-focus-shadow-color: variables.$focus-style-outline;
+$live-preview-font-color: variables.$element-text-primary;
+
+$live-preview-link-color: variables.$element-action-secondary-text;
+$live-preview-link-hover-color: variables.$element-action-secondary-text-hover;
+$live-preview-link-inactive-color: variables.$element-text-primary;

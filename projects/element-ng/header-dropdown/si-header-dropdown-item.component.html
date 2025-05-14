@@ -1,0 +1,27 @@
+@if (icon()) {
+  <span
+    class="icon"
+    aria-hidden="true"
+    [ngClass]="[icon(), ownTrigger?.isOpen ? icon() + '-filled' : '']"
+  ></span>
+}
+@if (iconBadge()) {
+  <div class="badge-text">{{ iconBadge() }}</div>
+}
+<span class="item-title text-truncate">
+  <ng-content />
+</span>
+<div class="item-end ps-2 d-flex me-n3 ms-auto gap-1">
+  @if (badge()) {
+    <span class="mx-0 me-1 ms-2 badge" [ngClass]="'bg-' + badgeColor()">{{ badge() }}</span>
+  }
+  @if (checked() === 'check') {
+    <div class="element-ok icon" aria-hidden="true"></div>
+  }
+  @if (checked() === 'radio') {
+    <div class="element-record-filled icon-small me-2" aria-hidden="true"></div>
+  }
+  @if (ownTrigger) {
+    <span class="element-down-2 dropdown-caret m-0 ps-0" aria-hidden="true"></span>
+  }
+</div>

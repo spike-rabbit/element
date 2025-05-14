@@ -1,0 +1,5 @@
+@use '../variables';
+
+.has-system-banner {
+  --element-system-banner-spacing: #{variables.$si-system-banner-height};
+}

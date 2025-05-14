@@ -1,0 +1,38 @@
+{
+  "name": "@siemens/element-translate-ng",
+  "description": "Element translation abstraction layer.",
+  "version": "47.11.0",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:siemens/element.git"
+  },
+  "author": {
+    "name": "Siemens AG",
+    "email": "info@siemens.com"
+  },
+  "homepage": "https://github.com/siemens/element",
+  "bugs": "https://github.com/siemens/element/issues/new",
+  "bin": {
+    "update-translatable-keys": "bin/update-translatable-keys.js"
+  },
+  "peerDependencies": {
+    "@angular/common": "19",
+    "@angular/core": "19",
+    "@ngx-translate/core": "15 - 16"
+  },
+  "peerDependenciesMeta": {
+    "@ngx-translate/core": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "fast-xml-parser": "^4.5.0"
+  },
+  "exports": {
+    "./docs.json": {
+      "default": "./docs.json"
+    }
+  }
+}
