@@ -2,7 +2,7 @@
  * Copyright Siemens 2016 - 2025.
  * SPDX-License-Identifier: MIT
  */
-import { TranslatableString } from '@simpl-labs/siemens-element-translate-ng/translate-types';
+import { TranslatableString } from '@siemens/element-translate-ng/translate-types';
 
 declare global {
   let $localize: (strings: TemplateStringsArray, ...expressions: string[]) => TranslatableString;
