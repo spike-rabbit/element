@@ -76,6 +76,18 @@ jobs:
       - run: npm run build:examples:aot
       - run: npm run build:all:update-translatable-keys
       - run: git diff --exit-code "projects/**/*-translatable-keys.interface.ts"
+
+  documentation:
+    runs-on: ubuntu-22.04
+    needs:
+      - build
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv run mkdocs build
+        env:
+          UV_INDEX_CODE_DOCS_THEME_USERNAME: ${{ secrets.SIEMENS_NPM_USER }}
+          UV_INDEX_CODE_DOCS_THEME_PASSWORD: ${{ secrets.SIEMENS_NPM_TOKEN }}
 # TODO: build design system
 # TODO: add release job
 # TODO: build PR previews
