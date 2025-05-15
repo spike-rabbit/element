@@ -1,0 +1,83 @@
+name: Build
+on:
+  push:
+    branches:
+      - main
+      - maintenance/*
+      - next
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # We need this for commit-lint
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/jod
+          cache: 'npm'
+      - run: npm config set //code.siemens.com/api/v4/packages/npm/:_authToken $SIEMENS_NPM_TOKEN
+        env:
+          SIEMENS_NPM_TOKEN: ${{ secrets.SIEMENS_NPM_TOKEN }}
+      - run: npm ci --prefer-offline --no-audit --include=optional
+      - run: npm run lint:commit
+      - run: npm run build:all
+      - run: npm run build:examples
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+  test:
+    runs-on: ubuntu-22.04
+    # We use playwright browser to run karma tests
+    container: mcr.microsoft.com/playwright:v1.52.0-noble
+    env:
+      # See: https://github.com/microsoft/playwright/issues/27620
+      HOME: /root
+    needs:
+      - build
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/jod
+          cache: 'npm'
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+      - run: npm ci --prefer-offline --no-audit
+      - run: npm run lint:format
+      - run: npm run lint:ng
+      - run: npm run translate:test -- --watch=false --progress=false --code-coverage
+      - run: npm run lib:test -- --watch=false --progress=false --code-coverage
+      # TODO: Upload coverage reports
+
+  aot:
+    runs-on: ubuntu-22.04
+    needs:
+      - build
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/jod
+          cache: 'npm'
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+      - run: npm config set //code.siemens.com/api/v4/packages/npm/:_authToken $SIEMENS_NPM_TOKEN
+        env:
+          SIEMENS_NPM_TOKEN: ${{ secrets.SIEMENS_NPM_TOKEN }}
+      - run: npm ci --prefer-offline --no-audit --include=optional
+      - run: npm run build:examples:aot
+      - run: npm run build:all:update-translatable-keys
+      - run: git diff --exit-code "projects/**/*-translatable-keys.interface.ts"
+# TODO: build design system
+# TODO: add release job
+# TODO: build PR previews
+# TODO: e2e test
+

@@ -50,7 +50,7 @@ module.exports.buildConfig = (config, { name, testSuite }) => ({
     reporters: [{ type: 'html' }, { type: 'cobertura' }, { type: 'text-summary' }],
     check: {
       global: {
-        lines: 80
+        lines: 70 // TODO: increase once every test is migrated
       }
     }
   },
