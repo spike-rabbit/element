@@ -1,0 +1,27 @@
+name: pr.yaml
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    uses: ./.github/workflows/build-and-test.yaml
+
+  publish-documentation:
+    runs-on: ubuntu-22.04
+    permissions:
+      pages: write
+      id-token: write
+    needs:
+      - build-and-test
+    steps:
+      - uses: actions/configure-pages@v5
+      - uses: actions/download-artifact@v4
+        with:
+          name: pages
+          path: dist/design
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'dist/design'
+      - uses: actions/deploy-pages@v4

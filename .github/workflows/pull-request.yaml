@@ -1,0 +1,7 @@
+name: pr.yaml
+on:
+  pull_request:
+
+jobs:
+  build:
+    uses: ./.github/workflows/build-and-test.yaml
