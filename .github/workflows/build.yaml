@@ -84,10 +84,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
       - run: uv run mkdocs build
         env:
           UV_INDEX_CODE_DOCS_THEME_USERNAME: ${{ secrets.SIEMENS_NPM_USER }}
           UV_INDEX_CODE_DOCS_THEME_PASSWORD: ${{ secrets.SIEMENS_NPM_TOKEN }}
+          EXAMPLES_BASE: /element-examples
+      - run: mv dist/element-examples/ dist/design/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pages
+          path: dist/design
 # TODO: build design system
 # TODO: add release job
 # TODO: build PR previews
