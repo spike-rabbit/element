@@ -33,5 +33,5 @@ jobs:
           GIT_AUTHOR_EMAIL: 'simpl.si@siemens.com'
           GIT_COMMITTER_NAME: 'Siemens Element bot'
           GIT_COMMITTER_EMAIL: 'simpl.si@siemens.com'
-          GITHUB_TOKEN: ${{ secrets.ELEMENT_BOT_TOKEN_GH }}
+          GH_TOKEN: ${{ secrets.ELEMENT_BOT_TOKEN_GH }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
