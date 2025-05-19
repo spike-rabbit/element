@@ -1,3 +1,11 @@
+## [1.0.3](https://github.com/spike-rabbit/element/compare/v1.0.2...v1.0.3) (2025-05-19)
+
+
+### Bug Fixes
+
+* add missing dot ([8b6790c](https://github.com/spike-rabbit/element/commit/8b6790c5790059f01b2c646b2746d872a0044abf))
+* maybe token for checkout ([6c90d39](https://github.com/spike-rabbit/element/commit/6c90d399c92b1a21264cc51d01ee41c564f6b9f4))
+
 ## [1.0.2](https://github.com/spike-rabbit/element/compare/v1.0.1...v1.0.2) (2025-05-19)
 
 
