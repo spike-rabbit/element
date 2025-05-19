@@ -4,10 +4,10 @@
 $siemens-font-path: '@simpl/brand/src/fonts' !default;
 $icon-font-path: '@simpl/element-icons/dist/fonts' !default;
 
-@use '@siemens/element-ng/element-ng';
-@use '@siemens/element-theme/src/styles/variables/spacers';
-@use '@siemens/element-theme/src/styles/variables/semantic-tokens';
-@use '@siemens/live-preview/styles/live-preview';
+@use '@spike-rabbit/element-ng/element-ng';
+@use '@spike-rabbit/element-theme/src/styles/variables/spacers';
+@use '@spike-rabbit/element-theme/src/styles/variables/semantic-tokens';
+@use '@spike-rabbit/live-preview/styles/live-preview';
 
 @use '@simpl/element-icons/dist/style/simpl-element-icons' with (
   $font-path: $icon-font-path
@@ -17,14 +17,14 @@ $icon-font-path: '@simpl/element-icons/dist/fonts' !default;
   $siemens-font-path: $siemens-font-path
 );
 
-@use '@siemens/element-theme/src/theme' with (
+@use '@spike-rabbit/element-theme/src/theme' with (
   $element-theme-default: 'siemens-brand',
   $element-themes: (
     'siemens-brand',
     'element'
   )
 );
-@use '@siemens/element-theme/src/styles/themes';
+@use '@spike-rabbit/element-theme/src/styles/themes';
 @include themes.make-theme(element-theme-siemens-brand.$theme-siemens-brand-light, 'siemens-brand');
 @include themes.make-theme(
   element-theme-siemens-brand.$theme-siemens-brand-dark,

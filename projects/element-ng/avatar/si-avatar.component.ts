@@ -12,9 +12,9 @@ import {
   OnChanges,
   SimpleChanges
 } from '@angular/core';
-import { EntityStatusType, STATUS_ICON, StatusIcon } from '@siemens/element-ng/common';
-import { SiIconModule } from '@siemens/element-ng/icon';
-import { TranslatableString } from '@siemens/element-translate-ng/translate';
+import { EntityStatusType, STATUS_ICON, StatusIcon } from '@spike-rabbit/element-ng/common';
+import { SiIconModule } from '@spike-rabbit/element-ng/icon';
+import { TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiAvatarBackgroundColorDirective } from './si-avatar-background-color.directive';
 

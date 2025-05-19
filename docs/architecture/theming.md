@@ -100,14 +100,14 @@ Then, to include this theme and build it as the default, change the main style s
 
 ```scss
 // first configure the element-theme by not building the 'siemens-brand' theme
-@use '@siemens/element-theme/src/theme' with (
+@use '@spike-rabbit/element-theme/src/theme' with (
   $element-theme-default: 'oem', // the default is 'siemens-brand';
   $element-themes: ('oem'), // themes to build.
 );
-@use '@siemens/element-ng/element-ng';
+@use '@spike-rabbit/element-ng/element-ng';
 
 // build the OEM theme
-@use '@siemens/element-theme/src/styles/themes';
+@use '@spike-rabbit/element-theme/src/styles/themes';
 @use './theme-oem';
 @include themes.make-theme(theme-oem.$theme-oem, 'oem', false);
 ```

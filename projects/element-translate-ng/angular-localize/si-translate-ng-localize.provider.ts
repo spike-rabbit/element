@@ -6,7 +6,7 @@ import { EnvironmentProviders, importProvidersFrom, Provider } from '@angular/co
 import {
   SiTranslateModule,
   SiTranslateServiceBuilder
-} from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiTranslateNgLocalizeServiceBuilder } from './si-translate-ng-localize-service-builder.service';
 

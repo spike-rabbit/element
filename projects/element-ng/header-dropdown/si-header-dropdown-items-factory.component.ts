@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: MIT
  */
 import { Component, input, output } from '@angular/core';
-import { MenuItem } from '@siemens/element-ng/common';
-import { SiLinkDirective } from '@siemens/element-ng/link';
-import { SiTranslateModule } from '@siemens/element-translate-ng/translate';
+import { MenuItem } from '@spike-rabbit/element-ng/common';
+import { SiLinkDirective } from '@spike-rabbit/element-ng/link';
+import { SiTranslateModule } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiHeaderDropdownItemComponent } from './si-header-dropdown-item.component';
 import { SiHeaderDropdownTriggerDirective } from './si-header-dropdown-trigger.directive';

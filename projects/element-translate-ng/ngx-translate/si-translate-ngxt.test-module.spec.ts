@@ -5,7 +5,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { SiTranslateModule } from '@siemens/element-translate-ng/translate';
+import { SiTranslateModule } from '@spike-rabbit/element-translate-ng/translate';
 import { of } from 'rxjs';
 
 @Component({

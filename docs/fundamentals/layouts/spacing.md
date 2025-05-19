@@ -141,7 +141,7 @@ above defined spacing options.
 ```scss
 @use 'sass:map';
 
-@use '@siemens/element-theme/src/styles/variables';
+@use '@spike-rabbit/element-theme/src/styles/variables';
 
 padding-top: map.get(variables.$spacers, 6);
 ```

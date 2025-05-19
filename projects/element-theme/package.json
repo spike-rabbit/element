@@ -1,11 +1,11 @@
 {
-  "name": "@siemens/element-theme",
+  "name": "@spike-rabbit/element-theme",
   "version": "47.11.0",
   "description": "Element CSS theme.",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:siemens/element.git"
+    "url": "git@github.com:spike-rabbit/element.git"
   },
   "author": {
     "name": "Siemens AG",

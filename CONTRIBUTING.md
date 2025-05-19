@@ -168,7 +168,7 @@ To locally setup this projects, use following steps:
 
 ```sh
 # Clone the repository
-git clone git@github.com:siemens/element.git
+git clone git@github.com:spike-rabbit/element.git
 
 # Change into project directory
 cd element
@@ -415,9 +415,9 @@ BREAKING CHANGE: <breaking change 2 summary>
 Breaking change description should start with a verb to provide a simple and
 recognizable pattern to readers e.g.:
 
-- changed import path for `@siemens/old` to `@siemens/new`
+- changed import path for `@spike-rabbit/old` to `@spike-rabbit/new`
 - dropped support for `xyz`
-- moved type `xyz` from `@siemens/old` to `@siemens/new`
+- moved type `xyz` from `@spike-rabbit/old` to `@spike-rabbit/new`
 - removed the `class/function` and use instead `new-class/new-function`
 - removed support for `xyz`
 - renamed `function` function to `new-function`

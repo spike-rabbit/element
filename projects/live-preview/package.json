@@ -1,12 +1,12 @@
 {
-  "name": "@siemens/live-preview",
+  "name": "@spike-rabbit/live-preview",
   "description": "Element live preview for web",
   "version": "47.11.0",
   "license": "MIT",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git@github.com:siemens/element.git"
+    "url": "git@github.com:spike-rabbit/element.git"
   },
   "author": {
     "name": "Siemens AG",

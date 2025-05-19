@@ -1,12 +1,12 @@
 {
-  "name": "@siemens/element-translate-ng",
+  "name": "@spike-rabbit/element-translate-ng",
   "description": "Element translation abstraction layer.",
   "version": "47.11.0",
   "license": "MIT",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git@github.com:siemens/element.git"
+    "url": "git@github.com:spike-rabbit/element.git"
   },
   "author": {
     "name": "Siemens AG",

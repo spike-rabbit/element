@@ -1,7 +1,7 @@
 @use 'sass:map';
-@use '@siemens/element-theme/src/theme/base-colors' as base;
-@use '@siemens/element-theme/src/theme/data-colors' as data;
-@use '@siemens/element-theme/src/styles/variables';
+@use '@spike-rabbit/element-theme/src/theme/base-colors' as base;
+@use '@spike-rabbit/element-theme/src/theme/data-colors' as data;
+@use '@spike-rabbit/element-theme/src/styles/variables';
 
 :host {
   display: flex;

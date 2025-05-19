@@ -172,7 +172,7 @@ Using contextual colors within SASS stylesheets is also possible by importing
 the Element Theme variables.
 
 ```scss
-@use '@siemens/element-theme/src/styles/variables';
+@use '@spike-rabbit/element-theme/src/styles/variables';
 
 background-color: variables.$element-base-0;
 color: variables.$element-text-warning;
