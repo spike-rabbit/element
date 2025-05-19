@@ -1,7 +1,7 @@
 {
   "name": "@spike-rabbit/element-ng",
   "description": "Element Angular component library, implementing the Siemens Design Language",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -24,8 +24,8 @@
     "@angular/core": "19",
     "@angular/forms": "19",
     "@angular/router": "19",
-    "@spike-rabbit/element-translate-ng": "1.0.0",
-    "@spike-rabbit/element-theme": "1.0.0"
+    "@spike-rabbit/element-translate-ng": "1.0.1",
+    "@spike-rabbit/element-theme": "1.0.1"
   },
   "peerDependenciesMeta": {
     "@angular/animations": {
