@@ -16,7 +16,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.ELEMENT_BOT_TOKEN_GH }}
           fetch-depth: 0 # semantic-release needs this
       - uses: actions/setup-node@v4
         with:
