@@ -43,6 +43,8 @@ nav:
       - Launchpad:                        'components/layout-navigation/launchpad.md'
       - Modals:                           'components/layout-navigation/modals.md'
       - Pagination:                       'components/layout-navigation/pagination.md'
+    - Progress Indications:
+      - Spinner:                          'components/progress-indication/spinner.md'
     - Status & notifications:
       - Avatar:                           'components/status-notifications/avatar.md'
       - Connection Strength:              'components/status-notifications/connection-strength.md'
