@@ -1,3 +1,31 @@
+# [47.2.0](https://github.com/siemens/element/compare/v47.1.0...v47.2.0) (2025-05-28)
+
+
+### Features
+
+* **accordion:** add accordion ([6115492](https://github.com/siemens/element/commit/61154926a2f389336bbb8761a2195300a035871d))
+* **action-modal:** add action modal service and components ([ac54c88](https://github.com/siemens/element/commit/ac54c88a7b962403ada2007579aaa008213be9ec))
+* **auto-collapsable-list:** add auto-collapsable list components and directives ([95c27fe](https://github.com/siemens/element/commit/95c27fe604f419faa7f9eeb7f6115ead6163a1d9))
+* **color-picker:** add color picker ([1811d08](https://github.com/siemens/element/commit/1811d086d68f3fde73cd6a88cdf6e2023e15b1e0))
+* **connection-strength:** add connection strength ([50b746e](https://github.com/siemens/element/commit/50b746ed5aab808b2106d5eeac637200f485e08c))
+* **copyright-notice:** introduce copyright notice ([c053f5f](https://github.com/siemens/element/commit/c053f5fe767d9b9ed11f747825029c83db79133a))
+* **empty-state:** add empty state ([7b382af](https://github.com/siemens/element/commit/7b382af636d9fb7e84df8ef96be728883442ba45))
+* **footer:** add footer component ([4b14465](https://github.com/siemens/element/commit/4b14465f1f911d952ed5c0217910574ae1d26222))
+* **inline-notification:** add inline notification ([592c7b9](https://github.com/siemens/element/commit/592c7b9cb04e5b3a608bdb5dc1322520f8a6ab3f))
+* **loading-spinner:** add loading spinner component ([ec94faa](https://github.com/siemens/element/commit/ec94faabe2d754dcea0185d29283daba8aaef2af))
+* **menu:** add menu component ([27020af](https://github.com/siemens/element/commit/27020af0dedccf68118164a2b86ee343bf565363))
+* **modal:** add modal component ([2c05627](https://github.com/siemens/element/commit/2c056275832d54fd9ee483859f9987c831becd7d))
+* **pagination:** add pagination component ([6cadaba](https://github.com/siemens/element/commit/6cadabad1018baf830b3bc63301b65b39c31e1d9))
+* **password-toggle:** add password toggle component ([6f9b405](https://github.com/siemens/element/commit/6f9b4057ea1823c13b817153b2cff5921350e9a8))
+* **summary-chip:** add summary chip ([7f6d187](https://github.com/siemens/element/commit/7f6d187c539a041a7358616ca211d0ca335e3141))
+* **tooltip:** add tooltip component ([151809b](https://github.com/siemens/element/commit/151809bf3c48167b92cb5654890586173e77883c))
+
+
+### Bug Fixes
+
+* **examples:** update navbar examples to use element prefix ([92b0ee7](https://github.com/siemens/element/commit/92b0ee7e1dc0c52a4febe80b12e4720efb461b6b))
+* **live-preview:** automatic dark/light theme for overview ([31d0376](https://github.com/siemens/element/commit/31d0376ac5f90d3a5dc2c34928890427d2ed9f01))
+
 # [47.1.0](https://github.com/siemens/element/compare/v47.0.0...v47.1.0) (2025-05-21)
 
 
