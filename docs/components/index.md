@@ -61,3 +61,7 @@ documentation.
 ## T
 
 - [Tooltip](status-notifications/tooltip.md)
+
+## W
+
+- [Wizard](layout-navigation/wizard.md)
