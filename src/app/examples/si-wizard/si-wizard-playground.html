@@ -1,0 +1,150 @@
+<div class="d-flex flex-column h-100 gap-6">
+  <div class="d-flex flex-column flex-grow-1">
+    <si-wizard
+      class="h-100 overflow-auto m-8"
+      [ngClass]="{ 'card': configForm.value.cardWizard }"
+      [enableCompletionPage]="configForm.value.enableCompletionPage!"
+      [completionPageVisibleTime]="configForm.value.completionPageVisibleTime!"
+      [hasCancel]="configForm.value.hasCancel!"
+      [hasNavigation]="configForm.value.hasNavigation!"
+      [verticalLayout]="configForm.value.verticalLayout"
+      [verticalMinSize]="
+        configForm.value.verticalLayoutMinSize
+          ? configForm.value.verticalLayoutMinSize + 'px'
+          : undefined
+      "
+      [verticalMaxSize]="
+        configForm.value.verticalLayoutMaxSize
+          ? configForm.value.verticalLayoutMaxSize + 'px'
+          : undefined
+      "
+      [inlineNavigation]="configForm.value.inlineNavigation"
+      [showVerticalDivider]="configForm.value.showVerticalDivider"
+      [showStepNumbers]="configForm.value.showStepNumbers"
+      (wizardCancel)="logEvent('cancel', $event)"
+      (completionAction)="logEvent('completionAction', $event)"
+    >
+      @for (step of steps(); track step) {
+        @let backMessage = 'Going back to step' + $index;
+        <si-wizard-step
+          [heading]="step"
+          [isValid]="wizard().index !== $index || configForm.value.validStep"
+          (next)="logEvent(step + ' finished!')"
+          (back)="logEvent(backMessage)"
+        >
+          <div class="d-flex flex-column h-100">
+            <h1 class="text-center">{{ step }}</h1>
+            Content with full height
+          </div>
+        </si-wizard-step>
+      }
+    </si-wizard>
+  </div>
+  <div class="px-8 pb-6 e2e-ignore">
+    <div class="card">
+      <div class="card-header">Control panel</div>
+      <div class="card-body">
+        <form [formGroup]="configForm">
+          <div class="d-flex mb-3 py-2 align-items-center">
+            <span>External navigation</span>
+            <div class="d-flex align-items-center">
+              <button
+                type="button"
+                class="btn btn-circle btn-xs btn-tertiary icon element-left-2 flip-rtl align-self-center"
+                aria-label="Previous step"
+                (click)="wizard().back()"
+              ></button>
+              <span class="px-2">{{ wizard().index + 1 }} / {{ wizard().stepCount }}</span>
+              <button
+                type="button"
+                class="btn btn-circle btn-xs btn-tertiary icon element-right-2 flip-rtl align-self-center"
+                aria-label="Next step"
+                [disabled]="!canNext()"
+                (click)="wizard().next()"
+              ></button>
+            </div>
+          </div>
+          <div class="row align-items-end">
+            <si-form-item class="col-sm-3" label="Card wizard">
+              <input type="checkbox" class="form-check-input" formControlName="cardWizard" />
+            </si-form-item>
+            <si-form-item class="col-sm-3" label="Vertical layout">
+              <input
+                #layout
+                type="checkbox"
+                class="form-check-input"
+                formControlName="verticalLayout"
+              />
+            </si-form-item>
+            @if (!layout.checked) {
+              <si-form-item class="col-sm-3" label="Inline navigation">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  formControlName="inlineNavigation"
+                />
+              </si-form-item>
+            } @else {
+              <si-form-item class="col-sm-3" label="Show vertical divider">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  formControlName="showVerticalDivider"
+                />
+              </si-form-item>
+            }
+            <si-form-item class="col-sm-3" label="Show cancel button">
+              <input type="checkbox" class="form-check-input" formControlName="hasCancel" />
+            </si-form-item>
+            <si-form-item class="col-sm-3" label="Show previous/next buttons">
+              <input type="checkbox" class="form-check-input" formControlName="hasNavigation" />
+            </si-form-item>
+            <si-form-item class="col-sm-3" label="Enable completion page">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                formControlName="enableCompletionPage"
+              />
+            </si-form-item>
+            <si-form-item class="col-sm-3" label="Valid step">
+              <input type="checkbox" class="form-check-input" formControlName="validStep" />
+            </si-form-item>
+            <si-form-item class="col-sm-3" label="Number representation">
+              <input type="checkbox" class="form-check-input" formControlName="showStepNumbers" />
+            </si-form-item>
+          </div>
+          <div class="row align-items-end">
+            <si-form-item class="col-sm-3" label="Completion page visible time (ms)">
+              <si-number-input
+                class="align-self-center form-control mb-6"
+                formControlName="completionPageVisibleTime"
+                [min]="0"
+              />
+            </si-form-item>
+            <si-form-item class="col-sm-3" label="Number of steps">
+              <si-number-input
+                class="align-self-center form-control mb-6"
+                formControlName="stepCount"
+                [min]="3"
+              />
+            </si-form-item>
+            <si-form-item class="col-sm-3" label="Vertical layout step container min-size (px)">
+              <si-number-input
+                class="align-self-center form-control mb-6"
+                formControlName="verticalLayoutMinSize"
+                [min]="0"
+              />
+            </si-form-item>
+            <si-form-item class="col-sm-3" label="Vertical layout step container max-size (px)">
+              <si-number-input
+                class="align-self-center form-control mb-6"
+                formControlName="verticalLayoutMaxSize"
+                [min]="0"
+              />
+            </si-form-item>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
