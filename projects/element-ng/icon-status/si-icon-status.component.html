@@ -1,0 +1,18 @@
+@let iconValue = icon();
+<span class="icon icon-stack">
+  <si-icon-next
+    [ngClass]="isDisabledOrCountZero() ? undefined : color()"
+    [class.inactive]="isDisabledOrCountZero()"
+    [icon]="iconValue"
+  />
+  @let stackedValue = stackedIcon();
+  @if (stackedValue) {
+    <si-icon-next
+      [ngClass]="isDisabledOrCountZero() ? 'inactive-contrast' : color() + '-contrast'"
+      [icon]="stackedValue"
+    />
+  }
+</span>
+@if (!disabled()) {
+  <span>{{ count() }}</span>
+}

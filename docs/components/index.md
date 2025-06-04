@@ -37,6 +37,7 @@ documentation.
 
 ## I
 
+- [Icon Status](status-notifications/icon-status.md)
 - [Inline Notification](status-notifications/inline-notification.md)
 - [Input](forms-inputs/input.md)
 

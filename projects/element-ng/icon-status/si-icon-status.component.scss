@@ -1,0 +1,19 @@
+@use 'sass:map';
+
+@use '@siemens/element-theme/src/styles/variables';
+
+:host {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: map.get(variables.$spacers, 2);
+}
+
+.inactive {
+  color: variables.$element-ui-3;
+}
+
+.inactive-contrast {
+  color: variables.$element-ui-5;
+}

@@ -58,6 +58,7 @@ nav:
       - Connection Strength:              'components/status-notifications/connection-strength.md'
       - Copyright Notice:                 'components/status-notifications/copyright-notice.md'
       - Empty State:                      'components/status-notifications/empty-state.md'
+      - Icon Status:                      'components/status-notifications/icon-status.md'
       - Inline Notification:              'components/status-notifications/inline-notification.md'
       - Popover:                          'components/status-notifications/popover.md'
       - Summary Chip:                     'components/status-notifications/summary-chip.md'
