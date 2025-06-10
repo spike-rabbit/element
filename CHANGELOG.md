@@ -1,3 +1,38 @@
+# [47.3.0](https://github.com/siemens/element/compare/v47.2.0...v47.3.0) (2025-06-10)
+
+
+### Features
+
+* **autocomplete:** add autocomplete directives and module ([a478cd6](https://github.com/siemens/element/commit/a478cd61ef3c456f722afd23d8da6fdcefccbab0))
+* **badges:** badges with icons and emphasis ([175b375](https://github.com/siemens/element/commit/175b375cd3b30fcb92e2cbc6d2e2782f0c42ba0a))
+* **content-action-bar:** add content action bar component ([06de114](https://github.com/siemens/element/commit/06de114e51f8a5605044bb220d59463e6a19a058))
+* **forms:** add si-form ([d771de6](https://github.com/siemens/element/commit/d771de6c973e10693ad7b2dcb0f742e3ae4f4083))
+* **icon-status:** add icon status component with styling and examples ([e2cdd3f](https://github.com/siemens/element/commit/e2cdd3f47baf6a3982f748af9c8616754bec1ecf))
+* **input:** add radio, checkbox,switch input type and textarea ([2df0b9d](https://github.com/siemens/element/commit/2df0b9d511e4b9ae4cd2503c91a9de10a3abc2a1))
+* **language-switcher:** add language switcher component ([032b8c2](https://github.com/siemens/element/commit/032b8c22fd7d891819ffa19a999bd57aa19725f2))
+* **launchpad:** add tokens for application icon color/background ([d31db92](https://github.com/siemens/element/commit/d31db9247db4415580cd37b31cf090f296fc2482))
+* **number-input:** add number input ([bcadbe7](https://github.com/siemens/element/commit/bcadbe7d939debd3b460c963a3d8115187660b59))
+* **password-strength:** add password strength component with validation and UI integration ([19a38fb](https://github.com/siemens/element/commit/19a38fb505f33627e3a13166a214172999ab8d7a))
+* **pills-input:** add pills Input component ([af0486d](https://github.com/siemens/element/commit/af0486dd0019028aa65053f905808d586dbecaee))
+* **popover-next:** add si-popover-next component with directives and templates ([291ca35](https://github.com/siemens/element/commit/291ca359d6e25f6aafd1938058f6afbee6233f88))
+* **popover:** add popover component ([87312d3](https://github.com/siemens/element/commit/87312d3b1613713516eaac9ec9c5e71342bb0509))
+* **progress-bar:** add progress bar component with dynamic functionality ([b6c5405](https://github.com/siemens/element/commit/b6c5405619cb27f273dc01749fcec6f4995d3f19))
+* **progress-bar:** add progress bar component with dynamic functionality ([12051f8](https://github.com/siemens/element/commit/12051f828f2361b0338f02c350f8912049f26ad6))
+* **select:** add select component with multi-select and filtering capabilities ([c1a1837](https://github.com/siemens/element/commit/c1a1837cebae31831258e72f4f989a56ab8ff0a1))
+* **select:** add support for stacked icons ([9c6f052](https://github.com/siemens/element/commit/9c6f05289341f83061fe9155c94fb8741f39334b))
+* **summary-widget:** add summary widget ([44a540c](https://github.com/siemens/element/commit/44a540cbe32255e926c4a2aa16db7076311abe87))
+* **theme:** introduce base-critical token and class ([a7692e7](https://github.com/siemens/element/commit/a7692e7c5165cdf3af13bdebd686c670dee408c5))
+* **toast-notification:** add toast notification component and service ([70f23b5](https://github.com/siemens/element/commit/70f23b5aa3828cdcd9d01513d9cd5d6b5e0e9d69))
+* **typeahead:** add typeahead directive and components ([754a60e](https://github.com/siemens/element/commit/754a60ea0f3c06d5e9fcbd75fd641b72dd4d6bf0))
+* **wizard:** add wizard component with dynamic steps and navigation ([944c13b](https://github.com/siemens/element/commit/944c13b32ec6798a5a7cb5c9384a4da8f115350c))
+
+
+### Bug Fixes
+
+* **live-previewer:** make initialization more reliable ([3219d17](https://github.com/siemens/element/commit/3219d1701901c13eb19bf8a39c4ed047767b6f6a))
+* **live-preview:** fix recompile on template change in viewer ([af70347](https://github.com/siemens/element/commit/af703477470c9142cfb959b802fd3fb191bb205a))
+* **tsdoc:** add default ref ([ef9377d](https://github.com/siemens/element/commit/ef9377d056dc06ad4075ab7688b59ba4cc5d3335))
+
 # [47.2.0](https://github.com/siemens/element/compare/v47.1.0...v47.2.0) (2025-05-28)
 
 
