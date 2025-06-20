@@ -1,3 +1,35 @@
+# [47.4.0](https://github.com/siemens/element/compare/v47.3.0...v47.4.0) (2025-06-20)
+
+
+### Features
+
+* add photo upload component with cropping functionality ([40c1491](https://github.com/siemens/element/commit/40c149129ff8b0fd04222a94c5b542311d05d657))
+* **badge:** introduce critical badge ([8a1f9c0](https://github.com/siemens/element/commit/8a1f9c0f92bcdb0d1256dcbf92b757df74e3350d))
+* **breadcrumb:** add breadcrumb component ([a8b3a90](https://github.com/siemens/element/commit/a8b3a9055eda88346795f1034ebaaa7f895f7db9))
+* **card:** add card component ([bf05edb](https://github.com/siemens/element/commit/bf05edbbe1c2bfeb87af06bd92da5590b3c8be7e))
+* **card:** introduce critical accent ([69cf124](https://github.com/siemens/element/commit/69cf1247a2fbfd2e406213817d744f9a71ccc4cb))
+* **circle-status:** add circle status component ([5448a6f](https://github.com/siemens/element/commit/5448a6f9b255e17ed014ee383b41b88067419e3d))
+* **column-selection-dialog:** add column selection dialog ([85bb1fc](https://github.com/siemens/element/commit/85bb1fcebea5466dabcb2dd3d1b52b40bbb60710))
+* **common:** move caution and critical to the base status types ([e7eed49](https://github.com/siemens/element/commit/e7eed492fb4a7355792624c5ebb1791b0afa6246))
+* **date-range-filter:** add date range filter component ([798dcd0](https://github.com/siemens/element/commit/798dcd0953012027f5bef5ddfda82091c8b880b3))
+* **datepicker:** add datepicker components and directives ([928b5cc](https://github.com/siemens/element/commit/928b5ccf55ad7ba194e8536a626d0dab8051a865))
+* **electron-titlebar:** add electron titlebar component ([1f53bb5](https://github.com/siemens/element/commit/1f53bb5f1718ebd1f317907007adaba8580a41ca))
+* **file-uploader:** add file uploader ([afea528](https://github.com/siemens/element/commit/afea528219b9a3b02d0b562bb2d0988f6cf28baf))
+* **filter-bar:** add filter bar ([55b2c14](https://github.com/siemens/element/commit/55b2c14875380fc6a127fc243f492e6b22a60513))
+* **info-page:** add info page component ([89aeb11](https://github.com/siemens/element/commit/89aeb11458798c0af9da8865df6d1babbcedfb49))
+* **inline-notification:** introduce critical notification ([c741a52](https://github.com/siemens/element/commit/c741a5208f92f77eae87bbfb5644d131194581d2))
+* **ip-input:** implement IPv4 and IPv6 input directives with validation and masking ([fc94b0d](https://github.com/siemens/element/commit/fc94b0d1e6e6887b59c24d61fa754f638c44d2c9))
+* **localization:** add localization service and related components ([609f67c](https://github.com/siemens/element/commit/609f67c42cc5c0259e09e105c331bc395c1cc5c7))
+* **search-bar:** add search bar ([ca68d76](https://github.com/siemens/element/commit/ca68d768ae58dbb6260155723ca6ea7127c2fe4a))
+* **slider:** add slider ([7d07906](https://github.com/siemens/element/commit/7d079068b63c5695b3356edb4202aa2dd3f9b886))
+* **sort-bar:** add sort bar component with sorting functionality and documentation ([9fc833d](https://github.com/siemens/element/commit/9fc833de670261191b217e943d3df552762fbd26))
+* **split:** add split ([b78f847](https://github.com/siemens/element/commit/b78f847799ad28abaf296d6aa1e2a202c0b20b57))
+* **status-toggle:** add status toggle ([c60fc38](https://github.com/siemens/element/commit/c60fc38d632361c846f30d40e7fede8dcefff843))
+* **system-banner:** add system banner ([fefc1ee](https://github.com/siemens/element/commit/fefc1ee3ce6baedfd79ce8a9aacde1ef89728835))
+* **tabs:** add tabs component ([bbd73d5](https://github.com/siemens/element/commit/bbd73d576e528d714cf41f6a7a23f798679f5a4c))
+* **theme:** introduce text-critical token ([11ef127](https://github.com/siemens/element/commit/11ef127ceac43cc3b32aee89a4037f66bc911267))
+* **unauthorized-page:** add unauthorized page component ([96ce204](https://github.com/siemens/element/commit/96ce204ec8f656d05a63d307d8ab42109b10a4c9))
+
 # [47.3.0](https://github.com/siemens/element/compare/v47.2.0...v47.3.0) (2025-06-10)
 
 
