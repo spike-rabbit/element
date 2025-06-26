@@ -1,3 +1,34 @@
+# [47.5.0](https://github.com/siemens/element/compare/v47.4.0...v47.5.0) (2025-06-26)
+
+
+### Features
+
+* **angular:** add support for Angular 20 ([ca6275f](https://github.com/siemens/element/commit/ca6275fcd0799b950f886ed03eee0b542175cc6c))
+* **datatable:** add datatable config and interaction ([4134ac1](https://github.com/siemens/element/commit/4134ac1bd04c007a7cab7102b7bffbcc9a35a594))
+* **datatable:** support @siemens/datatable 23 ([bd19350](https://github.com/siemens/element/commit/bd193502fc7c2e663fa4b31f3b0bafb0638cc60e))
+* **element:** add list-details component ([6b8503b](https://github.com/siemens/element/commit/6b8503bb8e8530a6f11cf862bbf73368dd3da86d))
+* **filtered-search:** add filtered search ([766db4b](https://github.com/siemens/element/commit/766db4be88e58830f79b572150c5c91456258e4b))
+* **form:** add form examples ([8d217f6](https://github.com/siemens/element/commit/8d217f6593060b88b832e14b6c59a37ca2058fc4))
+* **formly:** add formly wrappers and components ([6c4f12f](https://github.com/siemens/element/commit/6c4f12f0cfa74b18299b16666a757b610e66a78b))
+* **loading-spinner:** ensure compatibility to Angular CDK 20 ([c236c30](https://github.com/siemens/element/commit/c236c304b3f9696ec0b16fd0b6fa0549d14c772a))
+* **modal:** ensure compatibility to Angular CDK 20 ([67382c5](https://github.com/siemens/element/commit/67382c57218ab128188f8e02634f1d68ae0b9570))
+* **native-charts:** add native charts ([ec19393](https://github.com/siemens/element/commit/ec193931db2d924d82b3ffff9c1a5bd23ee5fe4c))
+* **password-strength:** add option to allow whitespaces ([b18c232](https://github.com/siemens/element/commit/b18c2323d2c68a296c491c49ee118fecde8372d7))
+* **password-strength:** allow setting minRequiredPolicies ([776b47c](https://github.com/siemens/element/commit/776b47c99159180e14ed2b65b51dcf51e5c2facd))
+* **phone-number:** add phone number ([66589d2](https://github.com/siemens/element/commit/66589d2fc4bed8f1a42c375411817a0d848cd409))
+* **result-details-list:** add result details list ([f4842f5](https://github.com/siemens/element/commit/f4842f509859007d6b8c2ac91a99e789495369ee))
+* **shadow-root:** add shadow-root ([5e0d1cb](https://github.com/siemens/element/commit/5e0d1cbe297b11d305b3824638ae6e2fc5c977fd))
+* **side-panel:** add side-panel ([78a75a0](https://github.com/siemens/element/commit/78a75a01e4e448d64b67c688dfeb8d15cfe70d02))
+* **status-bar:** add status bar ([8328095](https://github.com/siemens/element/commit/83280955ca18c0fc286ed09528a1a1076ad835a9))
+* **tabs-next:** add si-tabs-next ([a1e87ee](https://github.com/siemens/element/commit/a1e87ee8e0006056d15d6279ef45877e1a6cfbb6))
+* **tree-view:** add tree view component ([203edbd](https://github.com/siemens/element/commit/203edbdb1fc6fe8c2dbc689a24cdcfba430e15af))
+
+
+### Bug Fixes
+
+* **status-icon:** add aria label for status icons ([b202fd7](https://github.com/siemens/element/commit/b202fd76eb8dc67908fb8538ea5ab551ae0cd1b7))
+* **wizard:** improve vertical wizard button positioning on small screens ([fa6f486](https://github.com/siemens/element/commit/fa6f4868b92e8a687ccdadce0963470297f5deef))
+
 # [47.4.0](https://github.com/siemens/element/compare/v47.3.0...v47.4.0) (2025-06-20)
 
 
