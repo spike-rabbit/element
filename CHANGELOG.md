@@ -1,3 +1,26 @@
+# [47.6.0](https://github.com/siemens/element/compare/v47.5.0...v47.6.0) (2025-07-08)
+
+
+### Features
+
+* **breadcrumb-router:** add breadcrumb router component and resolver service ([7a23ea8](https://github.com/siemens/element/commit/7a23ea875b9397eb217bd6f593782ce085b6399a))
+* **charts:** add si chart ([76d3e8a](https://github.com/siemens/element/commit/76d3e8a850bb9268ee8d768637dc9fb8cbf8fa36))
+* **date-range-filter:** improve layout for smaller screens ([07e2ef8](https://github.com/siemens/element/commit/07e2ef8f7e8c39d007dff36a8cc7fa6d820001ce))
+* **main-detail-container:** add main-detail-container ([7171549](https://github.com/siemens/element/commit/717154994a00efcd8c5bb4a16468927a49d7216d))
+* **navbar-vertical:** add navbar-vertical ([ade96f8](https://github.com/siemens/element/commit/ade96f8438131bce957f761bb87b5e3ed00e886a))
+* **resize-observer:** add emitInitial input to control initial resize emit ([f512259](https://github.com/siemens/element/commit/f512259134f64a2d20a2b692ac5a61edf8fa2592))
+* **theme:** add a .text-link class for link in text ([ea7f7a4](https://github.com/siemens/element/commit/ea7f7a4238085949172188b6dff8493b94849e03))
+* **theme:** introduce base-4, updated base colors ([0712c41](https://github.com/siemens/element/commit/0712c41c1b0360c60d975a1fc9c1fa9cae54ae80))
+* **threshold:** add threshold component with customizable thresholds and validation ([c395815](https://github.com/siemens/element/commit/c39581568dd03878c1debff4a163c3b1dc0551fb))
+* **tour:** add tour ([3c4b151](https://github.com/siemens/element/commit/3c4b151fb460bfc3b9a314404b6a1b500a84e114))
+
+
+### Bug Fixes
+
+* **formly:** add support for placeholder for select ([830608e](https://github.com/siemens/element/commit/830608e45cd4c92547d9e18caaf0021fe31a2068))
+* **tabs-next:** calculate scroll container width correctly on load ([b93396d](https://github.com/siemens/element/commit/b93396d9a2476bd5f6d03959b4f257bd24fdf84c))
+* **tabs-next:** drop only showing fully visible tabs in responsive mode ([0eb49f6](https://github.com/siemens/element/commit/0eb49f67f7b2dfc7412814ed515b27c575a40923))
+
 # [47.5.0](https://github.com/siemens/element/compare/v47.4.0...v47.5.0) (2025-06-26)
 
 
