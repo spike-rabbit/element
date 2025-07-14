@@ -1,3 +1,18 @@
+# [47.7.0](https://github.com/siemens/element/compare/v47.6.0...v47.7.0) (2025-07-14)
+
+
+### Features
+
+* **about:** add about ([86b562a](https://github.com/siemens/element/commit/86b562ae0a7a72536186c5b3412d138c6f9d931e))
+* **content-action-bar:** support checkbox items ([9cc6a5f](https://github.com/siemens/element/commit/9cc6a5f1432d412835c23e6f4009252fb09ae10a))
+* **landing-page:** add landing page component ([76731fc](https://github.com/siemens/element/commit/76731fcb5c4839041394b67e1ee1e9703821b1c5))
+* **translate:** use provider function to create service instances ([b76324c](https://github.com/siemens/element/commit/b76324c12172cb1fa097ab30398b817e82f17a03))
+
+
+### Bug Fixes
+
+* **translate:** prevent missing $localize errors ([2098eb1](https://github.com/siemens/element/commit/2098eb153214bd034bae588b3278a455814e4f8a))
+
 # [47.6.0](https://github.com/siemens/element/compare/v47.5.0...v47.6.0) (2025-07-08)
 
 
