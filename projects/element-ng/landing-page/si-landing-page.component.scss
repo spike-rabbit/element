@@ -1,6 +1,6 @@
 @use 'sass:map';
 
-@use '@siemens/element-theme/src/styles/all-variables';
+@use '@spike-rabbit/element-theme/src/styles/all-variables';
 
 $margin-content: map.get(all-variables.$spacers, 11);
 $margin-content-large-tablet: map.get(all-variables.$spacers, 10);

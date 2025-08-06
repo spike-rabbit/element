@@ -30,8 +30,8 @@ import {
   Breakpoints,
   ElementDimensions,
   ResizeObserverService
-} from '@siemens/element-ng/resize-observer';
-import { t } from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-ng/resize-observer';
+import { t } from '@spike-rabbit/element-translate-ng/translate';
 import { Subject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 

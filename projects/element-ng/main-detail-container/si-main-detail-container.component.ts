@@ -24,9 +24,9 @@ import {
   BOOTSTRAP_BREAKPOINTS,
   ElementDimensions,
   ResizeObserverService
-} from '@siemens/element-ng/resize-observer';
-import { SiSplitComponent, SiSplitPartComponent } from '@siemens/element-ng/split';
-import { SiTranslatePipe, t } from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-ng/resize-observer';
+import { SiSplitComponent, SiSplitPartComponent } from '@spike-rabbit/element-ng/split';
+import { SiTranslatePipe, t } from '@spike-rabbit/element-translate-ng/translate';
 import { Subscription } from 'rxjs';
 
 @Component({

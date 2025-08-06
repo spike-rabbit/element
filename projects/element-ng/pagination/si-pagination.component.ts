@@ -8,8 +8,8 @@ import {
   elementLeft3,
   elementRight3,
   SiIconNextComponent
-} from '@siemens/element-ng/icon';
-import { SiTranslatePipe, t } from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-ng/icon';
+import { SiTranslatePipe, t } from '@spike-rabbit/element-translate-ng/translate';
 
 @Component({
   selector: 'si-pagination',

@@ -8,9 +8,9 @@ import {
   SiAutoCollapsableListDirective,
   SiAutoCollapsableListItemDirective,
   SiAutoCollapsableListOverflowItemDirective
-} from '@siemens/element-ng/auto-collapsable-list';
-import { BackgroundColorVariant } from '@siemens/element-ng/common';
-import { SiTranslatePipe, t } from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-ng/auto-collapsable-list';
+import { BackgroundColorVariant } from '@spike-rabbit/element-ng/common';
+import { SiTranslatePipe, t } from '@spike-rabbit/element-translate-ng/translate';
 
 import { Filter } from './filter';
 import { SiFilterPillComponent } from './si-filter-pill.component';

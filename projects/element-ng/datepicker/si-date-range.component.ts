@@ -42,10 +42,14 @@ import {
   positionTopCenter,
   positionTopEnd,
   positionTopStart
-} from '@siemens/element-ng/common';
-import { SI_FORM_ITEM_CONTROL, SiFormItemControl } from '@siemens/element-ng/form';
-import { addIcons, elementCalendar, SiIconNextComponent } from '@siemens/element-ng/icon';
-import { SiTranslatePipe, t, TranslatableString } from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-ng/common';
+import { SI_FORM_ITEM_CONTROL, SiFormItemControl } from '@spike-rabbit/element-ng/form';
+import { addIcons, elementCalendar, SiIconNextComponent } from '@spike-rabbit/element-ng/icon';
+import {
+  SiTranslatePipe,
+  t,
+  TranslatableString
+} from '@spike-rabbit/element-translate-ng/translate';
 
 import { getMaxDate, getMinDate } from './date-time-helper';
 import { SiDateInputDirective } from './si-date-input.directive';

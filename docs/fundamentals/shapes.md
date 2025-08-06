@@ -53,7 +53,7 @@ The shape tokens for each Element shape can also be alternatively used as SCSS
 variables within stylesheets.
 
 ```scss
-@use '@siemens/element-theme/src/styles/variables';
+@use '@spike-rabbit/element-theme/src/styles/variables';
 
 border-radius: variables.$element-radius-0;
 border-radius: variables.$element-radius-1;

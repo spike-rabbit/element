@@ -1,6 +1,6 @@
 @use 'sass:map';
 
-@use '@siemens/element-theme/src/styles/variables';
+@use '@spike-rabbit/element-theme/src/styles/variables';
 
 $list-sorting-bg: variables.$element-ui-4;
 $list-header-sorting-padding: map.get(variables.$spacers, 3) map.get(variables.$spacers, 5);

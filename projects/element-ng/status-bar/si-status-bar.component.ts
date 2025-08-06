@@ -21,23 +21,23 @@ import {
   viewChild
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { BlinkService, STATUS_ICON, TextMeasureService } from '@siemens/element-ng/common';
+import { BlinkService, STATUS_ICON, TextMeasureService } from '@spike-rabbit/element-ng/common';
 import {
   addIcons,
   elementDown2,
   elementSoundMute,
   elementSoundOn,
   SiIconNextComponent
-} from '@siemens/element-ng/icon';
+} from '@spike-rabbit/element-ng/icon';
 import {
   ResizeObserverService,
   SiResizeObserverDirective
-} from '@siemens/element-ng/resize-observer';
+} from '@spike-rabbit/element-ng/resize-observer';
 import {
   injectSiTranslateService,
   SiTranslatePipe,
   t
-} from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-translate-ng/translate';
 import { Observable, Subscription } from 'rxjs';
 import { first } from 'rxjs/operators';
 
