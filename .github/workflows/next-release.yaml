@@ -1,4 +1,4 @@
-name: Release
+name: Next Release
 on:
   workflow_dispatch:
 
@@ -27,7 +27,7 @@ jobs:
           name: dist
           path: dist
       - run: npm ci --prefer-offline --no-audit
-      - run: npx semantic-release -e ./.releaserc-regular.js
+      - run: npx semantic-release -e ./.releaserc-next.js
         env:
           GIT_AUTHOR_NAME: 'Siemens Element Bot'
           GIT_AUTHOR_EMAIL: 'simpl.si@siemens.com'
