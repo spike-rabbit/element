@@ -1,6 +1,6 @@
 @use 'sass:map';
 
-@use '@siemens/element-theme/src/styles/variables';
+@use '@spike-rabbit/element-theme/src/styles/variables';
 
 $filtered-search-line-height: map.get(variables.$spacers, 8);
 $filtered-search-criteria-margin: map.get(variables.$spacers, 2);

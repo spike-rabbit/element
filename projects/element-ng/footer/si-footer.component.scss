@@ -1,6 +1,6 @@
 @use 'sass:map';
 
-@use '@siemens/element-theme/src/styles/variables';
+@use '@spike-rabbit/element-theme/src/styles/variables';
 
 $page-footer-padding: map.get(variables.$spacers, 5);
 $footer-separator-content: '|' !default;

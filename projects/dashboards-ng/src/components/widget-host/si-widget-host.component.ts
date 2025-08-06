@@ -20,15 +20,15 @@ import {
   viewChild,
   ViewContainerRef
 } from '@angular/core';
-import { SiActionDialogService } from '@siemens/element-ng/action-modal';
+import { SiActionDialogService } from '@spike-rabbit/element-ng/action-modal';
 // We need one import from the main entry.
 // Otherwise, module federation is confused.
 // I don't know why.
-import type { MenuItem as MenuItemLegacy } from '@siemens/element-ng/common';
-import { ContentActionBarMainItem, ViewType } from '@siemens/element-ng/content-action-bar';
-import { SiDashboardCardComponent } from '@siemens/element-ng/dashboard';
-import { MenuItem } from '@siemens/element-ng/menu';
-import { t } from '@siemens/element-translate-ng/translate';
+import type { MenuItem as MenuItemLegacy } from '@spike-rabbit/element-ng/common';
+import { ContentActionBarMainItem, ViewType } from '@spike-rabbit/element-ng/content-action-bar';
+import { SiDashboardCardComponent } from '@spike-rabbit/element-ng/dashboard';
+import { MenuItem } from '@spike-rabbit/element-ng/menu';
+import { t } from '@spike-rabbit/element-translate-ng/translate';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 

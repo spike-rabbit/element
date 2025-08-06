@@ -21,7 +21,11 @@ import {
   viewChild
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { SiTranslatePipe, t, TranslatableString } from '@siemens/element-translate-ng/translate';
+import {
+  SiTranslatePipe,
+  t,
+  TranslatableString
+} from '@spike-rabbit/element-translate-ng/translate';
 
 import { Cell } from './components/si-calendar-body.component';
 import { SiDaySelectionComponent } from './components/si-day-selection.component';

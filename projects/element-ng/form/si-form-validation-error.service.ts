@@ -4,7 +4,7 @@
  */
 import { inject, Injectable } from '@angular/core';
 import { ValidationErrors } from '@angular/forms';
-import { t } from '@siemens/element-translate-ng/translate';
+import { t } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiFormError } from './si-form-item/si-form-item.component';
 import { SiFormValidationErrorMapper } from './si-form-validation-error.model';

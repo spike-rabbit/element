@@ -4,7 +4,7 @@
  */
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { ComponentFixture, fakeAsync, flush, TestBed, tick } from '@angular/core/testing';
-import { t } from '@siemens/element-translate-ng/translate';
+import { t } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiRelativeDateComponent } from './si-relative-date.component';
 

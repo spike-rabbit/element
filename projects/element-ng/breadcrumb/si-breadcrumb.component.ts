@@ -21,14 +21,14 @@ import {
   elementBreadcrumbRoot,
   elementRight2,
   SiIconNextComponent
-} from '@siemens/element-ng/icon';
-import { SiLinkDirective } from '@siemens/element-ng/link';
-import { SiResizeObserverDirective } from '@siemens/element-ng/resize-observer';
+} from '@spike-rabbit/element-ng/icon';
+import { SiLinkDirective } from '@spike-rabbit/element-ng/link';
+import { SiResizeObserverDirective } from '@spike-rabbit/element-ng/resize-observer';
 import {
   injectSiTranslateService,
   SiTranslatePipe,
   t
-} from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-translate-ng/translate';
 import { merge, of, Subscription } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 

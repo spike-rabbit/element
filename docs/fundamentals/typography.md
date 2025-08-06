@@ -136,7 +136,7 @@ variables, which can be used if required. The variables come in the form of
 are defined in [_typography.scss](https://github.com/siemens/element/tree/main/projects/element-theme/src/styles/variables/_typography.scss).
 
 ```scss
-@use '@siemens/element-theme/src/styles/variables';
+@use '@spike-rabbit/element-theme/src/styles/variables';
 
 font-size: variables.$si-font-size-h1;
 line-height: variables.$si-line-height-h1;
@@ -159,7 +159,7 @@ All color variants can also be applied alternatively using SASS. It is heavily
 recommended to use the contextual colors for this:
 
 ```scss
-@use '@siemens/element-theme/src/styles/variables';
+@use '@spike-rabbit/element-theme/src/styles/variables';
 
 color: variables.$element-text-primary;
 color: variables.$element-text-secondary;
