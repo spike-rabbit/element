@@ -45,6 +45,8 @@ export class SiNavbarItemComponent implements OnInit, DoCheck, OnDestroy {
    */
   readonly item = input.required<MenuItem>();
 
+  // fix comment
+
   /**
    * Is the item a quick action displayed on the end (right in LTR) side
    *
