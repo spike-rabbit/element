@@ -1,3 +1,164 @@
+# [49.0.0](https://github.com/spike-rabbit/element/compare/v48.0.0...v49.0.0) (2025-08-07)
+
+
+### Features
+
+* **angular:** update to Angular 20 ([cf9d3d5](https://github.com/spike-rabbit/element/commit/cf9d3d548f5cab5b05bfb1597ca50e1e6f702a89))
+* **charts/gauge:** support custom value formatter ([5ea6af2](https://github.com/spike-rabbit/element/commit/5ea6af26c09fdb0753c2dfb39e134414d78362bd))
+* **dashboard-toolbar:** add title attribute to edit button ([14afc3c](https://github.com/spike-rabbit/element/commit/14afc3cecd758a1ce186f342ccac18920592b982))
+* **element-translation-ng:** add `t`-function to locally override $localize ([b2916f4](https://github.com/spike-rabbit/element/commit/b2916f4e214fbd7a67c6e2d41e13ba8fc0f2bf86)), closes [#436](https://github.com/spike-rabbit/element/issues/436)
+* **form:** drop form-item legacy mode ([5d83257](https://github.com/spike-rabbit/element/commit/5d83257ac919dc8d62b85e3acd2f0a98c158f3b7))
+* **help-button:** introduce a help button component ([29ff865](https://github.com/spike-rabbit/element/commit/29ff865d3a00fac34f27d786e3e897874f4bb4a0))
+* **micro-charts:** add micro bar chart ([89e779f](https://github.com/spike-rabbit/element/commit/89e779f7603289e465b60f7dbcb22f530e58beb7))
+* **micro-charts:** add micro donut chart ([5e29b58](https://github.com/spike-rabbit/element/commit/5e29b5867e3a63ea0aa9cb50f04dbc41bb48555d))
+* **micro-charts:** add micro line chart ([e7c8429](https://github.com/spike-rabbit/element/commit/e7c84298eac5e59a3f73887899e9dbfe630703ce))
+* **micro-charts:** add micro progress chart ([e9333dc](https://github.com/spike-rabbit/element/commit/e9333dc3107df200ba18422d565b914f5eea3aad))
+* **switch:** align switch label padding with checkboxes ([13cf2f4](https://github.com/spike-rabbit/element/commit/13cf2f48e179e90e42336c3dae9ea43bbb1b1c94))
+* **tabs:** align with UX specs ([e3280c6](https://github.com/spike-rabbit/element/commit/e3280c65807c207a055ce4887d1c817e78f646ca))
+* **theme:** update critical status colors to use data-orchid palette ([f5e2b3b](https://github.com/spike-rabbit/element/commit/f5e2b3b9d496a08d2ed45c11dfece99f8d35fcd7))
+* **tooltip:** support template context with tooltip template ([6bfc714](https://github.com/spike-rabbit/element/commit/6bfc71415aca6eba7e30184774f0fa00da51a00d))
+* **wizard:** switch to footer navigation as default ([2f07b9c](https://github.com/spike-rabbit/element/commit/2f07b9cf534103f59e8a0bff8f37852297772199))
+
+
+### Bug Fixes
+
+* **accordion:** don't switch to cursor pointer in case of disabled panel ([bebdc16](https://github.com/spike-rabbit/element/commit/bebdc164f5bddb4409164e4ac795dd1ec16b01e2))
+* **badge:** align default text with design specs ([d96cf0b](https://github.com/spike-rabbit/element/commit/d96cf0be24bfd4bd6d713bcc2137b7dadd059175)), closes [#425](https://github.com/spike-rabbit/element/issues/425)
+* **date-range-filter:** allow empty reference point ([2f7748e](https://github.com/spike-rabbit/element/commit/2f7748e4d21aa5e08a79c66fd9e9579e843d0dcc))
+* **date-range-filter:** stop automatic advanced mode toggle in input mode ([6337d0a](https://github.com/spike-rabbit/element/commit/6337d0a8418cd2c23acf07722321003f60bea86d))
+* **form:** ensure default width of si-form-fieldset labels is 16% in horizontal layout ([0f16342](https://github.com/spike-rabbit/element/commit/0f16342cf7acdc0d8f1a39217924afb584e54682))
+* **help-button:** don't change color on hover when disabled ([5df4d9f](https://github.com/spike-rabbit/element/commit/5df4d9f2ce3261a20ef413db8123a628b88346c1))
+* **live-preview:** change initialization order to fix locale change loop ([acf2190](https://github.com/spike-rabbit/element/commit/acf21904d3aa16b18097a98aad6948cfb1b8ea52)), closes [#451](https://github.com/spike-rabbit/element/issues/451)
+* **navbar:** important problem ([e6011b3](https://github.com/spike-rabbit/element/commit/e6011b3aab3d0a799721f74edc30ab707f17a4e1))
+* **search-bar:** do not emit `searchChange` during initialisation ([e2be687](https://github.com/spike-rabbit/element/commit/e2be687430c94cf03def060721782c21e775b3bc))
+* **status-toggle:** use correct cursor for disabled state ([6cde8c0](https://github.com/spike-rabbit/element/commit/6cde8c0ee0886bb1f22df38bd63ccf3da30bb39a))
+* **tabs-next:** ensure that the active tab is focussed by default ([2b787fb](https://github.com/spike-rabbit/element/commit/2b787fb173e617479c008b856ace989b1676ef14))
+* **threshold:** input is not focused after adding step ([6cc6765](https://github.com/spike-rabbit/element/commit/6cc6765a99e46c63db13b13b70d6223d67aead00))
+* **utilities:** apply correct style for `rounded-end` utility ([295fc49](https://github.com/spike-rabbit/element/commit/295fc49568c98092a13ae10e715dded0b0c16860))
+
+
+### NOTES
+
+* **theme:** The colors for the "critical" status have changed. If this
+  change is not desired, the old colors can be restored using this snippet in the
+  application's main `styles.scss`:
+  
+  ```scss
+  @use '@siemens/element-theme/src/theme/base-colors';
+  
+  // load theme here as usual
+  @use '@siemens/element-theme/src/theme';
+  @use '@siemens/element-ng/element-ng';
+  
+  // add overrides
+  :root {
+    --element-base-critical: #{base-colors.$color-red-100};
+    --element-status-critical: #{base-colors.$color-red-900};
+    --element-text-critical: #{base-colors.$color-red-700};
+  }
+  
+  :root.app--dark {
+    --element-base-critical: #{base-colors.$color-red-900};
+    --element-status-critical: #{base-colors.$color-red-700};
+    --element-text-critical: #{base-colors.$color-red-100};
+  }
+  ```
+
+### BREAKING CHANGES
+
+* **search-bar:** `SiSearchBarComponent.searchChange` is not emitted during initialisation with `value` input
+* **wizard:** The `si-wizard` now has the navigation buttons by default in the footer.
+  
+  To restore the old behavior set `SiWizardComponent.inlineNavigation` to `true`:
+  
+  ```
+  <si-wizard inlineNavigation>
+     ...
+  </si-wizard>
+  ```
+* **form:** Using multiple form-controls within a single si-form-item is no longer supported.
+  Use si-form-fieldset to group multiple si-form-item components.
+  
+  Before:
+  
+  ```html
+  <si-form-item label="Group label">
+    <div class="form-check">
+      <input type="checkbox" id="check-1" class="form-check-input" [formControl]="check1" />
+      <label for="check-1">Label 1</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" id="check-2" class="form-check-input" [formControl]="check2" />
+      <label for="check-2">Label 2</label>
+    </div>
+  </si-form-item>
+  ```
+  
+  After:
+  
+  ```html
+  <si-form-fieldset label="Group label">
+    <si-form-item label="Label 1">
+      <input type="checkbox" class="form-check-input" [formControl]="check1" />
+    </si-form-item>
+    <si-form-item label="Label 2">
+      <input type="checkbox" class="form-check-input" [formControl]="check2" />
+    </si-form-item>
+  </si-form-fieldset>
+  ```
+* **angular:** Angular 20+ is required.
+  Follow the Angular update guide to update your app: <https://angular.dev/update-guide?v=19.0-20.0>
+* Removed deprecated `SiFormContainerComponent.getValidationErrors` method.
+  
+  Use the build-in mechanism of the `si-form-item` to show validation errors.
+  See: https://element.siemens.io/components/forms-inputs/forms/#error-messages
+* Removed `ResultDetailStepState` as object. Use `ResultDetailStepState` as type with direct string values.
+* Removed following deprecated inputs
+  
+    - `SiFilteredSearchComponent.showIcon`
+    - `SiFilteredSearchComponent.selectedCriteriaIndex`
+    - `SiFilteredSearchComponent.noMatchingCriteriaText`
+    - `SiFilteredSearchComponent.submitText` (replaced by `SiFilteredSearchComponent.submitButtonLabel`)
+    - `SiFilteredSearchComponent.items` (replaced by `SiFilteredSearchComponent.itemCountText`)
+* Removed `SiWizardComponent.hasNavigation` input and `SiWizardComponent.cancel` output. Use `SiWizardComponent.hideNavigation` and  `SiWizardComponent.wizardCancel` respectively instead.
+* Removed deprecated methods:
+  
+  - `SiActionDialogService.showAlertDialog`
+  - `SiActionDialogService.showConfirmationDialog`
+  - `SiActionDialogService.showEditDiscardDialog`
+  - `SiActionDialogService.showDeleteConfirmationDialog`
+  
+  Use `SiActionDialogService.showActionDialog` instead.
+* Removed `AlertDialogResult`, `EditDiscardDialogResult`, `ConfirmationDialogResult` and `DeleteConfirmationDialogResult` as const objects. Use them only as type.
+* Removed `SiFormItemComponent.inputId` and `SiFormItemComponent.readonly` inputs without any replacement.
+* Removed `siFormItemControl` directive.
+  
+  Replace this directive with either the class form-control or form-check-input:
+  
+  ```
+  <!-- Before -->
+  <input type="checkbox" siFormItemControl>
+  <input siFormItemControl>
+  
+  <!-- After -->
+  <input type="checkbox" class="form-check-input">
+  <input class="form-control">
+  ```
+* Removed `SiCollapsiblePanelComponent.toggle` output use `SiCollapsiblePanelComponent.panelToggle` instead.
+* Removed `SiAccordionComponent.colorVariant` input without any replacement.
+* Removed `SiDatepickerOverlayComponent.isFocused` and `SiDatepickerOverlayDirective.isFocused` without any replacement.
+* Removed `SiDatepickerOverlayDirective.toggleOverlay` method. Use `SiDatepickerOverlayDirective.showOverlay` or `SiDatepickerOverlayDirective.closeOverlay` methods instead.
+* Removed `SiDateInputDirective.dateInputDebounceTime`, `SiDateRangeComponent .debounceTime` and `SiDatepickerDirective.triggeringInput` inputs without any replacement as they had no effect.
+* Removed unused `SiSplitPartComponent.headerStatusColor` and `SiSplitPartComponent.headerStatusIconClass` inputs without any replacement.
+* Removed `SiNavbarVerticalComponent.autoCollapseDelay` input without any replacement.
+* Removed `SiTreeViewComponent.trackByFunction` input which had no effect.
+* Removed `SiTypeaheadDirective.typeaheadOnMultiselectClose` and `SiTypeaheadDirective.typeaheadClosed` output. Use `SiTypeaheadDirective.typeaheadOpenChange` instead.
+
+### DEPRECATIONS
+
+* **charts/gauge:** Input `labelFormatter` should no longer be used to format the value. Use `valueFormatter` instead.
+* `SiDatepickerComponent.calenderWeekLabel` input is deprecated. Use `SiDatepickerComponent.calendarWeekLabel` instead.
+
 # [47.8.0](https://github.com/siemens/element/compare/v47.7.0...v47.8.0) (2025-07-22)
 
 
