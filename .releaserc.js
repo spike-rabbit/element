@@ -3,6 +3,8 @@ import { commitTypes, releaseRules } from './tools/semantic-release/config.js';
 
 const skipCommits = process.env.SKIP_COMMIT === 'true';
 
+// comment
+
 export default {
   branches: [
     {
