@@ -1,3 +1,10 @@
+## [49.0.1](https://github.com/spike-rabbit/element/compare/v49.0.0...v49.0.1) (2025-08-08)
+
+
+### Bug Fixes
+
+* **release:** test maintenance relase ([3e9e978](https://github.com/spike-rabbit/element/commit/3e9e978d0f30f0f1974ff36ef1f481f91e0199f2))
+
 # [49.0.0](https://github.com/spike-rabbit/element/compare/v48.0.0...v49.0.0) (2025-08-07)
 
 

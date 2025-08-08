@@ -1,7 +1,7 @@
 {
   "name": "@spike-rabbit/charts-ng",
   "description": "Element Charts library.",
-  "version": "49.0.0",
+  "version": "49.0.1",
   "license": "MIT",
   "repository": {
     "type": "git",

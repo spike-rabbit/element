@@ -1,7 +1,7 @@
 {
   "name": "@spike-rabbit/dashboards-ng",
   "description": "Element Dashboards library.",
-  "version": "49.0.0",
+  "version": "49.0.1",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -21,8 +21,8 @@
     "@angular/common": "20",
     "@angular/core": "20",
     "@ngx-translate/core": "15 - 16",
-    "@spike-rabbit/element-ng": "49.0.0",
-    "@spike-rabbit/element-theme": "49.0.0",
+    "@spike-rabbit/element-ng": "49.0.1",
+    "@spike-rabbit/element-theme": "49.0.1",
     "gridstack": "^11.1.0"
   }
 }
