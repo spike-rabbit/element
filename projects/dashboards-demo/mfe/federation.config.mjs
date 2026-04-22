@@ -15,7 +15,13 @@ export default withNativeFederation({
     '@meteocons/svg-static',
     /^@module-federation/,
     // Skip packages with assets that can't be bundled for browser
-    'flag-icons'
+    'flag-icons',
+    // Skip Node.js-only build/schematics tooling that shareAll would otherwise
+    // try to bundle for the browser. These transitively import
+    // @angular-devkit/core, whose template.js is not valid browser code and
+    // breaks esbuild ("Unterminated string literal").
+    /^@angular-architects\/module-federation/,
+    /^@angular\/cdk\/schematics/
     // Add further packages you don't need at runtime
   ],
 
