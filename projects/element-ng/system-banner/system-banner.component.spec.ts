@@ -4,7 +4,7 @@
  */
 import { inputBinding, signal, WritableSignal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ExtendedStatusType } from '@siemens/element-ng/common';
+import { ExtendedStatusType } from '@spike-rabbit/element-ng/common';
 
 import { SiSystemBannerComponent } from './system-banner.component';
 

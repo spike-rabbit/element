@@ -13,9 +13,9 @@ import {
   OnInit
 } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, RouterLink } from '@angular/router';
-import { SiIconComponent } from '@siemens/element-ng/icon';
-import { MenuItem, SiMenuModule } from '@siemens/element-ng/menu';
-import { SiTranslatePipe, t, TranslatableString } from '@siemens/element-translate-ng/translate';
+import { SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { MenuItem, SiMenuModule } from '@spike-rabbit/element-ng/menu';
+import { SiTranslatePipe, t, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiWidgetBaseDirective } from '../si-widget-base.directive';
 

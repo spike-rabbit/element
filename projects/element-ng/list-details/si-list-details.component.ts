@@ -19,13 +19,13 @@ import {
   SimpleChanges,
   viewChild
 } from '@angular/core';
-import { areAnimationsDisabled } from '@siemens/element-ng/common';
+import { areAnimationsDisabled } from '@spike-rabbit/element-ng/common';
 import {
   BOOTSTRAP_BREAKPOINTS,
   ElementDimensions,
   ResizeObserverService
-} from '@siemens/element-ng/resize-observer';
-import { SiSplitComponent, SiSplitPartComponent } from '@siemens/element-ng/split';
+} from '@spike-rabbit/element-ng/resize-observer';
+import { SiSplitComponent, SiSplitPartComponent } from '@spike-rabbit/element-ng/split';
 import { BehaviorSubject, Subject, Subscription } from 'rxjs';
 
 @Component({

@@ -5,8 +5,8 @@
 import { NgTemplateOutlet } from '@angular/common';
 import { booleanAttribute, ChangeDetectionStrategy, Component, input, output } from '@angular/core';
 import { elementCancel } from '@siemens/element-icons';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiTranslatePipe } from '@siemens/element-translate-ng/translate';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiTranslatePipe } from '@spike-rabbit/element-translate-ng/translate';
 
 import { Filter } from './filter';
 

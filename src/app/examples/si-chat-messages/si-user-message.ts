@@ -8,9 +8,9 @@ import {
   SiUserMessageComponent,
   Attachment,
   MessageAction
-} from '@siemens/element-ng/chat-messages';
-import { getMarkdownRenderer } from '@siemens/element-ng/markdown-renderer';
-import { LOG_EVENT } from '@siemens/live-preview';
+} from '@spike-rabbit/element-ng/chat-messages';
+import { getMarkdownRenderer } from '@spike-rabbit/element-ng/markdown-renderer';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 
 @Component({
   selector: 'app-sample',

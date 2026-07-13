@@ -4,7 +4,7 @@
  */
 import { isDevMode, isSignal } from '@angular/core';
 import { MissingTranslationHandler, TranslateService } from '@ngx-translate/core';
-import { SiTranslateService, TranslationResult } from '@siemens/element-translate-ng/translate';
+import { SiTranslateService, TranslationResult } from '@spike-rabbit/element-translate-ng/translate';
 import { merge, Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 

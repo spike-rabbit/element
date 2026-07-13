@@ -16,8 +16,8 @@ import {
   signal
 } from '@angular/core';
 import { outputToObservable, takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { isRTL } from '@siemens/element-ng/common';
-import { BOOTSTRAP_BREAKPOINTS } from '@siemens/element-ng/resize-observer';
+import { isRTL } from '@spike-rabbit/element-ng/common';
+import { BOOTSTRAP_BREAKPOINTS } from '@spike-rabbit/element-ng/resize-observer';
 import { asapScheduler, merge, Observable, Subject } from 'rxjs';
 import { filter, map, observeOn, skip, takeUntil, tap } from 'rxjs/operators';
 

@@ -11,7 +11,7 @@ import {
   OnDestroy
 } from '@angular/core';
 import { ActivatedRoute, Route, Router, RouterOutlet } from '@angular/router';
-import { CopyrightDetails } from '@siemens/element-ng/copyright-notice';
+import { CopyrightDetails } from '@spike-rabbit/element-ng/copyright-notice';
 import {
   AlertConfig,
   SiChangePasswordComponent,
@@ -19,9 +19,9 @@ import {
   UsernamePassword,
   SiLandingPageComponent,
   SiLoginBasicComponent
-} from '@siemens/element-ng/landing-page';
-import { PasswordPolicy } from '@siemens/element-ng/password-strength';
-import { LOG_EVENT, provideExampleRoutes } from '@siemens/live-preview';
+} from '@spike-rabbit/element-ng/landing-page';
+import { PasswordPolicy } from '@spike-rabbit/element-ng/password-strength';
+import { LOG_EVENT, provideExampleRoutes } from '@spike-rabbit/live-preview';
 
 const loginAlert = signal<AlertConfig | undefined>(undefined);
 

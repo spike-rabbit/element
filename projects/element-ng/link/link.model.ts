@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 import { NavigationExtras } from '@angular/router';
-import { TranslatableString } from '@siemens/element-translate-ng/translate';
+import type { TranslatableString } from '@spike-rabbit/element-translate-ng/translate-types';
 
 export interface Link {
   /**

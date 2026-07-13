@@ -15,11 +15,11 @@ import {
   signal
 } from '@angular/core';
 import { elementPinch, elementZoom } from '@siemens/element-icons';
-import { SiCardComponent, SiCardHeaderComponent } from '@siemens/element-ng/card';
-import { MenuItem } from '@siemens/element-ng/common';
-import { ContentActionBarMainItem } from '@siemens/element-ng/content-action-bar';
-import { addIcons } from '@siemens/element-ng/icon';
-import { SiTranslatePipe, t } from '@siemens/element-translate-ng/translate';
+import { SiCardComponent, SiCardHeaderComponent } from '@spike-rabbit/element-ng/card';
+import { MenuItem } from '@spike-rabbit/element-ng/common';
+import { ContentActionBarMainItem } from '@spike-rabbit/element-ng/content-action-bar';
+import { addIcons } from '@spike-rabbit/element-ng/icon';
+import { SiTranslatePipe, t } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiDashboardService } from './si-dashboard.service';
 

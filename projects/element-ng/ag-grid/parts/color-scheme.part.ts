@@ -2,7 +2,7 @@
  * Copyright (c) Siemens 2016 - 2026
  * SPDX-License-Identifier: MIT
  */
-import { elementCheckedImageShape } from '@siemens/element-ng/icon';
+import { elementCheckedImageShape } from '@spike-rabbit/element-ng/icon';
 import { Part, ThemeDefaultParams, createPart } from 'ag-grid-community';
 
 /**

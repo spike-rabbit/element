@@ -29,11 +29,11 @@ import {
   elementLayoutPane2,
   elementLayoutPane2Right
 } from '@siemens/element-icons';
-import { SI_UI_STATE_SERVICE } from '@siemens/element-ng/common';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { BOOTSTRAP_BREAKPOINTS } from '@siemens/element-ng/resize-observer';
-import { SiSkipLinkTargetDirective } from '@siemens/element-ng/skip-links';
-import { SiTranslatePipe, t } from '@siemens/element-translate-ng/translate';
+import { SI_UI_STATE_SERVICE } from '@spike-rabbit/element-ng/common';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { BOOTSTRAP_BREAKPOINTS } from '@spike-rabbit/element-ng/resize-observer';
+import { SiSkipLinkTargetDirective } from '@spike-rabbit/element-ng/skip-links';
+import { SiTranslatePipe, t } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiNavbarVerticalNextItemComponent } from './si-navbar-vertical-next-item.component';
 import { SI_NAVBAR_VERTICAL_NEXT } from './si-navbar-vertical-next.provider';

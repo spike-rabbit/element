@@ -26,19 +26,19 @@ import {
   elementPinch,
   elementZoom
 } from '@siemens/element-icons';
-import { SiAccordionHCollapseService } from '@siemens/element-ng/accordion';
-import { MenuItem as MenuItemLegacy } from '@siemens/element-ng/common';
+import { SiAccordionHCollapseService } from '@spike-rabbit/element-ng/accordion';
+import { MenuItem as MenuItemLegacy } from '@spike-rabbit/element-ng/common';
 import {
   ContentActionBarMainItem,
   SiContentActionBarComponent
-} from '@siemens/element-ng/content-action-bar';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiLinkDirective } from '@siemens/element-ng/link';
-import { MenuItem } from '@siemens/element-ng/menu';
-import { BOOTSTRAP_BREAKPOINTS } from '@siemens/element-ng/resize-observer';
-import { SiSearchBarComponent } from '@siemens/element-ng/search-bar';
-import { SiTooltipDirective } from '@siemens/element-ng/tooltip';
-import { SiTranslatePipe, t, TranslatableString } from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-ng/content-action-bar';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiLinkDirective } from '@spike-rabbit/element-ng/link';
+import { MenuItem } from '@spike-rabbit/element-ng/menu';
+import { BOOTSTRAP_BREAKPOINTS } from '@spike-rabbit/element-ng/resize-observer';
+import { SiSearchBarComponent } from '@spike-rabbit/element-ng/search-bar';
+import { SiTooltipDirective } from '@spike-rabbit/element-ng/tooltip';
+import { SiTranslatePipe, t, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 import { timer } from 'rxjs';
 
 import { SiSidePanelService } from './si-side-panel.service';

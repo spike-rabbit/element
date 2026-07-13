@@ -10,7 +10,7 @@ import { SiTabsetLegacyComponent } from './si-tabset/si-tabset-legacy.component'
 const components = [SiTabsetLegacyComponent, SiTabLegacyComponent];
 
 /**
- * @deprecated Use the new components from `@siemens/element-ng/tabs` instead.
+ * @deprecated Use the new components from `@spike-rabbit/element-ng/tabs` instead.
  * See {@link https://element.siemens.io/components/layout-navigation/tabs/#code}
  * for usage instructions.
  */

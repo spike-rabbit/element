@@ -7,7 +7,7 @@ The **status counter** component (formerly **icon status**) represents a customi
 ### Usage
 
 ```ts
-import { SiStatusCounterComponent } from '@siemens/element-ng/status-counter';
+import { SiStatusCounterComponent } from '@spike-rabbit/element-ng/status-counter';
 
 @Component({
   imports: [SiStatusCounterComponent, ...]

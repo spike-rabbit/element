@@ -57,7 +57,7 @@ export const missingTranslateMigrationRule = (options: { path: string }): Rule =
         const importTransformation = applyImport(
           sourceFile,
           'provideMissingTranslationHandlerForElement',
-          '@siemens/element-translate-ng/ngx-translate'
+          '@spike-rabbit/element-translate-ng/ngx-translate'
         );
         if (importTransformation) {
           pendingTransformations.push(importTransformation);

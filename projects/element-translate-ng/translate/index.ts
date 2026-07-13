@@ -10,6 +10,6 @@ export * from './si-no-translate.service';
 export * from './si-translate.pipe';
 export * from './si-translate.service';
 export * from './testing/si-translate.mock-service-builder.factory';
-export * from '@siemens/element-translate-ng/translate-types';
+export * from '@spike-rabbit/element-translate-ng/translate-types';
 export * from './si-translate.inject';
 export * from './t';

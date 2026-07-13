@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
-import { SiTranslatePipe, t, TranslatableString } from '@siemens/element-translate-ng/translate';
+import { SiTranslatePipe, t, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 @Component({
   selector: 'si-progressbar',

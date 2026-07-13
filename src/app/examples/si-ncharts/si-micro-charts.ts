@@ -3,23 +3,23 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { SiIconComponent } from '@siemens/element-ng/icon';
+import { SiIconComponent } from '@spike-rabbit/element-ng/icon';
 import {
   MicrochartBarSeries,
   SiMicrochartBarComponent
-} from '@siemens/native-charts-ng/microchart-bar';
+} from '@spike-rabbit/native-charts-ng/microchart-bar';
 import {
   MicrochartDonutSeries,
   SiMicrochartDonutComponent
-} from '@siemens/native-charts-ng/microchart-donut';
+} from '@spike-rabbit/native-charts-ng/microchart-donut';
 import {
   MicrochartLineSeries,
   SiMicrochartLineComponent
-} from '@siemens/native-charts-ng/microchart-line';
+} from '@spike-rabbit/native-charts-ng/microchart-line';
 import {
   MicrochartProgressSeries,
   SiMicrochartProgressComponent
-} from '@siemens/native-charts-ng/microchart-progress';
+} from '@spike-rabbit/native-charts-ng/microchart-progress';
 
 @Component({
   selector: 'app-sample',

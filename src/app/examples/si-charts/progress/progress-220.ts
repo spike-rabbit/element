@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component, OnDestroy, viewChild } from '@angular/core';
-import { ProgressChartSeries, SiChartProgressComponent } from '@siemens/charts-ng/progress';
-import { SiResizeObserverDirective } from '@siemens/element-ng/resize-observer';
+import { ProgressChartSeries, SiChartProgressComponent } from '@spike-rabbit/charts-ng/progress';
+import { SiResizeObserverDirective } from '@spike-rabbit/element-ng/resize-observer';
 import { interval, Subscription } from 'rxjs';
 
 @Component({

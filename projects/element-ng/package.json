@@ -1,21 +1,21 @@
 {
-  "name": "@siemens/element-ng",
+  "name": "@spike-rabbit/element-ng",
   "description": "Element Angular component library, implementing the Siemens Design Language",
   "version": "49.13.0",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:siemens/element.git"
+    "url": "git+https://github.com/spike-rabbit/element.git"
   },
   "author": {
     "name": "Siemens AG",
     "email": "info@siemens.com"
   },
-  "homepage": "https://github.com/siemens/element",
-  "bugs": "https://github.com/siemens/element/issues/new",
+  "homepage": "https://github.com/spike-rabbit/element",
+  "bugs": "https://github.com/spike-rabbit/element/issues/new",
   "publishConfig": {
     "access": "public",
-    "directory": "../../dist/@siemens/element-ng"
+    "directory": "../../dist/@spike-rabbit/element-ng"
   },
   "type": "module",
   "schematics": "./schematics/collection.json",
@@ -24,14 +24,14 @@
   },
   "ng-update": {
     "packageGroup": [
-      "@siemens/charts-ng",
-      "@siemens/dashboards-ng",
-      "@siemens/element-ng",
-      "@siemens/element-theme",
-      "@siemens/element-translate-ng",
-      "@siemens/live-preview",
-      "@siemens/maps-ng",
-      "@siemens/native-charts-ng"
+      "@spike-rabbit/charts-ng",
+      "@spike-rabbit/dashboards-ng",
+      "@spike-rabbit/element-ng",
+      "@spike-rabbit/element-theme",
+      "@spike-rabbit/element-translate-ng",
+      "@spike-rabbit/live-preview",
+      "@spike-rabbit/maps-ng",
+      "@spike-rabbit/native-charts-ng"
     ],
     "migrations": "./schematics/migration.json"
   },
@@ -44,8 +44,8 @@
     "@ngx-formly/bootstrap": "^6.2.2 || ^7.0.1",
     "@ngx-formly/core": "^6.2.2 || ^7.0.1",
     "@siemens/element-icons": "1",
-    "@siemens/element-theme": "workspace:*",
-    "@siemens/element-translate-ng": "workspace:*",
+    "@spike-rabbit/element-theme": "workspace:*",
+    "@spike-rabbit/element-translate-ng": "workspace:*",
     "@siemens/ngx-datatable": "22 - 26",
     "ag-grid-community": "^34.3.1 || ^35.0.0 || ^36.0.0",
     "flag-icons": "^7.3.2",

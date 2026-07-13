@@ -20,9 +20,9 @@ import {
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { elementCancel } from '@siemens/element-icons';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiTypeaheadDirective } from '@siemens/element-ng/typeahead';
-import { SiTranslatePipe, TranslatableString } from '@siemens/element-translate-ng/translate';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiTypeaheadDirective } from '@spike-rabbit/element-ng/typeahead';
+import { SiTranslatePipe, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 import { Observable } from 'rxjs';
 
 import { InternalCriterionDefinition } from './si-filtered-search-helper';

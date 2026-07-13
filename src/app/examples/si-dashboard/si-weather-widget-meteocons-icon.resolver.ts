@@ -7,7 +7,7 @@ import {
   SiWeatherIcon,
   SiWeatherIconResolution,
   SiWeatherIconResolver
-} from '@siemens/element-ng/dashboard';
+} from '@spike-rabbit/element-ng/dashboard';
 
 /**
  * Maps the built-in {@link SiWeatherCondition} tokens to static SVG

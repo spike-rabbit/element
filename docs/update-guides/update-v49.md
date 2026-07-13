@@ -23,7 +23,7 @@ The v49 schematics cover these removals:
 
 - `si-unauthorized-page` / `SiUnauthorizedPageComponent` migrated to `si-info-page` / `SiInfoPageComponent`
 - `CONFIG_TOKEN` from dashboards replaced by `SI_DASHBOARD_CONFIGURATION`.
-- `ToastStateName` renamed to `StatusType` and relocated to `@siemens/element-ng/common`.
+- `ToastStateName` renamed to `StatusType` and relocated to `@spike-rabbit/element-ng/common`.
 - `SiMapComponent.onResize` removed entirely; references get stripped.
 
 ## Update Element
@@ -32,7 +32,7 @@ Update the packages and run migrations:
 
 ```sh
 npm i @simpl/brand@3.1.0 # Only for Siemens applications
-ng update @siemens/element-ng@49
+ng update @spike-rabbit/element-ng@49
 ```
 
 Do manual adjustments where needed, especially for the following:

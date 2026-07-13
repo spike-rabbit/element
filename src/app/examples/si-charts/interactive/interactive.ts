@@ -7,15 +7,15 @@ import {
   CartesianChartData,
   CartesianChartSeries,
   SiChartCartesianComponent
-} from '@siemens/charts-ng/cartesian';
+} from '@spike-rabbit/charts-ng/cartesian';
 import {
   AxisPointerEvent,
   ChartXAxis,
   ChartYAxis,
   DataZoomEvent,
   DataZoomRange
-} from '@siemens/charts-ng/common';
-import { SiResizeObserverDirective } from '@siemens/element-ng/resize-observer';
+} from '@spike-rabbit/charts-ng/common';
+import { SiResizeObserverDirective } from '@spike-rabbit/element-ng/resize-observer';
 
 const ONE_HOUR = 1000 * 60 * 60;
 const SERIES_NAME = 'Series 1';

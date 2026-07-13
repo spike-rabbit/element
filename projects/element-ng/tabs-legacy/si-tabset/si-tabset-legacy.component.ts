@@ -21,10 +21,10 @@ import {
   viewChildren
 } from '@angular/core';
 import { elementCancel, elementLeft3, elementRight3 } from '@siemens/element-icons';
-import { isRTL, WebComponentContentChildren } from '@siemens/element-ng/common';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiResizeObserverDirective } from '@siemens/element-ng/resize-observer';
-import { SiTranslatePipe } from '@siemens/element-translate-ng/translate';
+import { isRTL, WebComponentContentChildren } from '@spike-rabbit/element-ng/common';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiResizeObserverDirective } from '@spike-rabbit/element-ng/resize-observer';
+import { SiTranslatePipe } from '@spike-rabbit/element-translate-ng/translate';
 import { asyncScheduler, Subscription } from 'rxjs';
 import { first, observeOn } from 'rxjs/operators';
 
@@ -48,7 +48,7 @@ export interface SiTabDeselectionEvent {
 const SCROLL_INCREMENT = 55;
 
 /**
- * @deprecated Use the new components from `@siemens/element-ng/tabs` instead.
+ * @deprecated Use the new components from `@spike-rabbit/element-ng/tabs` instead.
  * See {@link https://element.siemens.io/components/layout-navigation/tabs/#code}
  * for usage instructions.
  */

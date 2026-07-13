@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SiUnauthorizedPageComponent } from '@siemens/element-ng/unauthorized-page';
+import { SiUnauthorizedPageComponent } from '@spike-rabbit/element-ng/unauthorized-page';
 
 @Component({
   selector: 'app-test-inline-unauthorized',

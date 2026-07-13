@@ -5,8 +5,8 @@
 import { DebugElement, inputBinding, signal, WritableSignal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By, DomSanitizer } from '@angular/platform-browser';
-import { getMarkdownRenderer } from '@siemens/element-ng/markdown-renderer';
-import { MenuItem } from '@siemens/element-ng/menu';
+import { getMarkdownRenderer } from '@spike-rabbit/element-ng/markdown-renderer';
+import { MenuItem } from '@spike-rabbit/element-ng/menu';
 
 import { MessageAction } from './message-action.model';
 import { Attachment } from './si-attachment-list.component';

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { SiStatusCounterComponent } from '@siemens/element-ng/status-counter';
+import { SiStatusCounterComponent } from '@spike-rabbit/element-ng/status-counter';
 
 @Component({
   selector: 'app-sample',

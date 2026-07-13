@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
-import { SiIconComponent } from '@siemens/element-ng/icon';
-import { SiTranslatePipe, TranslatableString } from '@siemens/element-translate-ng/translate';
+import { SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiTranslatePipe, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiWeatherWidgetIllustrationComponent } from './si-weather-widget-illustration.component';
 import { SiWeatherWidgetForecast, SiWeatherWidgetForecastColumn } from './si-weather-widget.types';

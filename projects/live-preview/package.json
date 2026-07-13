@@ -1,22 +1,22 @@
 {
-  "name": "@siemens/live-preview",
+  "name": "@spike-rabbit/live-preview",
   "description": "Element live preview for web",
   "version": "49.13.0",
   "license": "MIT",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/siemens/element.git"
+    "url": "git+https://github.com/spike-rabbit/element.git"
   },
   "author": {
     "name": "Siemens AG",
     "email": "info@siemens.com"
   },
-  "homepage": "https://github.com/siemens/element",
-  "bugs": "https://github.com/siemens/element/issues/new",
+  "homepage": "https://github.com/spike-rabbit/element",
+  "bugs": "https://github.com/spike-rabbit/element/issues/new",
   "publishConfig": {
     "access": "public",
-    "directory": "../../dist/@siemens/live-preview"
+    "directory": "../../dist/@spike-rabbit/live-preview"
   },
   "dependencies": {
     "@stackblitz/sdk": "^1.11.0",

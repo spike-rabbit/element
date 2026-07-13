@@ -1,5 +1,5 @@
 import { inject } from '@angular/core';
-import { SiResponsiveContainerDirective } from '@siemens/element-ng/resize-observer';
+import { SiResponsiveContainerDirective } from '@spike-rabbit/element-ng/resize-observer';
 
 export class MyClass {
   private resizeDirective = inject(SiResponsiveContainerDirective);

@@ -79,7 +79,7 @@ Badges can display text or numbers, and may also include an icon. Choose between
 ### Usage
 
 ```ts
-import { SiBadgeComponent } from '@siemens/element-ng/badge';
+import { SiBadgeComponent } from '@spike-rabbit/element-ng/badge';
 
 @Component({
   template: `<si-badge type="success" icon="element-validation-success">Success</si-badge>`,

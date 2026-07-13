@@ -20,17 +20,17 @@ import {
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { elementDown2, elementSoundMute, elementSoundOn } from '@siemens/element-icons';
-import { BlinkService, STATUS_ICON, TextMeasureService } from '@siemens/element-ng/common';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
+import { BlinkService, STATUS_ICON, TextMeasureService } from '@spike-rabbit/element-ng/common';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
 import {
   ResizeObserverService,
   SiResizeObserverDirective
-} from '@siemens/element-ng/resize-observer';
+} from '@spike-rabbit/element-ng/resize-observer';
 import {
   injectSiTranslateService,
   SiTranslatePipe,
   t
-} from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-translate-ng/translate';
 import { Observable, Subscription } from 'rxjs';
 import { first } from 'rxjs/operators';
 

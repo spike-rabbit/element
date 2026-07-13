@@ -18,9 +18,9 @@ import {
   SiIconComponent,
   SiStatusIconComponent,
   STATUS_ICON_CONFIG
-} from '@siemens/element-ng/icon';
-import { SiLinkModule } from '@siemens/element-ng/link';
-import { SiTranslatePipe, t } from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-ng/icon';
+import { SiLinkModule } from '@spike-rabbit/element-ng/link';
+import { SiTranslatePipe, t } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SI_TOAST_AUTO_HIDE_DELAY, SiToast } from '../si-toast.model';
 

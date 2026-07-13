@@ -5,10 +5,10 @@
 /* eslint-disable @typescript-eslint/no-deprecated */
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { SiAvatarComponent } from '@siemens/element-ng/avatar';
-import { SiCircleStatusComponent } from '@siemens/element-ng/circle-status';
-import { SiFormItemComponent } from '@siemens/element-ng/form';
-import { SiStatusIconComponent } from '@siemens/element-ng/icon';
+import { SiAvatarComponent } from '@spike-rabbit/element-ng/avatar';
+import { SiCircleStatusComponent } from '@spike-rabbit/element-ng/circle-status';
+import { SiFormItemComponent } from '@spike-rabbit/element-ng/form';
+import { SiStatusIconComponent } from '@spike-rabbit/element-ng/icon';
 import {
   SiNotificationItemComponent,
   type NotificationItemQuickAction,
@@ -16,8 +16,8 @@ import {
   type NotificationItemActionIconButton,
   type NotificationItemMenu,
   type NotificationItemLink
-} from '@siemens/element-ng/notification-item';
-import { LOG_EVENT } from '@siemens/live-preview';
+} from '@spike-rabbit/element-ng/notification-item';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 
 @Component({
   selector: 'app-sample',

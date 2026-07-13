@@ -4,9 +4,9 @@
  */
 import { ChangeDetectionStrategy, AfterViewInit, Component, inject } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink, RouterOutlet } from '@angular/router';
-import { Link, SiLinkDirective } from '@siemens/element-ng/link';
-import { SiTabsetComponent, SiTabLinkComponent } from '@siemens/element-ng/tabs';
-import { provideExampleRoutes } from '@siemens/live-preview';
+import { Link, SiLinkDirective } from '@spike-rabbit/element-ng/link';
+import { SiTabsetComponent, SiTabLinkComponent } from '@spike-rabbit/element-ng/tabs';
+import { provideExampleRoutes } from '@spike-rabbit/live-preview';
 
 // Dummy components to be used in the router outlet for the example
 @Component({

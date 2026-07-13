@@ -6,7 +6,7 @@ import {
   SiWeatherCondition,
   SiWeatherWidgetForecast,
   SiWeatherWidgetMetric
-} from '@siemens/element-ng/dashboard';
+} from '@spike-rabbit/element-ng/dashboard';
 
 export const ALL_CONDITIONS: SiWeatherCondition[] = [
   'clear',

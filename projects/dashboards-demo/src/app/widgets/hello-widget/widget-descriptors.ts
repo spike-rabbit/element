@@ -2,7 +2,7 @@
  * Copyright (c) Siemens 2016 - 2026
  * SPDX-License-Identifier: MIT
  */
-import { Widget } from '@siemens/dashboards-ng';
+import { Widget } from '@spike-rabbit/dashboards-ng';
 
 const loaderFunction = async (name: string): Promise<any> => {
   if (name === 'HelloWidgetComponent' || name === 'HelloWidgetEditorComponent') {
@@ -14,7 +14,7 @@ const loaderFunction = async (name: string): Promise<any> => {
 
 export const HELLO_DESCRIPTOR: Widget = {
   name: 'Hello World',
-  id: '@siemens/dashboards-demo/HelloWorld',
+  id: '@spike-rabbit/dashboards-demo/HelloWorld',
   iconClass: 'element-report',
   description: 'A dummy widget for testing.',
   componentFactory: {

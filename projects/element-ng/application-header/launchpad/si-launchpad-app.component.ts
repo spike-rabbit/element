@@ -12,8 +12,8 @@ import {
   model
 } from '@angular/core';
 import { elementExport, elementFavorites, elementFavoritesFilled } from '@siemens/element-icons';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiTranslatePipe, t, TranslatableString } from '@siemens/element-translate-ng/translate';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiTranslatePipe, t, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiApplicationHeaderComponent } from '../si-application-header.component';
 

@@ -13,15 +13,15 @@ import {
   FormlyFormBuilder,
   FormlyModule
 } from '@ngx-formly/core';
-import { SiFormModule } from '@siemens/element-ng/form';
-import { dynamicUiConfig } from '@siemens/element-ng/formly';
+import { SiFormModule } from '@spike-rabbit/element-ng/form';
+import { dynamicUiConfig } from '@spike-rabbit/element-ng/formly';
 
 import { SiFormlyComponent } from './si-formly.component';
 
 /**
  * @deprecated This module is based on Angular Formly v6 and will be removed in a
  * future release. Migrate to the standalone `SiFormlyComponent` from
- * `@siemens/element-ng/formly` (Formly v7.1) instead.
+ * `@spike-rabbit/element-ng/formly` (Formly v7.1) instead.
  */
 @NgModule({
   imports: [CommonModule, FormlyBootstrapModule, FormlyModule, ReactiveFormsModule, SiFormModule],

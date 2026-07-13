@@ -14,8 +14,8 @@ import {
   untracked,
   viewChild
 } from '@angular/core';
-import { SiTypeaheadDirective, TypeaheadMatch } from '@siemens/element-ng/typeahead';
-import { SiTranslatePipe } from '@siemens/element-translate-ng/translate';
+import { SiTypeaheadDirective, TypeaheadMatch } from '@spike-rabbit/element-ng/typeahead';
+import { SiTranslatePipe } from '@spike-rabbit/element-translate-ng/translate';
 
 import { TypeaheadOptionCriterion } from '../../si-filtered-search-helper';
 import { OptionCriterion } from '../../si-filtered-search.model';

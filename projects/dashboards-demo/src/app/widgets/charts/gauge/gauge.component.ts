@@ -4,9 +4,9 @@
  */
 import { AsyncPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject, input, OnInit } from '@angular/core';
-import { SiChartGaugeComponent } from '@siemens/charts-ng/gauge';
-import { WidgetConfig, WidgetInstance } from '@siemens/dashboards-ng';
-import { SiResizeObserverDirective } from '@siemens/element-ng/resize-observer';
+import { SiChartGaugeComponent } from '@spike-rabbit/charts-ng/gauge';
+import { WidgetConfig, WidgetInstance } from '@spike-rabbit/dashboards-ng';
+import { SiResizeObserverDirective } from '@spike-rabbit/element-ng/resize-observer';
 import { Observable } from 'rxjs';
 
 import { DataService } from '../../../widgets/charts/data.service';

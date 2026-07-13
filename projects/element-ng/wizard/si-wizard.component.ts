@@ -29,14 +29,14 @@ import {
   elementRight4,
   elementWarningFilled
 } from '@siemens/element-icons';
-import { TextMeasureService, WebComponentContentChildren } from '@siemens/element-ng/common';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiResizeObserverDirective } from '@siemens/element-ng/resize-observer';
+import { TextMeasureService, WebComponentContentChildren } from '@spike-rabbit/element-ng/common';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiResizeObserverDirective } from '@spike-rabbit/element-ng/resize-observer';
 import {
   injectSiTranslateService,
   SiTranslatePipe,
   t
-} from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-translate-ng/translate';
 import { switchMap } from 'rxjs';
 
 import { SiWizardStepComponent } from './si-wizard-step.component';

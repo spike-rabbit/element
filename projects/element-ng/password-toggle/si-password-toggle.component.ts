@@ -12,8 +12,8 @@ import {
 } from '@angular/core';
 import { NgControl } from '@angular/forms';
 import { elementHide, elementShow } from '@siemens/element-icons';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiTranslatePipe, t } from '@siemens/element-translate-ng/translate';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiTranslatePipe, t } from '@spike-rabbit/element-translate-ng/translate';
 
 @Component({
   selector: 'si-password-toggle',

@@ -13,7 +13,7 @@ import {
 } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import { SI_FORM_ITEM_CONTROL } from '@siemens/element-ng/form';
+import { SI_FORM_ITEM_CONTROL } from '@spike-rabbit/element-ng/form';
 
 import { SiCustomSelectDirective } from './si-custom-select.directive';
 import { SiSelectComboboxComponent } from './si-select-combobox.component';

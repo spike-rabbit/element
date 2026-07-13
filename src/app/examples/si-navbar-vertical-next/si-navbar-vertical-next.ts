@@ -15,8 +15,8 @@ import {
   SiApplicationHeaderComponent,
   SiHeaderBrandDirective,
   SiHeaderLogoDirective
-} from '@siemens/element-ng/application-header';
-import { SiFormItemComponent } from '@siemens/element-ng/form';
+} from '@spike-rabbit/element-ng/application-header';
+import { SiFormItemComponent } from '@spike-rabbit/element-ng/form';
 import {
   SiNavbarVerticalNextSearchComponent,
   SiNavbarVerticalNextItemsComponent,
@@ -27,8 +27,8 @@ import {
   SiNavbarVerticalNextGroupTriggerDirective,
   SiNavbarVerticalNextHeaderComponent,
   SiNavbarVerticalNextItemComponent
-} from '@siemens/element-ng/navbar-vertical-next';
-import { LOG_EVENT } from '@siemens/live-preview';
+} from '@spike-rabbit/element-ng/navbar-vertical-next';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 
 @Component({
   selector: 'app-sample',

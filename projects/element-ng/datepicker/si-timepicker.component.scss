@@ -1,5 +1,5 @@
 @use 'sass:map';
-@use '@siemens/element-theme/src/styles/bootstrap/variables';
+@use '@spike-rabbit/element-theme/src/styles/bootstrap/variables';
 
 $padding: 2 * (variables.$input-padding-x + variables.$input-border-width);
 

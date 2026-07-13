@@ -16,10 +16,10 @@ import {
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Link, SiLinkDirective } from '@siemens/element-ng/link';
-import { SiLoadingButtonComponent } from '@siemens/element-ng/loading-spinner';
-import { SiPasswordToggleComponent } from '@siemens/element-ng/password-toggle';
-import { SiTranslatePipe, t } from '@siemens/element-translate-ng/translate';
+import { Link, SiLinkDirective } from '@spike-rabbit/element-ng/link';
+import { SiLoadingButtonComponent } from '@spike-rabbit/element-ng/loading-spinner';
+import { SiPasswordToggleComponent } from '@spike-rabbit/element-ng/password-toggle';
+import { SiTranslatePipe, t } from '@spike-rabbit/element-translate-ng/translate';
 
 import { UsernamePassword, UsernameValidationPayload } from '../si-landing-page.model';
 

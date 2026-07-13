@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { LOG_EVENT } from '@siemens/live-preview';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 import { AgGridAngular } from 'ag-grid-angular';
 import {
   CellValueChangedEvent,

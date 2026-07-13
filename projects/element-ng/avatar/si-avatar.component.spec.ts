@@ -4,7 +4,7 @@
  */
 import { inputBinding, signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { EntityStatusType } from '@siemens/element-ng/common';
+import { EntityStatusType } from '@spike-rabbit/element-ng/common';
 
 import { SiAvatarComponent } from './index';
 

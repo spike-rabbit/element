@@ -17,8 +17,8 @@ import {
   signal,
   TemplateRef
 } from '@angular/core';
-import { getOverlay, getPositionStrategy, positions } from '@siemens/element-ng/common';
-import { TranslatableString } from '@siemens/element-translate-ng/translate-types';
+import { getOverlay, getPositionStrategy, positions } from '@spike-rabbit/element-ng/common';
+import { TranslatableString } from '@spike-rabbit/element-translate-ng/translate-types';
 import { Subject, takeUntil } from 'rxjs';
 
 import { PopoverComponent } from './si-popover.component';

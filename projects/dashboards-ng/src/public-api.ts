@@ -17,5 +17,5 @@ export * from './model/si-widget-id-provider';
 export * from './widget-loader';
 export * from './services/federation-loader.util';
 
-export * from '@siemens/dashboards-ng/translate';
+export * from '@spike-rabbit/dashboards-ng/translate';
 export * from './public-api.module';

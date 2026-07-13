@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
-import { SiTranslatePipe, t } from '@siemens/element-translate-ng/translate';
+import { SiTranslatePipe, t } from '@spike-rabbit/element-translate-ng/translate';
 
 /**
  * A single sign-on (SSO) login component that provides a button for SSO authentication.

@@ -6,7 +6,7 @@ import { Overlay, OverlayRef, ScrollStrategy } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { isPlatformBrowser } from '@angular/common';
 import { ComponentRef, ElementRef, inject, Injectable, Injector, PLATFORM_ID } from '@angular/core';
-import { getOverlay, getPositionStrategy, positions } from '@siemens/element-ng/common';
+import { getOverlay, getPositionStrategy, positions } from '@spike-rabbit/element-ng/common';
 import { fromEvent, Subject, Subscription, timer } from 'rxjs';
 import { delayWhen, filter, takeUntil } from 'rxjs/operators';
 

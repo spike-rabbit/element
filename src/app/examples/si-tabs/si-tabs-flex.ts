@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { SiFooterComponent } from '@siemens/element-ng/footer';
-import { SiTabComponent, SiTabsetComponent } from '@siemens/element-ng/tabs';
+import { SiFooterComponent } from '@spike-rabbit/element-ng/footer';
+import { SiTabComponent, SiTabsetComponent } from '@spike-rabbit/element-ng/tabs';
 
 @Component({
   selector: 'app-sample',

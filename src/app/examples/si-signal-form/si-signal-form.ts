@@ -17,10 +17,10 @@ import {
   provideSiFormFieldConfig,
   SiFormFieldComponent,
   SiFormFieldsetComponent
-} from '@siemens/element-ng/form';
+} from '@spike-rabbit/element-ng/form';
 
 export type Role = 'engineer' | 'installer';
-import { SiHelpButtonComponent } from '@siemens/element-ng/help-button';
+import { SiHelpButtonComponent } from '@spike-rabbit/element-ng/help-button';
 
 export interface TravelRequest {
   name: string;

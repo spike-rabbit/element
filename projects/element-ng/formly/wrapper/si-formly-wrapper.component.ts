@@ -4,7 +4,7 @@
  */
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FieldWrapper, FormlyModule } from '@ngx-formly/core';
-import { SiFormItemComponent } from '@siemens/element-ng/form';
+import { SiFormItemComponent } from '@spike-rabbit/element-ng/form';
 
 import { SiValidationErrorIdPipe } from '../utils';
 import { SiFormlyFormFieldProviderDirective } from './si-formly-form-field-provider.directive';

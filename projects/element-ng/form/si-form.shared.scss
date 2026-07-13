@@ -1,7 +1,7 @@
 @use 'sass:map';
 @use 'sass:math';
 
-@use '@siemens/element-theme/src/styles/all-variables';
+@use '@spike-rabbit/element-theme/src/styles/all-variables';
 
 :host.si-form-input {
   display: flex;

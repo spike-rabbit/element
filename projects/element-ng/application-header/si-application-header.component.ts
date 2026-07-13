@@ -25,10 +25,10 @@ import {
   HeaderWithDropdowns,
   SI_HEADER_WITH_DROPDOWNS,
   SiHeaderDropdownTriggerDirective
-} from '@siemens/element-ng/header-dropdown';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { BOOTSTRAP_BREAKPOINTS, Breakpoints } from '@siemens/element-ng/resize-observer';
-import { SiTranslatePipe, t } from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-ng/header-dropdown';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { BOOTSTRAP_BREAKPOINTS, Breakpoints } from '@spike-rabbit/element-ng/resize-observer';
+import { SiTranslatePipe, t } from '@spike-rabbit/element-translate-ng/translate';
 import { of, Subject } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 

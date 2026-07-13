@@ -4,8 +4,8 @@
  */
 import { SimpleChange, inputBinding, signal, WritableSignal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { EntityStatusType } from '@siemens/element-ng/common';
-import { TranslatableString } from '@siemens/element-translate-ng/translate';
+import { EntityStatusType } from '@spike-rabbit/element-ng/common';
+import { TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiCircleStatusComponent as TestComponent } from './index';
 

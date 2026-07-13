@@ -16,15 +16,15 @@ import {
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { elementDelete, elementPlus } from '@siemens/element-icons';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiNumberInputComponent } from '@siemens/element-ng/number-input';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiNumberInputComponent } from '@spike-rabbit/element-ng/number-input';
 import {
   SelectOption,
   SiSelectComponent,
   SiSelectSimpleOptionsDirective,
   SiSelectSingleValueDirective
-} from '@siemens/element-ng/select';
-import { SiTranslatePipe, t, TranslatableString } from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-ng/select';
+import { SiTranslatePipe, t, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiReadonlyThresholdOptionComponent } from './si-readonly-threshold-option.component';
 

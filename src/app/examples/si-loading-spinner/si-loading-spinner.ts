@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { SiLoadingSpinnerComponent } from '@siemens/element-ng/loading-spinner';
+import { SiLoadingSpinnerComponent } from '@spike-rabbit/element-ng/loading-spinner';
 
 @Component({
   selector: 'app-sample',

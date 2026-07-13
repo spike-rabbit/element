@@ -6,7 +6,7 @@ import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { inputBinding, signal, WritableSignal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
-import { MenuItem } from '@siemens/element-ng/menu';
+import { MenuItem } from '@spike-rabbit/element-ng/menu';
 
 import { SiContentActionBarComponent } from './si-content-action-bar.component';
 import { ContentActionBarMainItem, ViewType } from './si-content-action-bar.model';

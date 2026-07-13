@@ -11,7 +11,7 @@ A generic chart with full support for [ECharts options](https://echarts.apache.o
     - [echarts](https://www.npmjs.com/package/echarts)
 
 ```ts
-import { SiChartComponent } from '@siemens/charts-ng/chart';
+import { SiChartComponent } from '@spike-rabbit/charts-ng/chart';
 
 @Component({
   imports: [SiChartComponent, ...]
@@ -20,6 +20,6 @@ import { SiChartComponent } from '@siemens/charts-ng/chart';
 
 <si-docs-component example="si-charts/generic/si-chart-generic" full="true" height="400"></si-docs-component>
 
-<si-docs-api component="SiChartComponent" package="@siemens/charts-ng" hideImplicitlyPublic="true"></si-docs-api>
+<si-docs-api component="SiChartComponent" package="@spike-rabbit/charts-ng" hideImplicitlyPublic="true"></si-docs-api>
 
 <si-docs-types></si-docs-types>

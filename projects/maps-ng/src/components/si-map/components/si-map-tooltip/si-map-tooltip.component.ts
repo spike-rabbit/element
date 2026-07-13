@@ -11,7 +11,7 @@ import {
   signal,
   viewChild
 } from '@angular/core';
-import { SiTranslatePipe, t } from '@siemens/element-translate-ng/translate';
+import { SiTranslatePipe, t } from '@spike-rabbit/element-translate-ng/translate';
 
 import { TOOLTIP_FEATURES_TO_DISPLAY } from '../../models/constants';
 

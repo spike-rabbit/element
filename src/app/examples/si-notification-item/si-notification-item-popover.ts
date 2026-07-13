@@ -14,18 +14,18 @@ import {
   SiHeaderCollapsibleActionsComponent,
   SiHeaderLogoDirective,
   SiHeaderSelectionItemComponent
-} from '@siemens/element-ng/application-header';
+} from '@spike-rabbit/element-ng/application-header';
 import {
   SiHeaderDropdownComponent,
   SiHeaderDropdownItemComponent,
   SiHeaderDropdownTriggerDirective
-} from '@siemens/element-ng/header-dropdown';
-import { SiStatusIconComponent } from '@siemens/element-ng/icon';
+} from '@spike-rabbit/element-ng/header-dropdown';
+import { SiStatusIconComponent } from '@spike-rabbit/element-ng/icon';
 import {
   SiNotificationItemComponent,
   type NotificationItemLink
-} from '@siemens/element-ng/notification-item';
-import { LOG_EVENT } from '@siemens/live-preview';
+} from '@spike-rabbit/element-ng/notification-item';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 
 @Component({
   selector: 'app-sample',

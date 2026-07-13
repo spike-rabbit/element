@@ -21,7 +21,7 @@ import {
   SimpleChanges,
   viewChildren
 } from '@angular/core';
-import { SiTranslatePipe, t } from '@siemens/element-translate-ng/translate';
+import { SiTranslatePipe, t } from '@spike-rabbit/element-translate-ng/translate';
 import { GridItemHTMLElement, GridStack, GridStackNode, GridStackOptions } from 'gridstack';
 
 import { DEFAULT_GRIDSTACK_OPTIONS, GridConfig } from '../../model/gridstack.model';

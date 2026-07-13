@@ -22,13 +22,13 @@ import {
   viewChild
 } from '@angular/core';
 import { outputToObservable, takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { ScrollbarHelper } from '@siemens/element-ng/common';
+import { ScrollbarHelper } from '@spike-rabbit/element-ng/common';
 import {
   BOOTSTRAP_BREAKPOINTS,
   ElementDimensions,
   ResizeObserverService
-} from '@siemens/element-ng/resize-observer';
-import { SiTranslatePipe, TranslatableString } from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-ng/resize-observer';
+import { SiTranslatePipe, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 import { Subject, takeUntil } from 'rxjs';
 
 import { SiDashboardCardComponent } from './si-dashboard-card.component';

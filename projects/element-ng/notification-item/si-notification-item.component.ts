@@ -7,9 +7,9 @@ import { CommonModule } from '@angular/common';
 import { booleanAttribute, ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
 import { ActivatedRoute, RouterModule, type NavigationExtras } from '@angular/router';
 import { elementOptionsVertical } from '@siemens/element-icons';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiMenuFactoryComponent, type MenuItem } from '@siemens/element-ng/menu';
-import { SiTranslatePipe, TranslatableString } from '@siemens/element-translate-ng/translate';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiMenuFactoryComponent, type MenuItem } from '@spike-rabbit/element-ng/menu';
+import { SiTranslatePipe, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 /**
  * Interface for a router link in a notification item.

@@ -4,12 +4,12 @@
  */
 import { Component } from '@angular/core';
 import { AbstractControl } from '@angular/forms';
-import { SiFormlyComponent as SiFormlyBaseComponent } from '@siemens/element-ng/formly';
+import { SiFormlyComponent as SiFormlyBaseComponent } from '@spike-rabbit/element-ng/formly';
 
 /**
  * @deprecated This component is based on Angular Formly v6 and will be removed in
  * a future release. Migrate to the standalone `SiFormlyComponent` from
- * `@siemens/element-ng/formly` (Formly v7.1) instead.
+ * `@spike-rabbit/element-ng/formly` (Formly v7.1) instead.
  */
 @Component({
   selector: 'si-formly',

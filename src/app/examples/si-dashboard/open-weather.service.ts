@@ -9,7 +9,7 @@
  */
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { SiWeatherCondition } from '@siemens/element-ng/dashboard';
+import { SiWeatherCondition } from '@spike-rabbit/element-ng/dashboard';
 import { firstValueFrom } from 'rxjs';
 
 const BASE = 'https://api.openweathermap.org';

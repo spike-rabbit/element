@@ -25,10 +25,10 @@ import {
   elementCircleFilled,
   elementStateExclamationMark
 } from '@siemens/element-icons';
-import { SiAvatarBackgroundColorDirective } from '@siemens/element-ng/avatar';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { ModalRef, SiModalService } from '@siemens/element-ng/modal';
-import { SiTranslatePipe, t, TranslatableString } from '@siemens/element-translate-ng/translate';
+import { SiAvatarBackgroundColorDirective } from '@spike-rabbit/element-ng/avatar';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { ModalRef, SiModalService } from '@spike-rabbit/element-ng/modal';
+import { SiTranslatePipe, t, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 import { CropperPosition, ImageCroppedEvent, ImageCropperComponent } from 'ngx-image-cropper';
 
 import { SiImageCropperStyleComponent } from './si-image-cropper-style.component';

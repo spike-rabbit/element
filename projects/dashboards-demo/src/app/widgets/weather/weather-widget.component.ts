@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
-import { WidgetConfig, WidgetInstance } from '@siemens/dashboards-ng';
-import { SiWeatherWidgetBodyComponent, SiWeatherWidgetData } from '@siemens/element-ng/dashboard';
+import { WidgetConfig, WidgetInstance } from '@spike-rabbit/dashboards-ng';
+import { SiWeatherWidgetBodyComponent, SiWeatherWidgetData } from '@spike-rabbit/element-ng/dashboard';
 
 import {
   DEFAULT_WEATHER_PAYLOAD,

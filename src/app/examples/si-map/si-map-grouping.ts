@@ -4,7 +4,7 @@
  */
 import { ChangeDetectionStrategy, Component, viewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ColorPalette, MapPoint, SiMapComponent } from '@siemens/maps-ng';
+import { ColorPalette, MapPoint, SiMapComponent } from '@spike-rabbit/maps-ng';
 import { mockGroupedPoints } from 'src/app/mocks/points.mock';
 import { environment } from 'src/environments/environment';
 

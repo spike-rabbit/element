@@ -4,7 +4,7 @@
  */
 import { ChangeDetectionStrategy, Component, SimpleChange, viewChild } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { SankeySeriesOption } from '@siemens/charts-ng/common';
+import { SankeySeriesOption } from '@spike-rabbit/charts-ng/common';
 
 import { SiChartSankeyComponent } from './si-chart-sankey.component';
 

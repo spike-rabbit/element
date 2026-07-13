@@ -4,7 +4,7 @@
  */
 
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
-import { SiEmptyStateComponent } from '@siemens/element-ng/empty-state';
+import { SiEmptyStateComponent } from '@spike-rabbit/element-ng/empty-state';
 import { INoRowsOverlayParams } from 'ag-grid-community';
 
 /**

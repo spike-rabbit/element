@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SiChartGaugeComponent } from '@siemens/charts-ng/gauge';
+import { SiChartGaugeComponent } from '@spike-rabbit/charts-ng/gauge';
 
 @Component({
   selector: 'app-dashboard',

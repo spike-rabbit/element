@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { SiResponsiveContainerDirective } from '@siemens/element-ng/resize-observer';
+import { SiResponsiveContainerDirective } from '@spike-rabbit/element-ng/resize-observer';
 
 /**
  * Base declarative chat message component that provides the layout structure for chat messages.

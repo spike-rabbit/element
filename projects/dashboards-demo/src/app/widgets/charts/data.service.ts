@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: MIT
  */
 import { Injectable } from '@angular/core';
-import { CartesianChartSeries } from '@siemens/charts-ng/cartesian';
-import { CircleChartSeries } from '@siemens/charts-ng/circle';
-import { ChartXAxis, ChartYAxis } from '@siemens/charts-ng/common';
+import { CartesianChartSeries } from '@spike-rabbit/charts-ng/cartesian';
+import { CircleChartSeries } from '@spike-rabbit/charts-ng/circle';
+import { ChartXAxis, ChartYAxis } from '@spike-rabbit/charts-ng/common';
 import { BehaviorSubject, combineLatest, map, Observable, of, shareReplay } from 'rxjs';
 
 export interface CartesianChartData {

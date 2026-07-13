@@ -623,7 +623,7 @@
 * **form:** The input `SiFormItemComponent.label` is now required. This change ensures that `si-form-item` components meet accessibility standards as inputs always require a label. Provide a label that describes the input properly. Do NOT provide an empty string.
 * **form:** The property `SiFormItemControl.errormessageId` is now required. All implementations of `SiFormItemControl` must provide this property to ensure proper accessibility support for error messages.
 * **split:** The default value of `SiSplitPartComponent.collapseOthers` input has been changed from `true` to `false`. Previously, when a split part was collapsed, all split parts between it and the end of the split in the respective direction would also collapse automatically. Now, by default, only the individual split part will collapse.
-* **toast-notification:** Removed type `ToastStateName`, use type `StatusType` which can be imported from `@siemens/element-ng/common` instead. The `StatusType` omits the `connection` state which was legacy code and should not be used anymore. This change affects below interfaces/apis where the above type should be adapted accordingly.
+* **toast-notification:** Removed type `ToastStateName`, use type `StatusType` which can be imported from `@spike-rabbit/element-ng/common` instead. The `StatusType` omits the `connection` state which was legacy code and should not be used anymore. This change affects below interfaces/apis where the above type should be adapted accordingly.
   
   - `SiToastNotificationService.queueToastNotification`
   - `SiToast` interface
@@ -1218,7 +1218,7 @@
   
   ```ts
   // Before
-  import { INgxDatatableConfig } from '@siemens/element-ng/datatable';
+  import { INgxDatatableConfig } from '@spike-rabbit/element-ng/datatable';
   
   // After
   import { NgxDatatableConfig } from '@siemens/ngx-datatable';
@@ -1298,11 +1298,11 @@
   application's main `styles.scss`:
   
   ```scss
-  @use '@siemens/element-theme/src/theme/base-colors';
+  @use '@spike-rabbit/element-theme/src/theme/base-colors';
   
   // load theme here as usual
-  @use '@siemens/element-theme/src/theme';
-  @use '@siemens/element-ng/element-ng';
+  @use '@spike-rabbit/element-theme/src/theme';
+  @use '@spike-rabbit/element-ng/element-ng';
   
   // add overrides
   :root {
@@ -1333,7 +1333,7 @@
   Use `SiActionDialogService.showActionDialog` instead.
 * **angular:** Angular 20+ is required.
   Follow the Angular update guide to update your app: <https://angular.dev/update-guide?v=19.0-20.0>
-* **charts-ng:** The `@siemens/charts-ng` package now requires ECharts version 6.0.0 or higher. Please update your dependencies accordingly. For details on ECharts 6, see: https://github.com/apache/echarts/releases/tag/6.0.0
+* **charts-ng:** The `@spike-rabbit/charts-ng` package now requires ECharts version 6.0.0 or higher. Please update your dependencies accordingly. For details on ECharts 6, see: https://github.com/apache/echarts/releases/tag/6.0.0
 * **collapsible-panel:** Removed `SiCollapsiblePanelComponent.toggle` output use `SiCollapsiblePanelComponent.panelToggle` instead.
 * **dashboards-ng:** gridstack.js v12 is required. To migrate to v12,
   update the package and drop the inclusion of `gridstack-extra.css`
@@ -1487,7 +1487,7 @@
   <!-- after -->
   <si-status-icon class="si-display-lg" status="danger" />
   ```
-* **maps-ng:** The `@siemens/maps-ng` package now requires ol-mapbox-style version 13.1.0 or higher. Please update your dependencies accordingly. For details on ol-mapbox-style 13, see: https://github.com/openlayers/ol-mapbox-style/releases/tag/v13.0.0
+* **maps-ng:** The `@spike-rabbit/maps-ng` package now requires ol-mapbox-style version 13.1.0 or higher. Please update your dependencies accordingly. For details on ol-mapbox-style 13, see: https://github.com/openlayers/ol-mapbox-style/releases/tag/v13.0.0
 * **navbar-vertical:** Removed `SiNavbarVerticalComponent.autoCollapseDelay` input without any replacement.
 * **popover:** The `siPopover` directive has been completely re-implemented,
   including breaking changes in the API.
@@ -1505,7 +1505,7 @@
   search & replace removing the `next` suffix.
 
   The "old" popover is still available with via the legacy entrypoint
-  `@siemens/element-ng/popover-legacy`.
+  `@spike-rabbit/element-ng/popover-legacy`.
   Classes and selectors were renamed accordingly:
   - `siPopover` --> `siPopoverLegacy`
   - `SiPopoverDirective` --> `SiPopoverLegacyDirective`
@@ -1537,7 +1537,7 @@
   replacing the old tabs with v48. If you are already using `si-tabs-next`, you can do a simple
   search & replace removing the `-next` suffix.
   
-  The "old" tabs are still available via legacy entrypoint `@siemens/element-ng/tabs-legacy`.
+  The "old" tabs are still available via legacy entrypoint `@spike-rabbit/element-ng/tabs-legacy`.
   Classes and selectors were renamed accordingly:
   - `si-tabset` --> `si-tabset-legacy`
   - `SiTabsetComponent` --> `SiTabsetLegacyComponent`

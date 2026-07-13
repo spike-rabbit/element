@@ -14,9 +14,9 @@ import {
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { elementDown2, elementOptionsVertical } from '@siemens/element-icons';
-import { SI_DATATABLE_CONFIG, SiDatatableModule } from '@siemens/element-ng/datatable';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { MenuItem, SiMenuFactoryComponent } from '@siemens/element-ng/menu';
+import { SI_DATATABLE_CONFIG, SiDatatableModule } from '@spike-rabbit/element-ng/datatable';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { MenuItem, SiMenuFactoryComponent } from '@spike-rabbit/element-ng/menu';
 import { NgxDatatableModule, TableColumn } from '@siemens/ngx-datatable';
 import { SiAutoCollapsableListModule } from 'projects/element-ng/auto-collapsable-list';
 

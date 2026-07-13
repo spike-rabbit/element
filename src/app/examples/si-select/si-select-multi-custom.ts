@@ -8,16 +8,16 @@ import {
   SiAutoCollapsableListDirective,
   SiAutoCollapsableListItemDirective,
   SiAutoCollapsableListOverflowItemDirective
-} from '@siemens/element-ng/auto-collapsable-list';
-import { SiCardComponent } from '@siemens/element-ng/card';
-import { SiFormItemComponent } from '@siemens/element-ng/form';
+} from '@spike-rabbit/element-ng/auto-collapsable-list';
+import { SiCardComponent } from '@spike-rabbit/element-ng/card';
+import { SiFormItemComponent } from '@spike-rabbit/element-ng/form';
 import {
   SiCustomSelectDirective,
   SiSelectComboboxComponent,
   SiSelectComboboxValueComponent,
   SiSelectDropdownDirective
-} from '@siemens/element-ng/select';
-import { SiTreeViewComponent, TreeItem } from '@siemens/element-ng/tree-view';
+} from '@spike-rabbit/element-ng/select';
+import { SiTreeViewComponent, TreeItem } from '@spike-rabbit/element-ng/tree-view';
 
 import { treeItems } from '../si-tree-view/tree-items';
 import {

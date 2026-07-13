@@ -11,7 +11,7 @@ import {
   OnDestroy,
   ChangeDetectionStrategy
 } from '@angular/core';
-import { SiTranslatePipe, t, TranslatableString } from '@siemens/element-translate-ng/translate';
+import { SiTranslatePipe, t, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiLandingPageComponent } from '../si-landing-page.component';
 

@@ -4,13 +4,13 @@ packages:
 # Links workspace packages into the node_modules of all other packages in the
 # workspace, including for peer dependencies. Without "deep", pnpm only links
 # workspace packages at the root level, which means peer dependencies declared
-# with a plain version range (e.g. "@siemens/element-theme": "49.6.0") would
+# with a plain version range (e.g. "@spike-rabbit/element-theme": "49.6.0") would
 # be resolved from the registry instead of the local source.
 linkWorkspacePackages: deep
 
 # When a workspace package satisfies a declared version range, prefer the local
 # source over the published registry copy. This ensures packages such as
-# @siemens/element-theme are always resolved from the monorepo source —
+# @spike-rabbit/element-theme are always resolved from the monorepo source —
 # including any SCSS changes that have not been released yet.
 preferWorkspacePackages: true
 
@@ -21,10 +21,14 @@ embedReadme: true
 # workspace packages without needing to be explicitly declared as dependencies.
 # This matches npm's flat hoisting behaviour for three specific scopes:
 #
-# @siemens/* — workspace-internal packages (element-theme, element-translate-ng,
-#   etc.) are used in SCSS @use imports and TypeScript `types` references by
-#   packages that only declare them as peerDependencies. Under pnpm's strict
-#   isolation those packages would be unreachable without hoisting.
+# @spike-rabbit/* — workspace-internal packages (element-theme,
+#   element-translate-ng, etc.) are used in SCSS @use imports and TypeScript
+#   `types` references by packages that only declare them as peerDependencies.
+#   Under pnpm's strict isolation those packages would be unreachable without
+#   hoisting.
+#
+# @siemens/* — external Siemens packages such as element-icons and ngx-datatable
+#   are also consumed from package-level peers/imports and must remain hoisted.
 #
 # @module-federation/* — dashboards-ng imports @module-federation/runtime
 #   directly in TypeScript even though it is only a transitive dependency of the
@@ -37,6 +41,7 @@ embedReadme: true
 #   root node_modules/@types replicates npm's flat-hoisting behaviour for type
 #   declarations and is the standard pnpm recommendation for TypeScript monorepos.
 publicHoistPattern:
+  - '@spike-rabbit/*'
   - '@siemens/*'
   - '@simpl/*'
   - '@module-federation/*'
@@ -64,7 +69,7 @@ overrides:
   '@module-federation/runtime': 2.6.0
   '@ngx-formly/bootstrap': 7.1.0
   '@ngx-formly/core': 7.1.0
-  '@siemens/element-theme': 'workspace:*'
+  '@spike-rabbit/element-theme': 'workspace:*'
   '@siemens/ngx-datatable': 26.2.1
   '@softarc/native-federation-orchestrator': 4.4.1
   ag-grid-angular: 36.0.0

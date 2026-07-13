@@ -2,12 +2,12 @@
  * Copyright (c) Siemens 2016 - 2026
  * SPDX-License-Identifier: MIT
  */
-import { WidgetConfig } from '@siemens/dashboards-ng';
+import { WidgetConfig } from '@spike-rabbit/dashboards-ng';
 
 export const WIDGET: WidgetConfig[] = [
   {
     id: '1',
-    widgetId: '@siemens/dashboards-demo/line-chart',
+    widgetId: '@spike-rabbit/dashboards-demo/line-chart',
     width: 12,
     height: 4,
     minWidth: 3,
@@ -28,7 +28,7 @@ export const WIDGETS: WidgetConfig[] = [
   {
     id: 'zy1c8bx',
     heading: 'Project Issues!',
-    widgetId: '@siemens/dashboards-demo/value',
+    widgetId: '@spike-rabbit/dashboards-demo/value',
     minWidth: 3,
     x: 0,
     y: 0,
@@ -46,7 +46,7 @@ export const WIDGETS: WidgetConfig[] = [
   },
   {
     id: '1',
-    widgetId: '@siemens/dashboards-demo/bar-chart',
+    widgetId: '@spike-rabbit/dashboards-demo/bar-chart',
     width: 7,
     x: 5,
     y: 0,
@@ -65,7 +65,7 @@ export const WIDGETS: WidgetConfig[] = [
   },
   {
     id: '2',
-    widgetId: '@siemens/dashboards-demo/circle-chart',
+    widgetId: '@spike-rabbit/dashboards-demo/circle-chart',
     width: 5,
     height: 3,
     minWidth: 3,
@@ -78,7 +78,7 @@ export const WIDGETS: WidgetConfig[] = [
   },
   {
     id: '3',
-    widgetId: '@siemens/dashboards-demo/gauge',
+    widgetId: '@spike-rabbit/dashboards-demo/gauge',
     width: 3,
     height: 3,
     minWidth: 3,
@@ -95,7 +95,7 @@ export const WIDGETS: WidgetConfig[] = [
   },
   {
     id: '5',
-    widgetId: '@siemens/dashboards-demo/line-chart',
+    widgetId: '@spike-rabbit/dashboards-demo/line-chart',
     width: 8,
     height: 3,
     minWidth: 3,
@@ -113,7 +113,7 @@ export const WIDGETS: WidgetConfig[] = [
   {
     id: '6',
     heading: 'List Widget',
-    widgetId: '@siemens/dashboards-demo/list',
+    widgetId: '@spike-rabbit/dashboards-demo/list',
     minWidth: 3,
     x: 8,
     y: 3,
@@ -124,7 +124,7 @@ export const WIDGETS: WidgetConfig[] = [
   {
     id: '7',
     heading: 'Timeline Widget',
-    widgetId: '@siemens/dashboards-demo/timeline',
+    widgetId: '@spike-rabbit/dashboards-demo/timeline',
     minWidth: 3,
     width: 4,
     height: 4,
@@ -133,7 +133,7 @@ export const WIDGETS: WidgetConfig[] = [
   {
     id: '8',
     heading: 'Weather',
-    widgetId: '@siemens/dashboards-demo/weather',
+    widgetId: '@spike-rabbit/dashboards-demo/weather',
     minWidth: 3,
     width: 4,
     height: 6,
@@ -156,7 +156,7 @@ export const WIDGETS: WidgetConfig[] = [
 export const FIXED_WIDGETS: WidgetConfig[] = [
   {
     id: '1',
-    widgetId: '@siemens/dashboards-demo/bar-chart',
+    widgetId: '@spike-rabbit/dashboards-demo/bar-chart',
     width: 5,
     height: 4,
     minWidth: 4,
@@ -173,7 +173,7 @@ export const FIXED_WIDGETS: WidgetConfig[] = [
   },
   {
     id: '3',
-    widgetId: '@siemens/dashboards-demo/gauge',
+    widgetId: '@spike-rabbit/dashboards-demo/gauge',
     width: 3,
     height: 4,
     minWidth: 3,
@@ -190,7 +190,7 @@ export const FIXED_WIDGETS: WidgetConfig[] = [
   },
   {
     id: '2',
-    widgetId: '@siemens/dashboards-demo/circle-chart',
+    widgetId: '@spike-rabbit/dashboards-demo/circle-chart',
     width: 2,
     height: 3,
     minWidth: 2,

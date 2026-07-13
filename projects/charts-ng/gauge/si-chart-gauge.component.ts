@@ -14,9 +14,9 @@ import {
   SimpleChange,
   SimpleChanges
 } from '@angular/core';
-import { SiChartBaseComponent, GaugeSeriesOption, echarts } from '@siemens/charts-ng/common';
-import { SiCustomLegendComponent } from '@siemens/charts-ng/custom-legend';
-import { SiChartLoadingSpinnerComponent } from '@siemens/charts-ng/loading-spinner';
+import { SiChartBaseComponent, GaugeSeriesOption, echarts } from '@spike-rabbit/charts-ng/common';
+import { SiCustomLegendComponent } from '@spike-rabbit/charts-ng/custom-legend';
+import { SiChartLoadingSpinnerComponent } from '@spike-rabbit/charts-ng/loading-spinner';
 import { GaugeChart } from 'echarts/charts';
 
 import { GaugeChartSeries } from './si-chart-gauge.interface';

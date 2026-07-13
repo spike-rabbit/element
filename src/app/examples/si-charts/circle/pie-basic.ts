@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component, OnDestroy, viewChild } from '@angular/core';
-import { CircleChartSeries, SiChartCircleComponent } from '@siemens/charts-ng/circle';
-import { SiResizeObserverDirective } from '@siemens/element-ng/resize-observer';
+import { CircleChartSeries, SiChartCircleComponent } from '@spike-rabbit/charts-ng/circle';
+import { SiResizeObserverDirective } from '@spike-rabbit/element-ng/resize-observer';
 import { interval, Subscription } from 'rxjs';
 
 @Component({

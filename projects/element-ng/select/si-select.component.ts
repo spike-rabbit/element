@@ -17,8 +17,8 @@ import {
   TemplateRef,
   viewChild
 } from '@angular/core';
-import { SI_FORM_ITEM_CONTROL, SiFormItemControl } from '@siemens/element-ng/form';
-import { t, TranslatableString } from '@siemens/element-translate-ng/translate';
+import { SI_FORM_ITEM_CONTROL, SiFormItemControl } from '@spike-rabbit/element-ng/form';
+import { t, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiSelectInputComponent } from './select-input/si-select-input.component';
 import { SiSelectListHasFilterComponent } from './select-list/si-select-list-has-filter.component';

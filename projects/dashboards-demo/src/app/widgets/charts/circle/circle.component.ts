@@ -4,9 +4,9 @@
  */
 import { AsyncPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject, input, OnInit } from '@angular/core';
-import { CircleChartSeries, SiChartCircleComponent } from '@siemens/charts-ng/circle';
-import { WidgetConfig, WidgetInstance } from '@siemens/dashboards-ng';
-import { SiResizeObserverDirective } from '@siemens/element-ng/resize-observer';
+import { CircleChartSeries, SiChartCircleComponent } from '@spike-rabbit/charts-ng/circle';
+import { WidgetConfig, WidgetInstance } from '@spike-rabbit/dashboards-ng';
+import { SiResizeObserverDirective } from '@spike-rabbit/element-ng/resize-observer';
 import { Observable } from 'rxjs';
 
 import { DataService } from '../../../widgets/charts/data.service';

@@ -4,8 +4,8 @@
  */
 /* eslint-disable @typescript-eslint/no-deprecated */
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { SiNavbarModule } from '@siemens/element-ng/navbar';
-import { LOG_EVENT } from '@siemens/live-preview';
+import { SiNavbarModule } from '@spike-rabbit/element-ng/navbar';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 
 @Component({
   selector: 'app-sample',

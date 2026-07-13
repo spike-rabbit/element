@@ -21,10 +21,10 @@ import {
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { elementOptions } from '@siemens/element-icons';
-import { isRTL } from '@siemens/element-ng/common';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiMenuDirective, SiMenuItemComponent } from '@siemens/element-ng/menu';
-import { SiResizeObserverModule } from '@siemens/element-ng/resize-observer';
+import { isRTL } from '@spike-rabbit/element-ng/common';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiMenuDirective, SiMenuItemComponent } from '@spike-rabbit/element-ng/menu';
+import { SiResizeObserverModule } from '@spike-rabbit/element-ng/resize-observer';
 
 import { SiTabBadgeComponent } from './si-tab-badge.component';
 import { SiTabBaseDirective } from './si-tab-base.directive';

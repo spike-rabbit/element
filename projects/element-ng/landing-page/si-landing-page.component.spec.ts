@@ -4,8 +4,8 @@
  */
 import { inputBinding, signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Link } from '@siemens/element-ng/link';
-import { TranslatableString } from '@siemens/element-translate-ng/translate';
+import { Link } from '@spike-rabbit/element-ng/link';
+import { TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiLandingPageComponent as TestComponent } from '.';
 import { AlertConfig } from './alert-config.model';

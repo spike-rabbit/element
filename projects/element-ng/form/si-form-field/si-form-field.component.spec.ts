@@ -9,8 +9,8 @@ import { provideTranslateService, TranslateService } from '@ngx-translate/core';
 import {
   provideMissingTranslationHandlerForElement,
   provideNgxTranslateForElement
-} from '@siemens/element-translate-ng/ngx-translate';
-import { TranslatableString } from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-translate-ng/ngx-translate';
+import { TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 import { page } from 'vitest/browser';
 
 import { provideFormValidationErrorMapper } from '../si-form-validation-error.provider';

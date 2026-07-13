@@ -7,12 +7,12 @@ import {
   SiChatInputComponent,
   MessageAction,
   ChatInputAttachment
-} from '@siemens/element-ng/chat-messages';
-import { FileUploadError } from '@siemens/element-ng/file-uploader';
-import { SiIconComponent } from '@siemens/element-ng/icon';
-import { MenuItemAction } from '@siemens/element-ng/menu';
-import { SiToastNotificationService } from '@siemens/element-ng/toast-notification';
-import { LOG_EVENT } from '@siemens/live-preview';
+} from '@spike-rabbit/element-ng/chat-messages';
+import { FileUploadError } from '@spike-rabbit/element-ng/file-uploader';
+import { SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { MenuItemAction } from '@spike-rabbit/element-ng/menu';
+import { SiToastNotificationService } from '@spike-rabbit/element-ng/toast-notification';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 
 @Component({
   selector: 'app-sample',

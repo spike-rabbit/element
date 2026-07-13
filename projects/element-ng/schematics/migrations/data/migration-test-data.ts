@@ -49,7 +49,7 @@ const SYMBOL_RENAMING_MIGRATION: SymbolRenamingInstruction[] = [
         replaceWith: 'SiTabsLegacyModule'
       }
     ],
-    toModule: '@siemens/element-ng/tabs-legacy'
+    toModule: '@spike-rabbit/element-ng/tabs-legacy'
   },
   {
     module: /@(siemens|simpl)\/element-ng(\/tabs-next)?/,
@@ -67,7 +67,7 @@ const SYMBOL_RENAMING_MIGRATION: SymbolRenamingInstruction[] = [
         replaceWith: 'SiTabsModule'
       }
     ],
-    toModule: '@siemens/element-ng/tabs'
+    toModule: '@spike-rabbit/element-ng/tabs'
   },
   {
     module: /@(siemens|simpl)\/element-ng(\/popover)?/,
@@ -75,7 +75,7 @@ const SYMBOL_RENAMING_MIGRATION: SymbolRenamingInstruction[] = [
       { replace: 'SiPopoverDirective', replaceWith: 'SiPopoverLegacyDirective' },
       { replace: 'SiPopoverModule', replaceWith: 'SiPopoverLegacyModule' }
     ],
-    toModule: '@siemens/element-ng/popover-legacy'
+    toModule: '@spike-rabbit/element-ng/popover-legacy'
   },
   {
     module: /@(siemens|simpl)\/element-ng(\/popover-next)?/,
@@ -83,7 +83,7 @@ const SYMBOL_RENAMING_MIGRATION: SymbolRenamingInstruction[] = [
       { replace: 'SiPopoverNextDirective', replaceWith: 'SiPopoverDirective' },
       { replace: 'SiPopoverNextModule', replaceWith: 'SiPopoverModule' }
     ],
-    toModule: '@siemens/element-ng/popover'
+    toModule: '@spike-rabbit/element-ng/popover'
   },
   {
     module: /@(siemens|simpl)\/dashboards-ng/,
@@ -92,14 +92,14 @@ const SYMBOL_RENAMING_MIGRATION: SymbolRenamingInstruction[] = [
   {
     module: /@(siemens|simpl)\/element-ng(\/toast-notification)?/,
     symbolRenamings: [{ replace: 'ToastStateName', replaceWith: 'StatusType' }],
-    toModule: '@siemens/element-ng/common'
+    toModule: '@spike-rabbit/element-ng/common'
   },
   {
     module: /@(siemens|simpl)\/element-ng(\/(info-page|unauthorized-page))?/,
     symbolRenamings: [
       { replace: 'SiUnauthorizedPageComponent', replaceWith: 'SiInfoPageComponent' }
     ],
-    toModule: '@siemens/element-ng/info-page'
+    toModule: '@spike-rabbit/element-ng/info-page'
   }
 ];
 

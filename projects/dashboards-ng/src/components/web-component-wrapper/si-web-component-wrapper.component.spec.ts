@@ -7,7 +7,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import {
   DeleteConfirmationDialogResult,
   SiActionDialogService
-} from '@siemens/element-ng/action-modal';
+} from '@spike-rabbit/element-ng/action-modal';
 import { Observable, Subject } from 'rxjs';
 
 import { SiWebComponentWrapperComponent } from './si-web-component-wrapper.component';

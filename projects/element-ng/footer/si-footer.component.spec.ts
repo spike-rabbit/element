@@ -5,7 +5,7 @@
 import { inputBinding, signal, WritableSignal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
-import { Link } from '@siemens/element-ng/link';
+import { Link } from '@spike-rabbit/element-ng/link';
 
 import { SiFooterComponent } from './index';
 

@@ -12,8 +12,8 @@ import {
   input
 } from '@angular/core';
 import { AbstractControl, FormGroup } from '@angular/forms';
-import { Breakpoints, SiResponsiveContainerDirective } from '@siemens/element-ng/resize-observer';
-import { TranslatableString } from '@siemens/element-translate-ng/translate';
+import { Breakpoints, SiResponsiveContainerDirective } from '@spike-rabbit/element-ng/resize-observer';
+import { TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiFormValidationErrorMapper } from '../si-form-validation-error.model';
 

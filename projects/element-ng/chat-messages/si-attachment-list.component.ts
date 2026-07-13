@@ -12,9 +12,9 @@ import {
   TemplateRef
 } from '@angular/core';
 import { elementStateClose, elementDocument } from '@siemens/element-icons';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiModalService } from '@siemens/element-ng/modal';
-import { SiTranslatePipe, t } from '@siemens/element-translate-ng/translate';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiModalService } from '@spike-rabbit/element-ng/modal';
+import { SiTranslatePipe, t } from '@spike-rabbit/element-translate-ng/translate';
 
 /**
  * Attachment item interface for file attachments in chat messages, used by {@link SiAttachmentListComponent} and inside {@link SiUserMessageComponent} as well as {@link SiChatInputComponent}.

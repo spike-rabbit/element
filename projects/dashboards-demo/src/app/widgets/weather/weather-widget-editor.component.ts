@@ -13,15 +13,15 @@ import {
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { WidgetConfig, WidgetConfigStatus, WidgetInstanceEditor } from '@siemens/dashboards-ng';
-import { SiDashboardCardComponent } from '@siemens/element-ng/dashboard';
-import { SiFormContainerComponent, SiFormItemComponent } from '@siemens/element-ng/form';
+import { WidgetConfig, WidgetConfigStatus, WidgetInstanceEditor } from '@spike-rabbit/dashboards-ng';
+import { SiDashboardCardComponent } from '@spike-rabbit/element-ng/dashboard';
+import { SiFormContainerComponent, SiFormItemComponent } from '@spike-rabbit/element-ng/form';
 import {
   SelectOption,
   SiSelectComponent,
   SiSelectSimpleOptionsDirective,
   SiSelectSingleValueDirective
-} from '@siemens/element-ng/select';
+} from '@spike-rabbit/element-ng/select';
 
 import { WeatherWidgetComponent } from './weather-widget.component';
 import {

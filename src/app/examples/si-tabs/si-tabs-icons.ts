@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { SiTabComponent, SiTabsetComponent } from '@siemens/element-ng/tabs';
-import { LOG_EVENT } from '@siemens/live-preview';
+import { SiTabComponent, SiTabsetComponent } from '@spike-rabbit/element-ng/tabs';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 
 interface TabModel {
   heading: string;

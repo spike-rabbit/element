@@ -13,7 +13,7 @@ import {
   FormlyModule,
   provideFormlyConfig
 } from '@ngx-formly/core';
-import { SiTranslateService } from '@siemens/element-translate-ng/translate';
+import { SiTranslateService } from '@spike-rabbit/element-translate-ng/translate';
 import { of } from 'rxjs';
 
 import { dynamicUiConfig } from '../../dynamic-ui-config';

@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { SiImageCropperStyleComponent } from '@siemens/element-ng/photo-upload';
-import { LOG_EVENT } from '@siemens/live-preview';
+import { SiImageCropperStyleComponent } from '@spike-rabbit/element-ng/photo-upload';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 import { ImageCropperComponent, ImageCroppedEvent } from 'ngx-image-cropper';
 
 @Component({

@@ -12,7 +12,7 @@ import {
   output,
   viewChild
 } from '@angular/core';
-import { TranslatableString } from '@siemens/element-translate-ng/translate';
+import { TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { Cell, SiCalendarBodyComponent } from './si-calendar-body.component';
 

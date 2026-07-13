@@ -5,7 +5,7 @@
 
 import { ChangeDetectionStrategy, Component, ElementRef, OnDestroy, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { SiCalendarButtonComponent, SiDatepickerDirective } from '@siemens/element-ng/datepicker';
+import { SiCalendarButtonComponent, SiDatepickerDirective } from '@spike-rabbit/element-ng/datepicker';
 import { IDateComp, IDateParams } from 'ag-grid-community';
 
 /**

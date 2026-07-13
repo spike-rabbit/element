@@ -17,7 +17,7 @@ describe('ng-update migration', () => {
   let appTree: Tree;
 
   beforeEach(async () => {
-    runner = new SchematicTestRunner('@siemens/element-ng', collectionPath);
+    runner = new SchematicTestRunner('@spike-rabbit/element-ng', collectionPath);
     appTree = await createTestApp(runner, { style: 'scss' });
   });
 
@@ -41,7 +41,7 @@ describe('ng-update migration', () => {
 
   it('should leave unrelated files untouched', async () => {
     const originalContent = `import { Component, inject } from '@angular/core';
-import { SiActionDialogService } from '@siemens/element-ng/action-modal';
+import { SiActionDialogService } from '@spike-rabbit/element-ng/action-modal';
 
 @Component({ selector: 'app-test' })
 export class TestComponent {
@@ -71,7 +71,7 @@ export class TestComponent {
 
   it('should remove provideIconConfig usage and its import', async () => {
     const originalContent = `import { ApplicationConfig, provideZonelessChangeDetection } from '@angular/core';
-import { provideIconConfig } from '@siemens/element-ng/icon';
+import { provideIconConfig } from '@spike-rabbit/element-ng/icon';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideZonelessChangeDetection(), provideIconConfig({ disableSvgIcons: true })]
@@ -85,7 +85,7 @@ export const appConfig: ApplicationConfig = {
 
     const modifiedContent = tree.readContent('/projects/app/src/app.config.ts');
     expect(modifiedContent).not.toContain('provideIconConfig');
-    expect(modifiedContent).not.toContain('@siemens/element-ng/icon');
+    expect(modifiedContent).not.toContain('@spike-rabbit/element-ng/icon');
     expect(modifiedContent).toContain('providers: [provideZonelessChangeDetection()]');
   });
 

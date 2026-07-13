@@ -2,7 +2,7 @@
  * Copyright (c) Siemens 2016 - 2026
  * SPDX-License-Identifier: MIT
  */
-import { Widget } from '@siemens/dashboards-ng';
+import { Widget } from '@spike-rabbit/dashboards-ng';
 
 const loaderFunction = async (name: string): Promise<any> => {
   if (name === 'ContactWidgetComponent' || name === 'ContactWidgetEditorComponent') {
@@ -14,7 +14,7 @@ const loaderFunction = async (name: string): Promise<any> => {
 
 export const WIZARD_WIDGET_DESCRIPTOR: Widget = {
   name: 'Contact',
-  id: '@siemens/dashboards-demo/ContactWidget',
+  id: '@spike-rabbit/dashboards-demo/ContactWidget',
   iconClass: 'element-user',
   description: 'Add a contact card to your dashboard.',
   componentFactory: {

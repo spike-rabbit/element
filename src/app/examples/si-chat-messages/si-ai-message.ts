@@ -12,11 +12,11 @@ import {
   elementThumbsDown,
   elementThumbsUp
 } from '@siemens/element-icons';
-import { MessageAction, SiAiMessageComponent } from '@siemens/element-ng/chat-messages';
-import { addIcons } from '@siemens/element-ng/icon';
-import { getMarkdownRenderer } from '@siemens/element-ng/markdown-renderer';
-import { MenuItemAction } from '@siemens/element-ng/menu';
-import { LOG_EVENT } from '@siemens/live-preview';
+import { MessageAction, SiAiMessageComponent } from '@spike-rabbit/element-ng/chat-messages';
+import { addIcons } from '@spike-rabbit/element-ng/icon';
+import { getMarkdownRenderer } from '@spike-rabbit/element-ng/markdown-renderer';
+import { MenuItemAction } from '@spike-rabbit/element-ng/menu';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 
 @Component({
   selector: 'app-sample',

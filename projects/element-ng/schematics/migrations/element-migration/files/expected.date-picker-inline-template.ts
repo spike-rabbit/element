@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SiDatepickerModule } from '@siemens/element-ng/datepicker';
+import { SiDatepickerModule } from '@spike-rabbit/element-ng/datepicker';
 
 @Component({
   selector: 'app-sample',

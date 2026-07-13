@@ -1,5 +1,5 @@
 import { Component, inject, Input } from '@angular/core';
-import { ModalRef, SiModalService  } from '@siemens/element-ng/modal';
+import { ModalRef, SiModalService  } from '@spike-rabbit/element-ng/modal';
 
 @Component({
   selector: 'modal-content',

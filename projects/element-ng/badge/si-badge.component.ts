@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { type StatusType } from '@siemens/element-ng/common';
-import { SiIconComponent } from '@siemens/element-ng/icon';
+import { type StatusType } from '@spike-rabbit/element-ng/common';
+import { SiIconComponent } from '@spike-rabbit/element-ng/icon';
 
 export type BadgeType =
   | StatusType

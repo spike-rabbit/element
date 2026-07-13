@@ -14,8 +14,8 @@ import {
   Type
 } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MenuItem } from '@siemens/element-ng/common';
-import { SiLoadingSpinnerModule } from '@siemens/element-ng/loading-spinner';
+import { MenuItem } from '@spike-rabbit/element-ng/common';
+import { SiLoadingSpinnerModule } from '@spike-rabbit/element-ng/loading-spinner';
 import { firstValueFrom, Observable, of, zip } from 'rxjs';
 
 import { TestingModule } from '../../../test/testing.module';

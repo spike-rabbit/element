@@ -16,7 +16,7 @@ import {
 import {
   provideMockTranslateServiceBuilder,
   SiTranslateService
-} from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-translate-ng/translate';
 import { of } from 'rxjs';
 
 import { dynamicUiConfig } from '../../dynamic-ui-config';

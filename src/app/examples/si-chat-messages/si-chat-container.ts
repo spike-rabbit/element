@@ -37,17 +37,17 @@ import {
   SiAiWelcomeScreenComponent,
   PromptCategory,
   PromptSuggestion
-} from '@siemens/element-ng/chat-messages';
-import { FileUploadError } from '@siemens/element-ng/file-uploader';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiInlineNotificationComponent } from '@siemens/element-ng/inline-notification';
+} from '@spike-rabbit/element-ng/chat-messages';
+import { FileUploadError } from '@spike-rabbit/element-ng/file-uploader';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiInlineNotificationComponent } from '@spike-rabbit/element-ng/inline-notification';
 import {
   getMarkdownRenderer,
   SiMarkdownRendererComponent
-} from '@siemens/element-ng/markdown-renderer';
-import { MenuItem } from '@siemens/element-ng/menu';
-import { SiToastNotificationService } from '@siemens/element-ng/toast-notification';
-import { LOG_EVENT } from '@siemens/live-preview';
+} from '@spike-rabbit/element-ng/markdown-renderer';
+import { MenuItem } from '@spike-rabbit/element-ng/menu';
+import { SiToastNotificationService } from '@spike-rabbit/element-ng/toast-notification';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 
 interface ChatMessage {
   type: 'user' | 'ai' | 'custom';

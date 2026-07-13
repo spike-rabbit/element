@@ -27,10 +27,10 @@ import {
   SiFileUploadDirective,
   UploadFile,
   FileUploadError
-} from '@siemens/element-ng/file-uploader';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { MenuItem, SiMenuFactoryComponent } from '@siemens/element-ng/menu';
-import { SiTranslatePipe, TranslatableString, t } from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-ng/file-uploader';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { MenuItem, SiMenuFactoryComponent } from '@spike-rabbit/element-ng/menu';
+import { SiTranslatePipe, TranslatableString, t } from '@spike-rabbit/element-translate-ng/translate';
 
 import { MessageAction } from './message-action.model';
 import { Attachment, SiAttachmentListComponent } from './si-attachment-list.component';

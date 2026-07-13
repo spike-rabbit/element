@@ -14,9 +14,9 @@ import {
   viewChild
 } from '@angular/core';
 import { elementOptionsVertical } from '@siemens/element-icons';
-import { SI_HEADER_DROPDOWN_OPTIONS } from '@siemens/element-ng/header-dropdown';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiTranslatePipe, t } from '@siemens/element-translate-ng/translate';
+import { SI_HEADER_DROPDOWN_OPTIONS } from '@spike-rabbit/element-ng/header-dropdown';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiTranslatePipe, t } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiApplicationHeaderComponent } from './si-application-header.component';
 

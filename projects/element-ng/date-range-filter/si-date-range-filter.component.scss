@@ -1,5 +1,5 @@
 @use 'sass:map';
-@use '@siemens/element-theme/src/styles/variables';
+@use '@spike-rabbit/element-theme/src/styles/variables';
 
 // width of the date-picker: 8 cells + px-9
 $datepicker-width: calc(#{8 * 2rem} + #{2 * map.get(variables.$spacers, 9)});

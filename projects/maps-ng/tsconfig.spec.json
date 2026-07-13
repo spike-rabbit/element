@@ -3,7 +3,7 @@
   "compilerOptions": {
     "outDir": "../../out-tsc/spec",
     "lib": ["es2022", "dom", "esnext.disposable"],
-    "types": ["@siemens/element-translate-ng/localize-types", "vitest/globals"]
+    "types": ["@spike-rabbit/element-translate-ng/localize-types", "vitest/globals"]
   },
   "include": ["**/*.spec.ts", "**/*.d.ts"]
 }

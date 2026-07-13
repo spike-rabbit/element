@@ -133,7 +133,7 @@ import {
   SiPopoverDirective,
   SiPopoverTitleDirective,
   SiPopoverBodyDirective
-} from '@siemens/element-ng/popover';
+} from '@spike-rabbit/element-ng/popover';
 
 @Component({
   imports: [SiPopoverDirective, SiPopoverTitleDirective, SiPopoverBodyDirective, ...]

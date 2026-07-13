@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 import { Component } from '@angular/core';
-import { SiFilteredSearchModule } from '@siemens/element-ng/filtered-search';
+import { SiFilteredSearchModule } from '@spike-rabbit/element-ng/filtered-search';
 
 @Component({
   selector: 'app-inline-readonly-test',

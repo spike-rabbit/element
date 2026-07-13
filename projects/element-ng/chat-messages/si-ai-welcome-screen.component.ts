@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component, input, model, output } from '@angular/core';
-import { SiActionCardComponent } from '@siemens/element-ng/card';
-import { SiSummaryChipComponent } from '@siemens/element-ng/summary-chip';
-import { TranslatableString } from '@siemens/element-translate-ng/translate';
+import { SiActionCardComponent } from '@spike-rabbit/element-ng/card';
+import { SiSummaryChipComponent } from '@spike-rabbit/element-ng/summary-chip';
+import { TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 export interface PromptCategory {
   label: TranslatableString;

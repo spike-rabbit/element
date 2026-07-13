@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { SiConnectionStrengthComponent } from '@siemens/element-ng/connection-strength';
+import { SiConnectionStrengthComponent } from '@spike-rabbit/element-ng/connection-strength';
 
 @Component({
   selector: 'app-sample',

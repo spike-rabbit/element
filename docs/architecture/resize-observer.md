@@ -30,7 +30,7 @@ Choose the method that best fits your application's architecture and complexity.
 
 ```ts
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { ResizeObserverService } from '@siemens/element-ng/resize-observer';
+import { ResizeObserverService } from '@spike-rabbit/element-ng/resize-observer';
 
 inject(ResizeObserverService)
   .observe(inject(ElementRef<HTMLElement>).nativeElement, 100)
@@ -44,7 +44,7 @@ inject(ResizeObserverService)
 
 ```ts
 import { Component } from '@angular/core';
-import { ElementDimensions, SiResizeObserverDirective } from '@siemens/element-ng/resize-observer';
+import { ElementDimensions, SiResizeObserverDirective } from '@spike-rabbit/element-ng/resize-observer';
 
 @Component({
   selector: 'sample',

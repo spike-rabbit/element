@@ -4,9 +4,9 @@
  */
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FieldWrapper } from '@ngx-formly/core';
-import { SiIconComponent } from '@siemens/element-ng/icon';
-import { SiTooltipDirective } from '@siemens/element-ng/tooltip';
-import { SiTranslatePipe } from '@siemens/element-translate-ng/translate';
+import { SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiTooltipDirective } from '@spike-rabbit/element-ng/tooltip';
+import { SiTranslatePipe } from '@spike-rabbit/element-translate-ng/translate';
 
 @Component({
   selector: 'si-formly-icon-wrapper',

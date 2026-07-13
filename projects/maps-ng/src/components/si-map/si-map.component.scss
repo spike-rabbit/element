@@ -1,5 +1,5 @@
 @use 'sass:map';
-@use '@siemens/element-theme/src/styles/variables';
+@use '@spike-rabbit/element-theme/src/styles/variables';
 
 $main-button-block-size: calc(1rem + 2 * map.get(variables.$spacers, 4));
 $main-button-margin: 1px;

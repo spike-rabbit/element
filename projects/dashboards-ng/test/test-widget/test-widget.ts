@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 import { Type } from '@angular/core';
-import { Widget, WidgetConfig } from '@siemens/dashboards-ng';
+import { Widget, WidgetConfig } from '@spike-rabbit/dashboards-ng';
 import * as testWidgetModule from 'projects/dashboards-ng/test/test-widget/index';
 
 const loaderFunction = (name: string): Promise<any> => {
@@ -26,7 +26,7 @@ const loaderFunctionStandalone = <T>(name: string): Promise<Type<T>> => {
 
 export const TEST_WIDGET: Widget = {
   name: 'Test Widget',
-  id: '@siemens/dashboards-ng/TestWidgetComponent',
+  id: '@spike-rabbit/dashboards-ng/TestWidgetComponent',
   iconClass: 'element-report',
   description: 'A dummy widget for testing.',
   componentFactory: {
@@ -46,7 +46,7 @@ export const TEST_WIDGET: Widget = {
 
 export const TEST_WIDGET_STANDALONE: Widget = {
   name: 'Test Widget',
-  id: '@siemens/dashboards-ng/TestWidgetComponent',
+  id: '@spike-rabbit/dashboards-ng/TestWidgetComponent',
   iconClass: 'element-report',
   description: 'A dummy widget for testing.',
   componentFactory: {

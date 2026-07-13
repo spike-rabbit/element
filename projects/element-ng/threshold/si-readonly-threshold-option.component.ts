@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
-import { SiIconComponent } from '@siemens/element-ng/icon';
-import { SelectOption } from '@siemens/element-ng/select';
-import { SiTranslatePipe } from '@siemens/element-translate-ng/translate';
+import { SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SelectOption } from '@spike-rabbit/element-ng/select';
+import { SiTranslatePipe } from '@spike-rabbit/element-translate-ng/translate';
 
 @Component({
   selector: 'si-readonly-threshold-option',

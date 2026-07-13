@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { SiWeatherWidgetBodyComponent, SiWeatherWidgetData } from '@siemens/element-ng/dashboard';
+import { SiWeatherWidgetBodyComponent, SiWeatherWidgetData } from '@spike-rabbit/element-ng/dashboard';
 
 @Component({
   selector: 'app-sample',

@@ -13,8 +13,8 @@ import {
   OnInit,
   output
 } from '@angular/core';
-import { SiActionDialogService } from '@siemens/element-ng/action-modal';
-import { SiTranslatePipe, t } from '@siemens/element-translate-ng/translate';
+import { SiActionDialogService } from '@spike-rabbit/element-ng/action-modal';
+import { SiTranslatePipe, t } from '@spike-rabbit/element-translate-ng/translate';
 
 import { Widget, WidgetConfig } from '../../model/widgets.model';
 import { SiWidgetEditorBase } from '../si-widget-editor-base';

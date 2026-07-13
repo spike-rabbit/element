@@ -1,4 +1,4 @@
-# @siemens/map-styles
+# @spike-rabbit/map-styles
 
 Element map styles for OpenLayers and MapLibre GL.
 

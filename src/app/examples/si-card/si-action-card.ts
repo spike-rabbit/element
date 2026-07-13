@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { SiActionCardComponent } from '@siemens/element-ng/card';
-import { SiIconModule } from '@siemens/element-ng/icon';
-import { LOG_EVENT } from '@siemens/live-preview';
+import { SiActionCardComponent } from '@spike-rabbit/element-ng/card';
+import { SiIconModule } from '@spike-rabbit/element-ng/icon';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 
 @Component({
   selector: 'app-sample',

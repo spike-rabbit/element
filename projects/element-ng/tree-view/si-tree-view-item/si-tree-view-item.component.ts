@@ -23,11 +23,11 @@ import {
   viewChild
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { correctKeyRTL, MenuItem as MenuItemLegacy } from '@siemens/element-ng/common';
-import { SiIconComponent } from '@siemens/element-ng/icon';
-import { SiLoadingSpinnerComponent } from '@siemens/element-ng/loading-spinner';
-import { MenuItem, SiMenuFactoryComponent } from '@siemens/element-ng/menu';
-import { SiTranslatePipe } from '@siemens/element-translate-ng/translate';
+import { correctKeyRTL, MenuItem as MenuItemLegacy } from '@spike-rabbit/element-ng/common';
+import { SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiLoadingSpinnerComponent } from '@spike-rabbit/element-ng/loading-spinner';
+import { MenuItem, SiMenuFactoryComponent } from '@spike-rabbit/element-ng/menu';
+import { SiTranslatePipe } from '@spike-rabbit/element-translate-ng/translate';
 import { asyncScheduler, Subject } from 'rxjs';
 import { take, takeUntil } from 'rxjs/operators';
 

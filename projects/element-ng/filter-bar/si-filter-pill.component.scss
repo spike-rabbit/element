@@ -1,6 +1,6 @@
 @use 'sass:map';
 
-@use '@siemens/element-theme/src/styles/variables';
+@use '@spike-rabbit/element-theme/src/styles/variables';
 
 $filter-pill-height: map.get(variables.$spacers, 9);
 

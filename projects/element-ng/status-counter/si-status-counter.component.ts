@@ -10,7 +10,7 @@ import {
   input,
   numberAttribute
 } from '@angular/core';
-import { SiIconComponent } from '@siemens/element-ng/icon';
+import { SiIconComponent } from '@spike-rabbit/element-ng/icon';
 
 @Component({
   selector: 'si-status-counter, si-icon-status',

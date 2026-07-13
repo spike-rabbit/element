@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component, input, model, OnDestroy } from '@angular/core';
-import { SiIconComponent } from '@siemens/element-ng/icon';
-import { SiTooltipService } from '@siemens/element-ng/tooltip';
-import { SiTranslatePipe } from '@siemens/element-translate-ng/translate';
+import { SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiTooltipService } from '@spike-rabbit/element-ng/tooltip';
+import { SiTranslatePipe } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiTabBadgeComponent } from './si-tab-badge.component';
 import { SiTabBaseDirective } from './si-tab-base.directive';

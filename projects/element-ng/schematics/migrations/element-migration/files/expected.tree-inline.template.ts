@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SiTreeViewModule } from '@siemens/element-ng/tree-view'
+import { SiTreeViewModule } from '@spike-rabbit/element-ng/tree-view'
 
 @Component({
   selector: 'app-sample',

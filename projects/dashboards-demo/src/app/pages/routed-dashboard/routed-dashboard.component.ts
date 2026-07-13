@@ -17,8 +17,8 @@ import {
   SI_WIDGET_STORE,
   SiFlexibleDashboardComponent,
   Widget
-} from '@siemens/dashboards-ng';
-import { SiEmptyStateComponent } from '@siemens/element-ng/empty-state';
+} from '@spike-rabbit/dashboards-ng';
+import { SiEmptyStateComponent } from '@spike-rabbit/element-ng/empty-state';
 
 import { environment } from '../../../environments/environment';
 import { AppStateService } from '../../app-state.service';

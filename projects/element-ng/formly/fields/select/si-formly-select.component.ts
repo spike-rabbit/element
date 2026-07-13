@@ -10,7 +10,7 @@ import {
   SiSelectMultiValueDirective,
   SiSelectSimpleOptionsDirective,
   SiSelectSingleValueDirective
-} from '@siemens/element-ng/select';
+} from '@spike-rabbit/element-ng/select';
 
 import { SiValidationErrorIdPipe } from '../../utils';
 

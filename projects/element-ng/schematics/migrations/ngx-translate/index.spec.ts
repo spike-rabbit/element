@@ -70,7 +70,7 @@ describe('missing translate migration', () => {
         `import { ApplicationConfig, importProvidersFrom } from '@angular/core';`,
         `import { HttpBackend } from '@angular/common/http';`,
         `import { TranslateLoader, TranslateModule } from '@ngx-translate/core';`,
-        `import { provideMissingTranslationHandlerForElement } from '@siemens/element-translate-ng/ngx-translate';`,
+        `import { provideMissingTranslationHandlerForElement } from '@spike-rabbit/element-translate-ng/ngx-translate';`,
         ``,
         `export const createTranslateLoader = (http: HttpBackend): MultiTranslateHttpLoader =>`,
         `  new MultiTranslateHttpLoader(http, ['./assets/i18n/']);`,
@@ -121,7 +121,7 @@ describe('missing translate migration', () => {
         `import { ApplicationConfig, importProvidersFrom } from '@angular/core';`,
         `import { HttpBackend } from '@angular/common/http';`,
         `import { TranslateLoader, provideTranslateService } from '@ngx-translate/core';`,
-        `import { provideMissingTranslationHandlerForElement } from '@siemens/element-translate-ng/ngx-translate';`,
+        `import { provideMissingTranslationHandlerForElement } from '@spike-rabbit/element-translate-ng/ngx-translate';`,
         ``,
         `export const createTranslateLoader = (http: HttpBackend): MultiTranslateHttpLoader =>`,
         `  new MultiTranslateHttpLoader(http, ['./assets/i18n/']);`,
@@ -159,7 +159,7 @@ describe('missing translate migration', () => {
       'projects/app/src/app/app.config.ts': [
         `import { ApplicationConfig } from '@angular/core';`,
         `import { provideTranslateService } from '@ngx-translate/core';`,
-        `import { provideMissingTranslationHandlerForElement } from '@siemens/element-translate-ng/ngx-translate';`,
+        `import { provideMissingTranslationHandlerForElement } from '@spike-rabbit/element-translate-ng/ngx-translate';`,
         ``,
         `export const appConfig: ApplicationConfig = {`,
         `  providers: [`,
@@ -177,7 +177,7 @@ describe('missing translate migration', () => {
       'projects/app/src/app/app.config.ts': [
         `import { ApplicationConfig } from '@angular/core';`,
         `import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';`,
-        `import { provideMissingTranslationHandlerForElement } from '@siemens/element-translate-ng/ngx-translate';`,
+        `import { provideMissingTranslationHandlerForElement } from '@spike-rabbit/element-translate-ng/ngx-translate';`,
         ``,
         `export const appConfig: ApplicationConfig = {`,
         `  providers: [`,
@@ -196,7 +196,7 @@ describe('missing translate migration', () => {
       'projects/app/src/app/app.config.ts': [
         `import { ApplicationConfig } from '@angular/core';`,
         `import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';`,
-        `import { provideMissingTranslationHandlerForElement } from '@siemens/element-translate-ng/ngx-translate';`,
+        `import { provideMissingTranslationHandlerForElement } from '@spike-rabbit/element-translate-ng/ngx-translate';`,
         ``,
         `export const appConfig: ApplicationConfig = {`,
         `  providers: [`,
@@ -234,7 +234,7 @@ describe('missing translate migration', () => {
       'projects/app/src/app/app.config.ts': [
         `import { ApplicationConfig, importProvidersFrom } from '@angular/core';`,
         `import { TranslateModule } from '@ngx-translate/core';`,
-        `import { provideMissingTranslationHandlerForElement } from '@siemens/element-translate-ng/ngx-translate';`,
+        `import { provideMissingTranslationHandlerForElement } from '@spike-rabbit/element-translate-ng/ngx-translate';`,
         ``,
         `export const appConfig: ApplicationConfig = {`,
         `  providers: [`,
@@ -270,7 +270,7 @@ describe('missing translate migration', () => {
       'projects/app/src/app/app.config.ts': [
         `import { ApplicationConfig } from '@angular/core';`,
         `import { provideMissingTranslationHandler, provideTranslateService } from '@ngx-translate/core';`,
-        `import { provideMissingTranslationHandlerForElement } from '@siemens/element-translate-ng/ngx-translate';`,
+        `import { provideMissingTranslationHandlerForElement } from '@spike-rabbit/element-translate-ng/ngx-translate';`,
         `import { MyMissingTranslationHandler } from './my-handler';`,
         ``,
         `export const appConfig: ApplicationConfig = {`,
@@ -305,7 +305,7 @@ describe('missing translate migration', () => {
       'projects/app/src/app/app.config.ts': [
         `import { ApplicationConfig } from '@angular/core';`,
         `import { provideTranslateService } from '@ngx-translate/core';`,
-        `import { provideMissingTranslationHandlerForElement } from '@siemens/element-translate-ng/ngx-translate';`,
+        `import { provideMissingTranslationHandlerForElement } from '@spike-rabbit/element-translate-ng/ngx-translate';`,
         `import { MyMissingTranslationHandler } from './my-handler';`,
         ``,
         `export const appConfig: ApplicationConfig = {`,
@@ -344,7 +344,7 @@ describe('missing translate migration', () => {
       'projects/app/src/app/app.config.ts': [
         `import { ApplicationConfig } from '@angular/core';`,
         `import { provideMissingTranslationHandler, provideTranslateService, TranslateLoader } from '@ngx-translate/core';`,
-        `import { provideMissingTranslationHandlerForElement } from '@siemens/element-translate-ng/ngx-translate';`,
+        `import { provideMissingTranslationHandlerForElement } from '@spike-rabbit/element-translate-ng/ngx-translate';`,
         `import { MyMissingTranslationHandler } from './my-handler';`,
         ``,
         `export const appConfig: ApplicationConfig = {`,
@@ -384,7 +384,7 @@ describe('missing translate migration', () => {
       'projects/app/src/app/app.config.ts': [
         `import { ApplicationConfig, importProvidersFrom } from '@angular/core';`,
         `import { TranslateModule, provideMissingTranslationHandler } from '@ngx-translate/core';`,
-        `import { provideMissingTranslationHandlerForElement } from '@siemens/element-translate-ng/ngx-translate';`,
+        `import { provideMissingTranslationHandlerForElement } from '@spike-rabbit/element-translate-ng/ngx-translate';`,
         `import { MyMissingTranslationHandler } from './my-handler';`,
         ``,
         `export const appConfig: ApplicationConfig = {`,

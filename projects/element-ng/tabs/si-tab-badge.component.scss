@@ -1,6 +1,6 @@
 @use 'sass:map';
-@use '@siemens/element-theme/src/styles/bootstrap/variables';
-@use '@siemens/element-theme/src/styles/variables/spacers';
+@use '@spike-rabbit/element-theme/src/styles/bootstrap/variables';
+@use '@spike-rabbit/element-theme/src/styles/variables/spacers';
 
 .badge-dot {
   inset-block-end: calc(variables.$badge-dot-size + 8px);

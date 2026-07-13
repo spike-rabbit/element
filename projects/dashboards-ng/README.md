@@ -11,7 +11,7 @@ To use the Siemens Dashboards in your project, add it to your dependencies
 by executing:
 
 ```sh
-npm install --save @siemens/dashboards-ng gridstack
+npm install --save @spike-rabbit/dashboards-ng gridstack
 ```
 
 ### Add libraries to your project
@@ -49,9 +49,9 @@ Import the library to your Angular `AppModule`, mostly residing in your
 ```ts
 // [...]
 // Import this library
-import { SiDashboardsNgModule } from '@siemens/dashboards-ng';
+import { SiDashboardsNgModule } from '@spike-rabbit/dashboards-ng';
 // Import needed peer dependency
-import { SiTranslateModule } from '@siemens/element-translate-ng/translate';
+import { SiTranslateModule } from '@spike-rabbit/element-translate-ng/translate';
 
 @NgModule({
   declarations: [AppComponent],
@@ -122,7 +122,7 @@ The correct approach is to use the full page height as explained at
 The dashboard comes with a couple of components with i18n support.
 The library uses translation keys in the components and ships English
 and German (`en.json`, `de.json`) translations for demonstration. The
-files are located at the folder `node_modules/@siemens/dashboards-ng/assets/i18n/`
+files are located at the folder `node_modules/@spike-rabbit/dashboards-ng/assets/i18n/`
 and provides you all used keys. You should include the keys in your translation
 files and update the translations to your need.
 
@@ -133,7 +133,7 @@ file.
 ```json
 {
   "glob": "**/*",
-  "input": "node_modules/@siemens/dashboards-ng/assets/i18n",
+  "input": "node_modules/@spike-rabbit/dashboards-ng/assets/i18n",
   "output": "./assets/i18n/dashboard/"
 }
 ```
@@ -192,7 +192,7 @@ Uses `@angular-architects/module-federation` to share code between host and remo
 Register the loader in your application bootstrap:
 
 ```ts
-import { registerModuleFederatedWidgetLoader } from '@siemens/dashboards-ng/module-federation';
+import { registerModuleFederatedWidgetLoader } from '@spike-rabbit/dashboards-ng/module-federation';
 
 registerModuleFederatedWidgetLoader();
 ```
@@ -207,7 +207,7 @@ registerModuleFederatedWidgetLoader();
   registerModuleFederatedWidgetLoader             |
              |                                    |
 +------------v------------+       +---------------+------------------+
-| @siemens/dashboards-ng/ |       | Remote Widget                    |
+| @spike-rabbit/dashboards-ng/ |       | Remote Widget                    |
 | module-federation       |       | Module Federation                |
 +-------------------------+       | (webpack)                        |
                                   +----------------------------------+
@@ -220,7 +220,7 @@ Uses `@angular-architects/native-federation` with ES Module-based federation, in
 Register the loader in your application bootstrap:
 
 ```ts
-import { registerNativeFederatedWidgetLoader } from '@siemens/dashboards-ng/native-federation';
+import { registerNativeFederatedWidgetLoader } from '@spike-rabbit/dashboards-ng/native-federation';
 
 registerNativeFederatedWidgetLoader();
 ```
@@ -235,7 +235,7 @@ registerNativeFederatedWidgetLoader();
   registerNativeFederatedWidgetLoader             |
              |                                    |
 +------------v------------+       +---------------+------------------+
-| @siemens/dashboards-ng/ |       | Remote Widget                    |
+| @spike-rabbit/dashboards-ng/ |       | Remote Widget                    |
 | native-federation       |       | Native Federation                |
 +-------------------------+       | (esbuild)                        |
                                   +----------------------------------+
@@ -248,7 +248,7 @@ Enables a Native Federation shell to load Module Federation remotes using `@modu
 Register the loader with your Module Federation instance:
 
 ```ts
-import { registerModuleFederatedWidgetLoader } from '@siemens/dashboards-ng/native-federation/mf-bridge';
+import { registerModuleFederatedWidgetLoader } from '@spike-rabbit/dashboards-ng/native-federation/mf-bridge';
 
 registerModuleFederatedWidgetLoader(mfInstance);
 ```
@@ -263,7 +263,7 @@ registerModuleFederatedWidgetLoader(mfInstance);
              | registerModuleFederatedWidgetLoader(mfInstance)
              |
 +------------v-----------------------+
-| @siemens/dashboards-ng/            |
+| @spike-rabbit/dashboards-ng/            |
 | native-federation/mf-bridge        |
 +------------+-----------------------+
              |
@@ -309,7 +309,7 @@ context-aware IDs), create a class that extends `SiWidgetIdProvider` and impleme
 
 ```ts
 import { Injectable } from '@angular/core';
-import { SiWidgetIdProvider } from '@siemens/dashboards-ng';
+import { SiWidgetIdProvider } from '@spike-rabbit/dashboards-ng';
 
 @Injectable()
 export class CustomWidgetIdProvider extends SiWidgetIdProvider {

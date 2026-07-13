@@ -16,10 +16,10 @@ import {
   SiApplicationHeaderComponent,
   SiHeaderBrandDirective,
   SiHeaderLogoDirective
-} from '@siemens/element-ng/application-header';
-import { SiBreadcrumbRouterComponent } from '@siemens/element-ng/breadcrumb-router';
-import { SiFormItemComponent } from '@siemens/element-ng/form';
-import { Link, SiLinkDirective } from '@siemens/element-ng/link';
+} from '@spike-rabbit/element-ng/application-header';
+import { SiBreadcrumbRouterComponent } from '@spike-rabbit/element-ng/breadcrumb-router';
+import { SiFormItemComponent } from '@spike-rabbit/element-ng/form';
+import { Link, SiLinkDirective } from '@spike-rabbit/element-ng/link';
 import {
   SiNavbarVerticalNextSearchComponent,
   SiNavbarVerticalNextItemsComponent,
@@ -27,8 +27,8 @@ import {
   SiNavbarVerticalNextFooterItemsComponent,
   SiNavbarVerticalNextHeaderComponent,
   SiNavbarVerticalNextItemComponent
-} from '@siemens/element-ng/navbar-vertical-next';
-import { provideExampleRoutes } from '@siemens/live-preview';
+} from '@spike-rabbit/element-ng/navbar-vertical-next';
+import { provideExampleRoutes } from '@spike-rabbit/live-preview';
 
 // Dummy components to be used in the router outlet for the example
 @Component({

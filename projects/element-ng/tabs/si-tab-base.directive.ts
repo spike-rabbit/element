@@ -19,9 +19,9 @@ import {
   viewChild
 } from '@angular/core';
 import { elementCancel } from '@siemens/element-icons';
-import { addIcons } from '@siemens/element-ng/icon';
-import { SiTooltipDirective, SiTooltipService, TooltipRef } from '@siemens/element-ng/tooltip';
-import { TranslatableString } from '@siemens/element-translate-ng/translate';
+import { addIcons } from '@spike-rabbit/element-ng/icon';
+import { SiTooltipDirective, SiTooltipService, TooltipRef } from '@spike-rabbit/element-ng/tooltip';
+import { TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SI_TABSET } from './si-tabs-tokens';
 

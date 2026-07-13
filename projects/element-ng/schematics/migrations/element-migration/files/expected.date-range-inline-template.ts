@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { SiDateRangeComponent, SiDatepickerModule } from '@siemens/element-ng/datepicker';
+import { SiDateRangeComponent, SiDatepickerModule } from '@spike-rabbit/element-ng/datepicker';
 
 @Component({
   selector: 'app-sample',

@@ -5,7 +5,7 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { DatepickerInputConfig, SiDatepickerDirective } from '@siemens/element-ng/datepicker';
+import { DatepickerInputConfig, SiDatepickerDirective } from '@spike-rabbit/element-ng/datepicker';
 
 import { SiCalendarButtonComponent } from './si-calendar-button.component';
 import { CalendarTestHelper, enterValue } from './testing/test-helper';

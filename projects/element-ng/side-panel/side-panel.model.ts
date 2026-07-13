@@ -4,7 +4,7 @@
  */
 
 import { NavigationExtras } from '@angular/router';
-import { TranslatableString } from '@siemens/element-translate-ng/translate';
+import { TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 /**
  * Side panel mode options.

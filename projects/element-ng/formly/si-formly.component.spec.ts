@@ -9,7 +9,7 @@ import { FormlyFieldConfig, provideFormlyCore } from '@ngx-formly/core';
 import {
   SiTranslateService,
   provideMockTranslateServiceBuilder
-} from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-translate-ng/translate';
 import { JSONSchema7 } from 'json-schema';
 import { of } from 'rxjs';
 

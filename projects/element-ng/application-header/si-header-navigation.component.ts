@@ -4,8 +4,8 @@
  */
 import { ChangeDetectionStrategy, Component, inject, OnDestroy } from '@angular/core';
 import { elementThumbnails } from '@siemens/element-icons';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiTranslatePipe } from '@siemens/element-translate-ng/translate';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiTranslatePipe } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiApplicationHeaderComponent } from './si-application-header.component';
 

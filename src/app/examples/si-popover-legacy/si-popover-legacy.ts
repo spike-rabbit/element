@@ -4,9 +4,9 @@
  */
 /* eslint-disable @typescript-eslint/no-deprecated */
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { SiIconComponent } from '@siemens/element-ng/icon';
-import { SiPopoverLegacyDirective } from '@siemens/element-ng/popover-legacy';
-import { LOG_EVENT } from '@siemens/live-preview';
+import { SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiPopoverLegacyDirective } from '@spike-rabbit/element-ng/popover-legacy';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 
 @Component({
   selector: 'app-sample',

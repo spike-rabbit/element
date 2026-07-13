@@ -4,7 +4,7 @@
  */
 import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
 import { elementCancel } from '@siemens/element-icons';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
 
 @Component({
   selector: 'si-input-pill',

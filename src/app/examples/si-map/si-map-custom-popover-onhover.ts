@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component, input, viewChild } from '@angular/core';
-import { MapPoint, MapPointMetaData, SiMapComponent } from '@siemens/maps-ng';
+import { MapPoint, MapPointMetaData, SiMapComponent } from '@spike-rabbit/maps-ng';
 import { mockPoints, singlePoint } from 'src/app/mocks/points.mock';
 import { environment } from 'src/environments/environment';
 

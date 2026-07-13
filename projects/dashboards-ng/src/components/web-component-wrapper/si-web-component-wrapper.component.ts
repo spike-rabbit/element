@@ -9,9 +9,9 @@ import {
   EventEmitter,
   OnDestroy
 } from '@angular/core';
-import { MenuItem as MenuItemLegacy } from '@siemens/element-ng/common';
-import { ContentActionBarMainItem } from '@siemens/element-ng/content-action-bar';
-import { MenuItem } from '@siemens/element-ng/menu';
+import { MenuItem as MenuItemLegacy } from '@spike-rabbit/element-ng/common';
+import { ContentActionBarMainItem } from '@spike-rabbit/element-ng/content-action-bar';
+import { MenuItem } from '@spike-rabbit/element-ng/menu';
 
 import { WidgetConfigEvent, WidgetInstance } from '../../model/widgets.model';
 import { SiWebComponentWrapperBaseComponent } from './si-web-component-wrapper-base.component';

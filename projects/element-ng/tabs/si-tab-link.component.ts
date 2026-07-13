@@ -5,9 +5,9 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
-import { SiIconComponent } from '@siemens/element-ng/icon';
-import { SiTooltipService } from '@siemens/element-ng/tooltip';
-import { SiTranslatePipe } from '@siemens/element-translate-ng/translate';
+import { SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiTooltipService } from '@spike-rabbit/element-ng/tooltip';
+import { SiTranslatePipe } from '@spike-rabbit/element-translate-ng/translate';
 import { startWith } from 'rxjs/operators';
 
 import { SiTabBadgeComponent } from './si-tab-badge.component';

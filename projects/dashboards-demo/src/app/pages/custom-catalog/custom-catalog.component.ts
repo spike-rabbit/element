@@ -9,8 +9,8 @@ import {
   SiFlexibleDashboardComponent,
   SiGridComponent,
   Widget
-} from '@siemens/dashboards-ng';
-import { SiEmptyStateComponent } from '@siemens/element-ng/empty-state';
+} from '@spike-rabbit/dashboards-ng';
+import { SiEmptyStateComponent } from '@spike-rabbit/element-ng/empty-state';
 
 import { AppStateService } from '../../app-state.service';
 import { AppWidgetStorage } from '../../app-widget-storage';

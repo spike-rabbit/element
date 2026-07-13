@@ -17,10 +17,10 @@ import {
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { elementCancel, elementOptionsVertical } from '@siemens/element-icons';
-import { SiAutoCollapsableListModule } from '@siemens/element-ng/auto-collapsable-list';
-import { MenuItem as MenuItemLegacy } from '@siemens/element-ng/common';
-import { addIcons } from '@siemens/element-ng/icon';
-import { SiLinkModule } from '@siemens/element-ng/link';
+import { SiAutoCollapsableListModule } from '@spike-rabbit/element-ng/auto-collapsable-list';
+import { MenuItem as MenuItemLegacy } from '@spike-rabbit/element-ng/common';
+import { addIcons } from '@spike-rabbit/element-ng/icon';
+import { SiLinkModule } from '@spike-rabbit/element-ng/link';
 import {
   MenuItem,
   MenuItemAction,
@@ -28,9 +28,9 @@ import {
   MenuItemRadio,
   SiMenuActionService,
   SiMenuModule
-} from '@siemens/element-ng/menu';
-import { SiTooltipDirective } from '@siemens/element-ng/tooltip';
-import { SiTranslatePipe, t } from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-ng/menu';
+import { SiTooltipDirective } from '@spike-rabbit/element-ng/tooltip';
+import { SiTranslatePipe, t } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiContentActionBarToggleComponent } from './si-content-action-bar-toggle.component';
 import { ContentActionBarMainItem, ViewType } from './si-content-action-bar.model';

@@ -1,5 +1,5 @@
 @use 'sass:map';
-@use '@siemens/element-theme/src/styles/variables';
+@use '@spike-rabbit/element-theme/src/styles/variables';
 
 $si-circle-status-size-regular: calc(variables.$si-icon-font-size + 20px);
 $si-circle-status-indicator-size-regular: variables.$si-icon-font-size;

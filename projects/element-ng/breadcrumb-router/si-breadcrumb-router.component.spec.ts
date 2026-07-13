@@ -9,7 +9,7 @@ import { provideTranslateService } from '@ngx-translate/core';
 import {
   provideMissingTranslationHandlerForElement,
   provideNgxTranslateForElement
-} from '@siemens/element-translate-ng/ngx-translate';
+} from '@spike-rabbit/element-translate-ng/ngx-translate';
 
 import {
   SI_BREADCRUMB_RESOLVER_SERVICE,

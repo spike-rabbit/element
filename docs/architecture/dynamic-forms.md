@@ -6,13 +6,13 @@ which allows to generate forms from JSON data.
 
 !!! info "Formly version"
 
-    The `@siemens/element-ng/formly` package is based on Angular Formly v7.1.
-    If you are still using Formly v6, use `@siemens/element-ng/formly-legacy` instead.
+    The `@spike-rabbit/element-ng/formly` package is based on Angular Formly v7.1.
+    If you are still using Formly v6, use `@spike-rabbit/element-ng/formly-legacy` instead.
 
 !!! warning "Migrate from `formly-legacy`"
 
-    `@siemens/element-ng/formly-legacy` (Formly v6) is deprecated and support
-    will be dropped in a future release. Migrate to `@siemens/element-ng/formly`
+    `@spike-rabbit/element-ng/formly-legacy` (Formly v6) is deprecated and support
+    will be dropped in a future release. Migrate to `@spike-rabbit/element-ng/formly`
     (Formly v7.1) as soon as possible.
 
 ## Code ---
@@ -25,7 +25,7 @@ which allows to generate forms from JSON data.
     - [@ngx-formly/bootstrap](https://www.npmjs.com/package/@ngx-formly/bootstrap)
 
 ```ts
-import { SiFormlyComponent } from '@siemens/element-ng/formly';
+import { SiFormlyComponent } from '@spike-rabbit/element-ng/formly';
 
 @Component({
   imports: [SiFormlyComponent, ...]

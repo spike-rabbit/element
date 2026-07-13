@@ -1,7 +1,7 @@
 @use 'sass:map';
-@use '@siemens/element-theme/src/styles/variables';
-@use '@siemens/element-theme/src/styles/bootstrap/mixins/badge-text';
-@use '@siemens/element-theme/src/styles/bootstrap/mixins/visually-hidden';
+@use '@spike-rabbit/element-theme/src/styles/variables';
+@use '@spike-rabbit/element-theme/src/styles/bootstrap/mixins/badge-text';
+@use '@spike-rabbit/element-theme/src/styles/bootstrap/mixins/visually-hidden';
 
 :host(.navbar-vertical-item) {
   display: flex;

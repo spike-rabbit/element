@@ -84,7 +84,7 @@ used as SCSS variables within stylesheets. This also allows you to consume the
 inset alternatives to the outside shadow variants.
 
 ```scss
-@use '@siemens/element-theme/src/styles/variables';
+@use '@spike-rabbit/element-theme/src/styles/variables';
 
 box-shadow: variables.$element-elevation-1;
 box-shadow: variables.$element-elevation-2;

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { areAnimationsDisabled } from '@siemens/element-ng/common';
+import { areAnimationsDisabled } from '@spike-rabbit/element-ng/common';
 
 import { SiToastNotificationComponent } from '../si-toast-notification/si-toast-notification.component';
 import { SI_TOAST_TOKEN } from '../si-toast-token.model';

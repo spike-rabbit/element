@@ -12,7 +12,7 @@ import {
 } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { SiModalService } from '@siemens/element-ng/modal';
+import { SiModalService } from '@spike-rabbit/element-ng/modal';
 
 import {
   SiAttachmentListComponent as TestComponent,

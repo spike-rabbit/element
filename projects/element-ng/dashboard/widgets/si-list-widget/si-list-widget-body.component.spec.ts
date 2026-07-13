@@ -7,7 +7,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import {
   provideMockTranslateServiceBuilder,
   SiTranslateService
-} from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-translate-ng/translate';
 import { of } from 'rxjs';
 import { TestScheduler } from 'rxjs/testing';
 import { userEvent } from 'vitest/browser';

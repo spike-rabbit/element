@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { SiCircleStatusModule } from '@siemens/element-ng/circle-status';
+import { SiCircleStatusModule } from '@spike-rabbit/element-ng/circle-status';
 
 @Component({
   selector: 'app-sample',

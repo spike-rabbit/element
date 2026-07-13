@@ -7,8 +7,8 @@ import { elementDown2 } from '@siemens/element-icons';
 import {
   SI_HEADER_DROPDOWN_OPTIONS,
   SiHeaderDropdownTriggerDirective
-} from '@siemens/element-ng/header-dropdown';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
+} from '@spike-rabbit/element-ng/header-dropdown';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
 
 /** Adds a navigation item to the header. Should be located inside `.header-navigation`. */
 @Component({

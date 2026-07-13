@@ -28,7 +28,7 @@ import {
   ValidationErrors,
   ValidatorFn
 } from '@angular/forms';
-import { SiTranslatePipe, TranslatableString } from '@siemens/element-translate-ng/translate';
+import { SiTranslatePipe, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiFormFieldsetComponent } from '../form-fieldset/si-form-fieldset.component';
 import { SiFormFieldsetControl } from '../form-fieldset/si-form-fieldset.control';

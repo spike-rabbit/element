@@ -10,8 +10,8 @@ import {
 } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { DOCUMENT, ElementRef, inject, Injectable, Injector, signal } from '@angular/core';
-import { isRTL } from '@siemens/element-ng/common';
-import { ResizeObserverService } from '@siemens/element-ng/resize-observer';
+import { isRTL } from '@spike-rabbit/element-ng/common';
+import { ResizeObserverService } from '@spike-rabbit/element-ng/resize-observer';
 import { map, merge, Subject, Subscription, tap, throttleTime } from 'rxjs';
 
 import { SiTourHighlightComponent } from './si-tour-highlight.component';

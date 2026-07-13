@@ -4,8 +4,8 @@
  */
 import { CdkMenuTrigger } from '@angular/cdk/menu';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { SiIconComponent } from '@siemens/element-ng/icon';
-import { SiMenuModule } from '@siemens/element-ng/menu';
+import { SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiMenuModule } from '@spike-rabbit/element-ng/menu';
 
 @Component({
   selector: 'app-sample',

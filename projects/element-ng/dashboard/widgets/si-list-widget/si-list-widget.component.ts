@@ -12,12 +12,12 @@ import {
   OnChanges
 } from '@angular/core';
 import { elementRight2, elementSortDown, elementSortUp } from '@siemens/element-icons';
-import { SiCardComponent } from '@siemens/element-ng/card';
-import { AccentLineType } from '@siemens/element-ng/common';
-import { ContentActionBarMainItem } from '@siemens/element-ng/content-action-bar';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { Link, SiLinkDirective } from '@siemens/element-ng/link';
-import { SiTranslatePipe, t, TranslatableString } from '@siemens/element-translate-ng/translate';
+import { SiCardComponent } from '@spike-rabbit/element-ng/card';
+import { AccentLineType } from '@spike-rabbit/element-ng/common';
+import { ContentActionBarMainItem } from '@spike-rabbit/element-ng/content-action-bar';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { Link, SiLinkDirective } from '@spike-rabbit/element-ng/link';
+import { SiTranslatePipe, t, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiWidgetBaseDirective } from '../si-widget-base.directive';
 import { SiListWidgetBodyComponent, SortOrder } from './si-list-widget-body.component';

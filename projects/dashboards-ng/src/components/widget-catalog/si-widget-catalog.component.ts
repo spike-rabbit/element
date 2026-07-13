@@ -15,15 +15,15 @@ import {
   signal,
   viewChild
 } from '@angular/core';
-import { SiActionDialogService } from '@siemens/element-ng/action-modal';
-import { SiCircleStatusComponent } from '@siemens/element-ng/circle-status';
-import { SiEmptyStateComponent } from '@siemens/element-ng/empty-state';
-import { SiSearchBarComponent } from '@siemens/element-ng/search-bar';
+import { SiActionDialogService } from '@spike-rabbit/element-ng/action-modal';
+import { SiCircleStatusComponent } from '@spike-rabbit/element-ng/circle-status';
+import { SiEmptyStateComponent } from '@spike-rabbit/element-ng/empty-state';
+import { SiSearchBarComponent } from '@spike-rabbit/element-ng/search-bar';
 import {
   injectSiTranslateService,
   SiTranslatePipe,
   t
-} from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-translate-ng/translate';
 
 import { createWidgetConfig, Widget, WidgetConfig } from '../../model/widgets.model';
 import { SiWidgetEditorBase } from '../si-widget-editor-base';

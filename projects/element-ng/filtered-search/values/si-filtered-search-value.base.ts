@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 import { Directive, ElementRef, input, model, output, signal, Signal } from '@angular/core';
-import { TranslatableString } from '@siemens/element-translate-ng/translate';
+import { TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { CriterionDefinition, CriterionValue } from '../si-filtered-search.model';
 

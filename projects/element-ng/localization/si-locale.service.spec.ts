@@ -7,7 +7,7 @@ import { provideTranslateService, TranslateService } from '@ngx-translate/core';
 import {
   provideMissingTranslationHandlerForElement,
   provideNgxTranslateForElement
-} from '@siemens/element-translate-ng/ngx-translate';
+} from '@spike-rabbit/element-translate-ng/ngx-translate';
 import { firstValueFrom, Observable, of, take, toArray } from 'rxjs';
 
 import { SiLocaleStore } from './si-locale-store';

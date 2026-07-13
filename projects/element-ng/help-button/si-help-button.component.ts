@@ -4,8 +4,8 @@
  */
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { elementHelp } from '@siemens/element-icons';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiPopoverDirective } from '@siemens/element-ng/popover';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiPopoverDirective } from '@spike-rabbit/element-ng/popover';
 
 /**
  * This component creates a help button that shows contextual help in a popover.

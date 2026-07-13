@@ -17,9 +17,9 @@ import {
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { elementOk } from '@siemens/element-icons';
-import { isRTL } from '@siemens/element-ng/common';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiTranslatePipe, t } from '@siemens/element-translate-ng/translate';
+import { isRTL } from '@spike-rabbit/element-ng/common';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiTranslatePipe, t } from '@spike-rabbit/element-translate-ng/translate';
 
 /**
  * The Element data color palette is used as default.

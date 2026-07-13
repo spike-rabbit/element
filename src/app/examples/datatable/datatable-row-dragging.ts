@@ -8,7 +8,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 // eslint-disable-next-line no-restricted-imports
 import { TranslatePipe } from '@ngx-translate/core';
 import { elementMenu } from '@siemens/element-icons';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
 import { DatatableRowDefDirective, NgxDatatableModule } from '@siemens/ngx-datatable';
 
 @Component({

@@ -35,7 +35,7 @@ ModuleRegistry.registerModules([AllCommunityModule]);
 Then, add the Element AG Grid configuration provider in your `app.config.ts`:
 
 ```ts
-import { provideSiAgGridConfig } from '@siemens/element-ng/ag-grid';
+import { provideSiAgGridConfig } from '@spike-rabbit/element-ng/ag-grid';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideSiAgGridConfig()]

@@ -5,10 +5,10 @@
 import { CdkMenuTrigger } from '@angular/cdk/menu';
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject } from '@angular/core';
-import { SI_DATATABLE_CONFIG, SiDatatableModule } from '@siemens/element-ng/datatable';
-import { SiEmptyStateModule } from '@siemens/element-ng/empty-state';
-import { Filter, SiFilterBarComponent } from '@siemens/element-ng/filter-bar';
-import { SiIconComponent } from '@siemens/element-ng/icon';
+import { SI_DATATABLE_CONFIG, SiDatatableModule } from '@spike-rabbit/element-ng/datatable';
+import { SiEmptyStateModule } from '@spike-rabbit/element-ng/empty-state';
+import { Filter, SiFilterBarComponent } from '@spike-rabbit/element-ng/filter-bar';
+import { SiIconComponent } from '@spike-rabbit/element-ng/icon';
 import {
   SiDetailsPaneBodyComponent,
   SiDetailsPaneComponent,
@@ -18,21 +18,21 @@ import {
   SiListPaneBodyComponent,
   SiListPaneComponent,
   SiListPaneHeaderComponent
-} from '@siemens/element-ng/list-details';
+} from '@spike-rabbit/element-ng/list-details';
 import {
   MenuItem,
   SiMenuBarDirective,
   SiMenuDirective,
   SiMenuHeaderDirective,
   SiMenuItemComponent
-} from '@siemens/element-ng/menu';
+} from '@spike-rabbit/element-ng/menu';
 import {
   BOOTSTRAP_BREAKPOINTS,
   SiResizeObserverDirective
-} from '@siemens/element-ng/resize-observer';
-import { SiSearchBarComponent } from '@siemens/element-ng/search-bar';
-import { SiTabComponent, SiTabPortalComponent, SiTabsetComponent } from '@siemens/element-ng/tabs';
-import { LOG_EVENT } from '@siemens/live-preview';
+} from '@spike-rabbit/element-ng/resize-observer';
+import { SiSearchBarComponent } from '@spike-rabbit/element-ng/search-bar';
+import { SiTabComponent, SiTabPortalComponent, SiTabsetComponent } from '@spike-rabbit/element-ng/tabs';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 import { NgxDatatableModule } from '@siemens/ngx-datatable';
 
 import { CorporateEmployee, DataService, PageRequest } from '../datatable/data.service';

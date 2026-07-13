@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SiFormModule } from '@siemens/element-ng/form'
+import { SiFormModule } from '@spike-rabbit/element-ng/form'
 
 @Component({
   selector: 'app-sample',

@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component, inject, TemplateRef, viewChild } from '@angular/core';
-import { SiAttachmentListComponent, Attachment } from '@siemens/element-ng/chat-messages';
-import { LOG_EVENT } from '@siemens/live-preview';
+import { SiAttachmentListComponent, Attachment } from '@spike-rabbit/element-ng/chat-messages';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 
 @Component({
   selector: 'app-sample',

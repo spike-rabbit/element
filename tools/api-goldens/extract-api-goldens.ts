@@ -27,7 +27,7 @@ const packages = [
     console.log('Extracting API for package:', packageName);
     const outdated = await main(
       path.resolve(`api-goldens/${packageName}`),
-      path.resolve(`dist/@siemens/${packageName}`),
+      path.resolve(`dist/@spike-rabbit/${packageName}`),
       approveGolden,
       /^ɵ|^SiTranslatableKeys$/,
       []

@@ -20,9 +20,9 @@ import {
   computed,
   ChangeDetectionStrategy
 } from '@angular/core';
-import { calculateOverlayArrowPosition, OverlayArrowPosition } from '@siemens/element-ng/common';
-import { SiIconComponent } from '@siemens/element-ng/icon';
-import { SiTranslatePipe } from '@siemens/element-translate-ng/translate';
+import { calculateOverlayArrowPosition, OverlayArrowPosition } from '@spike-rabbit/element-ng/common';
+import { SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiTranslatePipe } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiPopoverDirective } from './si-popover.directive';
 

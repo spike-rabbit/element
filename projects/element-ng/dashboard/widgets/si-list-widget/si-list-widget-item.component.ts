@@ -4,9 +4,9 @@
  */
 import { ChangeDetectionStrategy, Component, computed } from '@angular/core';
 import { elementRight2 } from '@siemens/element-icons';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { Link, SiLinkDirective } from '@siemens/element-ng/link';
-import { SiTranslatePipe, TranslatableString } from '@siemens/element-translate-ng/translate';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { Link, SiLinkDirective } from '@spike-rabbit/element-ng/link';
+import { SiTranslatePipe, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiWidgetBaseDirective } from '../si-widget-base.directive';
 

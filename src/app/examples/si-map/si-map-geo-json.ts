@@ -10,7 +10,7 @@ import {
   OnInit,
   viewChild
 } from '@angular/core';
-import { MapPoint, MapPointMetaData, SiMapComponent } from '@siemens/maps-ng';
+import { MapPoint, MapPointMetaData, SiMapComponent } from '@spike-rabbit/maps-ng';
 import { FeatureLike } from 'ol/Feature';
 import { fromLonLat } from 'ol/proj';
 import { Fill, Stroke, Style } from 'ol/style';

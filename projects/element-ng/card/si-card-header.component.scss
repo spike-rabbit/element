@@ -1,7 +1,7 @@
 @use 'sass:map';
 
-@use '@siemens/element-theme/src/styles/bootstrap/variables';
-@use '@siemens/element-theme/src/styles/variables/spacers';
+@use '@spike-rabbit/element-theme/src/styles/bootstrap/variables';
+@use '@spike-rabbit/element-theme/src/styles/variables/spacers';
 
 .text-truncate {
   flex: 0 1 auto;

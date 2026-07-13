@@ -12,8 +12,8 @@ import {
   SiHeaderBrandDirective,
   SiHeaderLogoDirective,
   SiLaunchpadFactoryComponent
-} from '@siemens/element-ng/application-header';
-import { SiFormItemComponent } from '@siemens/element-ng/form';
+} from '@spike-rabbit/element-ng/application-header';
+import { SiFormItemComponent } from '@spike-rabbit/element-ng/form';
 
 @Component({
   selector: 'app-sample',

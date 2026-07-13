@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: MIT
  */
 import { Component } from '@angular/core';
-import { SiToastNotificationService } from '@siemens/element-ng/toast-notification';
-import { StatusType } from '@siemens/element-ng/common';
+import { SiToastNotificationService } from '@spike-rabbit/element-ng/toast-notification';
+import { StatusType } from '@spike-rabbit/element-ng/common';
 
 @Component({
   selector: 'app-test',

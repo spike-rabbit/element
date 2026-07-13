@@ -13,14 +13,14 @@ import {
 } from '@angular/core';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { FormsModule } from '@angular/forms';
-import { Link } from '@siemens/element-ng/link';
-import { SiSearchBarComponent } from '@siemens/element-ng/search-bar';
+import { Link } from '@spike-rabbit/element-ng/link';
+import { SiSearchBarComponent } from '@spike-rabbit/element-ng/search-bar';
 import {
   injectSiTranslateService,
   SiTranslatePipe,
   t,
   TranslatableString
-} from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-translate-ng/translate';
 import { map, of, switchMap } from 'rxjs';
 
 import { SiWidgetBaseDirective } from '../si-widget-base.directive';

@@ -25,10 +25,10 @@ import {
   viewChild
 } from '@angular/core';
 import { elementCancel, elementDelete, elementDocument, elementRedo } from '@siemens/element-icons';
-import { addIcons, SiIconComponent, SiStatusIconComponent } from '@siemens/element-ng/icon';
-import { SiInlineNotificationComponent } from '@siemens/element-ng/inline-notification';
-import { SiProgressbarComponent } from '@siemens/element-ng/progressbar';
-import { SiTranslatePipe, t } from '@siemens/element-translate-ng/translate';
+import { addIcons, SiIconComponent, SiStatusIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiInlineNotificationComponent } from '@spike-rabbit/element-ng/inline-notification';
+import { SiProgressbarComponent } from '@spike-rabbit/element-ng/progressbar';
+import { SiTranslatePipe, t } from '@spike-rabbit/element-translate-ng/translate';
 import { Observable, Subscription } from 'rxjs';
 import { retry } from 'rxjs/operators';
 

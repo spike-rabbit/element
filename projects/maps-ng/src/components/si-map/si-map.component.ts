@@ -27,8 +27,8 @@ import {
   SiNoTranslateService,
   SiTranslateServiceBuilder,
   t
-} from '@siemens/element-translate-ng/translate';
-import { siMapStyle } from '@siemens/map-styles/common';
+} from '@spike-rabbit/element-translate-ng/translate';
+import { siMapStyle } from '@spike-rabbit/map-styles/common';
 import { apply as applyMapboxStyle } from 'ol-mapbox-style';
 import Control from 'ol/control/Control';
 import { defaults as defaultControls } from 'ol/control/defaults';

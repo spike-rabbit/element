@@ -17,9 +17,9 @@ import {
   viewChild
 } from '@angular/core';
 import { elementRight4 } from '@siemens/element-icons';
-import { BlinkService, EntityStatusType, StatusIcon } from '@siemens/element-ng/common';
-import { addIcons, SiIconComponent, STATUS_ICON_CONFIG } from '@siemens/element-ng/icon';
-import { SiTranslatePipe, TranslatableString } from '@siemens/element-translate-ng/translate';
+import { BlinkService, EntityStatusType, StatusIcon } from '@spike-rabbit/element-ng/common';
+import { addIcons, SiIconComponent, STATUS_ICON_CONFIG } from '@spike-rabbit/element-ng/icon';
+import { SiTranslatePipe, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 import { Observable, Subscription } from 'rxjs';
 
 @Component({

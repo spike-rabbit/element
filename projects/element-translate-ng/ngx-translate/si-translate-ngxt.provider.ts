@@ -4,7 +4,7 @@
  */
 import { EnvironmentProviders, inject, Injector, Provider } from '@angular/core';
 import { MissingTranslationHandler } from '@ngx-translate/core';
-import { SiTranslateServiceBuilder } from '@siemens/element-translate-ng/translate';
+import { SiTranslateServiceBuilder } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiMissingTranslateService } from './si-missing-translate.service';
 import { SiTranslateNgxTServiceBuilder } from './si-translate-ngxt.service-builder';

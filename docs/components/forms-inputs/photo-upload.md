@@ -71,7 +71,7 @@ Import the `SiPhotoUploadComponent` in your standalone component that shall prov
 
 ```ts
 import { Component } from '@angular/core';
-import { SiPhotoUploadComponent } from '@siemens/element-ng/photo-upload';
+import { SiPhotoUploadComponent } from '@spike-rabbit/element-ng/photo-upload';
 
 @Component({
   selector: 'app-sample',
@@ -92,7 +92,7 @@ The snippet below shows how to use the Angular component styles attribute to adj
 
 ```ts
 import { Component } from '@angular/core';
-import { SiPhotoUploadComponent } from '@siemens/element-ng/photo-upload';
+import { SiPhotoUploadComponent } from '@spike-rabbit/element-ng/photo-upload';
 
 @Component({
   selector: 'app-sample',
@@ -116,7 +116,7 @@ This ensures the component matches Element’s theming while granting you full c
 
 ```ts
 import { Component } from '@angular/core';
-import { SiImageCropperStyleComponent } from '@siemens/element-ng/photo-upload';
+import { SiImageCropperStyleComponent } from '@spike-rabbit/element-ng/photo-upload';
 import { ImageCropperComponent, ImageCroppedEvent } from 'ngx-image-cropper';
 
 @Component({

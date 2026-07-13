@@ -4,7 +4,7 @@ Tabs are used to separate information into logical sections in the context of a 
 
 With Element v48, the tabs have been completely re-implemented including breaking changes in the API.
 The old tabs have been renamed to `*-legacy` and are available via legacy entrypoint
-`@siemens/element-ng/tabs-legacy`. For more details, see the BREAKING CHANGES notes for
+`@spike-rabbit/element-ng/tabs-legacy`. For more details, see the BREAKING CHANGES notes for
 Element v48.0.0 in the [changelog](../../CHANGELOG.md).
 
 ## Usage ---
@@ -84,7 +84,7 @@ This menu contains all the tabs in the same order, ensuring consistent navigatio
 ### Usage
 
 ```ts
-import { SiTabComponent, SiTabsetComponent } from '@siemens/element-ng/tabs';
+import { SiTabComponent, SiTabsetComponent } from '@spike-rabbit/element-ng/tabs';
 
 @Component({
   imports: [
@@ -184,7 +184,7 @@ No need to apply `routerLinkActive`, this is done automatically.
 ```ts
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { SiTabsetLegacyComponent, SiTabLegacyComponent } from '@siemens/element-ng/tabs-legacy';
+import { SiTabsetLegacyComponent, SiTabLegacyComponent } from '@spike-rabbit/element-ng/tabs-legacy';
 
 @Component({
   templateUrl: './my-component.html',
@@ -223,7 +223,7 @@ In this case, you can use the `si-tabset` component with `si-tab` components as 
 ```ts
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { SiTabsetLegacyComponent, SiTabLegacyComponent } from '@siemens/element-ng/tabs-legacy';
+import { SiTabsetLegacyComponent, SiTabLegacyComponent } from '@spike-rabbit/element-ng/tabs-legacy';
 
 @Component({
   templateUrl: './my-component.html',
@@ -259,7 +259,7 @@ A tab that can be closed must be explicitly marked as closable by setting the `c
 ```ts
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { SiTabsetLegacyComponent, SiTabLegacyComponent } from '@siemens/element-ng/tabs-legacy';
+import { SiTabsetLegacyComponent, SiTabLegacyComponent } from '@spike-rabbit/element-ng/tabs-legacy';
 
 @Component({
   templateUrl: './my-component.html',

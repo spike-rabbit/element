@@ -11,12 +11,12 @@ import {
   SiHeaderActionsDirective,
   SiHeaderBrandDirective,
   SiHeaderLogoDirective
-} from '@siemens/element-ng/application-header';
-import { SiFormItemComponent } from '@siemens/element-ng/form';
+} from '@spike-rabbit/element-ng/application-header';
+import { SiFormItemComponent } from '@spike-rabbit/element-ng/form';
 import {
   SiHeaderDropdownComponent,
   SiHeaderDropdownTriggerDirective
-} from '@siemens/element-ng/header-dropdown';
+} from '@spike-rabbit/element-ng/header-dropdown';
 import {
   SiNavbarVerticalNextItemsComponent,
   SiNavbarVerticalNextComponent,
@@ -25,7 +25,7 @@ import {
   SiNavbarVerticalNextGroupTriggerDirective,
   SiNavbarVerticalNextHeaderComponent,
   SiNavbarVerticalNextItemComponent
-} from '@siemens/element-ng/navbar-vertical-next';
+} from '@spike-rabbit/element-ng/navbar-vertical-next';
 
 @Component({
   selector: 'app-sample',

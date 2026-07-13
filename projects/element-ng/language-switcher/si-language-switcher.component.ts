@@ -7,7 +7,7 @@ import {
   injectSiTranslateService,
   SiTranslatePipe,
   t
-} from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-translate-ng/translate';
 
 import { IsoLanguageValue } from './iso-language-value';
 

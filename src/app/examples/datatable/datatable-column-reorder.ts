@@ -14,10 +14,10 @@ import {
   Column,
   ColumnSelectionDialogResult,
   SiColumnSelectionDialogService
-} from '@siemens/element-ng/column-selection-dialog';
-import { SI_DATATABLE_CONFIG, SiDatatableModule } from '@siemens/element-ng/datatable';
-import { SiResizeObserverModule } from '@siemens/element-ng/resize-observer';
-import { LOG_EVENT } from '@siemens/live-preview';
+} from '@spike-rabbit/element-ng/column-selection-dialog';
+import { SI_DATATABLE_CONFIG, SiDatatableModule } from '@spike-rabbit/element-ng/datatable';
+import { SiResizeObserverModule } from '@spike-rabbit/element-ng/resize-observer';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 import { NgxDatatableModule, TableColumn } from '@siemens/ngx-datatable';
 
 @Component({

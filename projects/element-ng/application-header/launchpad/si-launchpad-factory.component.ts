@@ -14,9 +14,9 @@ import {
 } from '@angular/core';
 import { ActivatedRoute, RouterLink, RouterLinkActive } from '@angular/router';
 import { elementCancel, elementDown2 } from '@siemens/element-icons';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiLinkModule } from '@siemens/element-ng/link';
-import { SiTranslatePipe, t, TranslatableString } from '@siemens/element-translate-ng/translate';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiLinkModule } from '@spike-rabbit/element-ng/link';
+import { SiTranslatePipe, t, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiApplicationHeaderComponent } from '../si-application-header.component';
 import { SiLaunchpadAppComponent } from './si-launchpad-app.component';

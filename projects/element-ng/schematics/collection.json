@@ -2,7 +2,7 @@
   "$schema": "../../../node_modules/@angular-devkit/schematics/collection-schema.json",
   "schematics": {
     "ng-add": {
-      "description": "A schematic to add the @siemens/element-ng to your project.",
+      "description": "A schematic to add the @spike-rabbit/element-ng to your project.",
       "factory": "./ng-add/index#ngAdd",
       "schema": "./ng-add/schema.json"
     }

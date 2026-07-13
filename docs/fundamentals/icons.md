@@ -117,7 +117,7 @@ Use the `si-icon` component to include SVG icons:
 ```ts
 import { Component } from '@angular/core';
 import { elementUser } from '@siemens/element-icons';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
 
 @Component({
   selector: 'app-sample',

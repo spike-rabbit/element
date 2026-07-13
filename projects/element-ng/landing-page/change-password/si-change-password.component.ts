@@ -16,14 +16,14 @@ import {
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { SiInlineNotificationComponent } from '@siemens/element-ng/inline-notification';
+import { SiInlineNotificationComponent } from '@spike-rabbit/element-ng/inline-notification';
 import {
   PasswordPolicy,
   SiPasswordStrengthComponent,
   SiPasswordStrengthDirective
-} from '@siemens/element-ng/password-strength';
-import { SiPasswordToggleComponent } from '@siemens/element-ng/password-toggle';
-import { SiTranslatePipe, t } from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-ng/password-strength';
+import { SiPasswordToggleComponent } from '@spike-rabbit/element-ng/password-toggle';
+import { SiTranslatePipe, t } from '@spike-rabbit/element-translate-ng/translate';
 
 import { AlertConfig } from '../alert-config.model';
 import { SiLandingPageComponent } from '../si-landing-page.component';

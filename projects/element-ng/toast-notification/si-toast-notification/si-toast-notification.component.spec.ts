@@ -4,7 +4,7 @@
  */
 import { ChangeDetectionStrategy, Component, signal, viewChild } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { STATUS_ICON } from '@siemens/element-ng/common';
+import { STATUS_ICON } from '@spike-rabbit/element-ng/common';
 import { Subject } from 'rxjs';
 import { userEvent } from 'vitest/browser';
 

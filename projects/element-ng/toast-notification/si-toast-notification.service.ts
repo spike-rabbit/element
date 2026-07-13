@@ -15,9 +15,9 @@ import {
   Provider,
   signal
 } from '@angular/core';
-import { isRTL, StatusType } from '@siemens/element-ng/common';
-import { Link } from '@siemens/element-ng/link';
-import { SiNoTranslateService, SiTranslateService } from '@siemens/element-translate-ng/translate';
+import { isRTL, StatusType } from '@spike-rabbit/element-ng/common';
+import { Link } from '@spike-rabbit/element-ng/link';
+import { SiNoTranslateService, SiTranslateService } from '@spike-rabbit/element-translate-ng/translate';
 import { Subject } from 'rxjs';
 
 import { SiToastNotificationDrawerComponent } from './si-toast-notification-drawer/si-toast-notification-drawer.component';

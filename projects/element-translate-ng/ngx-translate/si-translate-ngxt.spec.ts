@@ -18,7 +18,7 @@ import {
   injectSiTranslateService,
   SiTranslatePipe,
   t
-} from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-translate-ng/translate';
 import { firstValueFrom, Observable, of, Subject } from 'rxjs';
 
 import { SiTranslateNgxTModule } from './si-translate-ngxt.module';

@@ -2,7 +2,7 @@
  * Copyright (c) Siemens 2016 - 2026
  * SPDX-License-Identifier: MIT
  */
-import { Widget } from '@siemens/dashboards-ng';
+import { Widget } from '@spike-rabbit/dashboards-ng';
 
 const loaderFunction = async (name: string): Promise<any> => {
   if (
@@ -22,7 +22,7 @@ const loaderFunction = async (name: string): Promise<any> => {
 
 export const LINE_CHART_DESC: Widget = {
   name: 'WIDGET.LINE_CHART',
-  id: '@siemens/dashboards-demo/line-chart',
+  id: '@spike-rabbit/dashboards-demo/line-chart',
   description: 'WIDGET.LINE_CHART_DESC',
   iconClass: 'element-trend',
   componentFactory: {
@@ -46,7 +46,7 @@ export const LINE_CHART_DESC: Widget = {
 
 export const BAR_CHART_DESC: Widget = {
   name: 'Bar Chart',
-  id: '@siemens/dashboards-demo/bar-chart',
+  id: '@spike-rabbit/dashboards-demo/bar-chart',
   description: 'This is a bar chart widget.',
   iconClass: 'element-trend',
   componentFactory: {
@@ -70,7 +70,7 @@ export const BAR_CHART_DESC: Widget = {
 
 export const CIRCLE_CHART_DESC: Widget = {
   name: 'Circle Chart',
-  id: '@siemens/dashboards-demo/circle-chart',
+  id: '@spike-rabbit/dashboards-demo/circle-chart',
   description: 'This is a cart with a circle.',
   iconClass: 'element-trend',
   componentFactory: {
@@ -96,7 +96,7 @@ export const CIRCLE_CHART_DESC: Widget = {
 
 export const GAUGE_CHART_DESC: Widget = {
   name: 'Gauge Chart',
-  id: '@siemens/dashboards-demo/gauge',
+  id: '@spike-rabbit/dashboards-demo/gauge',
   description: 'A nice gauge charts',
   iconClass: 'element-trend',
   componentFactory: {
@@ -120,7 +120,7 @@ export const GAUGE_CHART_DESC: Widget = {
 
 export const VALUE_WIDGET: Widget = {
   name: 'Value Widget',
-  id: '@siemens/dashboards-demo/value',
+  id: '@spike-rabbit/dashboards-demo/value',
   description: 'Displays a single KPI',
   iconClass: 'element-trend',
   componentFactory: {
@@ -146,7 +146,7 @@ export const VALUE_WIDGET: Widget = {
 
 export const LIST_WIDGET: Widget = {
   name: 'List Widget',
-  id: '@siemens/dashboards-demo/list',
+  id: '@spike-rabbit/dashboards-demo/list',
   description: 'Displays a list of items',
   iconClass: 'element-trend',
   componentFactory: {
@@ -162,7 +162,7 @@ export const LIST_WIDGET: Widget = {
 
 export const TIMELINE_WIDGET: Widget = {
   name: 'Timeline Widget',
-  id: '@siemens/dashboards-demo/timeline',
+  id: '@spike-rabbit/dashboards-demo/timeline',
   description: 'Displays events or steps over a period of time',
   iconClass: 'element-trend',
   componentFactory: {

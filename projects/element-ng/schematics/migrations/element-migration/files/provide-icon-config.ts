@@ -1,5 +1,5 @@
 import { ApplicationConfig, provideZonelessChangeDetection } from '@angular/core';
-import { provideIconConfig } from '@siemens/element-ng/icon';
+import { provideIconConfig } from '@spike-rabbit/element-ng/icon';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideZonelessChangeDetection(), provideIconConfig({ disableSvgIcons: true })]

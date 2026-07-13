@@ -20,13 +20,13 @@ import {
 } from '@angular/core';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { elementLeft2, elementRight2, elementPause, elementPlay } from '@siemens/element-icons';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiResizeObserverDirective } from '@siemens/element-ng/resize-observer';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiResizeObserverDirective } from '@spike-rabbit/element-ng/resize-observer';
 import {
   injectSiTranslateService,
   SiTranslatePipe,
   t
-} from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-translate-ng/translate';
 import { switchMap } from 'rxjs';
 
 import { SiCarouselItemDirective } from './si-carousel-item.directive';
@@ -74,7 +74,7 @@ const SCROLL_STALL_THRESHOLD = 0.25;
  * @example
  *
  * ```typescript
- * import { SiCarouselComponent, SiCarouselItemDirective } from '@siemens/element-ng/carousel';
+ * import { SiCarouselComponent, SiCarouselItemDirective } from '@spike-rabbit/element-ng/carousel';
  *
  * @Component({
  *   imports: [SiCarouselComponent, SiCarouselItemDirective],

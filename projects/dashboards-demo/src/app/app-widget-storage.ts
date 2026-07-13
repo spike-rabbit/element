@@ -8,7 +8,7 @@ import {
   SiWidgetStorage,
   STORAGE_KEY,
   WidgetConfig
-} from '@siemens/dashboards-ng';
+} from '@spike-rabbit/dashboards-ng';
 import { delay, Observable } from 'rxjs';
 
 import { FIXED_WIDGETS, WIDGETS } from './widgets/widget-configs.mocks';

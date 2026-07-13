@@ -14,9 +14,9 @@ import {
   ChangeDetectionStrategy
 } from '@angular/core';
 import { elementOptionsVertical } from '@siemens/element-icons';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { MenuItem, SiMenuFactoryComponent } from '@siemens/element-ng/menu';
-import { SiTranslatePipe, t } from '@siemens/element-translate-ng/translate';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { MenuItem, SiMenuFactoryComponent } from '@spike-rabbit/element-ng/menu';
+import { SiTranslatePipe, t } from '@spike-rabbit/element-translate-ng/translate';
 
 import { MessageAction } from './message-action.model';
 import { SiChatMessageActionDirective } from './si-chat-message-action.directive';

@@ -4,7 +4,7 @@
  */
 /* eslint-disable @typescript-eslint/no-deprecated */
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { SiIconLegacyComponent } from '@siemens/element-ng/icon';
+import { SiIconLegacyComponent } from '@spike-rabbit/element-ng/icon';
 
 @Component({
   selector: 'app-sample',

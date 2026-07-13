@@ -11,9 +11,9 @@ import {
   input,
   numberAttribute
 } from '@angular/core';
-import { EntityStatusType } from '@siemens/element-ng/common';
-import { SiIconComponent, STATUS_ICON_CONFIG } from '@siemens/element-ng/icon';
-import { TranslatableString } from '@siemens/element-translate-ng/translate';
+import { EntityStatusType } from '@spike-rabbit/element-ng/common';
+import { SiIconComponent, STATUS_ICON_CONFIG } from '@spike-rabbit/element-ng/icon';
+import { TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiAvatarBackgroundColorDirective } from './si-avatar-background-color.directive';
 

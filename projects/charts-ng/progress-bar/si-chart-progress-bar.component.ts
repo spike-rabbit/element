@@ -9,9 +9,9 @@ import {
   BarSeriesOption,
   ChartXAxis,
   ChartYAxis
-} from '@siemens/charts-ng/common';
-import { SiCustomLegendComponent } from '@siemens/charts-ng/custom-legend';
-import { SiChartLoadingSpinnerComponent } from '@siemens/charts-ng/loading-spinner';
+} from '@spike-rabbit/charts-ng/common';
+import { SiCustomLegendComponent } from '@spike-rabbit/charts-ng/custom-legend';
+import { SiChartLoadingSpinnerComponent } from '@spike-rabbit/charts-ng/loading-spinner';
 import { BarChart } from 'echarts/charts';
 import { GridComponent } from 'echarts/components';
 import { LegacyGridContainLabel } from 'echarts/features';

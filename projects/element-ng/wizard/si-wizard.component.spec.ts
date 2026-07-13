@@ -5,7 +5,7 @@
 import { ChangeDetectionStrategy, Component, signal, viewChild } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { SiResizeObserverModule } from '@siemens/element-ng/resize-observer';
+import { SiResizeObserverModule } from '@spike-rabbit/element-ng/resize-observer';
 
 import { SiWizardStepComponent, SiWizardComponent as TestComponent } from './index';
 

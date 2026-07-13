@@ -23,14 +23,14 @@ import {
 } from '@angular/core';
 import { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
 import { elementCancel, elementSearch } from '@siemens/element-icons';
-import { BackgroundColorVariant, isRTL } from '@siemens/element-ng/common';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
+import { BackgroundColorVariant, isRTL } from '@spike-rabbit/element-ng/common';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
 import {
   injectSiTranslateService,
   SiTranslatePipe,
   t,
   TranslatableString
-} from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-translate-ng/translate';
 import { merge, Observable, Subject, switchMap } from 'rxjs';
 import { debounceTime, map } from 'rxjs/operators';
 

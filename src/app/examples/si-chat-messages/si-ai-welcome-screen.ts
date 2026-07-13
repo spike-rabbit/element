@@ -7,8 +7,8 @@ import {
   SiAiWelcomeScreenComponent,
   PromptCategory,
   PromptSuggestion
-} from '@siemens/element-ng/chat-messages';
-import { LOG_EVENT } from '@siemens/live-preview';
+} from '@spike-rabbit/element-ng/chat-messages';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 
 @Component({
   selector: 'app-sample',

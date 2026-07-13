@@ -11,7 +11,7 @@ import {
   output
 } from '@angular/core';
 import { elementLeft2, elementRight2 } from '@siemens/element-icons';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
 
 export type Direction = 'left' | 'right';
 

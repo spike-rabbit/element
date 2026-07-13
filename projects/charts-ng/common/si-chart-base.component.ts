@@ -26,8 +26,8 @@ import {
   CustomLegendItem,
   CustomLegendProps,
   SiCustomLegendComponent
-} from '@siemens/charts-ng/custom-legend';
-import { SiChartLoadingSpinnerComponent } from '@siemens/charts-ng/loading-spinner';
+} from '@spike-rabbit/charts-ng/custom-legend';
+import { SiChartLoadingSpinnerComponent } from '@spike-rabbit/charts-ng/loading-spinner';
 
 import { echarts } from './echarts.custom';
 import {

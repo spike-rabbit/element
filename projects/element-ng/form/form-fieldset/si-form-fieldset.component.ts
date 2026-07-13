@@ -10,7 +10,7 @@ import {
   input,
   signal
 } from '@angular/core';
-import { SiTranslatePipe, TranslatableString } from '@siemens/element-translate-ng/translate';
+import { SiTranslatePipe, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiFormFieldsetControl } from './si-form-fieldset.control';
 

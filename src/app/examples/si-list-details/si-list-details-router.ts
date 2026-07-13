@@ -12,10 +12,10 @@ import {
   ChangeDetectorRef
 } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink, RouterOutlet } from '@angular/router';
-import { SI_DATATABLE_CONFIG, SiDatatableModule } from '@siemens/element-ng/datatable';
-import { SiEmptyStateComponent, SiEmptyStateModule } from '@siemens/element-ng/empty-state';
-import { Filter, SiFilterBarComponent } from '@siemens/element-ng/filter-bar';
-import { SiIconComponent } from '@siemens/element-ng/icon';
+import { SI_DATATABLE_CONFIG, SiDatatableModule } from '@spike-rabbit/element-ng/datatable';
+import { SiEmptyStateComponent, SiEmptyStateModule } from '@spike-rabbit/element-ng/empty-state';
+import { Filter, SiFilterBarComponent } from '@spike-rabbit/element-ng/filter-bar';
+import { SiIconComponent } from '@spike-rabbit/element-ng/icon';
 import {
   SiDetailsPaneBodyComponent,
   SiDetailsPaneComponent,
@@ -25,17 +25,17 @@ import {
   SiListPaneBodyComponent,
   SiListPaneComponent,
   SiListPaneHeaderComponent
-} from '@siemens/element-ng/list-details';
+} from '@spike-rabbit/element-ng/list-details';
 import {
   SiMenuBarDirective,
   SiMenuDirective,
   SiMenuHeaderDirective,
   SiMenuItemComponent
-} from '@siemens/element-ng/menu';
-import { BOOTSTRAP_BREAKPOINTS } from '@siemens/element-ng/resize-observer';
-import { SiSearchBarComponent } from '@siemens/element-ng/search-bar';
-import { SiTabLinkComponent, SiTabsetComponent } from '@siemens/element-ng/tabs';
-import { LOG_EVENT, provideExampleRoutes } from '@siemens/live-preview';
+} from '@spike-rabbit/element-ng/menu';
+import { BOOTSTRAP_BREAKPOINTS } from '@spike-rabbit/element-ng/resize-observer';
+import { SiSearchBarComponent } from '@spike-rabbit/element-ng/search-bar';
+import { SiTabLinkComponent, SiTabsetComponent } from '@spike-rabbit/element-ng/tabs';
+import { LOG_EVENT, provideExampleRoutes } from '@spike-rabbit/live-preview';
 import { NgxDatatableModule } from '@siemens/ngx-datatable';
 import { map, switchMap } from 'rxjs/operators';
 

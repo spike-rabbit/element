@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component, OnDestroy, viewChild } from '@angular/core';
-import { CartesianChartSeries, SiChartCartesianComponent } from '@siemens/charts-ng/cartesian';
-import { ChartXAxis, ChartYAxis } from '@siemens/charts-ng/common';
-import { SiResizeObserverDirective } from '@siemens/element-ng/resize-observer';
+import { CartesianChartSeries, SiChartCartesianComponent } from '@spike-rabbit/charts-ng/cartesian';
+import { ChartXAxis, ChartYAxis } from '@spike-rabbit/charts-ng/common';
+import { SiResizeObserverDirective } from '@spike-rabbit/element-ng/resize-observer';
 import { interval, Subscription } from 'rxjs';
 
 import { ChartBase, ChartData } from './chart-base';

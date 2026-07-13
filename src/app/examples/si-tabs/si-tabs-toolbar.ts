@@ -3,10 +3,10 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { SiMenuBarDirective, SiMenuItemComponent } from '@siemens/element-ng/menu';
-import { SiTabComponent, SiTabPortalComponent, SiTabsetComponent } from '@siemens/element-ng/tabs';
-import { SiTooltipDirective } from '@siemens/element-ng/tooltip';
-import { LOG_EVENT } from '@siemens/live-preview';
+import { SiMenuBarDirective, SiMenuItemComponent } from '@spike-rabbit/element-ng/menu';
+import { SiTabComponent, SiTabPortalComponent, SiTabsetComponent } from '@spike-rabbit/element-ng/tabs';
+import { SiTooltipDirective } from '@spike-rabbit/element-ng/tooltip';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 
 @Component({
   selector: 'app-sample',

@@ -5,8 +5,8 @@
 import { HttpParams } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component, input, OnInit, output } from '@angular/core';
 import { elementSortDown, elementSortUp } from '@siemens/element-icons';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiTranslatePipe, t, TranslatableString } from '@siemens/element-translate-ng/translate';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiTranslatePipe, t, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 export interface SortCriteria {
   name: TranslatableString;

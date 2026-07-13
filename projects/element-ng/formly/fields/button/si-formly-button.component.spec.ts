@@ -11,7 +11,7 @@ import {
   SiTranslateService,
   injectSiTranslateService,
   provideMockTranslateServiceBuilder
-} from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-translate-ng/translate';
 import type { Mock } from 'vitest';
 
 import { SiFormlyButtonComponent } from './si-formly-button.component';

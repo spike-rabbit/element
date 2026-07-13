@@ -7,7 +7,7 @@ import { getPackageJsonDependency } from '@schematics/angular/utility/dependenci
 
 export const ngAdd = (options: { path: string }): Rule => {
   return (tree: Tree, context: SchematicContext) => {
-    context.logger.info('🔧 Adding @siemens/element-ng to your project...');
+    context.logger.info('🔧 Adding @spike-rabbit/element-ng to your project...');
 
     const hasSimplElementNgDependency = getPackageJsonDependency(tree, '@simpl/element-ng');
 

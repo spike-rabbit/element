@@ -1,7 +1,7 @@
 @use 'sass:map';
 @use 'sass:math';
 
-@use '@siemens/element-theme/src/styles/variables';
+@use '@spike-rabbit/element-theme/src/styles/variables';
 
 $icon-size: variables.$si-icon-font-size;
 $icon-size-half: math.div($icon-size, 2);

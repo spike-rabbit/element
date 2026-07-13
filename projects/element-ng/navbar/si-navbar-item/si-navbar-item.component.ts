@@ -15,15 +15,15 @@ import {
   viewChild
 } from '@angular/core';
 import { elementDown2 } from '@siemens/element-icons';
-import { MenuItem } from '@siemens/element-ng/common';
+import { MenuItem } from '@spike-rabbit/element-ng/common';
 import {
   SiHeaderDropdownComponent,
   SiHeaderDropdownItemsFactoryComponent,
   SiHeaderDropdownTriggerDirective
-} from '@siemens/element-ng/header-dropdown';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiLinkDirective } from '@siemens/element-ng/link';
-import { SiTranslatePipe } from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-ng/header-dropdown';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiLinkDirective } from '@spike-rabbit/element-ng/link';
+import { SiTranslatePipe } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiNavbarPrimaryComponent } from '../si-navbar-primary/si-navbar-primary.component';
 

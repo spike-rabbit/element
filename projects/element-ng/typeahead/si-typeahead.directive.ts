@@ -29,8 +29,8 @@ import {
   TemplateRef
 } from '@angular/core';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
-import { SiAutocompleteDirective } from '@siemens/element-ng/autocomplete';
-import { t, TranslatableString } from '@siemens/element-translate-ng/translate';
+import { SiAutocompleteDirective } from '@spike-rabbit/element-ng/autocomplete';
+import { t, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 import { catchError, isObservable, ReplaySubject, Subscription, timer } from 'rxjs';
 import { map, share, switchMap, takeUntil } from 'rxjs/operators';
 

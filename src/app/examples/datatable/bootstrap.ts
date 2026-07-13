@@ -4,8 +4,8 @@
  */
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { SiFormItemComponent } from '@siemens/element-ng/form';
-import { SiIconComponent } from '@siemens/element-ng/icon';
+import { SiFormItemComponent } from '@spike-rabbit/element-ng/form';
+import { SiIconComponent } from '@spike-rabbit/element-ng/icon';
 
 @Component({
   selector: 'app-sample',

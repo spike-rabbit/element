@@ -14,8 +14,8 @@ import {
   SimpleChanges,
   viewChild
 } from '@angular/core';
-import { SiTypeaheadDirective, TypeaheadMatch } from '@siemens/element-ng/typeahead';
-import { SiTranslatePipe, TranslatableString } from '@siemens/element-translate-ng/translate';
+import { SiTypeaheadDirective, TypeaheadMatch } from '@spike-rabbit/element-ng/typeahead';
+import { SiTranslatePipe, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 import { BehaviorSubject, Observable, switchMap } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 

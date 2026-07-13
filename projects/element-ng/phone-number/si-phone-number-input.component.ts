@@ -30,14 +30,14 @@ import {
   Validator
 } from '@angular/forms';
 import { elementDown2 } from '@siemens/element-icons';
-import { SI_FORM_ITEM_CONTROL, SiFormItemControl } from '@siemens/element-ng/form';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SelectOption, SiSelectListHasFilterComponent } from '@siemens/element-ng/select';
+import { SI_FORM_ITEM_CONTROL, SiFormItemControl } from '@spike-rabbit/element-ng/form';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SelectOption, SiSelectListHasFilterComponent } from '@spike-rabbit/element-ng/select';
 import {
   injectSiTranslateService,
   SiTranslatePipe,
   t
-} from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-translate-ng/translate';
 import { PhoneNumber, PhoneNumberFormat, PhoneNumberUtil } from 'google-libphonenumber';
 
 import { SiPhoneNumberInputSelectDirective } from './si-phone-number-input-select.directive';

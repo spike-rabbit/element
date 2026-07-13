@@ -5,11 +5,11 @@
 import { DecimalPipe, NgTemplateOutlet } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { SiChartCartesianComponent } from '@siemens/charts-ng/cartesian';
-import { SiChartCircleComponent } from '@siemens/charts-ng/circle';
-import { AxisType } from '@siemens/charts-ng/common';
-import { SiChartGaugeComponent } from '@siemens/charts-ng/gauge';
-import { SiChartProgressBarComponent } from '@siemens/charts-ng/progress-bar';
+import { SiChartCartesianComponent } from '@spike-rabbit/charts-ng/cartesian';
+import { SiChartCircleComponent } from '@spike-rabbit/charts-ng/circle';
+import { AxisType } from '@spike-rabbit/charts-ng/common';
+import { SiChartGaugeComponent } from '@spike-rabbit/charts-ng/gauge';
+import { SiChartProgressBarComponent } from '@spike-rabbit/charts-ng/progress-bar';
 import {
   SiApplicationHeaderComponent,
   SiHeaderAccountItemComponent,
@@ -18,23 +18,23 @@ import {
   SiHeaderBrandDirective,
   SiHeaderLogoDirective,
   SiLaunchpadFactoryComponent
-} from '@siemens/element-ng/application-header';
-import { ContentActionBarMainItem } from '@siemens/element-ng/content-action-bar';
+} from '@spike-rabbit/element-ng/application-header';
+import { ContentActionBarMainItem } from '@spike-rabbit/element-ng/content-action-bar';
 import {
   SiDashboardCardComponent,
   SiDashboardComponent,
   SiValueWidgetComponent
-} from '@siemens/element-ng/dashboard';
+} from '@spike-rabbit/element-ng/dashboard';
 import {
   SiHeaderDropdownComponent,
   SiHeaderDropdownItemComponent,
   SiHeaderDropdownTriggerDirective
-} from '@siemens/element-ng/header-dropdown';
-import { SiIconComponent } from '@siemens/element-ng/icon';
-import { Link } from '@siemens/element-ng/link';
-import { NavbarVerticalItem, SiNavbarVerticalComponent } from '@siemens/element-ng/navbar-vertical';
-import { SiResizeObserverDirective } from '@siemens/element-ng/resize-observer';
-import { LOG_EVENT } from '@siemens/live-preview';
+} from '@spike-rabbit/element-ng/header-dropdown';
+import { SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { Link } from '@spike-rabbit/element-ng/link';
+import { NavbarVerticalItem, SiNavbarVerticalComponent } from '@spike-rabbit/element-ng/navbar-vertical';
+import { SiResizeObserverDirective } from '@spike-rabbit/element-ng/resize-observer';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 
 @Component({
   selector: 'app-sample',

@@ -15,11 +15,11 @@ import {
 import {
   SiApplicationHeaderComponent,
   SiHeaderBrandDirective
-} from '@siemens/element-ng/application-header';
-import { SI_DATATABLE_CONFIG, SiDatatableModule } from '@siemens/element-ng/datatable';
-import { SiEmptyStateComponent } from '@siemens/element-ng/empty-state';
-import { SiResizeObserverDirective } from '@siemens/element-ng/resize-observer';
-import { SiSidePanelComponent, SiSidePanelContentComponent } from '@siemens/element-ng/side-panel';
+} from '@spike-rabbit/element-ng/application-header';
+import { SI_DATATABLE_CONFIG, SiDatatableModule } from '@spike-rabbit/element-ng/datatable';
+import { SiEmptyStateComponent } from '@spike-rabbit/element-ng/empty-state';
+import { SiResizeObserverDirective } from '@spike-rabbit/element-ng/resize-observer';
+import { SiSidePanelComponent, SiSidePanelContentComponent } from '@spike-rabbit/element-ng/side-panel';
 import { NgxDatatableModule, TableColumn } from '@siemens/ngx-datatable';
 
 interface Employee {

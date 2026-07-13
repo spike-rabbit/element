@@ -15,7 +15,7 @@ import {
   viewChild
 } from '@angular/core';
 import { elementHide, elementLock, elementMenu, elementShow } from '@siemens/element-icons';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
 
 import { Column } from '../si-column-selection-dialog.types';
 

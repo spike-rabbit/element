@@ -1,6 +1,6 @@
 @use 'sass:map';
-@use '@siemens/element-theme/src/styles/variables';
-@use '@siemens/element-theme/src/styles/variables/typography';
+@use '@spike-rabbit/element-theme/src/styles/variables';
+@use '@spike-rabbit/element-theme/src/styles/variables/typography';
 
 // Base layout applies to every body instance. The host always carries one of
 // the three layout discriminator classes (`-vertical`, `-horizontal`,

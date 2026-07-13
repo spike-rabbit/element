@@ -92,7 +92,7 @@ For the maximize/restore functionality to work correctly the cards container/wor
 ### SiCardComponent
 
 ```ts
-import { SiCardComponent } from '@siemens/element-ng/card';
+import { SiCardComponent } from '@spike-rabbit/element-ng/card';
 
 @Component({
   imports: [SiCardComponent, ...]

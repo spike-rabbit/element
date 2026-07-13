@@ -4,12 +4,12 @@
     "outDir": "../../out-tsc/lib",
     "declaration": true,
     "inlineSources": true,
-    "types": ["@siemens/element-translate-ng/localize-types"],
+    "types": ["@spike-rabbit/element-translate-ng/localize-types"],
     "paths": {
-      "@siemens/element-translate-ng": ["dist/@siemens/element-translate-ng"],
-      "@siemens/element-translate-ng/*": ["dist/@siemens/element-translate-ng/*"],
-      "@siemens/maps-ng/*": ["projects/maps-ng/*/index.ts"],
-      "@siemens/map-styles/*": ["dist/@siemens/map-styles/*"]
+      "@spike-rabbit/element-translate-ng": ["dist/@spike-rabbit/element-translate-ng"],
+      "@spike-rabbit/element-translate-ng/*": ["dist/@spike-rabbit/element-translate-ng/*"],
+      "@spike-rabbit/maps-ng/*": ["projects/maps-ng/*/index.ts"],
+      "@spike-rabbit/map-styles/*": ["dist/@spike-rabbit/map-styles/*"]
     }
   },
   "angularCompilerOptions": {

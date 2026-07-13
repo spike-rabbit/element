@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SiAccordionComponent, SiCollapsiblePanelComponent } from '@siemens/element-ng/accordion';
+import { SiAccordionComponent, SiCollapsiblePanelComponent } from '@spike-rabbit/element-ng/accordion';
 
 @Component({
   selector: 'si-migration',

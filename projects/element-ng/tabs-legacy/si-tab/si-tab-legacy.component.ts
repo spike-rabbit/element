@@ -14,12 +14,12 @@ import {
   Output,
   signal
 } from '@angular/core';
-import { TranslatableString } from '@siemens/element-translate-ng/translate';
+import { TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiTabsetLegacyComponent } from '../si-tabset/index';
 
 /**
- * @deprecated Use the new components from `@siemens/element-ng/tabs` instead.
+ * @deprecated Use the new components from `@spike-rabbit/element-ng/tabs` instead.
  * See {@link https://element.siemens.io/components/layout-navigation/tabs/#code}
  * for usage instructions.
  */

@@ -1,5 +1,5 @@
 import { ApplicationConfig, provideZonelessChangeDetection } from '@angular/core';
-import { addIcons, provideIconConfig } from '@siemens/element-ng/icon';
+import { addIcons, provideIconConfig } from '@spike-rabbit/element-ng/icon';
 
 export const appConfig: ApplicationConfig = {
   providers: [

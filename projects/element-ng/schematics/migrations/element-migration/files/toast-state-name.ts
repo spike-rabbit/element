@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 import { Component } from '@angular/core';
-import { ToastStateName , SiToastNotificationService } from '@siemens/element-ng/toast-notification';
+import { ToastStateName , SiToastNotificationService } from '@spike-rabbit/element-ng/toast-notification';
 
 @Component({
   selector: 'app-test',

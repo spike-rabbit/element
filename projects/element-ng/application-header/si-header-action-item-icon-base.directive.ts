@@ -15,7 +15,7 @@ import {
   Signal,
   SimpleChanges
 } from '@angular/core';
-import { SiTooltipDirective, SiTooltipService } from '@siemens/element-ng/tooltip';
+import { SiTooltipDirective, SiTooltipService } from '@spike-rabbit/element-ng/tooltip';
 
 import { SiHeaderActionItemBase } from './si-header-action-item.base';
 

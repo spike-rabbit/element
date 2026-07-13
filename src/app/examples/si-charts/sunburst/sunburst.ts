@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { EChartOption, SunburstSeriesOption } from '@siemens/charts-ng/common';
-import { SiChartSunburstComponent } from '@siemens/charts-ng/sunburst';
-import { SiResizeObserverDirective } from '@siemens/element-ng/resize-observer';
+import { EChartOption, SunburstSeriesOption } from '@spike-rabbit/charts-ng/common';
+import { SiChartSunburstComponent } from '@spike-rabbit/charts-ng/sunburst';
+import { SiResizeObserverDirective } from '@spike-rabbit/element-ng/resize-observer';
 
 @Component({
   selector: 'app-sample',

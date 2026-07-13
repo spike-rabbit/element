@@ -4,7 +4,7 @@
  */
 import { ChangeDetectionStrategy, Component, model, output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { WidgetConfig, WidgetConfigStatus, WidgetInstanceEditor } from '@siemens/dashboards-ng';
+import { WidgetConfig, WidgetConfigStatus, WidgetInstanceEditor } from '@spike-rabbit/dashboards-ng';
 @Component({
   selector: 'app-hello-widget-editor',
   imports: [FormsModule],

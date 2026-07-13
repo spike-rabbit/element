@@ -80,18 +80,18 @@ export const tsConfig = defineConfig({
             message: 'Use the convert functions from @angular/core instead.'
           },
           {
-            name: '@siemens/element-ng',
+            name: '@spike-rabbit/element-ng',
             message: 'Use the secondary entrypoints instead.'
           },
           {
             name: '@ngx-translate/core',
             importNames: ['TranslatePipe'],
-            message: 'Use `SiTranslatePipe` from `@siemens/element-translate-ng/translate` instead.'
+            message: 'Use `SiTranslatePipe` from `@spike-rabbit/element-translate-ng/translate` instead.'
           },
           {
-            name: '@siemens/element-translate-ng',
+            name: '@spike-rabbit/element-translate-ng',
             message:
-              'Always use a dedicated secondary entrypoint, e.g. `@siemens/element-translate-ng/translate`.'
+              'Always use a dedicated secondary entrypoint, e.g. `@spike-rabbit/element-translate-ng/translate`.'
           }
         ]
       }

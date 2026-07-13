@@ -18,7 +18,10 @@ jobs:
     needs:
       - build-and-test
     permissions:
+      contents: write
       id-token: write
+      issues: write
+      pull-requests: write
     outputs:
       new_release: ${{ steps.check_release.outputs.new_release }}
       release_tag: ${{ steps.check_release.outputs.release_tag }}
@@ -26,7 +29,6 @@ jobs:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
         with:
           fetch-depth: 0 # semantic-release needs this
-          token: ${{ secrets.ELEMENT_BOT_GITHUB_TOKEN }} # Otherwise, branch protection rules are not bypassed.
       - uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271 # v6.0.9
       - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6
         with:
@@ -48,86 +50,82 @@ jobs:
       - run: pnpm run release:copy-license
       - run: pnpm exec semantic-release
         env:
+          GITHUB_TOKEN: ${{ github.token }}
           SKIP_COMMIT: ${{ github.ref_name == 'next' && 'true' || '' }}
-          GIT_AUTHOR_NAME: 'Siemens Element Bot'
-          GIT_AUTHOR_EMAIL: 'simpl.si@siemens.com'
-          GIT_COMMITTER_NAME: 'Siemens Element Bot'
-          GIT_COMMITTER_EMAIL: 'simpl.si@siemens.com'
-          GITHUB_TOKEN: ${{ secrets.ELEMENT_BOT_GITHUB_TOKEN }}
-      - id: check_release
-        env:
-          BEFORE_TAG: ${{ steps.before_release.outputs.before_tag }}
-        run: |
-          AFTER_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+#      - id: check_release
+#        env:
+#          BEFORE_TAG: ${{ steps.before_release.outputs.before_tag }}
+#        run: |
+#          AFTER_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+#
+#          if [[ -n "$AFTER_TAG" && "$AFTER_TAG" != "$BEFORE_TAG" ]]; then
+#            echo "release_tag=$AFTER_TAG" >> $GITHUB_OUTPUT
+#            echo "new_release=true" >> $GITHUB_OUTPUT
+#          else
+#            echo "new_release=false" >> $GITHUB_OUTPUT
+#            echo "release_tag=" >> $GITHUB_OUTPUT
+#          fi
 
-          if [[ -n "$AFTER_TAG" && "$AFTER_TAG" != "$BEFORE_TAG" ]]; then
-            echo "release_tag=$AFTER_TAG" >> $GITHUB_OUTPUT
-            echo "new_release=true" >> $GITHUB_OUTPUT
-          else
-            echo "new_release=false" >> $GITHUB_OUTPUT
-            echo "release_tag=" >> $GITHUB_OUTPUT
-          fi
-
-  # Generates the versioned documentation and publishes it to S3.
-  # This job only runs after a successful release unless the release is on the "next" branch.
-  # In general, runs on main push to /latest/, while release branches (e.g., release/48.x) push to /v48/
-  # There are two special cases:
-  # 1. Release on a release branch while there is no new major release on main.
-  #    This happens, when we already merged breaking changes, but do a release for an older version before releasing from main.
-  #    In this case, we still want to update the /latest/ although we are on a release branch.
-  # 2. The first release of a new major version.
-  #    In this case, we need to move the existing /latest/ to the previous major version folder.
-  publish-documentation-release:
-    runs-on: ubuntu-24.04
-    needs:
-      - publish
-      - build-and-test
-    if: success() && needs.publish.outputs.new_release == 'true' && github.ref_name != 'next'
-    permissions:
-      id-token: write
-    env:
-      VERSIONED_BUCKET_NAME: simpl-element-release
-      CLOUDFRONT_DOMAIN: d2uqfzn4lxgtwv.cloudfront.net
-    steps:
-      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
-        with:
-          fetch-depth: 0
-      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
-        with:
-          name: pages
-          path: pages
-      - uses: aws-actions/configure-aws-credentials@517a711dbcd0e402f90c77e7e2f81e849156e31d # v6.2.2
-        with:
-          role-to-assume: arn:aws:iam::974483672234:role/simpl-element-release
-          role-session-name: element-release-docs
-          aws-region: eu-west-1
-        # Prepare gathers the necessary information:
-        # - the version / major version we are releasing
-        # - to which directory we need to deploy (latest or v123)
-        # - latest-version.txt contains the current version of the "latest" object in the S3 bucket
-        # If we create a new major version, we also move the existing latest/ to the previous major version folder.
-        # This outputs three values:
-        # - major_version: the major version we are releasing (e.g., v49)
-        # - deploy_latest: whether we need to deploy to latest/ (true/false)
-        # - latest: the current version of latest/ before this release (e.g., v48)
-      - id: prepare
-        run: >-
-          tools/release/prepare-release.sh
-          "${{ env.VERSIONED_BUCKET_NAME }}"
-          "${{ needs.publish.outputs.release_tag }}"
-          "${{ github.ref_name == github.event.repository.default_branch }}"
-
-        # Generate versions.json based on the existing versions in S3 and the new release
-      - name: Generate versions.json
-        run: >-
-          node tools/release/generate-versions.js
-          "${{ steps.prepare.outputs.deploy_latest }}"
-          "${{ steps.prepare.outputs.major_version }}"
-          "${{ steps.prepare.outputs.latest }}"
-
-        # Uploads the generated documentation to the appropriate S3 bucket and path.
-      - run: >-
-          tools/release/publish-docs.sh
-          "${{ env.VERSIONED_BUCKET_NAME }}"
-          "${{ steps.prepare.outputs.deploy_latest }}"
-          "${{ steps.prepare.outputs.major_version }}"
+# Generates the versioned documentation and publishes it to S3.
+# This job only runs after a successful release unless the release is on the "next" branch.
+# In general, runs on main push to /latest/, while release branches (e.g., release/48.x) push to /v48/
+# There are two special cases:
+# 1. Release on a release branch while there is no new major release on main.
+#    This happens, when we already merged breaking changes, but do a release for an older version before releasing from main.
+#    In this case, we still want to update the /latest/ although we are on a release branch.
+# 2. The first release of a new major version.
+#    In this case, we need to move the existing /latest/ to the previous major version folder.
+#  publish-documentation-release:
+#    runs-on: ubuntu-24.04
+#    needs:
+#      - publish
+#      - build-and-test
+#    if: success() && needs.publish.outputs.new_release == 'true' && github.ref_name != 'next'
+#    permissions:
+#      id-token: write
+#    env:
+#      VERSIONED_BUCKET_NAME: simpl-element-release
+#      CLOUDFRONT_DOMAIN: d2uqfzn4lxgtwv.cloudfront.net
+#    steps:
+#      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
+#        with:
+#          fetch-depth: 0
+#      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
+#        with:
+#          name: pages
+#          path: pages
+#      - uses: aws-actions/configure-aws-credentials@517a711dbcd0e402f90c77e7e2f81e849156e31d # v6.2.2
+#        with:
+#          role-to-assume: arn:aws:iam::974483672234:role/simpl-element-release
+#          role-session-name: element-release-docs
+#          aws-region: eu-west-1
+#        # Prepare gathers the necessary information:
+#        # - the version / major version we are releasing
+#        # - to which directory we need to deploy (latest or v123)
+#        # - latest-version.txt contains the current version of the "latest" object in the S3 bucket
+#        # If we create a new major version, we also move the existing latest/ to the previous major version folder.
+#        # This outputs three values:
+#        # - major_version: the major version we are releasing (e.g., v49)
+#        # - deploy_latest: whether we need to deploy to latest/ (true/false)
+#        # - latest: the current version of latest/ before this release (e.g., v48)
+#      - id: prepare
+#        run: >-
+#          tools/release/prepare-release.sh
+#          "${{ env.VERSIONED_BUCKET_NAME }}"
+#          "${{ needs.publish.outputs.release_tag }}"
+#          "${{ github.ref_name == github.event.repository.default_branch }}"
+#
+#        # Generate versions.json based on the existing versions in S3 and the new release
+#      - name: Generate versions.json
+#        run: >-
+#          node tools/release/generate-versions.js
+#          "${{ steps.prepare.outputs.deploy_latest }}"
+#          "${{ steps.prepare.outputs.major_version }}"
+#          "${{ steps.prepare.outputs.latest }}"
+#
+#        # Uploads the generated documentation to the appropriate S3 bucket and path.
+#      - run: >-
+#          tools/release/publish-docs.sh
+#          "${{ env.VERSIONED_BUCKET_NAME }}"
+#          "${{ steps.prepare.outputs.deploy_latest }}"
+#          "${{ steps.prepare.outputs.major_version }}"

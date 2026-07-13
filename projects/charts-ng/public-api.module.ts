@@ -3,15 +3,15 @@
  * SPDX-License-Identifier: MIT
  */
 import { NgModule } from '@angular/core';
-import { SiChartCartesianComponent } from '@siemens/charts-ng/cartesian';
-import { SiChartComponent } from '@siemens/charts-ng/chart';
-import { SiChartCircleComponent } from '@siemens/charts-ng/circle';
-import { SiCustomLegendComponent } from '@siemens/charts-ng/custom-legend';
-import { SiChartGaugeComponent } from '@siemens/charts-ng/gauge';
-import { SiChartProgressComponent } from '@siemens/charts-ng/progress';
-import { SiChartProgressBarComponent } from '@siemens/charts-ng/progress-bar';
-import { SiChartSankeyComponent } from '@siemens/charts-ng/sankey';
-import { SiChartSunburstComponent } from '@siemens/charts-ng/sunburst';
+import { SiChartCartesianComponent } from '@spike-rabbit/charts-ng/cartesian';
+import { SiChartComponent } from '@spike-rabbit/charts-ng/chart';
+import { SiChartCircleComponent } from '@spike-rabbit/charts-ng/circle';
+import { SiCustomLegendComponent } from '@spike-rabbit/charts-ng/custom-legend';
+import { SiChartGaugeComponent } from '@spike-rabbit/charts-ng/gauge';
+import { SiChartProgressComponent } from '@spike-rabbit/charts-ng/progress';
+import { SiChartProgressBarComponent } from '@spike-rabbit/charts-ng/progress-bar';
+import { SiChartSankeyComponent } from '@spike-rabbit/charts-ng/sankey';
+import { SiChartSunburstComponent } from '@spike-rabbit/charts-ng/sunburst';
 
 /**
  * @deprecated The {@link SiChartsNgModule} is deprecated and will be removed in v51.

@@ -25,14 +25,14 @@ import {
   viewChildren
 } from '@angular/core';
 import { elementCancel } from '@siemens/element-icons';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { ModalRef } from '@siemens/element-ng/modal';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { ModalRef } from '@spike-rabbit/element-ng/modal';
 import {
   injectSiTranslateService,
   SiTranslatePipe,
   t,
   TranslatableString
-} from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-translate-ng/translate';
 import { first } from 'rxjs/operators';
 
 import { SiColumnSelectionEditorComponent } from './column-selection-editor/si-column-selection-editor.component';

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 import { booleanAttribute, ChangeDetectionStrategy, Component, input, model } from '@angular/core';
-import { SiTranslatePipe } from '@siemens/element-translate-ng/translate';
+import { SiTranslatePipe } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiCardBaseDirective } from './si-card-base.directive';
 import { SiCardHeaderComponent } from './si-card-header.component';

@@ -4,8 +4,8 @@
  */
 import { inputBinding, signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ContentActionBarMainItem, ViewType } from '@siemens/element-ng/content-action-bar';
-import { MenuItem } from '@siemens/element-ng/menu';
+import { ContentActionBarMainItem, ViewType } from '@spike-rabbit/element-ng/content-action-bar';
+import { MenuItem } from '@spike-rabbit/element-ng/menu';
 
 import { SiCardComponent } from './index';
 

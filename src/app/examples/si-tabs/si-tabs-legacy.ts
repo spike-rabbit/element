@@ -9,8 +9,8 @@ import {
   SiTabDeselectionEvent,
   SiTabLegacyComponent,
   SiTabsetLegacyComponent
-} from '@siemens/element-ng/tabs-legacy';
-import { LOG_EVENT } from '@siemens/live-preview';
+} from '@spike-rabbit/element-ng/tabs-legacy';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 
 interface TabModel {
   heading: string;

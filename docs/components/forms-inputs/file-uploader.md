@@ -52,7 +52,7 @@ In the case that it was successful, you will be provided with the output emitter
 ### Usage
 
 ```ts
-import { SiFileUploaderComponent } from '@siemens/element-ng/file-uploader';
+import { SiFileUploaderComponent } from '@spike-rabbit/element-ng/file-uploader';
 
 @Component({
   imports: [SiFileUploaderComponent, ...]

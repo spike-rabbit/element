@@ -90,7 +90,7 @@ objects.
     - [ol-mapbox-style](https://www.npmjs.com/package/ol-mapbox-style)
 
 ```sh
-npm install --save @siemens/maps-ng
+npm install --save @spike-rabbit/maps-ng
 
 # Also install the needed peer dependencies
 npm install --save ol ol-ext ol-mapbox-style
@@ -107,7 +107,7 @@ Add library assets and CommonJs dependencies in your _angular.json_ under the bu
           // ... other assets
           {
             "glob": "**/*",
-            "input": "./node_modules/@siemens/maps-ng/assets",
+            "input": "./node_modules/@spike-rabbit/maps-ng/assets",
             "output": "/assets/"
           }
         ],
@@ -138,7 +138,7 @@ Add the library to the list of _imports_ in your Angular _AppModule_ like this:
 // [...]
 
 // Import this library and required dependencies
-import { SiMapsNgModule } from '@siemens/maps-ng';
+import { SiMapsNgModule } from '@spike-rabbit/maps-ng';
 
 @NgModule({
   declarations: [AppComponent],
@@ -305,7 +305,7 @@ A user can customize the tooltip width via `maxLabelLength` see snippet below:
 
 <si-docs-component example="si-map/si-map-default-style" height="580"></si-docs-component>
 
-<si-docs-api component="SiMapComponent" package="@siemens/maps-ng" hideImplicitlyPublic="true"></si-docs-api>
+<si-docs-api component="SiMapComponent" package="@spike-rabbit/maps-ng" hideImplicitlyPublic="true"></si-docs-api>
 
 #### Methods
 

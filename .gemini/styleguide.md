@@ -1,6 +1,6 @@
 # Element Code Review Style Guide
 
-This project uses `@siemens/element-ng` (Siemens Element design system). Apply the following
+This project uses `@spike-rabbit/element-ng` (Siemens Element design system). Apply the following
 conventions and best practices when reviewing code.
 
 ## TypeScript Best Practices

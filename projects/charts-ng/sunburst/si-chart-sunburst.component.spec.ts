@@ -4,7 +4,7 @@
  */
 import { ChangeDetectionStrategy, Component, SimpleChange, viewChild } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { SunburstSeriesOption } from '@siemens/charts-ng/common';
+import { SunburstSeriesOption } from '@spike-rabbit/charts-ng/common';
 
 import { SiChartSunburstComponent } from './si-chart-sunburst.component';
 

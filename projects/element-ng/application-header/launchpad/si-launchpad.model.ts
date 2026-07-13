@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 import { IsActiveMatchOptions, NavigationExtras } from '@angular/router';
-import { TranslatableString } from '@siemens/element-translate-ng/translate';
+import { TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 /** Represents an app to be shown in the launchpad. */
 export interface AppLink extends AppBase {

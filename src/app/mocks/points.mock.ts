@@ -2,7 +2,7 @@
  * Copyright (c) Siemens 2016 - 2026
  * SPDX-License-Identifier: MIT
  */
-import { MapPoint } from '@siemens/maps-ng';
+import { MapPoint } from '@spike-rabbit/maps-ng';
 
 /* eslint-disable no-console */
 

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 import { DestroyRef, inject, Injectable } from '@angular/core';
-import { SiThemeService } from '@siemens/element-ng/theme';
+import { SiThemeService } from '@spike-rabbit/element-ng/theme';
 
 interface RegisteredIcon {
   content: string | undefined;
@@ -26,7 +26,7 @@ const registeredIcons = new Map<string, RegisteredIcon>();
  * @example
  * ```ts
  * import { elementIcon } from '@siemens/element-icons';
- * import { addIcons } from '@siemens/element-ng/icon';
+ * import { addIcons } from '@spike-rabbit/element-ng/icon';
  *
  * @Component({`<si-icon [icon]="icons.elementIcon"`})
  * class MyComponent {

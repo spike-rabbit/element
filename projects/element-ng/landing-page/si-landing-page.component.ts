@@ -4,14 +4,14 @@
  */
 import { NgTemplateOutlet } from '@angular/common';
 import { ChangeDetectionStrategy, Component, input, TemplateRef, signal } from '@angular/core';
-import { CopyrightDetails, SiCopyrightNoticeComponent } from '@siemens/element-ng/copyright-notice';
-import { SiInlineNotificationComponent } from '@siemens/element-ng/inline-notification';
+import { CopyrightDetails, SiCopyrightNoticeComponent } from '@spike-rabbit/element-ng/copyright-notice';
+import { SiInlineNotificationComponent } from '@spike-rabbit/element-ng/inline-notification';
 import {
   IsoLanguageValue,
   SiLanguageSwitcherComponent
-} from '@siemens/element-ng/language-switcher';
-import { Link, SiLinkDirective } from '@siemens/element-ng/link';
-import { SiTranslatePipe, TranslatableString } from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-ng/language-switcher';
+import { Link, SiLinkDirective } from '@spike-rabbit/element-ng/link';
+import { SiTranslatePipe, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { AlertConfig } from './alert-config.model';
 import { LandingPageWarning } from './si-landing-page.model';

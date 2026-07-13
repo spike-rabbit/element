@@ -1,11 +1,11 @@
 {
-  "name": "@siemens/map-styles",
+  "name": "@spike-rabbit/map-styles",
   "description": "Element map styles library.",
   "version": "49.13.0",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/siemens/element.git"
+    "url": "git+https://github.com/spike-rabbit/element.git"
   },
   "author": {
     "name": "Siemens AG",
@@ -13,9 +13,9 @@
   },
   "publishConfig": {
     "access": "public",
-    "directory": "../../dist/@siemens/map-styles"
+    "directory": "../../dist/@spike-rabbit/map-styles"
   },
-  "homepage": "https://github.com/siemens/element",
-  "bugs": "https://github.com/siemens/element/issues/new",
+  "homepage": "https://github.com/spike-rabbit/element",
+  "bugs": "https://github.com/spike-rabbit/element/issues/new",
   "type": "module"
 }

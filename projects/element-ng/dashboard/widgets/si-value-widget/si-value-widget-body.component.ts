@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component, input, OnInit } from '@angular/core';
-import { EntityStatusType } from '@siemens/element-ng/common';
-import { SiIconComponent, SiStatusIconComponent } from '@siemens/element-ng/icon';
-import { SiTranslatePipe, TranslatableString } from '@siemens/element-translate-ng/translate';
+import { EntityStatusType } from '@spike-rabbit/element-ng/common';
+import { SiIconComponent, SiStatusIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiTranslatePipe, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiWidgetBaseDirective } from '../si-widget-base.directive';
 

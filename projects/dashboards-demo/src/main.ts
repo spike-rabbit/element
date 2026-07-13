@@ -19,7 +19,7 @@ import { environment } from './environments/environment';
    *    - Optionally supports Webpack Module Federation remotes via `@module-federation/runtime`
    */
   if (environment.useModuleFederation) {
-    import('@siemens/dashboards-ng/module-federation').then(m => {
+    import('@spike-rabbit/dashboards-ng/module-federation').then(m => {
       m.registerModuleFederatedWidgetLoader();
 
       import('./bootstrap');
@@ -71,8 +71,8 @@ import { environment } from './environments/environment';
 
     // Step 4: Register widget loaders for both federation types
     Promise.all([
-      import('@siemens/dashboards-ng/native-federation'),
-      import('@siemens/dashboards-ng/native-federation/mf-bridge')
+      import('@spike-rabbit/dashboards-ng/native-federation'),
+      import('@spike-rabbit/dashboards-ng/native-federation/mf-bridge')
     ]).then(([nativeFederation, mfBridge]) => {
       nativeFederation.registerNativeFederatedWidgetLoader();
       mfBridge.registerModuleFederatedWidgetLoader(mfInstance);

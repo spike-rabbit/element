@@ -67,7 +67,7 @@ To simplify the usage and reduce the code, Element offers an Angular
 component as a wrapper with streamlined inputs.
 
 ```ts
-import { SiWeatherWidgetComponent } from '@siemens/element-ng/dashboard';
+import { SiWeatherWidgetComponent } from '@spike-rabbit/element-ng/dashboard';
 
 @Component({
   :

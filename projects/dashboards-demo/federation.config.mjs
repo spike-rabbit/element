@@ -37,7 +37,7 @@ export default withNativeFederation({
 
   features: {
     // Disabled because sheriff-core doesn't support wildcard path mappings
-    // like @siemens/element-ng/*: projects/element-ng/*/index.ts in tsconfig
+    // like @spike-rabbit/element-ng/*: projects/element-ng/*/index.ts in tsconfig
     ignoreUnusedDeps: false
   }
 });

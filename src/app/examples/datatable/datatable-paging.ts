@@ -9,8 +9,8 @@ import {
   inject,
   OnDestroy
 } from '@angular/core';
-import { SI_DATATABLE_CONFIG, SiDatatableModule } from '@siemens/element-ng/datatable';
-import { SiPaginationComponent } from '@siemens/element-ng/pagination';
+import { SI_DATATABLE_CONFIG, SiDatatableModule } from '@spike-rabbit/element-ng/datatable';
+import { SiPaginationComponent } from '@spike-rabbit/element-ng/pagination';
 import { NgxDatatableModule } from '@siemens/ngx-datatable';
 import { Subscription } from 'rxjs';
 

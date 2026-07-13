@@ -3,5 +3,5 @@
  * SPDX-License-Identifier: MIT
  */
 export * from './components/si-map/index';
-export * from '@siemens/maps-ng/translate';
+export * from '@spike-rabbit/maps-ng/translate';
 export * from './public-api.module';

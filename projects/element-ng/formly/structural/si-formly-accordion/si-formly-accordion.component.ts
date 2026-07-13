@@ -4,7 +4,7 @@
  */
 import { AfterViewInit, ChangeDetectionStrategy, Component } from '@angular/core';
 import { FieldType, FormlyFieldConfig, FormlyModule } from '@ngx-formly/core';
-import { SiAccordionComponent, SiCollapsiblePanelComponent } from '@siemens/element-ng/accordion';
+import { SiAccordionComponent, SiCollapsiblePanelComponent } from '@spike-rabbit/element-ng/accordion';
 
 @Component({
   selector: 'si-formly-accordion',

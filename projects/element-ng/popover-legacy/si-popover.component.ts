@@ -14,8 +14,8 @@ import {
   signal,
   TemplateRef
 } from '@angular/core';
-import { calculateOverlayArrowPosition, OverlayArrowPosition } from '@siemens/element-ng/common';
-import { SiIconComponent } from '@siemens/element-ng/icon';
+import { calculateOverlayArrowPosition, OverlayArrowPosition } from '@spike-rabbit/element-ng/common';
+import { SiIconComponent } from '@spike-rabbit/element-ng/icon';
 
 @Component({
   selector: 'si-popover',

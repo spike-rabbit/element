@@ -6,8 +6,8 @@ import { HarnessLoader, parallel } from '@angular/cdk/testing';
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SelectOption } from '@siemens/element-ng/select';
-import { SiSelectHarness } from '@siemens/element-ng/select/testing';
+import { SelectOption } from '@spike-rabbit/element-ng/select';
+import { SiSelectHarness } from '@spike-rabbit/element-ng/select/testing';
 import { userEvent } from 'vitest/browser';
 
 import { SiThresholdComponent, ThresholdStep } from './index';

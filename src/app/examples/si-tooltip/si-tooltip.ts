@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: MIT
  */
 import { afterNextRender, Component, ElementRef, viewChild } from '@angular/core';
-import { SiIconComponent } from '@siemens/element-ng/icon';
-import { SiTabsetComponent, SiTabComponent } from '@siemens/element-ng/tabs';
-import { SiTooltipDirective } from '@siemens/element-ng/tooltip';
+import { SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiTabsetComponent, SiTabComponent } from '@spike-rabbit/element-ng/tabs';
+import { SiTooltipDirective } from '@spike-rabbit/element-ng/tooltip';
 
 @Component({
   selector: 'app-sample',

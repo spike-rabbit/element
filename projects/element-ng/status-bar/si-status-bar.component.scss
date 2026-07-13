@@ -1,6 +1,6 @@
 @use 'sass:map';
 
-@use '@siemens/element-theme/src/styles/variables';
+@use '@spike-rabbit/element-theme/src/styles/variables';
 
 $status-bar-padding: map.get(variables.$spacers, 4);
 $status-bar-padding-small: map.get(variables.$spacers, 1);

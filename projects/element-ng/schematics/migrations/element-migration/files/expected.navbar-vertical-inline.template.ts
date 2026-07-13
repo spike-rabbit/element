@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SiNavbarVerticalComponent } from '@siemens/element-ng/navbar-vertical'
+import { SiNavbarVerticalComponent } from '@spike-rabbit/element-ng/navbar-vertical'
 
 @Component({
   selector: 'app-sample',

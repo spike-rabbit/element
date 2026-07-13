@@ -17,10 +17,10 @@ import {
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { elementDown2 } from '@siemens/element-icons';
-import { BackgroundColorVariant } from '@siemens/element-ng/common';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiTooltipDirective } from '@siemens/element-ng/tooltip';
-import { SiTranslatePipe, TranslatableString } from '@siemens/element-translate-ng/translate';
+import { BackgroundColorVariant } from '@spike-rabbit/element-ng/common';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiTooltipDirective } from '@spike-rabbit/element-ng/tooltip';
+import { SiTranslatePipe, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 import { filter } from 'rxjs';
 
 import { SiAccordionHCollapseService } from './si-accordion-hcollapse.service';

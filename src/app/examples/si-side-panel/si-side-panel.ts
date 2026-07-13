@@ -5,16 +5,16 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
-import { SiAccordionComponent, SiCollapsiblePanelComponent } from '@siemens/element-ng/accordion';
+import { SiAccordionComponent, SiCollapsiblePanelComponent } from '@spike-rabbit/element-ng/accordion';
 import {
   SiApplicationHeaderComponent,
   SiHeaderBrandDirective,
   SiHeaderLogoDirective,
   SiHeaderActionsDirective,
   SiHeaderActionItemComponent
-} from '@siemens/element-ng/application-header';
-import { SiFormItemComponent } from '@siemens/element-ng/form';
-import { ElementDimensions } from '@siemens/element-ng/resize-observer';
+} from '@spike-rabbit/element-ng/application-header';
+import { SiFormItemComponent } from '@spike-rabbit/element-ng/form';
+import { ElementDimensions } from '@spike-rabbit/element-ng/resize-observer';
 import {
   SidePanelMode,
   SidePanelSize,
@@ -22,8 +22,8 @@ import {
   SidePanelNavigateConfig,
   SiSidePanelComponent,
   SiSidePanelContentComponent
-} from '@siemens/element-ng/side-panel';
-import { LOG_EVENT } from '@siemens/live-preview';
+} from '@spike-rabbit/element-ng/side-panel';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 
 @Component({
   selector: 'app-sample',

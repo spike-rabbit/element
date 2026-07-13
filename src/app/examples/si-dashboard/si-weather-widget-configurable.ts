@@ -12,7 +12,7 @@ import {
   SiWeatherWidgetForecast,
   SiWeatherWidgetLayout,
   SiWeatherWidgetMetric
-} from '@siemens/element-ng/dashboard';
+} from '@spike-rabbit/element-ng/dashboard';
 
 import {
   aggregateForecast,

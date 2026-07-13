@@ -72,7 +72,7 @@ The main purpose of a notification is to redirect users to the relevant page, ta
 ### Usage
 
 ```ts
-import { SiNotificationItemComponent } from '@siemens/element-ng/notification-item';
+import { SiNotificationItemComponent } from '@spike-rabbit/element-ng/notification-item';
 
 @Component({
   imports: [SiNotificationItemComponent]

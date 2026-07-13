@@ -12,7 +12,7 @@ import {
   input,
   signal
 } from '@angular/core';
-import { SiPasswordToggleComponent } from '@siemens/element-ng/password-toggle';
+import { SiPasswordToggleComponent } from '@spike-rabbit/element-ng/password-toggle';
 
 import { SiPasswordStrengthDirective } from './si-password-strength.directive';
 

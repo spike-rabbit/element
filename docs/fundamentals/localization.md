@@ -138,8 +138,8 @@ Supported frameworks:
 
 | Framework           | Path                                             | Module                        | Provider factory                | Remarks                                                                                                        |
 | ------------------- | ------------------------------------------------ | ----------------------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `ngx-translate`     | `@siemens/element-translate-ng/ngx-translate`    | `SiTranslateNgxTModule`       | `provideNgxTranslateForElement` |                                                                                                                |
-| `@angular/localize` | `@siemens/element-translate-ng/angular-localize` | `SiTranslateNgLocalizeModule` | `provideNgLocalizeForElement`   | The support is experimental. Please reach out to us via an issue, if you plan to use this in a productive app. |
+| `ngx-translate`     | `@spike-rabbit/element-translate-ng/ngx-translate`    | `SiTranslateNgxTModule`       | `provideNgxTranslateForElement` |                                                                                                                |
+| `@angular/localize` | `@spike-rabbit/element-translate-ng/angular-localize` | `SiTranslateNgLocalizeModule` | `provideNgLocalizeForElement`   | The support is experimental. Please reach out to us via an issue, if you plan to use this in a productive app. |
 
 <!-- markdownlint-enable MD013 -->
 
@@ -165,7 +165,7 @@ The overriding of text keys is available for every framework except `@angular/lo
 Overrides are declared like this:
 
 ```ts
-import { provideSiTranslatableOverrides } from '@siemens/element-ng/translate';
+import { provideSiTranslatableOverrides } from '@spike-rabbit/element-ng/translate';
 
 @NgModule({
   providers: [
@@ -213,7 +213,7 @@ import { provideMissingTranslationHandler, provideTranslateService } from '@ngx-
 import {
   provideMissingTranslationHandlerForElement,
   provideNgxTranslateForElement
-} from '@siemens/element-translate-ng/ngx-translate';
+} from '@spike-rabbit/element-translate-ng/ngx-translate';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -269,11 +269,11 @@ Note that this hash key will only be appended to the translation based JSON file
 
 An important part of the translation tooling is the extraction of translatable keys as a TypeScript
 interface as well as the extraction of a JSON messages file with default translations. This is
-provided by the `@siemens/element-translate-cli` package, which exposes the
+provided by the `@spike-rabbit/element-translate-cli` package, which exposes the
 `update-translatable-keys` command. Install it as a dev dependency:
 
 ```sh
-npm install --save-dev @siemens/element-translate-cli
+npm install --save-dev @spike-rabbit/element-translate-cli
 ```
 
 The extraction happens on compiled files. I.e. make sure to run the build first. Then, to run these
@@ -290,14 +290,14 @@ The config file looks like this:
 
 ```json
 {
-  "files": "dist/@siemens/**/fesm2022/**/*.mjs",
+  "files": "dist/@spike-rabbit/**/fesm2022/**/*.mjs",
   "configs": [
     {
       "name": "element",
       "locationPrefix": "projects/element-ng",
       "keysFile": "projects/element-ng/translate/si-translatable-keys.interface.ts",
       "keysInterfaceName": "SiTranslatableKeys",
-      "messagesFile": "dist/@siemens/element-ng/template-i18n.json"
+      "messagesFile": "dist/@spike-rabbit/element-ng/template-i18n.json"
     }
   ]
 }

@@ -1,7 +1,7 @@
 @use 'sass:map';
 
-@use '@siemens/element-theme/src/styles/variables';
-@use '@siemens/element-theme/src/styles/bootstrap/variables' as bootstrap-variables;
+@use '@spike-rabbit/element-theme/src/styles/variables';
+@use '@spike-rabbit/element-theme/src/styles/bootstrap/variables' as bootstrap-variables;
 
 %selection-hover {
   background: variables.$element-base-1-hover;

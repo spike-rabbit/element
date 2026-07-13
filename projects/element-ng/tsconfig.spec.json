@@ -7,7 +7,7 @@
       "vitest/globals",
       "vitest/browser",
       "node",
-      "@siemens/element-translate-ng/localize-types"
+      "@spike-rabbit/element-translate-ng/localize-types"
     ]
   },
   "exclude": ["**/schematics/**"],

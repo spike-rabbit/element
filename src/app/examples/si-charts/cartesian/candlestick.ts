@@ -7,9 +7,9 @@ import {
   CartesianChartData,
   CartesianChartSeries,
   SiChartCartesianComponent
-} from '@siemens/charts-ng/cartesian';
-import { ChartXAxis, ChartYAxis } from '@siemens/charts-ng/common';
-import { SiResizeObserverDirective } from '@siemens/element-ng/resize-observer';
+} from '@spike-rabbit/charts-ng/cartesian';
+import { ChartXAxis, ChartYAxis } from '@spike-rabbit/charts-ng/common';
+import { SiResizeObserverDirective } from '@spike-rabbit/element-ng/resize-observer';
 import { interval, Subscription } from 'rxjs';
 
 import { ChartBase, ChartData } from './chart-base';

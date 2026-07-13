@@ -7,7 +7,7 @@ import {
   SiWeatherIconResolver,
   SiWeatherWidgetComponent,
   SiWeatherWidgetData
-} from '@siemens/element-ng/dashboard';
+} from '@spike-rabbit/element-ng/dashboard';
 
 import { SiWeatherWidgetMeteoconsIconResolver } from './si-weather-widget-meteocons-icon.resolver';
 

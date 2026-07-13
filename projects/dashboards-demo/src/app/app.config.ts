@@ -13,11 +13,11 @@ import {
   SI_DASHBOARD_CONFIGURATION,
   SI_WIDGET_ID_PROVIDER,
   SI_WIDGET_STORE
-} from '@siemens/dashboards-ng';
+} from '@spike-rabbit/dashboards-ng';
 import {
   provideMissingTranslationHandlerForElement,
   provideNgxTranslateForElement
-} from '@siemens/element-translate-ng/ngx-translate';
+} from '@spike-rabbit/element-translate-ng/ngx-translate';
 
 import { AppWidgetIdProvider } from './app-widget-id-provider';
 import { AppWidgetStorage } from './app-widget-storage';

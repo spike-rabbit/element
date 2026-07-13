@@ -5,7 +5,7 @@
 import { ChangeDetectionStrategy, Component, signal, viewChild } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { MenuItem } from '@siemens/element-ng/menu';
+import { MenuItem } from '@spike-rabbit/element-ng/menu';
 import { BehaviorSubject } from 'rxjs';
 
 import { SiTreeViewItemHeightService } from './si-tree-view-item-height.service';

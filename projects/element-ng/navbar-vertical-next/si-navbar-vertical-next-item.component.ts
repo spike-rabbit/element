@@ -16,7 +16,7 @@ import {
 import { toSignal } from '@angular/core/rxjs-interop';
 import { RouterLinkActive } from '@angular/router';
 import { elementDown2, elementRight2 } from '@siemens/element-icons';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
 import { EMPTY, Observable } from 'rxjs';
 
 import { SiNavbarVerticalNextGroupTriggerDirective } from './si-navbar-vertical-next-group-trigger.directive';

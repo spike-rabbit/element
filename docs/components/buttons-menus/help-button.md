@@ -39,7 +39,7 @@ The button uses the `element-help` icon and is typically placed near form labels
 ### Usage
 
 ```ts
-import { SiHelpButtonComponent } from '@siemens/element-ng/help-button';
+import { SiHelpButtonComponent } from '@spike-rabbit/element-ng/help-button';
 
 @Component({
   imports: [SiHelpButtonComponent, ...]

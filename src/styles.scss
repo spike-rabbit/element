@@ -1,11 +1,11 @@
 @charset "UTF-8";
 @use 'sass:map';
 
-@use '@siemens/element-ng/element-ng';
-@use '@siemens/element-theme/src/styles/variables/spacers';
-@use '@siemens/element-theme/src/styles/variables/semantic-tokens';
-@use '@siemens/element-theme/src/styles/variables/utilities';
-@use '@siemens/live-preview/styles/live-preview';
+@use '@spike-rabbit/element-ng/element-ng';
+@use '@spike-rabbit/element-theme/src/styles/variables/spacers';
+@use '@spike-rabbit/element-theme/src/styles/variables/semantic-tokens';
+@use '@spike-rabbit/element-theme/src/styles/variables/utilities';
+@use '@spike-rabbit/live-preview/styles/live-preview';
 
 // Seems like an esbuild problem what we need to solve here.
 // Without this flag-icon would emit two icons with the same name although they are located in different directories.
@@ -19,7 +19,7 @@
 @use '@simpl/brand/dist/element-theme-siemens-brand-light' as brand-light;
 @use '@simpl/brand/dist/element-theme-siemens-brand-dark' as brand-dark;
 
-@use '@siemens/element-theme/src/theme' with (
+@use '@spike-rabbit/element-theme/src/theme' with (
   // $element-root-font-size: initial,
   $element-theme-default: 'siemens-brand',
   $element-themes: ('siemens-brand', 'element')
@@ -27,7 +27,7 @@
 
 @use '@siemens/element-icons/dist/style/siemens-element-icons';
 
-@use '@siemens/element-theme/src/styles/themes';
+@use '@spike-rabbit/element-theme/src/styles/themes';
 // OpenLayers styling
 @use 'ol/ol.css';
 @include themes.make-theme(brand-light.$tokens, 'siemens-brand');

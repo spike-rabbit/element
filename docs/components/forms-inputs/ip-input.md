@@ -25,8 +25,8 @@ The directives are an enhancement to the HTML input field specifically for IPv4 
 
 ```ts
 ...
-import { SiFormItemComponent } from '@siemens/element-ng/form';
-import { SiIp4InputDirective } from '@siemens/element-ng/ip-input';
+import { SiFormItemComponent } from '@spike-rabbit/element-ng/form';
+import { SiIp4InputDirective } from '@spike-rabbit/element-ng/ip-input';
 
 @Component({
   template: `
@@ -41,8 +41,8 @@ import { SiIp4InputDirective } from '@siemens/element-ng/ip-input';
 
 ```ts
 ...
-import { SiFormItemComponent } from '@siemens/element-ng/form';
-import { SiIp6InputDirective } from '@siemens/element-ng/ip-input';
+import { SiFormItemComponent } from '@spike-rabbit/element-ng/form';
+import { SiIp6InputDirective } from '@spike-rabbit/element-ng/ip-input';
 
 @Component({
   template: `

@@ -10,9 +10,9 @@ import {
   elementStateExclamationMark,
   elementStateTick
 } from '@siemens/element-icons';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiLoadingSpinnerComponent } from '@siemens/element-ng/loading-spinner';
-import { SiTranslatePipe } from '@siemens/element-translate-ng/translate';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiLoadingSpinnerComponent } from '@spike-rabbit/element-ng/loading-spinner';
+import { SiTranslatePipe } from '@spike-rabbit/element-translate-ng/translate';
 
 import { ResultDetailStep } from './si-result-details-list.datamodel';
 

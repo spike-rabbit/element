@@ -8,7 +8,7 @@ import { provideRouter, Router } from '@angular/router';
 import {
   provideMockTranslateServiceBuilder,
   SiTranslateService
-} from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-translate-ng/translate';
 import { of } from 'rxjs';
 
 import { Link, LinkAction } from './link.model';

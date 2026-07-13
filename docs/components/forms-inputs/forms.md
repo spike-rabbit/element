@@ -133,7 +133,7 @@ For a standalone app:
 
 ```ts
 import { ApplicationConfig } from '@angular/core';
-import { provideFormValidationErrorMapper } from '@siemens/element-ng/form';
+import { provideFormValidationErrorMapper } from '@spike-rabbit/element-ng/form';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -150,7 +150,7 @@ export const appConfig: ApplicationConfig = {
 or for a module base app:
 
 ```ts
-import {SiFormModule} from '@siemens/element-ng/form';
+import {SiFormModule} from '@spike-rabbit/element-ng/form';
 
 @NgModule({
   imports: [
@@ -223,7 +223,7 @@ This allows you to display additional information or guidance related to the inp
 Custom controls must implement the `SiFormItemControl` interface and provide themselves as `SI_FORM_ITEM_CONTROL`:
 
 ```ts
-import { SI_FORM_ITEM_CONTROL, SiFormItemControl } from '@siemens/element-ng/form';
+import { SI_FORM_ITEM_CONTROL, SiFormItemControl } from '@spike-rabbit/element-ng/form';
 import { Component } from '@angular/core';
 
 @Component({

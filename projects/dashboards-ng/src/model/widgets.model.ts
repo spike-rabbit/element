@@ -3,10 +3,10 @@
  * SPDX-License-Identifier: MIT
  */
 import { EventEmitter, InputSignal, OutputEmitterRef, TemplateRef, Type } from '@angular/core';
-import { AccentLineType, MenuItem as MenuItemLegacy } from '@siemens/element-ng/common';
-import { ContentActionBarMainItem, ViewType } from '@siemens/element-ng/content-action-bar';
-import { MenuItem } from '@siemens/element-ng/menu';
-import { TranslatableString } from '@siemens/element-translate-ng/translate';
+import { AccentLineType, MenuItem as MenuItemLegacy } from '@spike-rabbit/element-ng/common';
+import { ContentActionBarMainItem, ViewType } from '@spike-rabbit/element-ng/content-action-bar';
+import { MenuItem } from '@spike-rabbit/element-ng/menu';
+import { TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 import { Subject } from 'rxjs';
 
 /**

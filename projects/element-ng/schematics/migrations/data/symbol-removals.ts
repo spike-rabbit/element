@@ -16,12 +16,12 @@ export interface SymbolRemovalInstruction {
 export const SYMBOL_REMOVALS_MIGRATION: SymbolRemovalInstruction[] = [
   // v49 to v51
   {
-    module: /@siemens\/element-ng\/file-uploader/,
+    module: /@spike-rabbit\/element-ng\/file-uploader/,
     elementSelector: 'si-file-uploader',
     names: ['uploadTextFileSelect']
   },
   {
-    module: /@siemens\/element-ng\/file-uploader/,
+    module: /@spike-rabbit\/element-ng\/file-uploader/,
     elementSelector: 'si-file-dropzone',
     names: ['uploadTextFileSelect']
   }

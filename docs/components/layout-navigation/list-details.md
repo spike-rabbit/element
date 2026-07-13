@@ -124,7 +124,7 @@ then the details of a selected node with a 'Back' button.
 ### Usage
 
 ```ts
-import { SiListDetailsComponent } from '@siemens/element-ng/list-details';
+import { SiListDetailsComponent } from '@spike-rabbit/element-ng/list-details';
 
 @Component({
   imports: [SiListDetailsComponent, ...]
@@ -179,7 +179,7 @@ though it can also be moved to suite the design needs.
 ### Usage
 
 ```ts
-import { SiMainDetailContainerComponent } from '@siemens/element-ng/main-detail-container';
+import { SiMainDetailContainerComponent } from '@spike-rabbit/element-ng/main-detail-container';
 
 @Component({
   imports: [SiMainDetailContainerComponent, ...]

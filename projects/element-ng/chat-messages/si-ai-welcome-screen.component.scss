@@ -5,8 +5,8 @@
 
 @use 'sass:map';
 
-@use '@siemens/element-theme/src/styles/variables';
-@use '@siemens/element-theme/src/styles/bootstrap/variables' as bootstrap;
+@use '@spike-rabbit/element-theme/src/styles/variables';
+@use '@spike-rabbit/element-theme/src/styles/bootstrap/variables' as bootstrap;
 
 .welcome-header {
   max-inline-size: 720px;

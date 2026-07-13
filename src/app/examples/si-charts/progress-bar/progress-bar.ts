@@ -6,8 +6,8 @@ import { ChangeDetectionStrategy, Component, OnDestroy, viewChild } from '@angul
 import {
   ProgressBarChartSeries,
   SiChartProgressBarComponent
-} from '@siemens/charts-ng/progress-bar';
-import { SiResizeObserverDirective } from '@siemens/element-ng/resize-observer';
+} from '@spike-rabbit/charts-ng/progress-bar';
+import { SiResizeObserverDirective } from '@spike-rabbit/element-ng/resize-observer';
 import { interval, Subscription } from 'rxjs';
 
 @Component({

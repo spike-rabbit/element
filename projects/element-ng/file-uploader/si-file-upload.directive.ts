@@ -11,7 +11,7 @@ import {
   booleanAttribute,
   output
 } from '@angular/core';
-import { t, TranslatableString } from '@siemens/element-translate-ng/translate';
+import { t, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { UploadFile } from './si-file-uploader.model';
 

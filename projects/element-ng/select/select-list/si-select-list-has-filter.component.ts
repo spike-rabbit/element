@@ -15,10 +15,10 @@ import {
   viewChild
 } from '@angular/core';
 import { elementSearch } from '@siemens/element-icons';
-import { SiAutocompleteDirective, SiAutocompleteModule } from '@siemens/element-ng/autocomplete';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiLoadingSpinnerComponent } from '@siemens/element-ng/loading-spinner';
-import { SiTranslatePipe, TranslatableString } from '@siemens/element-translate-ng/translate';
+import { SiAutocompleteDirective, SiAutocompleteModule } from '@spike-rabbit/element-ng/autocomplete';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiLoadingSpinnerComponent } from '@spike-rabbit/element-ng/loading-spinner';
+import { SiTranslatePipe, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiSelectOptionRowComponent } from '../select-option/si-select-option-row.component';
 import { SiSelectGroupTemplateDirective } from '../si-select-group-template.directive';

@@ -6,7 +6,7 @@ import { DebugElement } from '@angular/core';
 import { outputToObservable } from '@angular/core/rxjs-interop';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { ModalRef } from '@siemens/element-ng/modal';
+import { ModalRef } from '@spike-rabbit/element-ng/modal';
 import { firstValueFrom } from 'rxjs';
 
 import { TEST_WIDGET } from '../../../test/test-widget/test-widget';

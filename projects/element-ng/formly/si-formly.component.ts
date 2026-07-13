@@ -24,7 +24,7 @@ import {
   provideFormlyConfig
 } from '@ngx-formly/core';
 import { FormlyJsonschema } from '@ngx-formly/core/json-schema';
-import { SiFormContainerComponent } from '@siemens/element-ng/form';
+import { SiFormContainerComponent } from '@spike-rabbit/element-ng/form';
 import { JSONSchema7 } from 'json-schema';
 
 import { dynamicUiConfig } from './dynamic-ui-config';

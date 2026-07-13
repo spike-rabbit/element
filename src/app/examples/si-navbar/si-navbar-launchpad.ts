@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { SiNavbarModule } from '@siemens/element-ng/navbar';
+import { SiNavbarModule } from '@spike-rabbit/element-ng/navbar';
 
 @Component({
   selector: 'app-sample',

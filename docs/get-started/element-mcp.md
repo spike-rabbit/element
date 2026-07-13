@@ -87,8 +87,8 @@ After successful installation you need to initialize the MCP server and provide 
      e.g. **Claude Sonnet 4.5**.
 
 5. **Start prompting**:
-   - "How do I use the Filtered-Search component from @siemens/element-ng?"
-   - "Show me examples of @siemens/charts-ng usage"
+   - "How do I use the Filtered-Search component from @spike-rabbit/element-ng?"
+   - "Show me examples of @spike-rabbit/charts-ng usage"
    - "Implement a dashboard with different widgets"
    - "Find icons related to AI or machine learning"
    - "Review the texts of this project"
@@ -132,23 +132,23 @@ commit it. Repeat per repository whenever you want to update the instructions.
 
 ## Version selection
 
-We distribute an MCP server package `@siemens/element-mcp` for every `@siemens/element-ng` version.
-The version of `@siemens/element-mcp` must match your version of `@siemens/element-ng`. The version
-number of the MCP package `@siemens/element-mcp` is a combination of the `@siemens/element-ng`
+We distribute an MCP server package `@siemens/element-mcp` for every `@spike-rabbit/element-ng` version.
+The version of `@siemens/element-mcp` must match your version of `@spike-rabbit/element-ng`. The version
+number of the MCP package `@siemens/element-mcp` is a combination of the `@spike-rabbit/element-ng`
 version and the version of the MCP code.
 
 For instance, `@siemens/element-mcp@48.2.0-v.1.4.8` comes with the data of
-`@siemens/element-ng@48.2.0` and `v.1.4.8` is the version of the MCP script.
+`@spike-rabbit/element-ng@48.2.0` and `v.1.4.8` is the version of the MCP script.
 
 To facilitate version selection, we use
 [npm distribution tags](https://docs.npmjs.com/cli/commands/npm-dist-tag) `@element<version>` that
-match the version of `@siemens/element-ng`. When using the corresponding distribution tag on
-installation, you get the latest version of the MCP package that matches your `@siemens/element-ng`
+match the version of `@spike-rabbit/element-ng`. When using the corresponding distribution tag on
+installation, you get the latest version of the MCP package that matches your `@spike-rabbit/element-ng`
 version and simplifies handling in your `package.json`.
 
 ```json
 "dependencies": {
-    "@siemens/element-ng": "48.2.0",
+    "@spike-rabbit/element-ng": "48.2.0",
   },
   "devDependencies": {
     "@siemens/element-mcp": "48.2.0-v.1.4.8",

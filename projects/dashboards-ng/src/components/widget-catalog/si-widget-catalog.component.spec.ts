@@ -6,12 +6,12 @@ import { DebugElement } from '@angular/core';
 import { outputToObservable } from '@angular/core/rxjs-interop';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { ModalRef } from '@siemens/element-ng/modal';
-import { SiSearchBarComponent } from '@siemens/element-ng/search-bar';
+import { ModalRef } from '@spike-rabbit/element-ng/modal';
+import { SiSearchBarComponent } from '@spike-rabbit/element-ng/search-bar';
 import {
   provideMockTranslateServiceBuilder,
   SiTranslateService
-} from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-translate-ng/translate';
 import { firstValueFrom, NEVER } from 'rxjs';
 
 import { TEST_WIDGET } from '../../../test/test-widget/test-widget';

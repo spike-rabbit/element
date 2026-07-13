@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SiSplitModule } from '@siemens/element-ng/split';
+import { SiSplitModule } from '@spike-rabbit/element-ng/split';
 
 @Component({
   selector: 'app-sample',

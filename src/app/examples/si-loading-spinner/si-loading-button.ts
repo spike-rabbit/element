@@ -4,9 +4,9 @@
  */
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { SiFormItemComponent } from '@siemens/element-ng/form';
-import { SiLoadingButtonComponent } from '@siemens/element-ng/loading-spinner';
-import { LOG_EVENT } from '@siemens/live-preview';
+import { SiFormItemComponent } from '@spike-rabbit/element-ng/form';
+import { SiLoadingButtonComponent } from '@spike-rabbit/element-ng/loading-spinner';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 
 @Component({
   selector: 'app-sample',

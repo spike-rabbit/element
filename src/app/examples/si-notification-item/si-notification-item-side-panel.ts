@@ -15,23 +15,23 @@ import {
   SiHeaderCollapsibleActionsComponent,
   SiHeaderLogoDirective,
   SiHeaderSelectionItemComponent
-} from '@siemens/element-ng/application-header';
+} from '@spike-rabbit/element-ng/application-header';
 import {
   SiHeaderDropdownComponent,
   SiHeaderDropdownItemComponent,
   SiHeaderDropdownTriggerDirective
-} from '@siemens/element-ng/header-dropdown';
-import type { MenuItemAction } from '@siemens/element-ng/menu';
+} from '@spike-rabbit/element-ng/header-dropdown';
+import type { MenuItemAction } from '@spike-rabbit/element-ng/menu';
 import {
   SiNotificationItemComponent,
   type NotificationItemLink,
   type NotificationItemQuickAction,
   type NotificationItemRouterLink
-} from '@siemens/element-ng/notification-item';
-import { SiSearchBarComponent } from '@siemens/element-ng/search-bar';
-import { SiSidePanelComponent, SiSidePanelContentComponent } from '@siemens/element-ng/side-panel';
-import { SiSummaryChipComponent } from '@siemens/element-ng/summary-chip';
-import { LOG_EVENT } from '@siemens/live-preview';
+} from '@spike-rabbit/element-ng/notification-item';
+import { SiSearchBarComponent } from '@spike-rabbit/element-ng/search-bar';
+import { SiSidePanelComponent, SiSidePanelContentComponent } from '@spike-rabbit/element-ng/side-panel';
+import { SiSummaryChipComponent } from '@spike-rabbit/element-ng/summary-chip';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 
 interface Notification {
   itemLink?: NotificationItemRouterLink | NotificationItemLink;

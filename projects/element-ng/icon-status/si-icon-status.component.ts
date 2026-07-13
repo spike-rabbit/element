@@ -2,7 +2,7 @@
  * Copyright (c) Siemens 2016 - 2026
  * SPDX-License-Identifier: MIT
  */
-import { SiStatusCounterComponent } from '@siemens/element-ng/status-counter';
+import { SiStatusCounterComponent } from '@spike-rabbit/element-ng/status-counter';
 
 /**
  * @deprecated Using `SiIconStatusComponent` is deprecated. Use `SiStatusCounterComponent` instead.

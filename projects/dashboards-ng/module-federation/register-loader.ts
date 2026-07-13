@@ -10,7 +10,7 @@ import {
   handleFederatedModuleLoad,
   SetupComponentFn,
   widgetFactoryRegistry
-} from '@siemens/dashboards-ng';
+} from '@spike-rabbit/dashboards-ng';
 import { Observable } from 'rxjs';
 
 const setupRemoteComponent = <T>(

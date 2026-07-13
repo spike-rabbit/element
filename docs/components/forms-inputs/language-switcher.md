@@ -11,7 +11,7 @@ automatically queried from the translation service and translated using the
 ### Usage
 
 ```ts
-import { SiLanguageSwitcherComponent } from '@siemens/element-ng/language-switcher';
+import { SiLanguageSwitcherComponent } from '@spike-rabbit/element-ng/language-switcher';
 
 @Component({
   imports: [SiLanguageSwitcherComponent, ...]

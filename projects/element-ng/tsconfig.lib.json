@@ -4,7 +4,7 @@
     "outDir": "../../out-tsc/lib",
     "declaration": true,
     "inlineSources": true,
-    "types": ["@siemens/element-translate-ng/localize-types"]
+    "types": ["@spike-rabbit/element-translate-ng/localize-types"]
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

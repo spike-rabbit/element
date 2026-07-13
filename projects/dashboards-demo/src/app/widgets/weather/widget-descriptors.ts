@@ -2,7 +2,7 @@
  * Copyright (c) Siemens 2016 - 2026
  * SPDX-License-Identifier: MIT
  */
-import { Widget } from '@siemens/dashboards-ng';
+import { Widget } from '@spike-rabbit/dashboards-ng';
 
 import { DEFAULT_WEATHER_PAYLOAD } from './weather-widget.mocks';
 
@@ -16,7 +16,7 @@ const loaderFunction = async (name: string): Promise<any> => {
 
 export const WEATHER_WIDGET: Widget = {
   name: 'Weather',
-  id: '@siemens/dashboards-demo/weather',
+  id: '@spike-rabbit/dashboards-demo/weather',
   description: 'Current weather and multi-day forecast',
   iconClass: 'element-cloud',
   componentFactory: {

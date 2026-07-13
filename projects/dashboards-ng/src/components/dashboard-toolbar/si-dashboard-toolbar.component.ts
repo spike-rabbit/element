@@ -14,14 +14,14 @@ import {
 } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { elementEdit } from '@siemens/element-icons';
-import { MenuItem } from '@siemens/element-ng/common';
-import { SiContentActionBarComponent } from '@siemens/element-ng/content-action-bar';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiLinkDirective } from '@siemens/element-ng/link';
-import { SiLoadingButtonComponent } from '@siemens/element-ng/loading-spinner';
-import { SiResponsiveContainerDirective } from '@siemens/element-ng/resize-observer';
-import { SiTooltipDirective } from '@siemens/element-ng/tooltip';
-import { SiTranslatePipe, t } from '@siemens/element-translate-ng/translate';
+import { MenuItem } from '@spike-rabbit/element-ng/common';
+import { SiContentActionBarComponent } from '@spike-rabbit/element-ng/content-action-bar';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiLinkDirective } from '@spike-rabbit/element-ng/link';
+import { SiLoadingButtonComponent } from '@spike-rabbit/element-ng/loading-spinner';
+import { SiResponsiveContainerDirective } from '@spike-rabbit/element-ng/resize-observer';
+import { SiTooltipDirective } from '@spike-rabbit/element-ng/tooltip';
+import { SiTranslatePipe, t } from '@spike-rabbit/element-translate-ng/translate';
 
 import { DashboardToolbarItem } from '../../model/si-dashboard-toolbar.model';
 import { SiGridComponent } from '../grid/si-grid.component';

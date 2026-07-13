@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { EChartOption, SankeySeriesOption } from '@siemens/charts-ng/common';
-import { SiChartSankeyComponent } from '@siemens/charts-ng/sankey';
-import { SiResizeObserverDirective } from '@siemens/element-ng/resize-observer';
+import { EChartOption, SankeySeriesOption } from '@spike-rabbit/charts-ng/common';
+import { SiChartSankeyComponent } from '@spike-rabbit/charts-ng/sankey';
+import { SiResizeObserverDirective } from '@spike-rabbit/element-ng/resize-observer';
 
 @Component({
   selector: 'app-sample',

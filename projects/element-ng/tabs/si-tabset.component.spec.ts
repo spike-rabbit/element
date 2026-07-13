@@ -7,7 +7,7 @@ import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { ChangeDetectionStrategy, Component, signal, viewChild } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter, RouterLink, RouterOutlet } from '@angular/router';
-import { SiTooltipDirective } from '@siemens/element-ng/tooltip';
+import { SiTooltipDirective } from '@spike-rabbit/element-ng/tooltip';
 import { page } from 'vitest/browser';
 
 import {

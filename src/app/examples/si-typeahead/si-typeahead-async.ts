@@ -5,9 +5,9 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { BackgroundColorVariant } from '@siemens/element-ng/common';
-import { SiSearchBarModule } from '@siemens/element-ng/search-bar';
-import { SiTypeaheadDirective, TypeaheadOptionSource } from '@siemens/element-ng/typeahead';
+import { BackgroundColorVariant } from '@spike-rabbit/element-ng/common';
+import { SiSearchBarModule } from '@spike-rabbit/element-ng/search-bar';
+import { SiTypeaheadDirective, TypeaheadOptionSource } from '@spike-rabbit/element-ng/typeahead';
 
 import { SiFilterSettingsComponent } from '../si-filter-settings/si-filter-settings.component';
 import { StatesService } from './states.service';

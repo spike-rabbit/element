@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { SiIconComponent } from '@siemens/element-ng/icon';
+import { SiIconComponent } from '@spike-rabbit/element-ng/icon';
 
 import { SiHeaderActionItemBase } from './si-header-action-item.base';
 

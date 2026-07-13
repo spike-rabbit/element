@@ -11,12 +11,12 @@ import {
   viewChild
 } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { CopyrightDetails } from '@siemens/element-ng/copyright-notice';
+import { CopyrightDetails } from '@spike-rabbit/element-ng/copyright-notice';
 import {
   AlertConfig,
   SiLandingPageComponent,
   SiLoginSingleSignOnComponent
-} from '@siemens/element-ng/landing-page';
+} from '@spike-rabbit/element-ng/landing-page';
 
 @Component({
   selector: 'app-sample',

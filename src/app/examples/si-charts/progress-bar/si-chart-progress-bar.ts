@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { SiChartProgressBarComponent } from '@siemens/charts-ng/progress-bar';
-import { SiResizeObserverDirective } from '@siemens/element-ng/resize-observer';
+import { SiChartProgressBarComponent } from '@spike-rabbit/charts-ng/progress-bar';
+import { SiResizeObserverDirective } from '@spike-rabbit/element-ng/resize-observer';
 
 @Component({
   selector: 'app-sample',

@@ -65,15 +65,15 @@ Select SCSS as the stylesheet format:
 
 ## Step 3 - Install Element npm packages
 
-- `@siemens/element-ng` provides the components
-- `@siemens/element-theme` provides global styles
+- `@spike-rabbit/element-ng` provides the components
+- `@spike-rabbit/element-theme` provides global styles
 - `@siemens/element-icons` provides the icons
-- `@siemens/element-translate-ng` provides a facade for different translation
+- `@spike-rabbit/element-translate-ng` provides a facade for different translation
   libraries (or none), including `ngx-translate` and `@angular/localize`
 - `@angular/cdk` for support from the Angular component development kit
 
 ```sh
-npm install @siemens/element-ng @siemens/element-theme @siemens/element-translate-ng @siemens/element-icons @angular/cdk
+npm install @spike-rabbit/element-ng @spike-rabbit/element-theme @spike-rabbit/element-translate-ng @siemens/element-icons @angular/cdk
 ```
 
 > **Note:** The versions of the Angular packages need to correspond to the
@@ -94,10 +94,10 @@ Include the styles in your application's `styles.scss`:
 
 ```scss
 // Use Element Theme
-@use '@siemens/element-theme/src/theme';
+@use '@spike-rabbit/element-theme/src/theme';
 
 // Use Element components
-@use '@siemens/element-ng/element-ng';
+@use '@spike-rabbit/element-ng/element-ng';
 ```
 
 Add Element components like the `<si-application-header>` to the `app.html` and
@@ -148,13 +148,13 @@ import {
   SiHeaderActionsDirective,
   SiHeaderBrandDirective,
   SiHeaderLogoDirective
-} from '@siemens/element-ng/application-header';
+} from '@spike-rabbit/element-ng/application-header';
 import {
   SiHeaderDropdownComponent,
   SiHeaderDropdownItemComponent,
   SiHeaderDropdownTriggerDirective
-} from '@siemens/element-ng/header-dropdown';
-import { addIcons } from '@siemens/element-ng/icon';
+} from '@spike-rabbit/element-ng/header-dropdown';
+import { addIcons } from '@spike-rabbit/element-ng/icon';
 import { elementLogout, elementUser } from '@siemens/element-icons';
 
 @Component({
@@ -203,8 +203,8 @@ Update the `styles.scss` to include the Siemens brand assets:
 @use '@simpl/brand/dist/element-theme-siemens-brand-light' as brand-light;
 @use '@simpl/brand/dist/element-theme-siemens-brand-dark' as brand-dark;
 
-// This replaces the previous @use '@siemens/element-theme/src/theme' statement and needs to be added after the brand themes.
-@use '@siemens/element-theme/src/theme' with (
+// This replaces the previous @use '@spike-rabbit/element-theme/src/theme' statement and needs to be added after the brand themes.
+@use '@spike-rabbit/element-theme/src/theme' with (
   $element-theme-default: 'siemens-brand',
   $element-themes: (
     'siemens-brand',
@@ -213,7 +213,7 @@ Update the `styles.scss` to include the Siemens brand assets:
 );
 
 // Create the an Element theme based on the Siemens brand tokens.
-@use '@siemens/element-theme/src/styles/themes';
+@use '@spike-rabbit/element-theme/src/styles/themes';
 @include themes.make-theme(brand-light.$tokens, 'siemens-brand');
 @include themes.make-theme(brand-dark.$tokens, 'siemens-brand', true);
 ```

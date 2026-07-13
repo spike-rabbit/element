@@ -21,7 +21,7 @@ import {
   polarToCartesian,
   relativeValueToRelativeAngle,
   valueToRelativeAngle
-} from '@siemens/native-charts-ng/utils';
+} from '@spike-rabbit/native-charts-ng/utils';
 
 /**
  * One series of the gauge chart.

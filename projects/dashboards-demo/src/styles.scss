@@ -10,7 +10,7 @@ $icon-font-path: '~@siemens/element-icons/fonts' !default;
 @use '@simpl/brand/dist/element-theme-siemens-brand-light' as brand-light;
 @use '@simpl/brand/dist/element-theme-siemens-brand-dark' as brand-dark;
 
-@use '@siemens/element-theme/src/theme' with (
+@use '@spike-rabbit/element-theme/src/theme' with (
   $element-theme-default: 'siemens-brand',
   $element-themes: (
     'siemens-brand',
@@ -22,6 +22,6 @@ $icon-font-path: '~@siemens/element-icons/fonts' !default;
   $font-path: $icon-font-path
 );
 
-@use '@siemens/element-theme/src/styles/themes';
+@use '@spike-rabbit/element-theme/src/styles/themes';
 @include themes.make-theme(brand-light.$tokens, 'siemens-brand');
 @include themes.make-theme(brand-dark.$tokens, 'siemens-brand', true);

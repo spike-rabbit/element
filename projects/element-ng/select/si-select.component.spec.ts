@@ -8,7 +8,7 @@ import { ChangeDetectionStrategy, Component, signal, viewChild } from '@angular/
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
-import { SiSelectHarness } from '@siemens/element-ng/select/testing';
+import { SiSelectHarness } from '@spike-rabbit/element-ng/select/testing';
 
 import { SelectOption, SelectItem, SiSelectComponent, SiSelectModule } from './index';
 import { SiSelectSelectionStrategy } from './selection/si-select-selection-strategy';

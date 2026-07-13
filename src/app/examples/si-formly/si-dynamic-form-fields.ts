@@ -6,9 +6,9 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormRecord } from '@angular/forms';
 import { FormlyFieldConfig, FormlyFormOptions } from '@ngx-formly/core';
-import { DatepickerInputConfig } from '@siemens/element-ng/datepicker';
-import { SiFormModule } from '@siemens/element-ng/form';
-import { SiFormlyComponent } from '@siemens/element-ng/formly';
+import { DatepickerInputConfig } from '@spike-rabbit/element-ng/datepicker';
+import { SiFormModule } from '@spike-rabbit/element-ng/form';
+import { SiFormlyComponent } from '@spike-rabbit/element-ng/formly';
 
 @Component({
   selector: 'app-sample',

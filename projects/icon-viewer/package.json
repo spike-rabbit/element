@@ -1,17 +1,17 @@
 {
-  "name": "@siemens/icon-viewer",
+  "name": "@spike-rabbit/icon-viewer",
   "description": "Element Icon Viewer application.",
   "version": "48.9.0",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/siemens/element.git"
+    "url": "git+https://github.com/spike-rabbit/element.git"
   },
   "author": {
     "name": "Siemens AG",
     "email": "info@siemens.com"
   },
-  "homepage": "https://github.com/siemens/element",
-  "bugs": "https://github.com/siemens/element/issues/new",
+  "homepage": "https://github.com/spike-rabbit/element",
+  "bugs": "https://github.com/spike-rabbit/element/issues/new",
   "type": "module"
 }

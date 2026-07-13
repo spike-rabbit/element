@@ -22,14 +22,14 @@ import {
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { elementBack } from '@siemens/element-icons';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
 import {
   BOOTSTRAP_BREAKPOINTS,
   ElementDimensions,
   ResizeObserverService
-} from '@siemens/element-ng/resize-observer';
-import { SiSplitComponent, SiSplitPartComponent } from '@siemens/element-ng/split';
-import { SiTranslatePipe, t, TranslatableString } from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-ng/resize-observer';
+import { SiSplitComponent, SiSplitPartComponent } from '@spike-rabbit/element-ng/split';
+import { SiTranslatePipe, t, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 import { timer } from 'rxjs';
 
 @Component({

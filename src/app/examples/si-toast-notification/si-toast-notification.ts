@@ -3,10 +3,10 @@
  * SPDX-License-Identifier: MIT
  */
 import { ChangeDetectionStrategy, Component, inject, OnDestroy } from '@angular/core';
-import { StatusType } from '@siemens/element-ng/common';
-import { Link } from '@siemens/element-ng/link';
-import { SiToastNotificationService } from '@siemens/element-ng/toast-notification';
-import { LOG_EVENT } from '@siemens/live-preview';
+import { StatusType } from '@spike-rabbit/element-ng/common';
+import { Link } from '@spike-rabbit/element-ng/link';
+import { SiToastNotificationService } from '@spike-rabbit/element-ng/toast-notification';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 
 @Component({
   selector: 'app-sample',

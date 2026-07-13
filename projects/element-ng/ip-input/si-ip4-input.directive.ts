@@ -22,8 +22,8 @@ import { AddrInputEvent, SiIpInputDirective } from './si-ip-input.directive';
  * Usage:
  *
  * ```ts
- * import { SiFormItemComponent } from '@siemens/element-ng/form';
- * import { SiIp4InputDirective } from '@siemens/element-ng/ip-input';
+ * import { SiFormItemComponent } from '@spike-rabbit/element-ng/form';
+ * import { SiIp4InputDirective } from '@spike-rabbit/element-ng/ip-input';
  *
  * @Component({
  *   template: `

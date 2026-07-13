@@ -4,9 +4,9 @@
  */
 import { ChangeDetectionStrategy, Component, inject, input, viewChild } from '@angular/core';
 import { elementGoTo } from '@siemens/element-icons';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { LOG_EVENT } from '@siemens/live-preview';
-import { MapPoint, MapPointMetaData, SiMapComponent } from '@siemens/maps-ng';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
+import { MapPoint, MapPointMetaData, SiMapComponent } from '@spike-rabbit/maps-ng';
 import { mockPoints, singlePoint } from 'src/app/mocks/points.mock';
 import { environment } from 'src/environments/environment';
 

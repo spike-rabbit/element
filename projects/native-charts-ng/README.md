@@ -8,18 +8,18 @@ To use the Element Native Charts Angular components in your project, add them to
 by executing:
 
 ```sh
-npm install --save @siemens/native-charts-ng
+npm install --save @spike-rabbit/native-charts-ng
 ```
 
 Element Native Charts uses standalone components with separate entry points.
 Import components directly from their specific entry points:
 
 ```ts
-import { SiNChartGaugeComponent } from '@siemens/native-charts-ng/gauge';
-import { SiMicrochartBarComponent } from '@siemens/native-charts-ng/microchart-bar';
-import { SiMicrochartDonutComponent } from '@siemens/native-charts-ng/microchart-donut';
-import { SiMicrochartLineComponent } from '@siemens/native-charts-ng/microchart-line';
-import { SiMicrochartProgressComponent } from '@siemens/native-charts-ng/microchart-progress';
+import { SiNChartGaugeComponent } from '@spike-rabbit/native-charts-ng/gauge';
+import { SiMicrochartBarComponent } from '@spike-rabbit/native-charts-ng/microchart-bar';
+import { SiMicrochartDonutComponent } from '@spike-rabbit/native-charts-ng/microchart-donut';
+import { SiMicrochartLineComponent } from '@spike-rabbit/native-charts-ng/microchart-line';
+import { SiMicrochartProgressComponent } from '@spike-rabbit/native-charts-ng/microchart-progress';
 
 @Component({
   selector: 'app-dashboard',

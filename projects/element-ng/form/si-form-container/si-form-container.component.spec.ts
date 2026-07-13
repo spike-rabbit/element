@@ -15,8 +15,8 @@ import {
   SiFormContainerComponent,
   SiFormModule,
   SiFormValidationErrorMapper
-} from '@siemens/element-ng/form';
-import { SiResponsiveContainerDirective } from '@siemens/element-ng/resize-observer';
+} from '@spike-rabbit/element-ng/form';
+import { SiResponsiveContainerDirective } from '@spike-rabbit/element-ng/resize-observer';
 
 interface TestForm {
   name: FormControl<string | null>;

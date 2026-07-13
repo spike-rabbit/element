@@ -4,8 +4,8 @@
  */
 import { Directive, HostListener, inject, OnInit } from '@angular/core';
 import { elementDown2 } from '@siemens/element-icons';
-import { SiHeaderDropdownTriggerDirective } from '@siemens/element-ng/header-dropdown';
-import { addIcons } from '@siemens/element-ng/icon';
+import { SiHeaderDropdownTriggerDirective } from '@spike-rabbit/element-ng/header-dropdown';
+import { addIcons } from '@spike-rabbit/element-ng/icon';
 
 import { SiApplicationHeaderComponent } from './si-application-header.component';
 import { SiHeaderCollapsibleActionsComponent } from './si-header-collapsible-actions.component';

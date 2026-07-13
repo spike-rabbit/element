@@ -11,7 +11,7 @@ import {
   OnInit,
   signal
 } from '@angular/core';
-import { SiMarkdownRendererComponent } from '@siemens/element-ng/markdown-renderer';
+import { SiMarkdownRendererComponent } from '@spike-rabbit/element-ng/markdown-renderer';
 
 @Component({
   selector: 'app-sample',

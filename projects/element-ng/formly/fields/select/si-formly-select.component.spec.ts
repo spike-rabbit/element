@@ -10,7 +10,7 @@ import { FormlyFieldConfig, FormlyModule } from '@ngx-formly/core';
 import {
   SiSelectMultiValueDirective,
   SiSelectSingleValueDirective
-} from '@siemens/element-ng/select';
+} from '@spike-rabbit/element-ng/select';
 
 import { SiFormlySelectComponent } from './si-formly-select.component';
 

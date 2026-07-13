@@ -1,7 +1,7 @@
 @use 'sass:map';
-@use '@siemens/element-theme/src/styles/variables/semantic-tokens';
-@use '@siemens/element-theme/src/styles/bootstrap/variables' as bootstrap-variables;
-@use '@siemens/element-theme/src/styles/variables/spacers';
+@use '@spike-rabbit/element-theme/src/styles/variables/semantic-tokens';
+@use '@spike-rabbit/element-theme/src/styles/bootstrap/variables' as bootstrap-variables;
+@use '@spike-rabbit/element-theme/src/styles/variables/spacers';
 
 div > [si-content-action-bar-toggle] {
   // The siAutoCollapsableList directive reserves space for the overflow toggle by reading its

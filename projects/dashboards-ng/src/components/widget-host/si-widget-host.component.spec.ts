@@ -11,8 +11,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import {
   DeleteConfirmationDialogResult,
   SiActionDialogService
-} from '@siemens/element-ng/action-modal';
-import { MenuItemAction } from '@siemens/element-ng/menu';
+} from '@spike-rabbit/element-ng/action-modal';
+import { MenuItemAction } from '@spike-rabbit/element-ng/menu';
 import { GridItemHTMLElement } from 'gridstack';
 import { firstValueFrom, Observable, Subject } from 'rxjs';
 import { page, userEvent } from 'vitest/browser';

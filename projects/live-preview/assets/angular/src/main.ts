@@ -7,13 +7,13 @@ import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter } from '@angular/router';
 import { provideTranslateService } from '@ngx-translate/core';
-import { provideSiUiState } from '@siemens/element-ng/common';
-import { provideSiDatatableConfig } from '@siemens/element-ng/datatable';
+import { provideSiUiState } from '@spike-rabbit/element-ng/common';
+import { provideSiDatatableConfig } from '@spike-rabbit/element-ng/datatable';
 import {
   provideNgxTranslateForElement,
   provideMissingTranslationHandlerForElement
-} from '@siemens/element-translate-ng/ngx-translate';
-import { LOG_EVENT } from '@siemens/live-preview';
+} from '@spike-rabbit/element-translate-ng/ngx-translate';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 
 import { AppComponent } from './app/app.component';
 

@@ -4,11 +4,11 @@
  */
 import { AsyncPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject, input, OnInit } from '@angular/core';
-import { SiChartCartesianComponent } from '@siemens/charts-ng/cartesian';
-import { WidgetConfig, WidgetInstance } from '@siemens/dashboards-ng';
-import { ContentActionBarMainItem } from '@siemens/element-ng/content-action-bar';
-import { MenuItem } from '@siemens/element-ng/menu';
-import { SiResizeObserverDirective } from '@siemens/element-ng/resize-observer';
+import { SiChartCartesianComponent } from '@spike-rabbit/charts-ng/cartesian';
+import { WidgetConfig, WidgetInstance } from '@spike-rabbit/dashboards-ng';
+import { ContentActionBarMainItem } from '@spike-rabbit/element-ng/content-action-bar';
+import { MenuItem } from '@spike-rabbit/element-ng/menu';
+import { SiResizeObserverDirective } from '@spike-rabbit/element-ng/resize-observer';
 import { Observable } from 'rxjs';
 
 import { CartesianChartData, DataService } from '../../../widgets/charts/data.service';

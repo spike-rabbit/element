@@ -109,4 +109,4 @@ export {
   ContextmenuType,
   type TableColumnProp
 } from '@siemens/ngx-datatable';
-export type { MenuItem } from '@siemens/element-ng/menu';
+export type { MenuItem } from '@spike-rabbit/element-ng/menu';

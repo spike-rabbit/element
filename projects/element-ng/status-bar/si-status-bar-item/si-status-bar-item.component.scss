@@ -1,7 +1,7 @@
 @use 'sass:map';
 @use 'sass:math';
 
-@use '@siemens/element-theme/src/styles/variables';
+@use '@spike-rabbit/element-theme/src/styles/variables';
 
 $item-min-width: 7.1429em;
 $item-padding: map.get(variables.$spacers, 4);

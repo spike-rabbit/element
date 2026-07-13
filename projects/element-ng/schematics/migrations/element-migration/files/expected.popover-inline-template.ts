@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SiPopoverLegacyDirective } from '@siemens/element-ng/popover-legacy';
+import { SiPopoverLegacyDirective } from '@spike-rabbit/element-ng/popover-legacy';
 
 @Component({
   selector: 'si-migration',

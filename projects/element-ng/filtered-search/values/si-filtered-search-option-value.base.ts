@@ -4,7 +4,7 @@
  */
 import { computed, DestroyRef, Directive, inject, input } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { injectSiTranslateService } from '@siemens/element-translate-ng/translate';
+import { injectSiTranslateService } from '@spike-rabbit/element-translate-ng/translate';
 import { BehaviorSubject, Observable, of, switchMap } from 'rxjs';
 import { debounceTime, first, map, tap } from 'rxjs/operators';
 

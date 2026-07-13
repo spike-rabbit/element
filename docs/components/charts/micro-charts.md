@@ -50,10 +50,10 @@ Make use of data visualization [categorical colors](../../fundamentals/colors/da
 ### Usage
 
 ```ts
-import { SiMicrochartBarComponent } from '@siemens/native-charts-ng/microchart-bar';
-import { SiMicrochartDonutComponent } from '@siemens/native-charts-ng/microchart-donut';
-import { SiMicrochartLineComponent } from '@siemens/native-charts-ng/microchart-line';
-import { SiMicrochartProgressComponent } from '@siemens/native-charts-ng/microchart-progress';
+import { SiMicrochartBarComponent } from '@spike-rabbit/native-charts-ng/microchart-bar';
+import { SiMicrochartDonutComponent } from '@spike-rabbit/native-charts-ng/microchart-donut';
+import { SiMicrochartLineComponent } from '@spike-rabbit/native-charts-ng/microchart-line';
+import { SiMicrochartProgressComponent } from '@spike-rabbit/native-charts-ng/microchart-progress';
 
 @Component({
   imports: [SiMicrochartBarComponent, SiMicrochartDonutComponent, SiMicrochartLineComponent, SiMicrochartProgressComponent, ...]
@@ -64,12 +64,12 @@ import { SiMicrochartProgressComponent } from '@siemens/native-charts-ng/microch
 
 <si-docs-component example="si-ncharts/si-micro-charts" height="400"></si-docs-component>
 
-<si-docs-api component="SiMicrochartBarComponent" package="@siemens/native-charts-ng" hideImplicitlyPublic="true"></si-docs-api>
+<si-docs-api component="SiMicrochartBarComponent" package="@spike-rabbit/native-charts-ng" hideImplicitlyPublic="true"></si-docs-api>
 
-<si-docs-api component="SiMicrochartDonutComponent" package="@siemens/native-charts-ng" hideImplicitlyPublic="true"></si-docs-api>
+<si-docs-api component="SiMicrochartDonutComponent" package="@spike-rabbit/native-charts-ng" hideImplicitlyPublic="true"></si-docs-api>
 
-<si-docs-api component="SiMicrochartLineComponent" package="@siemens/native-charts-ng" hideImplicitlyPublic="true"></si-docs-api>
+<si-docs-api component="SiMicrochartLineComponent" package="@spike-rabbit/native-charts-ng" hideImplicitlyPublic="true"></si-docs-api>
 
-<si-docs-api component="SiMicrochartProgressComponent" package="@siemens/native-charts-ng" hideImplicitlyPublic="true"></si-docs-api>
+<si-docs-api component="SiMicrochartProgressComponent" package="@spike-rabbit/native-charts-ng" hideImplicitlyPublic="true"></si-docs-api>
 
 <si-docs-types></si-docs-types>

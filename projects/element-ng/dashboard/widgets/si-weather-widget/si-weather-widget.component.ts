@@ -9,11 +9,11 @@ import {
   computed,
   input
 } from '@angular/core';
-import { SiCardComponent } from '@siemens/element-ng/card';
-import { AccentLineType } from '@siemens/element-ng/common';
-import { ContentActionBarMainItem } from '@siemens/element-ng/content-action-bar';
-import { MenuItem } from '@siemens/element-ng/menu';
-import { TranslatableString } from '@siemens/element-translate-ng/translate';
+import { SiCardComponent } from '@spike-rabbit/element-ng/card';
+import { AccentLineType } from '@spike-rabbit/element-ng/common';
+import { ContentActionBarMainItem } from '@spike-rabbit/element-ng/content-action-bar';
+import { MenuItem } from '@spike-rabbit/element-ng/menu';
+import { TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiWeatherWidgetBodyComponent } from './si-weather-widget-body.component';
 import { SiWeatherWidgetData, SiWeatherWidgetLayout } from './si-weather-widget.types';

@@ -1,18 +1,18 @@
 {
-  "name": "@siemens/dashboards-demo",
+  "name": "@spike-rabbit/dashboards-demo",
   "version": "49.13.0",
   "description": "Siemens Dashboards demo",
   "license": "SEE LICENSE IN LICENSE.md",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/siemens/element.git"
+    "url": "git+https://github.com/spike-rabbit/element.git"
   },
   "author": {
     "name": "Siemens AG",
     "email": "info@siemens.com"
   },
-  "homepage": "https://github.com/siemens/element",
-  "bugs": "https://github.com/siemens/element/issues/new",
+  "homepage": "https://github.com/spike-rabbit/element",
+  "bugs": "https://github.com/spike-rabbit/element/issues/new",
   "dependencies": {
     "@ngx-translate/http-loader": "18.0.0"
   },

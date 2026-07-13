@@ -16,10 +16,10 @@ import {
   SiAutocompleteDirective,
   SiAutocompleteListboxDirective,
   SiAutocompleteOptionDirective
-} from '@siemens/element-ng/autocomplete';
-import { SiIconComponent } from '@siemens/element-ng/icon';
-import { SiLoadingSpinnerDirective } from '@siemens/element-ng/loading-spinner';
-import { SiTranslatePipe } from '@siemens/element-translate-ng/translate';
+} from '@spike-rabbit/element-ng/autocomplete';
+import { SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiLoadingSpinnerDirective } from '@spike-rabbit/element-ng/loading-spinner';
+import { SiTranslatePipe } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiTypeaheadItemTemplateDirective } from './si-typeahead-item-template.directive';
 import { SiTypeaheadDirective } from './si-typeahead.directive';

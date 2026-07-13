@@ -13,8 +13,8 @@ import {
   viewChild
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { SiTypeaheadDirective, TypeaheadOption } from '@siemens/element-ng/typeahead';
-import { SiTranslatePipe, TranslatableString } from '@siemens/element-translate-ng/translate';
+import { SiTypeaheadDirective, TypeaheadOption } from '@spike-rabbit/element-ng/typeahead';
+import { SiTranslatePipe, TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 import { Observable } from 'rxjs';
 
 import { InternalCriterionDefinition } from './si-filtered-search-helper';

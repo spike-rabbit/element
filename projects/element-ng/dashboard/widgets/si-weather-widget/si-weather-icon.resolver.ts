@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 import { inject, Injectable } from '@angular/core';
-import { TranslatableString } from '@siemens/element-translate-ng/translate';
+import { TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 
 import { SiWeatherCondition, SiWeatherIcon } from './si-weather-widget.types';
 

@@ -4,13 +4,13 @@
     "outDir": "../../out-tsc/lib",
     "declaration": true,
     "inlineSources": true,
-    "types": ["@siemens/element-translate-ng/localize-types", "node"],
+    "types": ["@spike-rabbit/element-translate-ng/localize-types", "node"],
     "paths": {
-      "@siemens/element-translate-ng": ["dist/@siemens/element-translate-ng"],
-      "@siemens/element-translate-ng/*": ["dist/@siemens/element-translate-ng/*"],
-      "@siemens/element-ng": ["dist/@siemens/element-ng"],
-      "@siemens/element-ng/*": ["dist/@siemens/element-ng/*"],
-      "@siemens/dashboards-ng": ["projects/dashboards-ng/src/public-api.ts"]
+      "@spike-rabbit/element-translate-ng": ["dist/@spike-rabbit/element-translate-ng"],
+      "@spike-rabbit/element-translate-ng/*": ["dist/@spike-rabbit/element-translate-ng/*"],
+      "@spike-rabbit/element-ng": ["dist/@spike-rabbit/element-ng"],
+      "@spike-rabbit/element-ng/*": ["dist/@spike-rabbit/element-ng/*"],
+      "@spike-rabbit/dashboards-ng": ["projects/dashboards-ng/src/public-api.ts"]
     }
   },
   "angularCompilerOptions": {

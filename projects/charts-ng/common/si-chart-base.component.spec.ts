@@ -4,7 +4,7 @@
  */
 import { ChangeDetectionStrategy, Component, viewChild } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { echarts, EChartOption } from '@siemens/charts-ng/common';
+import { echarts, EChartOption } from '@spike-rabbit/charts-ng/common';
 import { LineChart } from 'echarts/charts';
 import { GridComponent } from 'echarts/components';
 

@@ -12,7 +12,7 @@ import {
   MarkPointComponentOption,
   ScatterSeriesOption,
   SiSeriesOption
-} from '@siemens/charts-ng/common';
+} from '@spike-rabbit/charts-ng/common';
 
 export type LineStepType = 'start' | 'middle' | 'end';
 export type LineType = 'solid' | 'dashed' | 'dotted';

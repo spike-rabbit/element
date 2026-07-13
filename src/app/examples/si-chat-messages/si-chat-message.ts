@@ -12,19 +12,19 @@ import {
   elementOptionsVertical,
   elementUser
 } from '@siemens/element-icons';
-import { SiAvatarComponent } from '@siemens/element-ng/avatar';
+import { SiAvatarComponent } from '@spike-rabbit/element-ng/avatar';
 import {
   SiChatMessageComponent,
   SiAttachmentListComponent,
   Attachment,
   SiChatMessageActionDirective,
   MessageAction
-} from '@siemens/element-ng/chat-messages';
-import { addIcons, SiIconComponent } from '@siemens/element-ng/icon';
-import { SiMarkdownRendererComponent } from '@siemens/element-ng/markdown-renderer';
-import { MenuItemAction, SiMenuFactoryComponent } from '@siemens/element-ng/menu';
-import { SiTranslatePipe } from '@siemens/element-translate-ng/translate';
-import { LOG_EVENT } from '@siemens/live-preview';
+} from '@spike-rabbit/element-ng/chat-messages';
+import { addIcons, SiIconComponent } from '@spike-rabbit/element-ng/icon';
+import { SiMarkdownRendererComponent } from '@spike-rabbit/element-ng/markdown-renderer';
+import { MenuItemAction, SiMenuFactoryComponent } from '@spike-rabbit/element-ng/menu';
+import { SiTranslatePipe } from '@spike-rabbit/element-translate-ng/translate';
+import { LOG_EVENT } from '@spike-rabbit/live-preview';
 
 @Component({
   selector: 'app-sample',

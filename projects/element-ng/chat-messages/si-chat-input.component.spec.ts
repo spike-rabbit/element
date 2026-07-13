@@ -12,9 +12,9 @@ import {
 } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { FileUploadError, UploadFile } from '@siemens/element-ng/file-uploader';
-import { MenuItem } from '@siemens/element-ng/menu';
-import { TranslatableString } from '@siemens/element-translate-ng/translate';
+import { FileUploadError, UploadFile } from '@spike-rabbit/element-ng/file-uploader';
+import { MenuItem } from '@spike-rabbit/element-ng/menu';
+import { TranslatableString } from '@spike-rabbit/element-translate-ng/translate';
 import { page } from 'vitest/browser';
 
 import { MessageAction } from './message-action.model';

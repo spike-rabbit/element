@@ -13,13 +13,13 @@ import {
   ChartYAxis,
   DataZoomRange,
   SeriesUpdate
-} from '@siemens/charts-ng/common';
+} from '@spike-rabbit/charts-ng/common';
 import {
   CustomLegend,
   CustomLegendProps,
   SiCustomLegendComponent
-} from '@siemens/charts-ng/custom-legend';
-import { SiChartLoadingSpinnerComponent } from '@siemens/charts-ng/loading-spinner';
+} from '@spike-rabbit/charts-ng/custom-legend';
+import { SiChartLoadingSpinnerComponent } from '@spike-rabbit/charts-ng/loading-spinner';
 import { BarChart, LineChart, ScatterChart, CandlestickChart, HeatmapChart } from 'echarts/charts';
 import {
   LegendComponent,

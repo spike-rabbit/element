@@ -35,7 +35,7 @@ For greater flexibility, apply color variants using SASS.
 We recommend using [semantic color tokens](../colors/ui-colors.md):
 
 ```scss
-@use '@siemens/element-theme/src/styles/variables';
+@use '@spike-rabbit/element-theme/src/styles/variables';
 
 /* Pick the tokens you need: */
 color: variables.$element-text-primary;

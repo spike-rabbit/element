@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 import { booleanAttribute, ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { SiIconComponent } from '@siemens/element-ng/icon';
+import { SiIconComponent } from '@spike-rabbit/element-ng/icon';
 
 /**
  * Creates an action for the side-panel.

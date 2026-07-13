@@ -4,7 +4,7 @@
  */
 import { inputBinding, outputBinding, signal } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { PasswordPolicy } from '@siemens/element-ng/password-strength';
+import { PasswordPolicy } from '@spike-rabbit/element-ng/password-strength';
 
 import { ChangePassword } from '../si-landing-page.model';
 import { SiChangePasswordComponent as TestComponent } from './si-change-password.component';

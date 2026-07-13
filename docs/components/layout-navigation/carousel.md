@@ -67,7 +67,7 @@ each slide. Slides are displayed horizontally with snap-scroll behavior.
 ### Usage
 
 ```ts
-import { SiCarouselComponent, SiCarouselItemDirective } from '@siemens/element-ng/carousel';
+import { SiCarouselComponent, SiCarouselItemDirective } from '@spike-rabbit/element-ng/carousel';
 
 @Component({
   imports: [SiCarouselComponent, SiCarouselItemDirective, ...]
