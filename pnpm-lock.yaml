@@ -306,7 +306,6 @@ importers:
       '@simpl/docs-composer':
         specifier: 12.0.0
         version: 12.0.0(typescript@6.0.3)
-    publishDirectory: dist
 
   projects/charts-ng:
     dependencies:
@@ -319,6 +318,7 @@ importers:
       echarts:
         specifier: 6.1.0
         version: 6.1.0
+    publishDirectory: ../../dist/@siemens/charts-ng
 
   projects/dashboards-demo:
     dependencies:
@@ -352,13 +352,14 @@ importers:
         version: 2.6.0(node-fetch@3.3.2)
       '@siemens/element-ng':
         specifier: workspace:*
-        version: link:../element-ng
+        version: link:../../dist/@siemens/element-ng
       '@siemens/element-theme':
         specifier: workspace:*
         version: link:../element-theme
       gridstack:
         specifier: ^12.3.3
         version: 12.6.0
+    publishDirectory: ../../dist/@siemens/dashboards-ng
 
   projects/element-ng:
     dependencies:
@@ -391,7 +392,7 @@ importers:
         version: link:../element-theme
       '@siemens/element-translate-ng':
         specifier: workspace:*
-        version: link:../element-translate-ng
+        version: link:../../dist/@siemens/element-translate-ng
       '@siemens/ngx-datatable':
         specifier: 26.2.1
         version: 26.2.1(@angular/common@22.0.5(@angular/core@22.0.5(@angular/compiler@22.0.5)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.5(@angular/compiler@22.0.5)(rxjs@7.8.2))(@angular/platform-browser@22.0.5(@angular/common@22.0.5(@angular/core@22.0.5(@angular/compiler@22.0.5)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.5(@angular/compiler@22.0.5)(rxjs@7.8.2)))(rxjs@7.8.2)
@@ -407,6 +408,7 @@ importers:
       ngx-image-cropper:
         specifier: ^9.0.0
         version: 9.1.6(@angular/common@22.0.5(@angular/core@22.0.5(@angular/compiler@22.0.5)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.5(@angular/compiler@22.0.5)(rxjs@7.8.2))
+    publishDirectory: ../../dist/@siemens/element-ng
 
   projects/element-theme: {}
 
@@ -427,6 +429,7 @@ importers:
       '@ngx-translate/core':
         specifier: 17 - 18
         version: 18.0.0(@angular/common@22.0.5(@angular/core@22.0.5(@angular/compiler@22.0.5)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.0.5(@angular/compiler@22.0.5)(rxjs@7.8.2))(rxjs@7.8.2)
+    publishDirectory: ../../dist/@siemens/element-translate-ng
 
   projects/icon-viewer: {}
 
@@ -481,8 +484,10 @@ importers:
       '@types/react-dom':
         specifier: 19.2.3
         version: 19.2.3(@types/react@19.2.17)
+    publishDirectory: ../../dist/@siemens/live-preview
 
-  projects/map-styles: {}
+  projects/map-styles:
+    publishDirectory: ../../dist/@siemens/map-styles
 
   projects/maps-ng:
     dependencies:
@@ -497,10 +502,10 @@ importers:
         version: link:../element-theme
       '@siemens/element-translate-ng':
         specifier: workspace:*
-        version: link:../element-translate-ng
+        version: link:../../dist/@siemens/element-translate-ng
       '@siemens/map-styles':
         specifier: workspace:*
-        version: link:../map-styles
+        version: link:../../dist/@siemens/map-styles
       ol:
         specifier: ~10.6.0 || ~10.7.0 || ~10.8.0 || ~10.9.0
         version: 10.9.0
@@ -510,6 +515,7 @@ importers:
       ol-mapbox-style:
         specifier: ^13.1.0
         version: 13.4.1(ol@10.9.0)
+    publishDirectory: ../../dist/@siemens/maps-ng
 
   projects/native-charts-ng:
     dependencies:
@@ -522,6 +528,7 @@ importers:
       '@siemens/element-theme':
         specifier: workspace:*
         version: link:../element-theme
+    publishDirectory: ../../dist/@siemens/native-charts-ng
 
 packages:
 

@@ -15,7 +15,8 @@
   "homepage": "https://github.com/siemens/element",
   "bugs": "https://github.com/siemens/element/issues/new",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "directory": "../../dist/@siemens/live-preview"
   },
   "dependencies": {
     "@stackblitz/sdk": "^1.11.0",

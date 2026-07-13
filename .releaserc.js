@@ -46,49 +46,49 @@ export default {
     [
       '@anolilab/semantic-release-pnpm',
       {
-        pkgRoot: 'dist/@siemens/element-ng'
+        pkgRoot: 'projects/element-ng'
       }
     ],
     [
       '@anolilab/semantic-release-pnpm',
       {
-        pkgRoot: 'dist/@siemens/element-translate-ng'
+        pkgRoot: 'projects/element-translate-ng'
       }
     ],
     [
       '@anolilab/semantic-release-pnpm',
       {
-        pkgRoot: 'dist/@siemens/live-preview'
+        pkgRoot: 'projects/live-preview'
       }
     ],
     [
       '@anolilab/semantic-release-pnpm',
       {
-        pkgRoot: 'dist/@siemens/charts-ng'
+        pkgRoot: 'projects/charts-ng'
       }
     ],
     [
       '@anolilab/semantic-release-pnpm',
       {
-        pkgRoot: 'dist/@siemens/native-charts-ng'
+        pkgRoot: 'projects/native-charts-ng'
       }
     ],
     [
       '@anolilab/semantic-release-pnpm',
       {
-        pkgRoot: 'dist/@siemens/dashboards-ng'
+        pkgRoot: 'projects/dashboards-ng'
       }
     ],
     [
       '@anolilab/semantic-release-pnpm',
       {
-        pkgRoot: 'dist/@siemens/maps-ng'
+        pkgRoot: 'projects/maps-ng'
       }
     ],
     [
       '@anolilab/semantic-release-pnpm',
       {
-        pkgRoot: 'dist/@siemens/map-styles'
+        pkgRoot: 'projects/map-styles'
       }
     ],
     [
