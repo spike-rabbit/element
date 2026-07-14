@@ -92,7 +92,7 @@ export default {
       }
     ],
     [
-      '@semantic-release/npm',
+      '@anolilab/semantic-release-pnpm',
       {
         pkgRoot: 'projects/element-theme'
       }
