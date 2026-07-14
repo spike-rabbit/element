@@ -1,3 +1,185 @@
+# [50.0.0](https://github.com/spike-rabbit/element/compare/v49.13.0...v50.0.0) (2026-07-14)
+
+
+### Features
+
+* **angular:** update to angular version 22 ([9b00425](https://github.com/spike-rabbit/element/commit/9b004258d08c5cc6cc542af4f677308d6375ba44))
+* **element-theme:** align ghost button naming convention ([dbba17a](https://github.com/spike-rabbit/element/commit/dbba17ac848bb37a0d7581f7e1d1e7b000fdce50)), closes [#1797](https://github.com/spike-rabbit/element/issues/1797)
+* **file-uploader:** merge upload texts into single button label ([82acd6e](https://github.com/spike-rabbit/element/commit/82acd6e04b7b91f8360e426c3122682b225e5a9d))
+* **formly:** add ngx-formly v7 support ([0c68442](https://github.com/spike-rabbit/element/commit/0c6844208f12586907d0b3979215f57464c99144))
+* **form:** support Angular's signal forms with new `si-form-field` ([98fa995](https://github.com/spike-rabbit/element/commit/98fa995320a24a40990dd3ed51354277a3e68a95))
+* **list-item:** introduce new styles ([53c302a](https://github.com/spike-rabbit/element/commit/53c302ac2d9220804a11d46c81e1a28cabea3b4b)), closes [#1641](https://github.com/spike-rabbit/element/issues/1641)
+* **map-styles:** introduce new library `@siemens/map-styles` ([a1e69ce](https://github.com/spike-rabbit/element/commit/a1e69ceebf711bcbaa29a985a5299af0ccf1be1c))
+* **pnpm:** rename to @spike-rabbit packages ([5941772](https://github.com/spike-rabbit/element/commit/594177284332f68c5a9f3774c67e10508c6b6253))
+* **split:** migrate si-split to OnPush ([5c204c9](https://github.com/spike-rabbit/element/commit/5c204c95cfcac53ba781b3d5fc9940d85ac11469))
+* **theme:** consumer defined root font size ([656712e](https://github.com/spike-rabbit/element/commit/656712ef92b1de0102b50807a19333c79e21b047)), closes [#2166](https://github.com/spike-rabbit/element/issues/2166)
+* **translate:** support @ngx-translate/core v18 ([28c1a8c](https://github.com/spike-rabbit/element/commit/28c1a8c996e5248873bfd8b4958576790781660d))
+
+
+### Bug Fixes
+
+* **chat-messages:** use placeholder in attachment remove aria-label ([cca849b](https://github.com/spike-rabbit/element/commit/cca849b985b50ba296db8cf8b04becbdf0409c55)), closes [#2128](https://github.com/spike-rabbit/element/issues/2128)
+* **dashboards:** use correct aria roles for widgets in none edit mode ([1a20450](https://github.com/spike-rabbit/element/commit/1a2045014b829a53546e886e2764da269d423fa5))
+* **filtered-search:** omit daterange specific properties from datepickerConfig ([7d00413](https://github.com/spike-rabbit/element/commit/7d00413d55c712fb011936a6a588dc987d1351a8))
+* **pnpm:** always use pnpm to publish ([5063c4a](https://github.com/spike-rabbit/element/commit/5063c4ae7773a69e1177d0517ec15e07a1d83ef8))
+* **pnpm:** include npm secret in release ([b6176f5](https://github.com/spike-rabbit/element/commit/b6176f5bd40aa6a986c689cb7faf9c4105fb66fb))
+* **pnpm:** use latest version ([d371f20](https://github.com/spike-rabbit/element/commit/d371f20dd6bd891ee955b9565427b70a45d3afc8))
+* **pnpm:** use proper configs ([f992f29](https://github.com/spike-rabbit/element/commit/f992f295a18a89f0641a7ce63edbc8bbe7df5e9d))
+* **split:** adjust handle size and cursor styles for better usability ([6408eac](https://github.com/spike-rabbit/element/commit/6408eac9cc44fe5e377fbecfb8436f682cbee21a)), closes [#2102](https://github.com/spike-rabbit/element/issues/2102)
+* **status-bar:** use static text for the toggle button ([91e956a](https://github.com/spike-rabbit/element/commit/91e956a6bcb5f84be16adcf42400f25858d36a2d)), closes [#2004](https://github.com/spike-rabbit/element/issues/2004)
+* **tour:** calculate arrow position correctly on size change ([f4168c0](https://github.com/spike-rabbit/element/commit/f4168c0ef9c9b3ee411d87ac7c654ca2809bfaf5))
+
+
+### NOTES
+
+* **theme:** The default root font size is now configurable when loading the
+  Element theme. Pass the value via `$element-root-font-size`, or set it
+  to `none` to use the browser default.
+  
+  If nothing is provided, the default remains `16px`, so nothing breaks
+  and projects can opt in when ready. We recommend switching to `none / initial`
+  as soon as possible. Starting with Element v52, `initial` will be the
+  default.
+  
+  ```scss
+  @use '@siemens/element-theme/src/theme' with (
+    $element-root-font-size: initial
+  );
+  ```
+  
+  Furthermore, a series of helper classes are provided that can be applied
+  to the `<html>` tag to change the root font size:
+  - `rfs-none`: use the browser default, regardless of the configured default
+  - `rfs-16`: use 16px
+  - `rfs-20`: use 20px
+  - `rfs-24`: use 24px
+  
+  Any other value can be used by setting the CSS variable at the `<html>`
+  tag or using a `:root {}` CSS block: `--element-root-font-size`.
+* **chat-messages:** Custom `removeLabel`/`removeAttachmentLabel` inputs on `si-attachment-list`
+  and `si-chat-input` should now include the `{{attachment}}` placeholder to embed
+  the attachment name in the remove button aria-label
+
+### BREAKING CHANGES
+
+* **pnpm:** @spike-rabbit is the future!
+* **map-styles:** `@siemens/maps-ng` now requires `@siemens/map-styles` as
+  a peer dependency.
+  
+  Consumers upgrading `@siemens/maps-ng` must also add
+  `@siemens/map-styles` to their project dependencies.
+* **split:** si-split and si-split-part inputs were migrated to signal inputs
+* **status-bar:** Changed the accessibility text inputs of `si-status-bar`
+  
+  The `expandButtonText` and `collapseButtonText` inputs were removed and
+  replaced by a single `toggleButtonText` input. Update usages that set these
+  inputs to use toggleButtonText instead. The associated translation keys
+  `SI_STATUS_BAR.EXPAND` and `SI_STATUS_BAR.COLLAPSE` were replaced by
+  `SI_STATUS_BAR.TOGGLE`.
+* **formly:** The `@siemens/element-ng/formly` entry point is now based on
+  ngx-formly v7.1 and exposes the standalone `SiFormlyComponent`. The v6
+  implementation moved to `@siemens/element-ng/formly-legacy`. Consumers still on
+  ngx-formly v6 must either migrate to v7.1 or change the import path to `@siemens/element-ng/formly-legacy` (`SiFormlyModule`). The legacy package is deprecated and will be removed in a future release.
+* **translate:** `@ngx-translate/core@16` is no longer supported. Please update to `@ngx-translate/core@18`.
+* **element-theme:** The .btn-ghost class now uses the primary ghost style instead of the tertiary style.
+  To maintain the current behavior in your application:
+  - rename: `.btn-ghost` to `.btn-tertiary-ghost`
+  - rename: `.btn-primary-ghost` to `.btn-ghost`
+  
+  In the past, only `.btn-ghost` existed which was style wise
+  appearing like a tertiary button.
+  In order to support the full button style features we introduced
+  a temporary `.btn-primary-ghost` class.
+  Now the ghost buttons are aligned.
+* **file-uploader:** The `uploadTextFileSelect` input has been removed from
+  `SiFileUploaderComponent` and `SiFileDropzoneComponent`.
+  
+  The full text now lives in `uploadDropText`, which renders as the button. Remove `uploadTextFileSelect` and move its content into `uploadDropText`.
+  
+  Before:
+  
+  ```html
+  <si-file-uploader
+    uploadDropText="Drop files here or"
+    uploadTextFileSelect="click to upload"
+  />
+  ```
+  After:
+  
+  ```html
+  <si-file-uploader uploadDropText="Drop files here or click to upload" />
+  ```
+* **filtered-search:** `CriterionDefinition.datepickerConfig` type narrowed
+  
+  The type of `datepickerConfig` in `CriterionDefinition` (filtered-search) changed from `DatepickerInputConfig` to `Omit<DatepickerInputConfig, 'enableDateRange' | 'enableTwoMonthDateRange'>`.
+  
+  The properties `enableDateRange` and `enableTwoMonthDateRange ` are no longer accepted in `datepickerConfig` when used with filtered-search criteria, as they had no effect in that context.
+  
+  Migration: Remove any `enableDateRange` and `enableTwoMonthDateRange` properties from your `datepickerConfig` objects passed to `CriterionDefinition`.
+* **angular:** endpoint `@siemens/element-ng/translate` no longer re-export `@siemens/element-translate-ng/translate`.
+  
+  Use `@siemens/element-translate-ng/translate` instead.
+  
+  Before:
+  
+  ```ts
+  import { ... } from '@siemens/element-ng/translate';
+  ````
+  
+  After:
+  
+  ```ts
+  import { ... } from '@siemens/element-translate-ng/translate';
+  ```
+* **select:** When using `si-select` withouth `.form-control`
+  the classes `.btn .btn-ghost` must be applied to keep a similar appreance.
+* **icon:** Removed `provideIconConfig()` provider without replacment.
+  
+  Element will now always render SVG icons internally.
+  Consumer which provide their own custom icons must use the `icons` property
+  of a theme: https://github.com/siemens/element/blob/main/projects/element-ng/theme/si-theme.model.ts#L42.
+  
+  Overrides of `.element-*` classes will no longer affect element components.
+* **angular:** Angular 22+ is required.
+  Follow the Angular update guide to update your app: https://angular.dev/update-guide?v=21.0-22.0
+
+### 
+
+* **localization:** that the CLI ships as the @siemens/element-translate-cli package.
+
+### DEPRECATIONS
+
+* **formly:** The `@siemens/element-ng/formly-legacy` entry point (`SiFormlyModule`, `SiFormlyComponent`) is deprecated and will be removed in a future release.
+  Migrate to the standalone `SiFormlyComponent` from `@siemens/element-ng/formly` which is based on ngx-formly v7.
+  
+  Before (v6 — `@siemens/element-ng/formly-legacy`):
+  
+  ```ts
+  import { SiFormlyModule } from '@siemens/element-ng/formly-legacy';
+  
+  @NgModule({
+    imports: [SiFormlyModule.forRoot()]
+  })
+  export class AppModule {}
+  ```
+  
+  After (v7.1 — @siemens/element-ng/formly):
+  
+  ```ts
+  import { SiFormlyComponent } from '@siemens/element-ng/formly';
+  
+  @Component({
+    imports: [SiFormlyComponent]
+  })
+  export class MyComponent {}
+  ```
+* **notification-item:** `SiNotificationItemComponent` is deprecated.
+  
+  Use the CSS-based list item component instead. Migrate by replacing
+  `<si-notification-item>` with the `.list-item` CSS classes applied to
+  semantic HTML elements. See the list item documentation for usage
+  examples and accessibility guidance.
+
 # [49.13.0](https://github.com/siemens/element/compare/v49.12.0...v49.13.0) (2026-07-02)
 
 

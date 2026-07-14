@@ -1,7 +1,7 @@
 {
   "name": "@spike-rabbit/map-styles",
   "description": "Element map styles library.",
-  "version": "49.13.0",
+  "version": "50.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
