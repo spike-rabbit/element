@@ -1,3 +1,10 @@
+## [50.0.2](https://github.com/spike-rabbit/element/compare/v50.0.1...v50.0.2) (2026-07-14)
+
+
+### Bug Fixes
+
+* **pnpm:** sync versions to dist attempt 2 ([46232ba](https://github.com/spike-rabbit/element/commit/46232ba7a50fcfe4f48b9db172f0e20e70d8a371))
+
 ## [50.0.1](https://github.com/spike-rabbit/element/compare/v50.0.0...v50.0.1) (2026-07-14)
 
 
