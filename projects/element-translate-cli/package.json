@@ -1,7 +1,7 @@
 {
   "name": "@spike-rabbit/element-translate-cli",
   "description": "Element translation abstraction layer CLI.",
-  "version": "50.0.4",
+  "version": "50.0.5",
   "license": "MIT",
   "type": "module",
   "repository": {

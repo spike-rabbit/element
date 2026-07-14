@@ -1,7 +1,7 @@
 {
   "name": "@spike-rabbit/live-preview",
   "description": "Element live preview for web",
-  "version": "50.0.4",
+  "version": "50.0.5",
   "license": "MIT",
   "type": "module",
   "repository": {

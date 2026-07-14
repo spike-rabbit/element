@@ -1,3 +1,10 @@
+## [50.0.5](https://github.com/spike-rabbit/element/compare/v50.0.4...v50.0.5) (2026-07-14)
+
+
+### Bug Fixes
+
+* use use correct registry ([8d0efe5](https://github.com/spike-rabbit/element/commit/8d0efe5ec50f39ae0786aceabf656ceb3e5eef60))
+
 ## [50.0.4](https://github.com/spike-rabbit/element/compare/v50.0.3...v50.0.4) (2026-07-14)
 
 
