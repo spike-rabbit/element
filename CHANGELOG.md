@@ -1,3 +1,10 @@
+## [50.0.7](https://github.com/spike-rabbit/element/compare/v50.0.6...v50.0.7) (2026-07-14)
+
+
+### Bug Fixes
+
+* add missing packages ([ad4139f](https://github.com/spike-rabbit/element/commit/ad4139f052e8ea766138d7c4488b6c4c7ae19b2c))
+
 ## [50.0.6](https://github.com/spike-rabbit/element/compare/v50.0.5...v50.0.6) (2026-07-14)
 
 
