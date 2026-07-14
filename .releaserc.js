@@ -22,7 +22,9 @@ const pnpmPackageRoots = [
   'projects/map-styles',
   'dist/@spike-rabbit/map-styles',
   'projects/element-theme',
-  'projects/element-translate-cli'
+  'projects/element-translate-cli',
+  'projects/dashboards-demo',
+  'projects/icon-viewer'
 ];
 
 export default {
