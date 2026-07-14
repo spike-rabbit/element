@@ -110,6 +110,7 @@ export default {
         npmPublish: false
       }
     ],
+    './tools/semantic-release/sync-dist-package-versions.js',
     ...(skipCommits
       ? []
       : [
