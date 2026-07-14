@@ -1,7 +1,7 @@
 {
   "name": "@spike-rabbit/element-ng",
   "description": "Element Angular component library, implementing the Siemens Design Language",
-  "version": "50.0.2",
+  "version": "50.0.3",
   "license": "MIT",
   "repository": {
     "type": "git",

@@ -1,3 +1,10 @@
+## [50.0.3](https://github.com/spike-rabbit/element/compare/v50.0.2...v50.0.3) (2026-07-14)
+
+
+### Bug Fixes
+
+* use semantic-release/npm to set version ([4de0cba](https://github.com/spike-rabbit/element/commit/4de0cbad6740ab91ede6ed2c1f600e86a5257f51))
+
 ## [50.0.2](https://github.com/spike-rabbit/element/compare/v50.0.1...v50.0.2) (2026-07-14)
 
 
