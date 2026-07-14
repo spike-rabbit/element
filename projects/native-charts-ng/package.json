@@ -1,7 +1,7 @@
 {
   "name": "@spike-rabbit/native-charts-ng",
   "description": "Element Native charts library.",
-  "version": "50.0.3",
+  "version": "50.0.4",
   "license": "MIT",
   "type": "module",
   "repository": {
