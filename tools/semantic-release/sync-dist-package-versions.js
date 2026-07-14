@@ -11,20 +11,8 @@ const writeJson = async (file, data) => {
   await writeFile(file, `${JSON.stringify(data, null, 2)}\n`);
 };
 
-const getPnpmPackageRoots = options => {
-  const publishPlugins = Array.isArray(options.publish)
-    ? options.publish
-    : [options.publish].filter(Boolean);
-
-  return publishPlugins
-    .filter(plugin => plugin.path === '@anolilab/semantic-release-pnpm')
-    .filter(plugin => plugin.npmPublish !== false)
-    .map(plugin => plugin.pkgRoot)
-    .filter(Boolean);
-};
-
-export const prepare = async (pluginConfig, { cwd, logger, options }) => {
-  for (const pkgRoot of getPnpmPackageRoots(options)) {
+export const prepare = async (pluginConfig, { cwd, logger }) => {
+  for (const pkgRoot of pluginConfig.pkgRoots) {
     const sourcePackagePath = path.resolve(cwd, pkgRoot, 'package.json');
     const sourcePackage = await readJson(sourcePackagePath);
     const publishDirectory = sourcePackage.publishConfig?.directory;

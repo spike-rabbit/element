@@ -3,6 +3,19 @@ import { commitTypes, releaseRules } from './tools/semantic-release/config.js';
 
 const skipCommits = process.env.SKIP_COMMIT === 'true';
 
+const pnpmPackageRoots = [
+  'projects/element-ng',
+  'projects/element-translate-ng',
+  'projects/live-preview',
+  'projects/charts-ng',
+  'projects/native-charts-ng',
+  'projects/dashboards-ng',
+  'projects/maps-ng',
+  'projects/map-styles',
+  'projects/element-theme',
+  'projects/element-translate-cli'
+];
+
 export default {
   branches: [
     {
@@ -43,66 +56,12 @@ export default {
     ],
     ...(skipCommits ? [] : ['@semantic-release/changelog']),
     // Packages to be pushed
-    [
+    ...pnpmPackageRoots.map(pkgRoot => [
       '@anolilab/semantic-release-pnpm',
       {
-        pkgRoot: 'projects/element-ng'
+        pkgRoot
       }
-    ],
-    [
-      '@anolilab/semantic-release-pnpm',
-      {
-        pkgRoot: 'projects/element-translate-ng'
-      }
-    ],
-    [
-      '@anolilab/semantic-release-pnpm',
-      {
-        pkgRoot: 'projects/live-preview'
-      }
-    ],
-    [
-      '@anolilab/semantic-release-pnpm',
-      {
-        pkgRoot: 'projects/charts-ng'
-      }
-    ],
-    [
-      '@anolilab/semantic-release-pnpm',
-      {
-        pkgRoot: 'projects/native-charts-ng'
-      }
-    ],
-    [
-      '@anolilab/semantic-release-pnpm',
-      {
-        pkgRoot: 'projects/dashboards-ng'
-      }
-    ],
-    [
-      '@anolilab/semantic-release-pnpm',
-      {
-        pkgRoot: 'projects/maps-ng'
-      }
-    ],
-    [
-      '@anolilab/semantic-release-pnpm',
-      {
-        pkgRoot: 'projects/map-styles'
-      }
-    ],
-    [
-      '@anolilab/semantic-release-pnpm',
-      {
-        pkgRoot: 'projects/element-theme'
-      }
-    ],
-    [
-      '@anolilab/semantic-release-pnpm',
-      {
-        pkgRoot: 'projects/element-translate-cli'
-      }
-    ],
+    ]),
     // Root package.json only needs version update
     [
       '@anolilab/semantic-release-pnpm',
@@ -110,7 +69,12 @@ export default {
         npmPublish: false
       }
     ],
-    './tools/semantic-release/sync-dist-package-versions.js',
+    [
+      './tools/semantic-release/sync-dist-package-versions.js',
+      {
+        pkgRoots: pnpmPackageRoots
+      }
+    ],
     ...(skipCommits
       ? []
       : [
