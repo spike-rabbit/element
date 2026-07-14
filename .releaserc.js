@@ -75,10 +75,8 @@ export default {
     [
       '@semantic-release/exec',
       {
-        verifyConditionsCmd:
-          'pnpm publish --recursive --no-git-checks --registry=https://npmjs.org --provenance --dry-run',
-        publishCmd:
-          'pnpm publish --recursive --no-git-checks --registry=https://npmjs.org --provenance'
+        verifyConditionsCmd: 'pnpm publish --recursive --no-git-checks --provenance --dry-run',
+        publishCmd: 'pnpm publish --recursive --no-git-checks --provenance'
       }
     ],
     ...(skipCommits
