@@ -64,7 +64,7 @@ export default {
       }
     ],
     ...(skipCommits ? [] : ['@semantic-release/changelog']),
-    // Packages to be pushed
+    // All package.json where the version needs to be updated
     ...pnpmPackageRoots.map(pkgRoot => [
       '@semantic-release/npm',
       {
