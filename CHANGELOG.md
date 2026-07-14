@@ -1,3 +1,10 @@
+## [50.0.6](https://github.com/spike-rabbit/element/compare/v50.0.5...v50.0.6) (2026-07-14)
+
+
+### Bug Fixes
+
+* remove --provenance ([33a67e9](https://github.com/spike-rabbit/element/commit/33a67e98818068c5b8f3eef9723f8297bd0f5c72))
+
 ## [50.0.5](https://github.com/spike-rabbit/element/compare/v50.0.4...v50.0.5) (2026-07-14)
 
 
